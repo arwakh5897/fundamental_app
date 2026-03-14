@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import Card from "../card/card";
+import LeftArrow from "../buttons/leftArrow";
+import RightArrow from "../buttons/rightArrow";
 
 const RamadanTitle = () => {
+  const scrollReference = useRef(null);
   return (
     <div>
       <div className="bg-menu-buttons text-2xl md:text-4xl text-center py-4">
         RAMADAN
         <span className="font-bold mx-2">BLESSINGS</span>
       </div>
-
-      <div className="flex flex-col md:flex-wrap md:flex-row md:justify-center md:gap-8 gap-4 p-4 overflow-x-auto">
-        {Array.from({ length: 8 }).map((_, index) => (
-          <Card
-            key={index}
-            title={`Ramadan Product ${index + 1}`}
-            price={4900 + index * 100}
-          />
-        ))}
-      </div>
+        <div className="flex items-center justify-center p-4">
+        <LeftArrow scrollRef={scrollReference} />
+          <div ref={scrollReference} 
+          className="flex flex-col overflow-x-auto scroll-smooth  md:flex-row md:justify-center md:gap-8 gap-4 p-4">
+            {Array.from({ length: 8 }).map((_, index) => (
+              <div key={index} className="flex-shrink-0">
+              <Card
+                title={`Ramadan Product ${index + 1}`}
+                price={4900 + index * 100}
+              />
+              </div>
+            ))}
+          </div>
+       <RightArrow scrollRef={scrollReference} />
+       </div>
     </div>
   );
 };

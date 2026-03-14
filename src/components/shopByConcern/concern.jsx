@@ -22,7 +22,7 @@ const Concern = () => {
 
       <div className="grid grid-cols-4 gap-4 py-4 px-6 mx-auto text-center">
         {concerns.map((item, index) => (
-          <a key={index} className="bg-background text-sm font-bold md:font-medium md:text-xl px-4 py-2 cursor-pointer hover:scale-105 transition">
+          <a key={index} className="bg-background text-sm font-bold md:font-medium md:text-xl p-2 cursor-pointer hover:scale-105 transition">
             {item}
           </a>
         ))}
