@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Custom Theme Classes */
+.bg-background {
+  background-color: rgb(245, 245, 245); /* Light mode default */
+}
+.bg-background-header {
+  background-color: rgb(245 245 245 / 1); /* Light mode default */
+}
+.bg-menu-buttons {
+  background-color: rgb(170, 134, 134);
+}
+.bg-background-card {
+  background-color: rgb(245, 245, 245); /* Light mode default */
+}
+.text-foreground {
+  color: rgba(15, 23, 42, 0.753); /* Light mode default */
+}
+
+/* Dark Mode */
+.dark .bg-background {
+  background-color: rgba(1, 14, 43, 0.623);
+}
+.dark .bg-background-header {
+  background-color: rgba(15, 23, 42, 0.623);
+}
+.dark .bg-background-card {
+  background-color: rgba(218, 221, 230, 0.623);
+}
+.dark .text-foreground {
+  color: rgb(255, 255, 255);
+}
