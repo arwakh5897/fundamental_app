@@ -2,13 +2,12 @@ import React, { useEffect } from "react";
 import Dashboard from "./pages/dashboard/dashboard";
 import Ad from "./components/header/ad";
 import Menu from "./components/header/menu";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis"; // ✅ default import
 
 const App = () => {
-
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.5,
+      duration: 1,
       smooth: true,
     });
 
