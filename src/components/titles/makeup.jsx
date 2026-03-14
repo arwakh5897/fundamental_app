@@ -7,7 +7,7 @@ import RightArrow from "../buttons/rightArrow";
 const MakeUpTitle = () => {
     return (
         <div>
-        <div className="bg-menu-buttons text-4xl  text-center py-4">
+        <div className="bg-menu-buttons text-2xl md:text-4xl  text-center py-4">
             MAKEUP  
             <span className="font-bold mx-2">MUST-HAVES</span>
         </div>

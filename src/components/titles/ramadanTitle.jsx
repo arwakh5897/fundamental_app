@@ -4,7 +4,7 @@ import Card from "../card/card";
 const RamadanTitle = () => {
   return (
     <div>
-      <div className="bg-menu-buttons text-4xl text-center py-4">
+      <div className="bg-menu-buttons text-2xl md:text-4xl text-center py-4">
         RAMADAN
         <span className="font-bold mx-2">BLESSINGS</span>
       </div>

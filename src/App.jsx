@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Dashboard from "./pages/dashboard/dashboard";
 import Ad from "./components/header/ad";
 import Menu from "./components/header/menu";
-import Lenis from "lenis"; // ✅ default import
+import Lenis from "lenis";
 
 const App = () => {
   useEffect(() => {

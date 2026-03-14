@@ -24,7 +24,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 20 }) => {
       {/* Content */}
       <div className="flex flex-col p-2 md:text-center items-start md:items-center w-1/2 md:w-full">
 
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-lg flex-wrap font-semibold">
           {title || "Card Title"}
         </h3>
 
