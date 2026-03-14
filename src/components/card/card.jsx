@@ -5,7 +5,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 20 }) => {
   const discountedPrice = price - (price * discount) / 100;
 
   return (
-    <div className="bg-background-card md:w-1/5 shadow-md overflow-hidden flex md:flex-col rounded-2xl relative">
+    <div className="bg-background-card md:w-60 shadow-md overflow-hidden flex md:flex-col rounded-2xl relative">
 
       {/* Discount Badge */}
       <span className="absolute top-2 left-2 bg-red-700 text-white text-sm font-bold px-3 py-1 rounded-full">
@@ -22,7 +22,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 20 }) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col p-2 md:text-center items-start md:items-center w-1/2 md:w-full">
+      <div className="flex flex-col p-2 md:text-center items-start md:items-center w-full">
 
         <h3 className="text-lg flex-wrap font-semibold">
           {title || "Card Title"}

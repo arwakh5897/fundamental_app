@@ -5,7 +5,7 @@ import { ChevronRightIcon } from "@heroicons/react/24/solid";
 const RightArrow =({slideRight})=>{
  const handleClick = () => {
      if(slideRight.current){
-        slideRight.current.scrollBy({right: 300, behavior: "smooth"})
+        slideRight.current.scrollBy({right: -300, behavior: "smooth"})
      }
 };
     return(
