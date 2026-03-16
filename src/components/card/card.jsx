@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ image, title, rating = 4.5, price = 4900, discount = 20 }) => {
+const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
 
   const discountedPrice = price - (price * discount) / 100;
 
@@ -8,9 +8,9 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 20 }) => {
     <div className="bg-background-card md:w-60 shadow-md overflow-hidden flex md:flex-col rounded-2xl relative">
 
       {/* Discount Badge */}
-      <span className="absolute top-2 left-2 bg-red-700 text-white text-sm font-bold px-3 py-1 rounded-full">
-        {discount}%
-      </span>
+    <span className="absolute -left-5 rotate-[-45deg] bg-red-700 text-white text-xs md:text-sm font-bold px-5 py-1 text-center">
+      {discount}%
+    </span>
 
       {/* Image */}
       <div className="md:w-full md:h-64 w-1/2">

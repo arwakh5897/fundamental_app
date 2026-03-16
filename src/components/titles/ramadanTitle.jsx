@@ -11,11 +11,11 @@ const RamadanTitle = () => {
         RAMADAN
         <span className="font-bold mx-2">BLESSINGS</span>
       </div>
-        <div className="flex items-center justify-center p-4">
+        <div className="relative flex items-center  p-4">
         <LeftArrow scrollRef={scrollReference} />
           <div ref={scrollReference} 
-          className="flex flex-col overflow-x-auto scroll-smooth  md:flex-row md:justify-center md:gap-8 gap-4 p-4">
-            {Array.from({ length: 8 }).map((_, index) => (
+          className="flex flex-col scrollbar-hide overflow-x-auto scroll-smooth md:flex-row md:gap-8 gap-4">
+            {Array.from({ length: 18 }).map((_, index) => (
               <div key={index} className="flex-shrink-0">
               <Card
                 title={`Ramadan Product ${index + 1}`}

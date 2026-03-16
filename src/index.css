@@ -30,3 +30,13 @@
 .dark .text-foreground {
   color: rgb(255, 255, 255);
 }
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
