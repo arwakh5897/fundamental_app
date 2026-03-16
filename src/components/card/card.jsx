@@ -36,7 +36,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
 
         {/* Price */}
         <div className="flex gap-1 justify-center items-center">
-          <div className="font-bold text-xs py-1">
+          <div className="font-bold text-xs md:text-sm py-1">
             Rs {discountedPrice}
           </div>
 
@@ -46,8 +46,8 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
         </div>
 
         {/* Desktop Button */}
-        <button className=" flex bg-menu-buttons md:py-1 py-0.5 md:px-4 px-1 rounded-sm text-xs md:text-sm hover:opacity-90 md:font-semibold hover:cursor-pointer transition">
-          Add to Cart
+        <button className=" flex bg-menu-buttons py-1 px-4 rounded-sm text-xs md:text-sm hover:opacity-90 md:font-semibold hover:cursor-pointer transition">
+         Add&nbsp;<span className="hidden md:flex">to Cart</span>
         </button>
 
       </div>

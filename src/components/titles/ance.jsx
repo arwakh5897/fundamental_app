@@ -9,7 +9,7 @@ const Ance = () => {
             <span className="font-bold mx-2">ESSENTIALS</span>
         </div>
                <img className="w-full"src="assets/images/banner2.png"/>
-      <div className="flex flex-col md:flex-wrap md:flex-row md:justify-center md:gap-8 gap-4 p-4 overflow-x-auto">
+      <div className="flex flex-wrap flex-row justify-center gap-8 p-4 overflow-x-auto">
         {Array.from({ length: 6 }).map((_, index) => (
           <Card
             key={index}

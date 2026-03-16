@@ -15,7 +15,7 @@ const RightArrow = ({ scrollRef }) => {
         onClick={handleClick}
         className="bg-menu-buttons md:p-2 p-1 rounded-full hover:opacity-80"
       >
-        <ChevronRightIcon className="md:w-5 md:h-5 w-3 h-3" />
+        <ChevronRightIcon className="md:w-5 md:h-5 w-4 h-4" />
       </button>
     </div>
   );
