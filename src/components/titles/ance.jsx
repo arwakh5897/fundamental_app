@@ -4,7 +4,7 @@ import Card from "../card/card";
 const Ance = () => {
     return (
         <div>
-        <div className="bg-menu-buttons text-2xl md:text-4xl  text-center py-4">
+      <div className="bg-menu-buttons md:text-4xl text-center py-2 md:py-4">
             ANCE
             <span className="font-bold mx-2">ESSENTIALS</span>
         </div>
