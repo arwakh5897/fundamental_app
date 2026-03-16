@@ -53,6 +53,7 @@ const MenuItems = () => {
               className="cursor-pointer hover:text-gray-300"
             >
               {item}
+              <p className="h-0.5 bg-white"></p>
             </h1>
           ))}
         </div>

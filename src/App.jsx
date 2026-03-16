@@ -5,10 +5,9 @@ import Menu from "./components/header/menu";
 import Lenis from "lenis";
 
 const App = () => {
-  const isMobile = window.length <= 768;
   useEffect(() => {
     const lenis = new Lenis({
-      duration: isMobile ? 30: 1,
+      duration: 1,
       smooth: true,
     });
 
