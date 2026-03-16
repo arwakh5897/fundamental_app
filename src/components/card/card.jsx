@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
 
   const discountedPrice = price - (price * discount) / 100;
-
+  const [hover,setHover] = useState(false);
   return (
-    <div className="bg-background-card md:w-60 shadow-md overflow-hidden flex md:flex-col rounded-2xl relative">
+    <div className="bg-background-card md:w-72 shadow-md overflow-hidden hover:cursor-pointer flex md:flex-col rounded-xl relative">
 
       {/* Discount Badge */}
     <span className="absolute -left-5 rotate-[-45deg] bg-red-700 text-white text-xs md:text-sm font-bold px-5 py-1 text-center">
@@ -13,11 +13,13 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
     </span>
 
       {/* Image */}
-      <div className="md:w-full md:h-64 w-1/2">
+      <div className="md:w-full md:h-64 w-1/2 ">
         <img
-          src={image || "assets/images/banner1.png"}
+          src={image || (hover ? "assets/images/banner1.png" : "assets/images/banner2.png")}
+          onMouseEnter={()=>setHover(true)}
+          onMouseLeave={()=>setHover(false)}
           alt={title || "Product"}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 transform hover:scale-105 "
         />
       </div>
 
@@ -28,7 +30,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
           {title || "Card Title"}
         </h3>
 
-        <div className="text-sm hidden md:flex">
+        <div className="text-xs hidden md:flex">
           ⭐⭐⭐⭐⭐
         </div>
 
@@ -44,7 +46,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
         </div>
 
         {/* Desktop Button */}
-        <button className="hidden md:flex bg-menu-buttons py-1 px-4 rounded-md hover:opacity-90 font-bold hover:cursor-pointer transition">
+        <button className="hidden md:flex bg-menu-buttons py-1 px-4 rounded-sm text-sm hover:opacity-90 font-semibold hover:cursor-pointer transition">
           Add to Cart
         </button>
 

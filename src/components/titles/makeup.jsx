@@ -11,11 +11,11 @@ const MakeUpTitle = () => {
 
           <img className="w-full" src="assets/images/banner3.png"/>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 p-4 items-center">
-          {Array.from({ length: 10 }).map((_, index) => (
+        <div className="flex flex-col md:flex-wrap md:flex-row md:justify-center md:gap-8 gap-4 p-4 overflow-x-auto">
+          {Array.from({ length: 15 }).map((_, index) => (
             <Card
               key={index}
-              title={`Ramadan Product ${index + 1}`}
+              title={`MakeUp Product ${index + 1}`}
               price={4900 + index * 100}
             />
           ))}

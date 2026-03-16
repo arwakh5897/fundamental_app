@@ -13,7 +13,7 @@ const Ance = () => {
         {Array.from({ length: 7 }).map((_, index) => (
           <Card
             key={index}
-            title={`Ramadan Product ${index + 1}`}
+            title={`ANCE Essential ${index + 1}`}
             price={4900 + index * 100}
           />
         ))}
