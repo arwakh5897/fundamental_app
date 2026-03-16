@@ -2,10 +2,10 @@ import React from "react";
 
 const Ad = () => {
   return (
-    <div className="py-1 md:flex hidden">
+    <div className="py-1 flex">
         <marquee>
           <div className="flex gap-4 text-sm md:text-md font-medium">
-              <h1>
+              <h1 >
                 FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500
               </h1>
               <a
