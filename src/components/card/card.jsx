@@ -5,7 +5,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
   const discountedPrice = price - (price * discount) / 100;
   const [hover,setHover] = useState(false);
   return (
-    <div className="bg-background-card w-36 md:w-72 shadow-md overflow-hidden hover:cursor-pointer flex flex-col rounded-xl relative">
+    <div className="bg-background-card w-40 md:w-72 shadow-md overflow-hidden hover:cursor-pointer flex flex-col rounded-xl relative">
 
       {/* Discount Badge */}
     <span className="absolute -left-5 rotate-[-45deg] bg-red-700 text-white text-xs text-sm font-bold px-5 py-1 text-center">
