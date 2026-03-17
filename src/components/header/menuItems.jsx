@@ -8,10 +8,7 @@ const MenuItems = () => {
 
       {/* Mobile Button */}
       <div className="md:hidden">
-        <button
-          onClick={() => setActive(true)}
-          className="flex flex-col gap-1"
-        >
+        <button onClick={() => setActive(true)} className="flex flex-col gap-1">
           <span className="h-[2px] w-5 bg-black"></span>
           <span className="h-[2px] w-3 bg-black"></span>
           <span className="h-[2px] w-4 bg-black"></span>
@@ -28,7 +25,7 @@ const MenuItems = () => {
 
       {/* Mobile Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-full w-64 bg-menu-buttons text-white z-50 p-6 transition-transform duration-500 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-menu-buttons text-white z-50 p-6 transition-transform duration-1000 ${
           active ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -37,31 +34,19 @@ const MenuItems = () => {
         </button>
 
         <div className="space-y-4">
-          <a href="/shop-all" className="block">Shop All</a>
-                        <p className="h-0.5 bg-white"></p>
-
-          <a href="/bundles" className="block">Shop Bundles</a>
-                        <p className="h-0.5 bg-white"></p>
-
-          <a href="/concern" className="block">By Concern</a>
-                        <p className="h-0.5 bg-white"></p>
-
-          <a href="/type" className="block">By Type</a>
-                        <p className="h-0.5 bg-white"></p>
-
-          <a href="/accessories" className="block">Accessories</a>
-                        <p className="h-0.5 bg-white"></p>
-
-          <a href="/makeup" className="block">MAKEUP</a>
-                        <p className="h-0.5 bg-white"></p>
-
+          <a href="/pages/productsPage" className="block border-b-2 border-white pb-2">Shop All</a>
+          <a href="/pages/productsPage" className="block border-b-2 border-white pb-2">Shop Bundles</a>
+          <a href="/concern" className="block border-b-2 border-white pb-2">By Concern</a>
+          <a href="/type" className="block border-b-2 border-white pb-2">By Type</a>
+          <a href="/accessories" className="block border-b-2 border-white pb-2">Accessories</a>
+          <a href="/makeup" className="block border-b-2 border-white pb-2">MAKEUP</a>
         </div>
       </nav>
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6">
-        <a href="/shop-all">Shop All</a>
-        <a href="/bundles">Shop Bundles</a>
+        <a href="/pages/productsPage">Shop All</a>
+        <a href="/pages/productsPage">Shop Bundles</a>
         <a href="/concern">By Concern</a>
         <a href="/type">By Type</a>
         <a href="/accessories">Accessories</a>

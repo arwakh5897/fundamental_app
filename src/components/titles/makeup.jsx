@@ -20,7 +20,7 @@ const MakeUpTitle = () => {
                 <span className="font-bold mx-2">MUST-HAVES</span>
           </div>
 
-          <img className="w-full" src="assets/images/banner3.png"/>
+          <img className="w-full" src="/assets/images/banner3.png"/>
 
           <Products products={visibleProducts}/>
           <div className="py-2">

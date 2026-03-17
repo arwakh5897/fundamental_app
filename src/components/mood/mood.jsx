@@ -17,7 +17,7 @@ export default function Mood() {
       className=" hover:cursor-pointer md:flex hidden"
     >
       <img
-        src={isDark ? "assets/icons/sun.png" : "assets/icons/moon.png"}
+        src={isDark ? "/assets/icons/sun.png" : "/assets/icons/moon.png"}
         alt="Toggle Theme"
         className="w-5 h-5"
       />

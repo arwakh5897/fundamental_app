@@ -20,7 +20,7 @@ const Ance = () => {
             ANCE
             <span className="font-bold mx-2">ESSENTIALS</span>
         </div>
-               <img className="w-full"src="assets/images/banner2.png"/>
+               <img className="w-full"src="/assets/images/banner2.png"/>
         <Products products={visibleProducts}/>
     </div>
     )

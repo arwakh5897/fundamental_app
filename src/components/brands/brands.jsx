@@ -2,10 +2,10 @@ import React from "react";
 
 const Brands = () => {
     const brandsData = [
-        { img: "assets/images/brand1.png" },
-        { img: "assets/images/brand2.png" },
-        { img: "assets/images/brand3.png" },
-        { img: "assets/images/brand4.png" }
+        { img: "/assets/images/brand1.png" },
+        { img: "/assets/images/brand2.png" },
+        { img: "/assets/images/brand3.png" },
+        { img: "/assets/images/brand4.png" }
     ];
     return (
         <div className="p-4">

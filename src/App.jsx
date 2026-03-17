@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import Lenis from "lenis";
+import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Ad from "./components/header/ad";
 import Menu from "./components/header/menu";
-import Lenis from "lenis";
+import ProductsPage from "./pages/productsPage";
 
 const App = () => {
   useEffect(() => {
@@ -20,11 +22,16 @@ const App = () => {
   }, []);
 
   return (
-    <div className="text-foreground bg-background">
-      <Ad />
-      <Menu />
-      <Dashboard />
-    </div>
+    <BrowserRouter>
+      <div className="text-foreground bg-background">
+        <Ad />
+        <Menu />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/pages/productsPage" element={<ProductsPage />} />
+          </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 

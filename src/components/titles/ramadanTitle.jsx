@@ -19,7 +19,7 @@ const RamadanTitle = () => {
               <div key={index} className="flex-shrink-0">
               <Card
                 title={`Ramadan Product ${index + 1}`}
-                image={"assets/images/banner1.png"}
+                image={"/assets/images/banner1.png"}
                 price={4900 + index * 100}
               />
               </div>
