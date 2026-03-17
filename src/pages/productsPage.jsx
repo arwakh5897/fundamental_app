@@ -7,7 +7,7 @@ import VerticalProducts from "../components/products/verticalProducts";
 const ProductsPage = () => {
    const [currentPage, setCurrentPage]= useState(1);
 
-    const allProducts = Array.from({ length: 20 }, (item, index) => ({
+    const allProducts = Array.from({ length: 30 }, (item, index) => ({
       id: index + 1,
       name: `MakeUp Product ${index + 1}` 
       }));
