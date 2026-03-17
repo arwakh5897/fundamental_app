@@ -18,8 +18,15 @@ const MenuItems = () => {
 
       {/* Mobile Menu Button */}
       <div className="md:hidden">
-        <button onClick={() => setActive(true)} className="text-2xl">
-          ☰
+        <button onClick={() => setActive(true)} className="text-2xl flex flex-col gap-1">
+          {/* 1st line */}
+          <span className="block h-[2px] w-5 bg-black"></span>
+
+          {/* 2nd line (smallest) */}
+          <span className="block h-[2px] w-3 bg-black"></span>
+
+          {/* 3rd line (medium) */}
+          <span className="block h-[2px] w-4 bg-black"></span>
         </button>
       </div>
 

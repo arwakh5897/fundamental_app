@@ -6,7 +6,7 @@ const RightArrow = ({ scrollRef }) => {
   const handleClick = () => {
     if (!scrollRef?.current) return;
     const currentScrollValue = scrollRef.current;
-    const maxScroll = currentScrollValue.offsetWidth * 0.8;
+    const maxScroll = currentScrollValue.offsetWidth * 0.85;
 
     currentScrollValue.scrollBy({ left: maxScroll, behavior: "smooth" });
   };
