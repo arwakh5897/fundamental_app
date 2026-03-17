@@ -7,7 +7,7 @@ import Lenis from "lenis";
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1,
+      duration: 2,
       smooth: true,
     });
 

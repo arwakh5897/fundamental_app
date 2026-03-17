@@ -26,7 +26,7 @@ const MenuItems = () => {
       {/* Overlay */}
       {active && (
         <div
-          className="fixed inset-0 bg-black/40 z-40"
+          className="fixed inset-0 bg-black/40 z-50"
           onClick={() => setActive(false)}
         />
       )}
