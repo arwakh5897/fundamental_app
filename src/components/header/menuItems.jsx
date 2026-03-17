@@ -1,82 +1,71 @@
 import React, { useState } from "react";
 
 const MenuItems = () => {
-
   const [active, setActive] = useState(false);
-
-  const itemNames = [
-    "Shop All",
-    "Shop Bundles",
-    "By Concern",
-    "By Type",
-    "Accessories",
-    "MAKEUP",
-  ];
 
   return (
     <div className="font-medium">
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Button */}
       <div className="md:hidden">
-        <button onClick={() => setActive(true)} className="text-2xl flex flex-col gap-1">
-          {/* 1st line */}
-          <span className="block h-[2px] w-5 bg-black"></span>
-
-          {/* 2nd line (smallest) */}
-          <span className="block h-[2px] w-3 bg-black"></span>
-
-          {/* 3rd line (medium) */}
-          <span className="block h-[2px] w-4 bg-black"></span>
+        <button
+          onClick={() => setActive(true)}
+          className="flex flex-col gap-1"
+        >
+          <span className="h-[2px] w-5 bg-black"></span>
+          <span className="h-[2px] w-3 bg-black"></span>
+          <span className="h-[2px] w-4 bg-black"></span>
         </button>
       </div>
 
       {/* Overlay */}
       {active && (
         <div
-          className="fixed inset-0 bg-black/40 z-50"
+          className="fixed inset-0 bg-black/40 z-40"
           onClick={() => setActive(false)}
         />
       )}
 
       {/* Mobile Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-full w-64 bg-menu-buttons text-white z-50 p-6 transform transition-transform duration-1000 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-menu-buttons text-white z-50 p-6 transition-transform duration-500 ${
           active ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-
-        {/* Close Button */}
-        <button
-          className="text-3xl mb-6"
-          onClick={() => setActive(false)}
-        >
+        <button className="text-3xl mb-6" onClick={() => setActive(false)}>
           ×
         </button>
 
         <div className="space-y-4">
-          {itemNames.map((item, index) => (
-            <h1
-              key={index}
-              className="cursor-pointer hover:text-gray-300"
-            >
-              {item}
-              <p className="h-0.5 bg-white"></p>
-            </h1>
-          ))}
-        </div>
+          <a href="/shop-all" className="block">Shop All</a>
+                        <p className="h-0.5 bg-white"></p>
 
+          <a href="/bundles" className="block">Shop Bundles</a>
+                        <p className="h-0.5 bg-white"></p>
+
+          <a href="/concern" className="block">By Concern</a>
+                        <p className="h-0.5 bg-white"></p>
+
+          <a href="/type" className="block">By Type</a>
+                        <p className="h-0.5 bg-white"></p>
+
+          <a href="/accessories" className="block">Accessories</a>
+                        <p className="h-0.5 bg-white"></p>
+
+          <a href="/makeup" className="block">MAKEUP</a>
+                        <p className="h-0.5 bg-white"></p>
+
+        </div>
       </nav>
 
       {/* Desktop Menu */}
-      <nav className="hidden md:flex space-x-6">
-        {itemNames.map((item, index) => (
-          <h1
-            key={index}
-            className="cursor-pointer hover:text-gray-600"
-          >
-            {item}
-          </h1>
-        ))}
+      <nav className="hidden md:flex gap-6">
+        <a href="/shop-all">Shop All</a>
+        <a href="/bundles">Shop Bundles</a>
+        <a href="/concern">By Concern</a>
+        <a href="/type">By Type</a>
+        <a href="/accessories">Accessories</a>
+        <a href="/makeup">MAKEUP</a>
       </nav>
 
     </div>
