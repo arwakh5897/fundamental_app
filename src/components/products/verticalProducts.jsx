@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Card from "../card/verticalCard";
+import VerticalCard from "../card/verticalCard";
 
 const VerticalProducts = ({products})=>{
     return(
-      <div className="flex flex-wrap flex-row justify-center gap-8 p-4 overflow-x-auto">
+      <div className="flex flex-wrap flex-row justify-center gap-2 md:gap-8 p-4 overflow-x-auto">
         {products.map((item, index) => (
-              <Card
+              <VerticalCard
                 key={index}
                 title={item.name}
                 price={item.price}

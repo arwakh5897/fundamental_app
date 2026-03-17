@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
+const VerticalCard = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
 
   const discountedPrice = price - (price * discount) / 100;
   const [hover,setHover] = useState(false);
@@ -60,4 +60,4 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount = 50 }) => {
   );
 };
 
-export default Card;
+export default VerticalCard;
