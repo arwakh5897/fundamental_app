@@ -5,6 +5,7 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Ad from "./components/header/ad";
 import Menu from "./components/header/menu";
 import ProductsPage from "./pages/productsPage";
+import Footer from "./components/footer/footer";
 
 const App = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/pages/productsPage" element={<ProductsPage />} />
           </Routes>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

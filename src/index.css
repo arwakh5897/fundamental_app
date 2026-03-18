@@ -10,9 +10,7 @@
 .bg-menu-buttons {
   background-color: rgb(170, 134, 134);
 }
-.bg-menu-buttons-hover {
-  background-color: rgb(36, 6, 6);
-}
+
 .bg-background-card {
   background-color: rgb(245, 245, 245); /* Light mode default */
 }
