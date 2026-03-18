@@ -59,9 +59,7 @@ const Menu = () => {
         md:${show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
       `}
     >
-      <div className="md:order-1 order-2">
-        <Logo />
-      </div>
+      <a href="/" className="md:order-1 order-2"> <Logo/></a>
 
       <div className="order-1 md:order-2">
         <MenuItems />
