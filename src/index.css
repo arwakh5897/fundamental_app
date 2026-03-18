@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 /* Custom Theme Classes */
+body {
+  font-family: 'Poppins', sans-serif;
+}
 .bg-background {
   background-color: rgb(245, 245, 245); /* Light mode default */
 }
@@ -41,4 +44,26 @@
 .scrollbar-hide {
   -ms-overflow-style: none; 
   scrollbar-width: none;
+}
+/* marquee Swiper */
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+ 25% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(100%);
+  } 
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
 }

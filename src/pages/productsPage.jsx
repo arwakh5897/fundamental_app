@@ -20,7 +20,7 @@ const ProductsPage = () => {
             <Banner/>
             <h1 className="bg-menu-buttons md:text-2xl font-bold text-center py-2 md:py-4">BUNDLE</h1>
             <VerticalProducts products={visibleProducts}/>
-                <div className="py-2">
+                <div className="py-8">
                     <Pagination 
                         currentPage={currentPage}
                         totalPages={totalPages}

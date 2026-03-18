@@ -2,16 +2,11 @@ import React from "react";
 
 const Ad = () => {
   return (
-    <div className="py-1 flex">
-        <marquee>
-          <div className="flex gap-4 text-sm md:text-md font-medium">
-              <h1 >
-                FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500
-              </h1>
-              <a
-                href="#"
-                className="underline font-semibold hover:opacity-80 transition"
-              >
+    <div className="py-2 flex text-sm md:text-md font-medium">
+        <marquee behavior="scroll" direction="right" scrollamount="5">
+          <div className="flex gap-4">
+              <span>FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+              <a href="#" className="underline font-semibold hover:opacity-80 transition">
                 Shop now
               </a>
             </div>

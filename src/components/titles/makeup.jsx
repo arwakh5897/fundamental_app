@@ -23,7 +23,7 @@ const MakeUpTitle = () => {
           <img className="w-full" src="/assets/images/banner3.png"/>
 
           <Products products={visibleProducts}/>
-          <div className="py-2">
+          <div className="py-8">
           <Pagination 
             currentPage={currentPage}
             totalPages={totalPages}
