@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import Pagination from "../pagination/pagination";
 import Products from "../products/products";
+import { usePagination } from "../../hook/paginationHook";
 const MakeUpTitle = () => {
-   const [currentPage, setCurrentPage]= useState(1);
-
-    const allProducts = Array.from({ length: 20 }, (item, index) => ({
+  const itemsPerPage = 8;
+    const allItems = Array.from({ length: 15 }, (item, index) => ({
       id: index + 1,
       name: `MakeUp Product ${index + 1}` 
       }));
-    const productsPerPage = 8;
-    const totalPages = Math.ceil(allProducts.length / productsPerPage);
+    const {currentPage, totalPages,visibleProducts, loadMore}= usePagination({allItems,itemsPerPage})
 
-    const visibleProducts = allProducts.slice(0, currentPage * productsPerPage);
 
     return (
         <div>
@@ -19,17 +17,9 @@ const MakeUpTitle = () => {
                 MAKEUP  
                 <span className="font-bold mx-2">MUST-HAVES</span>
           </div>
-
           <img className="w-full" src="/assets/images/banner3.png"/>
-
           <Products products={visibleProducts}/>
-          <div className="py-8">
-          <Pagination 
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
-          </div>
+          {currentPage < totalPages && <Pagination loadMore={loadMore} />}
 
        </div>
   )

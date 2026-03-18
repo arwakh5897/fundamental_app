@@ -4,8 +4,13 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Ad from "./components/header/ad";
 import Menu from "./components/header/menu";
-import ProductsPage from "./pages/productsPage";
+import ProductsPage from "./pages/shop_all";
 import Footer from "./components/footer/footer";
+import ShopAll from "./pages/shop_all";
+import ByType from "./pages/by_type";
+import ByConcern from "./pages/by_Concern";
+import ByBundle from "./pages/by_bundle";
+
 
 const App = () => {
   useEffect(() => {
@@ -29,7 +34,11 @@ const App = () => {
         <Menu />
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/pages/productsPage" element={<ProductsPage />} />
+            <Route path="/pages/shop_all" element={<ShopAll />} />
+            <Route path="/pages/by_type" element={<ByType />} />
+            <Route path="/pages/by_concern" element={<ByConcern />} />
+            <Route path="/pages/by_bundle" element={<ByBundle />} />
+
           </Routes>
         <Footer/>
       </div>

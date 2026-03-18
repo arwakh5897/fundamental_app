@@ -34,22 +34,22 @@ const MenuItems = () => {
         </button>
 
         <nav className="space-y-4">
-          <a href="/shop-all" className="block border-b-2 border-white pb-2">Shop All</a>
-          <a href="/pages/productsPage" className="block border-b-2 border-white pb-2">Shop Bundles</a>
-          <a href="/concern" className="block border-b-2 border-white pb-2">By Concern</a>
-          <a href="/type" className="block border-b-2 border-white pb-2">By Type</a>
-          <a href="/accessories" className="block border-b-2 border-white pb-2">Accessories</a>
-          <a href="/makeup" className="block border-b-2 border-white pb-2">MAKEUP</a>
+          <a href="/pages/shop_all" className="block border-b-2 border-white pb-2">Shop All</a>
+          <a href="/pages/by_bundle" className="block border-b-2 border-white pb-2">Shop Bundles</a>
+          <a href="/pages/by_concern" className="block border-b-2 border-white pb-2">By Concern</a>
+          <a href="/pages/by_type" className="block border-b-2 border-white pb-2">By Type</a>
+          <a href="/pages/accessories" className="block border-b-2 border-white pb-2">Accessories</a>
+          <a href="/pages/makeup" className="block border-b-2 border-white pb-2">MAKEUP</a>
         </nav>
       </nav>
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6">
-        <a href="/shop-all">Shop All</a>
-        <a href="/pages/productsPage">Shop Bundles</a>
-        <a href="/concern">By Concern</a>
-        <a href="/type">By Type</a>
-        <a href="/accessories">Accessories</a>
+        <a href="/pages/shop_all">Shop All</a>
+        <a href="/pages/by_bundle">Shop Bundles</a>
+        <a href="/pages/by_concern">By Concern</a>
+        <a href="/pages/by_type">By Type</a>
+        <a href="/pages/accessories">Accessories</a>
         <a href="/makeup">MAKEUP</a>
       </nav>
 
