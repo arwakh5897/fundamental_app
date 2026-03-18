@@ -1,7 +1,7 @@
 import react,{use, useState} from "react";
 import Banner from "../components/banners/banner";
 import Pagination from "../components/pagination/pagination";
-import VerticalProducts from "../components/products/verticalProducts";
+import Products from "../components/products/products";
 import { usePagination } from "../hook/paginationHook";
 
 
@@ -17,7 +17,7 @@ const ByType = () => {
         <div>
             <img className="w-full" src="/assets/images/banner2.png"/>
             <h1 className="bg-menu-buttons md:text-2xl font-bold text-center py-2 md:py-4">TYPE</h1>
-            <VerticalProducts products={visibleProducts}/>
+            <Products products={visibleProducts}/>
             {currentPage < totalPages &&<Pagination loadMore={loadMore} />}
         </div>
     )
