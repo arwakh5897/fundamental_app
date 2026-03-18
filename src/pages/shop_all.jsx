@@ -16,7 +16,7 @@ const ShopAll = () => {
 
     return (
         <div>
-            <Banner/>
+            <img className="w-full" src="/assets/images/banner3.png"/>
             <Products products={visibleProducts}/>
             {currentPage < totalPages &&<Pagination loadMore={loadMore} />}
         </div>

@@ -15,7 +15,7 @@ const ByConcern = () => {
 
     return (
         <div>
-            <Banner/>
+            <img className="w-full" src="/assets/images/banner1.png"/>
             <h1 className="bg-menu-buttons md:text-2xl font-bold text-center py-2 md:py-4">CONCERN</h1>
             <VerticalProducts products={visibleProducts}/>
             {currentPage < totalPages &&<Pagination loadMore={loadMore} />}
