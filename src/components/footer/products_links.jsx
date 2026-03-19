@@ -5,9 +5,15 @@ const ProductsLinks = () => {
         <div className="text-lg">
              <h2 className="font-bold pb-4">Products Links</h2>
                 <div className="flex flex-col gap-1">
-                    <h2>All Products</h2>
-                    <h2>New Arrivals</h2>
-                    <h2>Best Sellers</h2>
+                    <a href="/pages/shop_all" className="hover:underline">
+                        All Products
+                    </a>
+                    <a href="/pages/new_arrivals" className="hover:underline">
+                        New Arrivals
+                    </a>
+                    <a href="/pages/best_sellers" className="hover:underline">
+                        Best Sellers
+                    </a>
                 </div>
         </div>
     );
