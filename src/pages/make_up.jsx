@@ -2,7 +2,7 @@ import react,{use, useState} from "react";
 import ProductsLayout from "../components/product_Layout/product_layout";
 
 
-const ByType = () => {
+const MakeUp = () => {
     const itemsPerPage = 8;
   const allItems = Array.from({ length: 12 }, (_, index) => ({
     id: index + 1,
@@ -23,4 +23,4 @@ const ByType = () => {
         </div>
     )
 }
-export default ByType;
+export default MakeUp;

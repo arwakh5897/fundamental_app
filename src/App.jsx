@@ -11,6 +11,7 @@ import ByType from "./pages/by_type";
 import ByConcern from "./pages/by_Concern";
 import ByBundle from "./pages/by_bundle";
 import Accessories from "./pages/accessories";
+import MakeUp from "./pages/make_up";
 
 const App = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/pages/by_concern" element={<ByConcern />} />
             <Route path="/pages/by_bundle" element={<ByBundle />} />
             <Route path="/pages/accessories" element={<Accessories />} />
+            <Route path="/pages/make_up" element={<MakeUp/>}/>
           </Routes>
         <Footer/>
       </div>

@@ -39,7 +39,7 @@ const MenuItems = () => {
           <a href="/pages/by_concern" className="block border-b-2 border-white pb-2">By Concern</a>
           <a href="/pages/by_type" className="block border-b-2 border-white pb-2">By Type</a>
           <a href="/pages/accessories" className="block border-b-2 border-white pb-2">Accessories</a>
-          <a href="/pages/makeup" className="block border-b-2 border-white pb-2">MAKEUP</a>
+          <a href="/pages/make_up" className="block border-b-2 border-white pb-2">MAKEUP</a>
         </nav>
       </nav>
 
@@ -50,7 +50,7 @@ const MenuItems = () => {
         <a href="/pages/by_concern">By Concern</a>
         <a href="/pages/by_type">By Type</a>
         <a href="/pages/accessories">Accessories</a>
-        <a href="/makeup">MAKEUP</a>
+        <a href="/pages/make_up">MAKEUP</a>
       </nav>
 
     </div>
