@@ -15,10 +15,10 @@ const Ad = () => {
               </a>
             </div>
         </SwiperSlide>
-                <SwiperSlide>
+        <SwiperSlide>
           <div className="flex gap-4 justify-center">
             <span>RAMADAN SALE - UP TO 50% OFF</span>
-            <a href="#" className="underline font-semibold hover:opacity-80 transition">
+            <a href="#ramadan" className="underline font-semibold hover:opacity-80 transition">
               Shop now
             </a>
           </div>
@@ -27,7 +27,7 @@ const Ad = () => {
         <SwiperSlide>
           <div className="flex gap-4 justify-center">
             <span>NEW ARRIVALS JUST DROPPED</span>
-            <a href="#" className="underline font-semibold hover:opacity-80 transition">
+            <a href="#new_arrival" className="underline font-semibold hover:opacity-80 transition">
               Explore
             </a>
           </div>
