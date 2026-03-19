@@ -10,7 +10,7 @@ const Ad = () => {
         <SwiperSlide >
           <div className="flex flex-row gap-4 justify-center">
               <span>FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
-              <a href="/pages/shop_all" className="underline font-semibold hover:opacity-80 transition">
+              <a href="#new_arrival" className="underline font-semibold hover:opacity-80 transition">
                 Shop now
               </a>
             </div>
