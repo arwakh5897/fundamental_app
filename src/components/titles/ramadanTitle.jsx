@@ -1,10 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect,useState } from "react";
 import Card from "../card/card";
 import LeftArrow from "../buttons/leftArrow";
 import RightArrow from "../buttons/rightArrow";
+import { fetchProducts } from "../../api/data";
 
 const RamadanTitle = () => {
   const scrollReference = useRef(null);
+  const [allItems, setProducts] = useState([]);
+     useEffect(()=>{
+      fetchProducts().then(setProducts)
+     },[]);
   return (
     <div id="ramadan">
       <div className="bg-menu-buttons md:text-4xl text-center py-2 md:py-4">
@@ -15,12 +20,17 @@ const RamadanTitle = () => {
         <LeftArrow scrollRef={scrollReference} />
           <div ref={scrollReference} 
           className="flex flex-row scrollbar-hide overflow-x-auto scroll-smooth md:gap-8 gap-4 py-4">
-            {Array.from({ length: 18 }).map((_, index) => (
+            {allItems.map((item, index) => (
               <div key={index} className="flex-shrink-0">
-              <Card
-                title={`Ramadan Product ${index + 1}`}
-                image={"/assets/images/banner1.png"}
-                price={4900 + index * 100}
+             <Card
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                price={item.price}
+                rating={item.rating.rate}
+                reviews={item.rating.count}
+                image={item.image}
+                discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
               />
               </div>
             ))}

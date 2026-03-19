@@ -1,18 +1,13 @@
-import React ,{useState} from "react";
-import Card from "../card/card";
+import React ,{useEffect,useState} from "react";
+import { fetchProducts } from "../../api/data";
 import Products from "../products/products";
-
 const Ance = () => {
-     const [currentPage, setCurrentPage]= useState(1);
-  
-      const allProducts = Array.from({ length: 20 }, (item, index) => ({
-        id: index + 1,
-        name: `MakeUp Product ${index + 1}` 
-        }));
-      const productsPerPage = 6;
-      const totalPages = Math.ceil(allProducts.length / productsPerPage);
-  
-      const visibleProducts = allProducts.slice(0, currentPage * productsPerPage);
+  const [allItems, setProducts] = useState([]);
+
+   useEffect(()=>{
+    fetchProducts().then(setProducts)
+   },[]);
+   const specificProducts = allItems.slice(0,8)
   
       return (
         <div>
@@ -21,7 +16,7 @@ const Ance = () => {
             <span className="font-bold mx-2">ESSENTIALS</span>
         </div>
                <img className="w-full"src="/assets/images/banner2.png"/>
-        <Products products={visibleProducts}/>
+          {  <Products products={specificProducts} />}
     </div>
     )
 }

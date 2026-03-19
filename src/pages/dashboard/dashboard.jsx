@@ -11,9 +11,9 @@ const Dashboard =()=>{
     <div>
        <Banner/>
        <div className="pt-0"><RamadanTitle/></div>
-       <div className="pt-4"><Ance /></div>
+     <div className="pt-4"><Ance /></div>
 
-       <MakeUpTitle/>
+         <MakeUpTitle/>
        <Concern/>
        <Brands/>
     </div>

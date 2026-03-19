@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, {useEffect , useState } from "react";
 import Pagination from "../pagination/pagination";
 import Products from "../products/products";
 import { usePagination } from "../../hook/paginationHook";
+import { fetchProducts } from "../../api/data";
 const MakeUpTitle = () => {
   const itemsPerPage = 8;
-    const allItems = Array.from({ length: 15 }, (item, index) => ({
-      id: index + 1,
-      name: `MakeUp Product ${index + 1}` 
-      }));
+  const [allItems, setProducts] = useState([]);
+
+   useEffect(()=>{
+    fetchProducts().then(setProducts)
+   },[]);
     const {currentPage, totalPages,visibleProducts, loadMore}= usePagination({allItems,itemsPerPage})
 
 
