@@ -1,29 +1,28 @@
 import { useState, useMemo } from "react";
 
-const useFilter = ({ allItems }) => {
+const useFilter = ({ allItems = [] }) => {
   const [sortType, setSortType] = useState("default");
 
   const sortedProducts = useMemo(() => {
-    return [...allItems].sort((a, b) => {
+    if (!Array.isArray(allItems)) return [];
+
+    // Remove invalid items
+    const validItems = allItems.filter(item => item && typeof item === "object");
+
+    return [...validItems].sort((a, b) => {
       switch (sortType) {
         case "a-z":
-          return a.name.localeCompare(b.name);
-
+          return (a.title || "").localeCompare(b.title || "");
         case "z-a":
-          return b.name.localeCompare(a.name);
-
+          return (b.title || "").localeCompare(a.title || "");
         case "price-low-high":
-          return a.price - b.price;
-
+          return (a.price || 0) - (b.price || 0);
         case "price-high-low":
-          return b.price - a.price;
-
-        case "date-old-new":
-          return new Date(a.Date) - new Date(b.Date);
-
-        case "date-new-old":
-          return new Date(b.Date) - new Date(a.Date);
-
+          return (b.price || 0) - (a.price || 0);
+        case "rating-high-low":
+          return (b.rating?.rate || 0) - (a.rating?.rate || 0);
+        case "discount-high-low":
+          return (b.discount || 0) - (a.discount || 0);
         default:
           return 0;
       }
