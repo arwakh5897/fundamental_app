@@ -14,19 +14,32 @@ import Accessories from "./pages/accessories";
 import MakeUp from "./pages/make_up";
 
 const App = () => {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 2,
-      smooth: true,
-    });
+useEffect(() => {
+  const lenis = new Lenis({
+    duration: 1.2,              // ← higher = more "floaty" / delayed stop (try 1.0–1.6)
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),  // very popular easing (expo-out like)
+    // easing: (t) => 1 - Math.pow(1 - t, 3),          // alternative: cubic-out, bit snappier
+    smoothWheel: true,
+    wheelMultiplier: 0.9,       // ← slightly slower mouse wheel feel (default 1)
+    smoothTouch: true,         // ← important: disable on mobile → prevents weird jitter / over-scroll
+    normalizeWheel: true,       // helps consistency across devices
+  });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  // Optional: listen to scroll events if you later add GSAP / parallax
+  // lenis.on('scroll', (e) => { console.log(e); });
 
+  function raf(time) {
+    lenis.raf(time);
     requestAnimationFrame(raf);
-  }, []);
+  }
+
+  requestAnimationFrame(raf);
+
+  // Cleanup (good practice)
+  return () => {
+    lenis.destroy();
+  };
+}, []);
 
   return (
     <BrowserRouter>
