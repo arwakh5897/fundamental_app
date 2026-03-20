@@ -12,6 +12,7 @@ const Products = ({products})=>{
                 price={item.price}
                 rating={item.rating.rate}
                 reviews={item.rating.count}
+                category={item.category}
                 image={item.image}
                 discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
               />

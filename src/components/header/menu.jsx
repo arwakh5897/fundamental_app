@@ -28,6 +28,7 @@ import MenuItems from "./menuItems";
 import SignIn from "./profile";
 import Cart from "./cart";
 import Logo from "./logo";
+import MoodHook from "../../hook/modeHook";
 
 const Menu = () => {
   const [show, setShow] = useState(true);
@@ -66,9 +67,7 @@ const Menu = () => {
       </div>
 
       <div className="order-3 flex gap-4">
-        <Mood />
-        <SignIn />
-        <Cart />
+       <MoodHook/>
       </div>
     </div>
   );
