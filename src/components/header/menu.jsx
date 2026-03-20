@@ -23,10 +23,7 @@
 // export default Menu;
 
 import React, { useEffect, useState } from "react";
-import Mood from "../mood/mood";
 import MenuItems from "./menuItems";
-import SignIn from "./profile";
-import Cart from "./cart";
 import Logo from "./logo";
 import MoodHook from "../../hook/modeHook";
 
@@ -54,7 +51,7 @@ const Menu = () => {
 
   return (
     <div
-      className={`sticky top-0 left-0 z-50 w-full flex bg-menu-buttons gap-4 md:p-4 py-1.5 px-4 
+      className={`sticky top-0 left-0 z-50 w-full flex bg-menu-buttons gap-4 md:p-3 py-1.5 px-4 
         md:justify-around justify-between items-center
         transition-all duration-500 ease-in-out
         md:${show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
