@@ -13,6 +13,7 @@ import ByBundle from "./pages/by_bundle";
 import Accessories from "./pages/accessories";
 import MakeUp from "./pages/make_up";
 import { LoaderProvider } from "./context/loaderContext";
+import Loader from "./components/loader/loader";
 
 const App = () => {
 useEffect(() => {
@@ -44,6 +45,7 @@ useEffect(() => {
 
   return (
     <LoaderProvider>
+      <Loader/>
     <BrowserRouter>
       <div className="text-foreground bg-background">
         <Ad />

@@ -7,7 +7,7 @@ const ShopAll = () => {
   const [allItems, setProducts] = useState([]);
 
    useEffect(()=>{
-    fetchProducts().then(setProducts)
+    fetchProducts({}).then(setProducts)
    },[]);
   // const allItems = Array.from({ length: 80 }, (_, index) => ({
   //   id: index + 1,
