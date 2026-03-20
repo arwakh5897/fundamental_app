@@ -4,7 +4,7 @@ const MenuItems = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="font-bold">
+    <div className="font-medium md:font-bold">
 
       {/* Mobile Button */}
       <div className="md:hidden">

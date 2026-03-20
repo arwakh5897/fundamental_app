@@ -1,8 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useLoader } from "../../context/loaderContext";
+import FilterTrigger from "./filterComponents/filterTrigger";
+import FilterDropdown from "./filterComponents/filterDropdown";
 
 const FilterUI = ({ sortType, setSortType }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
+  const { showLoader, hideLoader } = useLoader();
 
   const buttons = [
     { label: "Default", value: "default" },
@@ -23,49 +27,35 @@ const FilterUI = ({ sortType, setSortType }) => {
         setOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () =>
       document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleSortClick = async (value) => {
+    showLoader();
+    setOpen(false);
+
+    await new Promise((resolve) => setTimeout(resolve, 500)); // smoother UX
+
+    setSortType(value);
+    hideLoader();
+  };
+
   return (
     <div ref={ref} className="relative w-fit text-xs md:text-sm">
-      {/* TOP */}
-      <div className="flex justify-end">
-        <div
-            onClick={() => setOpen(!open)}
-            className="flex justify-between items-center gap-6 py-1 border-b  border-gray-500 cursor-pointer"
-        >
-            <span>{activeLabel}</span>
+      <FilterTrigger
+        activeLabel={activeLabel}
+        open={open}
+        setOpen={setOpen}
+      />
 
-            <img
-            className="w-4 h-4"
-            src="/assets/icons/arrow-down.png"
-            alt="arrow"
-            />
-        </div>
-     </div>
-      {/* DROPDOWN */}
       {open && (
-        <div className="absolute right-0 mt-2 bg-white shadow-md rounded-xs text-xs md:text-sm border border-gray-500 p-2 w-40 md:w-48 z-10">
-          {buttons.map((button) => (
-            <button
-              key={button.value}
-              onClick={() => {
-                setSortType(button.value);
-                setOpen(false);
-              }}
-              className={`flex w-full items-center px-0 py-1.5 rounded ${
-                sortType === button.value
-                  ? "text-red-500 font-semibold"
-                  : "hover:bg-gray-100"
-              }`}
-            >
-              {button.label}
-            </button>
-          ))}
-        </div>
+        <FilterDropdown
+          buttons={buttons}
+          sortType={sortType}
+          onSelect={handleSortClick}
+        />
       )}
     </div>
   );
