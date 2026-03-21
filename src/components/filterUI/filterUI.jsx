@@ -16,6 +16,7 @@ const FilterUI = ({ sortType, setSortType }) => {
     { label: "Price: High to Low", value: "price-high-low" },
     { label: "Date: Old to New", value: "date-old-new" },
     { label: "Date: New to Old", value: "date-new-old" },
+   { label: "Discount: High to Low", value: "discount-high-low" },
   ];
 
   const activeLabel =
