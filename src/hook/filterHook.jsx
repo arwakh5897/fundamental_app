@@ -16,7 +16,7 @@ const useFilter = ({ allItems = [] }) => {
         case "z-a":
           return (b.title || "").localeCompare(a.title || "");
         case "price-low-high":
-          return (a.discountedPrice || 0) - (b.discountedPrice || 0);
+          return (a.price || 0) - (b.price || 0);
         case "price-high-low":
           return (b.price || 0) - (a.price || 0);
         case "rating-high-low":
