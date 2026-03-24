@@ -5,7 +5,7 @@ import CartView from "../components/addToCart/cart_view";
 const AddToCart = () => {
   return (
     <div className="flex flex-col md:flex-row gap-6 md:p-2">
-      <a href> Home</a>
+     
       {/* Left Side - Images */}
       <div className="w-full md:w-1/2">
         <Images />
