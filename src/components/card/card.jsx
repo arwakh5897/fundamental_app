@@ -22,7 +22,7 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount=50, stock=10 
         <CardTitle title={title} />
         <CardRating rating={rating} />
         <CardPrice price={price} discount={discount} discountedPrice={discountedPrice} />
-        <CardButton disabled={stock===0}/>
+        <CardButton disabled={stock===0} />
       </div>
     </div>
   );
