@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import DropDownButton from "../../buttons/dropdownButton";
 
 const Size = () => {
+    const sizes = [
+    24,26,28,30,32,34
+  ]
+
   return (
     <div className="space-y-4">
-      {/* Size */}
-      <div className="flex items-center gap-18">
-        <h4 className="text-sm font-medium">Size</h4>
-
-        <button className="flex items-center justify-between w-full border-1 border-gray-400 px-3 py-2">
-          <span>38</span>
-          <img
-            className="w-4 h-4"
-            src="/assets/icons/arrow-down.png"
-            alt=""
-          />
-        </button>
+      {/* Color */}
+      <div className="flex items-center">
+        <h4 className="w-24 text-sm font-medium">Size</h4>
+        <DropDownButton buttons={sizes} title={"Select Size"}/>
       </div>
-    </div>
+      </div>
   );
 };
 

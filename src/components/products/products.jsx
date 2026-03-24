@@ -15,6 +15,7 @@ const Products = ({products})=>{
                 category={item.category}
                 image={item.image}
                 discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
+
               />
             ))}
       </div>

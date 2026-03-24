@@ -1,20 +1,18 @@
 import React from "react";
+import DropDownButton from "../../buttons/dropdownButton";
 
 const Color = () => {
+  const Colors = [
+      "Brown",
+      "Blue",
+      "Red",
+  ]
   return (
     <div className="space-y-4">
       {/* Color */}
-      <div className="flex items-center gap-16">
-        <h4 className="text-sm font-medium">color</h4>
-
-        <button className="flex items-center justify-between w-full border-1 border-gray-400 px-3 py-2">
-          <span>brown</span>
-          <img
-            className="w-4 h-4"
-            src="/assets/icons/arrow-down.png"
-            alt=""
-          />
-        </button>
+      <div className="flex items-center">
+        <h4 className="w-24 text-sm font-medium">Color</h4>
+        <DropDownButton buttons={Colors} title={"Select Color"}/>
       </div>
 
     </div>

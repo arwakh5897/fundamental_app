@@ -12,10 +12,9 @@ const AddToCart = () => {
       </div>
 
       {/* Right Side - Cart Details */}
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 px-2">
         <CartView />
       </div>
-
     </div>
   );
 };

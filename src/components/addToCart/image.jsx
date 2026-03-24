@@ -13,7 +13,7 @@ const Images = () => {
             <div className="w-full aspect-auto md:aspect-[4/3]">
                 <img className="w-full h-full object-cover" src={activeImage} alt="" />
             </div>
-            <div className="flex py-6 gap-2 overflow-auto scrollbar-hide"> 
+            <div className="flex py-6 px-2 gap-2 overflow-auto scrollbar-hide"> 
                 {images.map((item,index)=>(
                   <img
                   key={index}

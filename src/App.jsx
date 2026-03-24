@@ -16,7 +16,7 @@ import { LoaderProvider } from "./context/loaderContext";
 import Loader from "./components/loader/loader";
 import AddToCart from "./pages/add_to_cart";
 import RouteLoader from "./context/navigationLoader";
-import Banner from "./components/banners/banner";
+import ConditionalBanner from "./layout/conditionalBanner";
 
 const App = () => {
 useEffect(() => {
@@ -50,11 +50,12 @@ useEffect(() => {
     <LoaderProvider>
       <Loader/>
     <BrowserRouter>
-    <RouteLoader/>
+    {/* <RouteLoader/> */}
       <div className="text-foreground bg-background">
         <Ad />
         <Menu />
-        <Banner/>
+        <
+          ConditionalBanner/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/pages/shop_all" element={<ShopAll />} />

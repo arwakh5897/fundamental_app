@@ -4,6 +4,8 @@ import CartPrice from "./cartComponents/price";
 import CartDescription from "./cartComponents/description";
 import Size from "./cartComponents/size";
 import Color from "./cartComponents/color";
+import AddButton from "./cartComponents/addButton";
+import CartBuyButton from "./cartComponents/buyButton";
 
 const CartView = () => {
   return (
@@ -27,10 +29,16 @@ const CartView = () => {
       <Size/>
       <Color/>
 
+       <div className="flex flex-col gap-4 mt-4 md:sticky md:bottom-0 p-4 border-t border-gray-200">
+        <AddButton className="flex-1" />
+        <CartBuyButton className="flex-1" />
+      </div>
+
       {/* Add to Cart Button (optional) */}
       {/* <CardButton /> */}
 
     </div>
+    
   );
 };
 

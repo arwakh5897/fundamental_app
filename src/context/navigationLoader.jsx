@@ -8,10 +8,11 @@ const RouteLoader = ()=>{
 
    useEffect(()=>{
     showLoader();
-
+   
     const timer = setTimeout(() => {
+
       hideLoader();
-    }, 2000);
+    }, 1000);
     return()=> clearTimeout(timer);
    },[location]);
    
