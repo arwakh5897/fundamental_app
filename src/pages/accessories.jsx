@@ -12,7 +12,6 @@ const Accessories = () => {
    },[]);
     return (
         <div>
-            <img className="w-full" src="/assets/images/banner3.png"/>
             <h1 className="bg-menu-buttons md:text-2xl font-bold text-center py-2 md:py-4">ACCESSORIES</h1>
             <ProductsLayout allItems={allItems} title="Accessories" itemsPerPage={itemsPerPage} />
         </div>

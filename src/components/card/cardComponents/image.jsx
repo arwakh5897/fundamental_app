@@ -4,7 +4,7 @@ const CardImage = ({ image, title }) => {
       const [hover,setHover] = useState(false);
     
     return (
-              <div className="w-full md:h-64 h-24    ">
+      <div className="w-full md:h-64 h-24">
         <img
           src={image || (hover ? "/assets/images/banner1.png" : "/assets/images/banner2.png")}
           onMouseEnter={()=>setHover(true)}

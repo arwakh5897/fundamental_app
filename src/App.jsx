@@ -14,11 +14,14 @@ import Accessories from "./pages/accessories";
 import MakeUp from "./pages/make_up";
 import { LoaderProvider } from "./context/loaderContext";
 import Loader from "./components/loader/loader";
+import AddToCart from "./pages/add_to_cart";
+import RouteLoader from "./context/navigationLoader";
+import Banner from "./components/banners/banner";
 
 const App = () => {
 useEffect(() => {
   const lenis = new Lenis({
-    duration: 1.2,              // ← higher = more "floaty" / delayed stop (try 1.0–1.6)
+    duration: 1.2,          
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),  // very popular easing (expo-out like)
     // easing: (t) => 1 - Math.pow(1 - t, 3),          // alternative: cubic-out, bit snappier
     smoothWheel: true,
@@ -47,9 +50,12 @@ useEffect(() => {
     <LoaderProvider>
       <Loader/>
     <BrowserRouter>
+    <RouteLoader/>
       <div className="text-foreground bg-background">
         <Ad />
         <Menu />
+        <Banner/>
+         <div className="px-4">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/pages/shop_all" element={<ShopAll />} />
@@ -58,7 +64,9 @@ useEffect(() => {
             <Route path="/pages/by_bundle" element={<ByBundle />} />
             <Route path="/pages/accessories" element={<Accessories />} />
             <Route path="/pages/make_up" element={<MakeUp/>}/>
+            <Route path="/pages/add_to_cart" element={<AddToCart/>}/>
           </Routes>
+          </div>
         <Footer/>
       </div>
     </BrowserRouter>

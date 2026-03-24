@@ -22,7 +22,6 @@ const ShopAll = () => {
 
   return (
         <div>
-            <img className="w-full" src="/assets/images/banner3.png"/>
             <ProductsLayout title="All Products" allItems={allItems} itemsPerPage={itemsPerPage} />
         </div>
 

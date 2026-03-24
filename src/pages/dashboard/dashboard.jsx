@@ -9,7 +9,6 @@ import Brands from "../../components/brands/brands";
 const Dashboard =()=>{
     return(
     <div>
-       <Banner/>
        <div className="pt-0"><RamadanTitle/></div>
      <div className="pt-4"><Ance /></div>
 

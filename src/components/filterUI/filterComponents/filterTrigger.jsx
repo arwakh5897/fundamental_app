@@ -10,9 +10,7 @@ const FilterTrigger = ({ activeLabel, open, setOpen }) => {
         <span>{activeLabel}</span>
 
         <img
-          className={`w-4 h-4 transition-transform ${
-            open ? "rotate-180" : ""
-          }`}
+          className="w-4 h-4"
           src="/assets/icons/arrow-down.png"
           alt="arrow"
         />

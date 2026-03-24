@@ -1,10 +1,21 @@
 import React from "react";
+import Images from "../components/addToCart/image";
+import CartView from "../components/addToCart/cart_view";
 
 const AddToCart = () => {
   return (
-    <div className="absolute bg-menu-buttons">
-        <h2 className="text-white text-lg font-bold p-2">Added to Cart</h2>
-        
+    <div className="flex flex-col md:flex-row gap-6 md:p-2">
+      
+      {/* Left Side - Images */}
+      <div className="w-full md:w-1/2">
+        <Images />
+      </div>
+
+      {/* Right Side - Cart Details */}
+      <div className="w-full md:w-1/2">
+        <CartView />
+      </div>
+
     </div>
   );
 };

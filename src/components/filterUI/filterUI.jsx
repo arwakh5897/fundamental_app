@@ -36,7 +36,7 @@ const FilterUI = ({ sortType, setSortType }) => {
     showLoader();
     setOpen(false);
 
-    await new Promise((resolve) => setTimeout(resolve, 500)); // smoother UX
+    await new Promise((resolve) => setTimeout(resolve, 2000)); // smoother UX
 
     setSortType(value);
     hideLoader();

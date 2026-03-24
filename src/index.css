@@ -41,7 +41,9 @@ body {
 .text-foreground {
   color: rgba(15, 23, 42, 0.753); /* Light mode default */
 }
-
+.bg-line {
+ background-color: rgb(200,200,200); 
+}
 /* Dark Mode */
 .dark .bg-background {
   background-color: rgba(1, 14, 43, 0.623);
