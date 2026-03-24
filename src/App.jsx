@@ -55,7 +55,6 @@ useEffect(() => {
         <Ad />
         <Menu />
         <Banner/>
-         <div className="px-4">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/pages/shop_all" element={<ShopAll />} />
@@ -66,7 +65,7 @@ useEffect(() => {
             <Route path="/pages/make_up" element={<MakeUp/>}/>
             <Route path="/pages/add_to_cart" element={<AddToCart/>}/>
           </Routes>
-          </div>
+          
         <Footer/>
       </div>
     </BrowserRouter>
