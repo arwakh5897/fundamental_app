@@ -18,7 +18,7 @@ const Images = () => {
                   <img
                   key={index}
                   onClick={()=>setActiveImage(item)}
-                  className="w-12 h-12 md:w-28 md:h-28 object-cover"
+                  className="w-16 h-16 md:w-28 md:h-28 object-cover"
                   src={item}
                   alt="image"
                    />
