@@ -10,7 +10,7 @@ const Images = () => {
   const [activeImage, setActiveImage] = useState(images[0]);
       return(
         <div className="w-full">
-            <div className="w-full p-4 aspect-auto md:aspect-[4/3]">
+            <div className="w-full p-4 md:p-0 aspect-auto md:aspect-[4/3]">
                 <img className="w-full h-full object-cover" src={activeImage} alt="" />
             </div>
             <div className="flex py-6 px-2 gap-2 overflow-auto scrollbar-hide"> 
