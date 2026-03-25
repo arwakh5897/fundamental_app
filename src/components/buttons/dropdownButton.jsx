@@ -23,7 +23,7 @@ const DropDownButton = ({ buttons, title }) => {
   return (
     <div
       ref={dropdownRef}
-      className="relative h-auto flex flex-col items-center w-full border border-gray-400 px-3 py-2"
+      className="relative h-auto flex flex-col items-center w-full border border-color px-3 py-2"
     >
       <button
         className="flex w-full justify-between"
@@ -38,7 +38,7 @@ const DropDownButton = ({ buttons, title }) => {
       </button>
 
       {open && (
-        <ul className="absolute left-0 mt-8 overflow-y-auto scrollbar-hide w-full border border-gray-400 bg-white z-10">
+        <ul className="absolute left-0 mt-8 overflow-y-auto scrollbar-hide w-full border-color bg-white z-10">
           {buttons.map((item, index) => (
             <li
               key={index}

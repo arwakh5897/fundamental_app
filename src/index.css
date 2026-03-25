@@ -47,6 +47,9 @@ body {
 .text-highlighted {
   color: rgb(248, 113, 113);
 }
+.border-color {
+  border: 1px solid rgb(156, 163, 175);
+}
 
 /* Dark Mode */
 .dark .bg-background {

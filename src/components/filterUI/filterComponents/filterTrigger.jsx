@@ -5,7 +5,7 @@ const FilterTrigger = ({ activeLabel, open, setOpen }) => {
     <div className="flex justify-end">
       <div
         onClick={() => setOpen(!open)}
-        className="flex justify-between items-center gap-6 py-1 border-b border-gray-500 cursor-pointer"
+        className="flex justify-between items-center gap-6 py-1 border-b border-color cursor-pointer"
       >
         <span>{activeLabel}</span>
 

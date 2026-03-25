@@ -14,7 +14,7 @@ const AddButton = ({ onAdd }) => {
     <div className="flex items-center gap-2 md:gap-4 mt-4">
       
       {/* Quantity Selector */}
-      <div className="flex items-center border border-gray-300 rounded overflow-hidden">
+      <div className="flex items-center border-color rounded overflow-hidden">
         <button
           onClick={decrement}
           className="px-3 py-1  hover:bg-gray-200 transition"

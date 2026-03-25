@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Mood from "../components/mood/mood";
 import Cart from "../components/header/cart";
 import SignIn from "../components/header/profile";
-import SearchBar from "../components/header/search_bar";
+import SearchBar from "../components/search/search_bar";
 export default function ModeHook() {
   const [isDark, setIsDark] = useState(false);
 
@@ -22,7 +22,7 @@ export default function ModeHook() {
     >
             <Mood darkLight={isDark}/>          
     </button>
-            {/* <SearchBar /> */}
+            <SearchBar darkLight={isDark}/>
             <SignIn darkLight={isDark}/>
             <Cart darkLight={isDark}/>
     </div>

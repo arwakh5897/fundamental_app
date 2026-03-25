@@ -7,6 +7,7 @@ import Color from "./cartComponents/color";
 import AddButton from "./cartComponents/addButton";
 import CartBuyButton from "./cartComponents/buyButton";
 import { useLocation } from "react-router-dom";
+import Divider from "../divider/divider";
 
 const CartView = () => {
   const {state} = useLocation();
@@ -21,9 +22,7 @@ const CartView = () => {
       <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>
 
       {/* Divider */}
-      <div className="pt-6">      
-        <span className="block h-[1px] w-full bg-line"></span>
-     </div>
+       <Divider className="py-6"/>
 
       {/* Description */}
       <CartDescription description={products?.description}/>
@@ -32,9 +31,10 @@ const CartView = () => {
       <Size/>
       <Color/>
 
-       <div className="flex flex-col gap-4 py-4 md:sticky md:bottom-0 border-t border-gray-200">
-        <AddButton className="flex-1" />
-        <CartBuyButton className="flex-1" />
+       <div className="flex flex-col gap-4 py-4 md:py-0 md:sticky md:bottom-0">
+        <Divider className="py-6" />
+        <AddButton  />
+        <CartBuyButton  />
       </div>
 
       {/* Add to Cart Button (optional) */}
