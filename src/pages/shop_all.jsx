@@ -1,39 +1,33 @@
 import React,{useState,useEffect} from "react";
 import ProductsLayout from "../components/product_Layout/product_layout";
 import { fetchProducts } from "../api/data";
+import { useSearchParams } from "react-router-dom";
 
 const ShopAll = () => {
+  const [searchParams] = useSearchParams();
   const itemsPerPage = 16;
   const [allItems, setProducts] = useState([]);
 
+  const searchQuery = searchParams.get("search") ||"";
    useEffect(()=>{
     fetchProducts({}).then(setProducts)
    },[]);
-  // const allItems = Array.from({ length: 80 }, (_, index) => ({
-  //   id: index + 1,
-  //   name: `MakeUp Product ${index + 1}`,
-  //   price: Math.floor(Math.random() * 2500) + 1,
-  //   discount: Math.floor(Math.random() * 30) + 1,
-  //   Date: new Date(
-  //     Date.now() -
-  //       Math.floor(Math.random() * 30) * 24 * 60 * 60 * 1000
-  //   ),
-  // }));
 
-//   Loader for api 
-//   const {showLoader , hideLoader} = useLoader();
-
-//    useEffect(()=>{
-//     const loadData = async()=>{
-//         const data = await fetchProducts({ showLoader , hideLoader});
-//         setProducts(data);
-//     }
-//     loadData();
-//    },[]);
+  const filteredItems = allItems.filter((item)=>
+  item.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
         <div>
-            <ProductsLayout title="All Products" allItems={allItems} itemsPerPage={itemsPerPage} />
+            <ProductsLayout title="All Products" allItems={filteredItems} itemsPerPage={itemsPerPage} />
+                  {/* No results */}
+            {filteredItems.length === 0 && (
+              <div className="flex flex-col justify-center items-center py-20 text-center">
+                <p className="text-2xl md:text-3xl font-semibold text-gray-500">
+                  No products found
+                </p>
+              </div>           
+            )}
         </div>
 
 )
