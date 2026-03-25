@@ -32,7 +32,7 @@ const CartView = () => {
       <Size/>
       <Color/>
 
-       <div className="flex flex-col gap-4 mt-4 md:sticky md:bottom-0 py-8 border-t border-gray-200">
+       <div className="flex flex-col gap-4 py-4 md:sticky md:bottom-0 border-t border-gray-200">
         <AddButton className="flex-1" />
         <CartBuyButton className="flex-1" />
       </div>

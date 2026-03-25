@@ -50,8 +50,8 @@ useEffect(() => {
     <LoaderProvider>
       <Loader/>
     <BrowserRouter>
-    {/* <RouteLoader/> */}
-      <div className="text-foreground bg-background">
+     <RouteLoader/>
+      <div className="text-foreground md:bg-background">
         <Ad />
         <Menu />
         <
