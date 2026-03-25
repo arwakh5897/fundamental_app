@@ -19,7 +19,7 @@ const SearchTopUp = ({ handleClick }) => {
     handleClick();
   }
   return (
-    <div className="absolute z-50 top-12 right-0 w-80 md:w-[420px] bg-menu-buttons shadow-xl rounded-xl p-4 border border-gray-200">      
+    <div className="absolute z-50 top-12 right-0 w-64 md:w-[420px] bg-menu-buttons shadow-xl rounded-xl p-4 border border-gray-200">      
       {/* Header */}
       <SearchTitle handleClick={handleClick}/>
 
