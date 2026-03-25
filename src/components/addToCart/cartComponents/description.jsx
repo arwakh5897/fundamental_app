@@ -3,7 +3,7 @@ import React from "react";
 const CartDescription =({description})=>{
     return(
         <div>
-          <h6>{description}</h6>
+          <p className="text-sm">{description}</p>
         </div>
     )
 }

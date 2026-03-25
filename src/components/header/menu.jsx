@@ -25,7 +25,7 @@
 import React, { useEffect, useState } from "react";
 import MenuItems from "./menuItems";
 import Logo from "./logo";
-import MoodHook from "../../hook/modeHook";
+import ModeHook from "../../hook/modeHook";
 
 const Menu = () => {
   const [show, setShow] = useState(true);
@@ -64,7 +64,7 @@ const Menu = () => {
       </div>
 
       <div className="order-3 flex gap-4">
-       <MoodHook/>
+       <ModeHook/>
       </div>
     </div>
   );
