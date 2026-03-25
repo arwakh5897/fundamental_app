@@ -6,7 +6,7 @@ const SearchSuggestions =()=>{
         <p className="text-xs  mb-2">Recent Searches</p>
         <div className="flex flex-wrap gap-2">
           <span className="text-xs bg-background px-2 py-1 rounded-md cursor-pointer">
-            Shoes
+            Shoes 
           </span>
           <span className="text-xs bg-background px-2 py-1 rounded-md cursor-pointer ">
             Shirts
