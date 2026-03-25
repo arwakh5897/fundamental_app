@@ -9,9 +9,10 @@ const Products = ({products})=>{
                 key={item.id}
                 id={item.id}
                 title={item.title}
+                description={item.description}
                 price={item.price}
                 rating={item.rating.rate}
-                reviews={item.rating.count}
+                stock={item.rating.count}
                 category={item.category}
                 image={item.image}
                 discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%

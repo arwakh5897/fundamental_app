@@ -10,6 +10,8 @@ const ByBundle = () => {
     fetchProducts().then(setProducts)
    },[]);
 
+
+
     return (
         <div>
             <h1 className="bg-menu-buttons md:text-2xl font-bold text-center py-2 md:py-4">BUNDLE</h1>

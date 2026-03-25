@@ -7,14 +7,21 @@ const RouteLoader = ()=>{
    const {showLoader, hideLoader} = useLoader();
 
    useEffect(()=>{
+    const handleRouteChange = async()=>{
+      showLoader();
+
+      await new Promise((item)=>setTimeout(item,1500));
+      hideLoader();
+    };
+    handleRouteChange();
     showLoader();
    
-    const timer = setTimeout(() => {
+    // const timer = setTimeout(() => {
 
-      hideLoader();
-    }, 1000);
-    return()=> clearTimeout(timer);
-   },[location]);
+    //   hideLoader();
+    // }, 1000);
+    // return()=> clearTimeout(timer);
+   },[location.pathname]);
    
    return null;
 }

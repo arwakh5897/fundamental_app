@@ -7,7 +7,7 @@ import CardPrice from "./cardComponents/price";
 import CardButton from "./cardComponents/button";
 import CardStock from "./cardComponents/stock";
 
-const Card = ({ image, title, rating = 4.5, price = 4900, discount=50, stock=10 }) => {
+const Card = ({ image, title,description, rating = 4.5, price = 4900, discount=50, stock=10 }) => {
  const discountedPrice = price - (price * discount) / 100;
   return (
     <div className="bg-background-card w-36 md:w-72 shadow-sm overflow-hidden hover:cursor-pointer flex flex-col rounded-xl relative">
@@ -22,8 +22,10 @@ const Card = ({ image, title, rating = 4.5, price = 4900, discount=50, stock=10 
         <CardTitle title={title} />
         <CardRating rating={rating} />
         <CardPrice price={price} discount={discount} discountedPrice={discountedPrice} />
-        <CardButton disabled={stock===0} />
-      </div>
+        <CardButton 
+          disabled={stock === 0} 
+          productData={{ image, title,description, rating, price, discount,discountedPrice, stock }} 
+        />      </div>
     </div>
   );
 };

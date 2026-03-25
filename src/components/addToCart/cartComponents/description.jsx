@@ -1,9 +1,9 @@
 import React from "react";
 
-const CartDescription =()=>{
+const CartDescription =({description})=>{
     return(
         <div>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium minima dignissimos dolores quo! Dolor harum vel dolore, sint nulla optio possimus nostrum rem deleniti, libero a saepe magnam fuga?</h3>
+          <h6>{description}</h6>
         </div>
     )
 }

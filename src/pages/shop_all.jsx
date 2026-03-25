@@ -20,6 +20,17 @@ const ShopAll = () => {
   //   ),
   // }));
 
+//   Loader for api 
+//   const {showLoader , hideLoader} = useLoader();
+
+//    useEffect(()=>{
+//     const loadData = async()=>{
+//         const data = await fetchProducts({ showLoader , hideLoader});
+//         setProducts(data);
+//     }
+//     loadData();
+//    },[]);
+
   return (
         <div>
             <ProductsLayout title="All Products" allItems={allItems} itemsPerPage={itemsPerPage} />

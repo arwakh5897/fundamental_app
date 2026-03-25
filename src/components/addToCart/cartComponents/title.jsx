@@ -1,8 +1,8 @@
 import React from "react";
 
-const CartTitle = ()=>{
+const CartTitle = ({title})=>{
     return(
-        <h1 className="text-black text-2xl">Add to Cart</h1>
+        <h1 className="text-black text-2xl">{title}</h1>
     )
 }
 export default CartTitle;

@@ -21,7 +21,7 @@ const AddButton = ({ onAdd }) => {
         >
           -
         </button>
-        <span className="px-2 py-1 min-w-[24px] text-center">{quantity}</span>
+        <span className="w-8 py-1 min-w-[24px] text-center">{quantity}</span>
         <button
           onClick={increment}
           className="px-3 py-1  hover:bg-gray-200 transition"
