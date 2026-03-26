@@ -1,50 +1,31 @@
 import React, { useEffect } from "react";
-import Lenis from "lenis";
+import useLenis from "./hook/lenisHook";
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Ad from "./components/header/ad";
 import Menu from "./components/header/menu";
-import ProductsPage from "./pages/shop_all";
 import Footer from "./components/footer/footer";
-import ShopAll from "./pages/shop_all";
-import ByType from "./pages/by_type";
-import ByConcern from "./pages/by_Concern";
-import ByBundle from "./pages/by_bundle";
-import Accessories from "./pages/accessories";
-import MakeUp from "./pages/make_up";
+import ShopAll from "./pages/dashboard/shop_all";
+import ByType from "./pages/dashboard/by_type";
+import ByConcern from "./pages/dashboard/by_Concern";
+import ByBundle from "./pages/dashboard/by_bundle";
+import Accessories from "./pages/dashboard/accessories";
+import MakeUp from "./pages/dashboard/make_up";
 import { LoaderProvider } from "./context/loaderContext";
 import Loader from "./components/loader/loader";
-import AddToCart from "./pages/add_to_cart";
+import AddToCart from "./pages/dashboard/add_to_cart";
 import RouteLoader from "./context/navigationLoader";
 import ConditionalBanner from "./layout/conditionalBanner";
 
+import OurStory from "./pages/footer_pages/about_us/our_story";
+import Sustainability from "./pages/footer_pages/about_us/sustainability";
+import OurPhilosophy from "./pages/footer_pages/about_us/our_philosophy";
+import ContactUs from "./pages/footer_pages/customer_care/contact_us";
+import FAQ from "./pages/footer_pages/customer_care/faqs";
+import RefundPolicy from "./pages/footer_pages/customer_care/refund_policy";
+
 const App = () => {
-useEffect(() => {
-  const lenis = new Lenis({
-    duration: 1.2,          
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),  // very popular easing (expo-out like)
-    // easing: (t) => 1 - Math.pow(1 - t, 3),          // alternative: cubic-out, bit snappier
-    smoothWheel: true,
-    wheelMultiplier: 0.9,       // ← slightly slower mouse wheel feel (default 1)
-    smoothTouch: true,         // ← important: disable on mobile → prevents weird jitter / over-scroll
-    normalizeWheel: true,       // helps consistency across devices
-  });
-
-  // Optional: listen to scroll events if you later add GSAP / parallax
-  // lenis.on('scroll', (e) => { console.log(e); });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-
-  // Cleanup (good practice)
-  return () => {
-    lenis.destroy();
-  };
-}, []);
+  useLenis();
 
   return (
     <LoaderProvider>
@@ -58,6 +39,8 @@ useEffect(() => {
           ConditionalBanner/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
+
+                                  {/*  Header Routes  */}
             <Route path="/pages/shop_all" element={<ShopAll />} />
             <Route path="/pages/by_type" element={<ByType />} />
             <Route path="/pages/by_concern" element={<ByConcern />} />
@@ -65,6 +48,15 @@ useEffect(() => {
             <Route path="/pages/accessories" element={<Accessories />} />
             <Route path="/pages/make_up" element={<MakeUp/>}/>
             <Route path="/pages/add_to_cart" element={<AddToCart/>}/>
+
+                                  {/*  Footer Routes  */}
+            <Route path="/our-story" element={<OurStory />} />
+            <Route path="/sustainability" element={<Sustainability />} />
+            <Route path="/philosophy" element={<OurPhilosophy />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+
           </Routes>
           
         <Footer/>

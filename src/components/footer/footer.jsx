@@ -1,9 +1,9 @@
 import React from "react";
-import AboutUs from "./about_us";
-import CustomerCare from "./customer_care";
-import CopyRight from "./copy_right";
-import FollowUs from "./follow_us";
-import ProductsLinks from "./products_links";
+import AboutUs from "./footer_components/about_us";
+import CustomerCare from "./footer_components/customer_care";
+import CopyRight from "./footer_components/copy_right";
+import FollowUs from "./footer_components/follow_us";
+import ProductsLinks from "./footer_components/products_links";
 
 
 const Footer = () => {

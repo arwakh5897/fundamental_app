@@ -5,9 +5,9 @@ const CustomerCare = () => {
         <div className="text-lg">
              <h2 className="font-bold pb-4">Customer Care</h2>
                 <div className="flex flex-col gap-1">
-                    <h2>Contact Us</h2>
-                    <h2>FAQ's</h2>
-                    <h2>Refund Policy</h2>
+                    <a href="/contact">Contact Us</a>
+                    <a href="/faq">FAQ's</a>
+                    <a href="refund-policy">Refund Policy</a>
                 </div>
         </div>
     )

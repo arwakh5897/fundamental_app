@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
-import ProductsLayout from "../components/product_Layout/product_layout";
-import { fetchProducts } from "../api/data";
+import ProductsLayout from "../../components/product_Layout/product_layout";
+import { fetchProducts } from "../../api/data";
 import { useSearchParams } from "react-router-dom";
 
 const ShopAll = () => {

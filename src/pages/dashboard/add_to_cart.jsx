@@ -1,8 +1,8 @@
 import React from "react";
-import Images from "../components/addToCart/image";
-import CartView from "../components/addToCart/cart_view";
+import Images from "../../components/addToCart/image";
+import CartView from "../../components/addToCart/cart_view";
 import { useLocation } from "react-router-dom";
-import Breadcrumb from "../components/breadcrumbs/breadcrumb";
+import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
 
 const AddToCart = () => {
   const { state } = useLocation();
