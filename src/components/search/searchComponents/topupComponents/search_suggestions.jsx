@@ -1,19 +1,27 @@
 import React from "react";
 
-const SearchSuggestions =()=>{
+const SearchSuggestions =({query , setQuery , handleSearch})=>{
+  const suggestions = [
+    "Men",
+    "Women",
+    "Footware"
+  ];
+  const handleClick =(item)=>{
+    setQuery(item);
+    handleSearch;
+  }
     return(
       <div className="mt-4">
         <p className="text-xs  mb-2">Recent Searches</p>
         <div className="flex flex-wrap gap-2">
-          <span className="text-xs bg-background px-2 py-1 rounded-md cursor-pointer">
-            Shoes 
+          {suggestions.map((item,index)=>(
+          <span 
+          key={index} 
+          onClick={()=>handleClick(item)}
+          className="text-xs bg-background px-2 py-1 rounded-md cursor-pointer">
+            {item}
           </span>
-          <span className="text-xs bg-background px-2 py-1 rounded-md cursor-pointer ">
-            Shirts
-          </span>
-          <span className="text-xs bg-background px-2 py-1 rounded-md cursor-pointer ">
-            Watches
-          </span>
+          ))}
         </div>
       </div>
     )

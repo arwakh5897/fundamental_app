@@ -32,7 +32,10 @@ const SearchTopUp = ({ handleClick }) => {
 
 
       {/* Optional: Recent / Suggestions */}
-      <SearchSuggestions handleClick={handleClick}/>
+      <SearchSuggestions 
+        query={query}
+        setQuery={setQuery}
+        handleSearch={handleSearch}/>
     </div>
   );
 };

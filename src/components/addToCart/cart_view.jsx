@@ -1,11 +1,11 @@
 import React from "react";
-import CartTitle from "./cartComponents/title";
-import CartPrice from "./cartComponents/price";
-import CartDescription from "./cartComponents/description";
-import Size from "./cartComponents/size";
-import Color from "./cartComponents/color";
-import AddButton from "./cartComponents/addButton";
-import CartBuyButton from "./cartComponents/buyButton";
+import CartTitle from "./cartComponents/cart_title";
+import CartPrice from "./cartComponents/cart_price";
+import CartDescription from "./cartComponents/cart_description";
+import Size from "./cartComponents/cart_size";
+import Color from "./cartComponents/cart_color";
+import AddButton from "./cartComponents/cart_add_Button";
+import CartBuyButton from "./cartComponents/cart_buy_Button";
 import { useLocation } from "react-router-dom";
 import Divider from "../divider/divider";
 
