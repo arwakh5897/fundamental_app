@@ -24,6 +24,9 @@ import ContactUs from "./pages/footer_pages/customer_care/contact_us";
 import FAQ from "./pages/footer_pages/customer_care/faqs";
 import RefundPolicy from "./pages/footer_pages/customer_care/refund_policy";
 
+import SignIn from "./pages/auth/sign_in";
+import SignUp from "./pages/auth/sign_up";
+
 const App = () => {
   useLenis();
 
@@ -39,6 +42,8 @@ const App = () => {
           ConditionalBanner/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={<SignIn/>} />
+            <Route path="/signup" element={<SignUp/>} />
 
                                   {/*  Header Routes  */}
             <Route path="/pages/shop_all" element={<ShopAll />} />
