@@ -36,7 +36,7 @@ const Breadcrumb = ({ title }) => {
       className="flex md:hidden py-2 text-sm items-center text-gray-600"
       aria-label="Breadcrumb"
     >
-      <div className="space-x-2">
+      <div className="space-x-2 py-4">
           <span>
           <a
             href="/"
