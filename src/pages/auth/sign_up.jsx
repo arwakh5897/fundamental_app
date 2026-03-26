@@ -38,7 +38,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/40 z-40">
+    <div className="fixed inset-0 bg-black/40 z-60">
       {/* Modal */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-white p-6 rounded-lg shadow-lg z-50">
         

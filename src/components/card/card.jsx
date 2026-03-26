@@ -6,11 +6,18 @@ import CardRating from "./cardComponents/rating";
 import CardPrice from "./cardComponents/price";
 import CardButton from "./cardComponents/button";
 import CardStock from "./cardComponents/stock";
+import { useNavigate } from "react-router-dom";
+import CardStockCount from "./cardComponents/stock_count";
 
 const Card = ({ image, title,description, rating = 4.5, price = 4900, discount=50, stock=10 }) => {
- const discountedPrice = price - (price * discount) / 100;
+  const navigate = useNavigate();
+  const discountedPrice = price - (price * discount) / 100;
+  const productData={ image, title,description, rating, price, discount,discountedPrice, stock };
   return (
-    <div className="bg-background-card w-36 md:w-72 shadow-sm overflow-hidden hover:cursor-pointer flex flex-col rounded-xl relative">
+    <div 
+    onClick={()=>{navigate("/pages/add_to_cart" , {state:{productData}})}}
+    className="bg-background-card w-36 md:w-72 shadow-sm overflow-hidden hover:cursor-pointer flex flex-col rounded-xl relative"
+    >
       {discount > 0 && (
         <CardDiscountBadge discount={discount} price={price} />
       )} 
@@ -21,11 +28,15 @@ const Card = ({ image, title,description, rating = 4.5, price = 4900, discount=5
       <div className="flex flex-col p-2 text-center items-center w-full">
         <CardTitle title={title} />
         <CardRating rating={rating} />
+      {/* <div className="flex py-1 items-center gap-8"> */}
         <CardPrice price={price} discount={discount} discountedPrice={discountedPrice} />
-        <CardButton 
+        <CardStockCount stock={stock}/>
+      {/* </div> */}
+        {/* <CardButton 
           disabled={stock === 0} 
-          productData={{ image, title,description, rating, price, discount,discountedPrice, stock }} 
-        />      </div>
+          productData={productData} 
+        /> */}
+         </div>
     </div>
   );
 };

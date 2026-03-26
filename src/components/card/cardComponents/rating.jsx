@@ -3,8 +3,9 @@ import React from "react";
 const CardRating = ({ rating }) => {
     const totalStars = 5;
 
-    return (
-        <div className="text-xs flex">
+   return (
+    <div>
+        <div className="flex text-highlighted font-semibold  items-center">
 
         {[...Array(totalStars)].map((item,index)=>{
             const strNumber = index + 1;
@@ -18,8 +19,11 @@ const CardRating = ({ rating }) => {
                 return <span key={index} className="text-gray-300">★</span>
             }
         })}
-        {/* ({rating}) */}
+            <div className="text-xs pl-1">
+                ({rating})
+            </div>
         </div>
+    </div>
 )
 };
 export default CardRating;
