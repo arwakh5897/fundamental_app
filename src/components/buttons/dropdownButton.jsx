@@ -1,28 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
+import ClickOutside from "./click_ouside_close";
+
 
 const DropDownButton = ({ buttons, title }) => {
   const [active, setActive] = useState(title);
   const [open, setOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  // 👇 Outside click handler
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
+    <ClickOutside onClickOutside={()=>setOpen(false)}>
     <div
-      ref={dropdownRef}
+      // ref={dropdownRef}
       className="relative h-auto flex flex-col items-center w-full border border-color px-3 py-2"
     >
       <button
@@ -38,11 +25,11 @@ const DropDownButton = ({ buttons, title }) => {
       </button>
 
       {open && (
-        <ul className="absolute left-0 mt-8 overflow-y-auto scrollbar-hide w-full border-color bg-white z-10">
+        <ul className="absolute left-0 mt-8 overflow-y-auto scrollbar-hide w-full border-color bg-background z-10">
           {buttons.map((item, index) => (
             <li
               key={index}
-              className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
+              className="px-3 py-2 bg-hover-color cursor-pointer"
               onClick={() => {
                 setActive(item);
                 setOpen(false);
@@ -54,6 +41,7 @@ const DropDownButton = ({ buttons, title }) => {
         </ul>
       )}
     </div>
+  </ClickOutside>
   );
 };
 

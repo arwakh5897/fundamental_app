@@ -54,7 +54,7 @@ const SignUp = () => {
                 placeholder={field.placeholder}
                 value={form[field.label.toLowerCase()]}
                 onChange={handleChange}
-                className="border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-menu-buttons"
+                className="border border-color rounded-md px-3 py-2 outline-none"
                 required
               />
             </div>
@@ -62,7 +62,7 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="mt-4 w-full bg-menu-buttons text-white py-2 rounded-md font-semibold hover:opacity-90 transition"
+            className="mt-4 w-full bg-menu-buttons py-2 rounded-md font-semibold hover:opacity-90 transition"
           >
             Create Account
           </button>
