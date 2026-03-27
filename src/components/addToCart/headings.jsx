@@ -31,8 +31,9 @@ const Headings = () => {
 
             {/* Animated underline */}
             <span
-              className={`h-[2px] mt-1 transition-all duration-300
-              ${activeTab === tab.key ? "w-full bg-menu-buttons" : "w-0 bg-menu-buttons"}`}
+              className={`h-[2px] mt-1 transition-all duration-500
+              ${activeTab === tab.key ? "w-full bg-menu-buttons" : "w-0 bg-menu-buttons"}`
+            }
             ></span>
           </div>
         ))}
