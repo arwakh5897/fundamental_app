@@ -7,6 +7,7 @@ import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
 import RelatedProducts from "../../components/addToCart/related_products";
 import FullDescription from "../../components/addToCart/full_decription";
 import Review from "../../components/addToCart/reviews";
+import Headings from "../../components/addToCart/headings";
 
 const ProductDetails = () => {
   const { state } = useLocation();
@@ -29,8 +30,7 @@ const ProductDetails = () => {
         </div>
     </div>
     <div className="flex py-4">
-      <FullDescription />
-      <Review />
+      <Headings />
     </div>
     <div className="py-4">
       <RelatedProducts />
