@@ -17,7 +17,7 @@ const ClickOutside = ({ onClickOutside, children }) => {
     };
   }, [onClickOutside]);
 
-  return <div className="w-full" ref={wrapperRef}>{children}</div>;
+  return <div className="inline-block" ref={wrapperRef}>{children}</div>;
 };
 
 export default ClickOutside;

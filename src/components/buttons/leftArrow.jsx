@@ -10,7 +10,7 @@ const LeftArrow =({scrollRef})=>{
   };
     return(
    <div className="flex bg-transparent left-1 absolute z-10">
-        <button onClick={leftRef} className="bg-menu-buttons md:p-2 p-1 rounded-full">
+        <button onClick={leftRef} className="bg-menu-buttons md:p-2 p-1 rounded-full hover:opacity-80">
         <ChevronLeftIcon className="md:w-5 md:h-5 w-4 h-4" />
         </button>
    </div>

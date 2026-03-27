@@ -63,7 +63,7 @@ const Menu = () => {
         <MenuItems />
       </div>
 
-      <div className="order-3 flex gap-4">
+      <div className="order-3">
        <ModeHook/>
       </div>
     </div>

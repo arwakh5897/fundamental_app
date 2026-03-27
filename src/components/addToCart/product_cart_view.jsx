@@ -1,15 +1,15 @@
 import React from "react";
-import CartTitle from "./cartComponents/cart_title";
-import CartPrice from "./cartComponents/cart_price";
-import CartDescription from "./cartComponents/cart_description";
-import Size from "./cartComponents/cart_size";
-import Color from "./cartComponents/cart_color";
-import AddButton from "./cartComponents/cart_add_Button";
-import CartBuyButton from "./cartComponents/cart_buy_Button";
+import CartTitle from "./product_cart_Components/cart_title";
+import CartPrice from "./product_cart_Components/cart_price";
+import CartDescription from "./product_cart_Components/cart_description";
+import Size from "./product_cart_Components/cart_size";
+import Color from "./product_cart_Components/cart_color";
+import AddButton from "./product_cart_Components/cart_add_Button";
+import CartBuyButton from "./product_cart_Components/cart_buy_Button";
 import { useLocation } from "react-router-dom";
 import Divider from "../divider/divider";
 
-const CartView = () => {
+const ProductCartView = () => {
   const {state} = useLocation();
   const products = state?.productData;
   return (
@@ -45,4 +45,4 @@ const CartView = () => {
   );
 };
 
-export default CartView;
+export default ProductCartView;

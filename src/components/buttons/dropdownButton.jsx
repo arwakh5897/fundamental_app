@@ -1,15 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
-import ClickOutside from "./click_ouside_close";
-
+import useClickOutside from "../../hook/click_outside_hook";
 
 const DropDownButton = ({ buttons, title }) => {
   const [active, setActive] = useState(title);
   const [open, setOpen] = useState(false);
-
+  const ref = useRef();
+  useClickOutside(ref,()=>setOpen(false))
   return (
-    <ClickOutside onClickOutside={()=>setOpen(false)}>
     <div
-      // ref={dropdownRef}
+    ref={ref}
       className="relative h-auto flex flex-col items-center w-full border border-color px-3 py-2"
     >
       <button
@@ -41,7 +40,6 @@ const DropDownButton = ({ buttons, title }) => {
         </ul>
       )}
     </div>
-  </ClickOutside>
   );
 };
 

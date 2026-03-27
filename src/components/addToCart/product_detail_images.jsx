@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ImageZoom from "../zoom/imageZoom";
 
-const Images = ({thumbnail}) => {
+const ProductDetailImages = ({thumbnail}) => {
   const images = [
     "/assets/images/banner.png",
     "/assets/images/banner1.png",
@@ -30,4 +30,4 @@ const Images = ({thumbnail}) => {
         </div>
       )
 }
-export default Images;
+export default ProductDetailImages;

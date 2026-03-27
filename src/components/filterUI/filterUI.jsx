@@ -2,10 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { useLoader } from "../../context/loaderContext";
 import FilterTrigger from "./filterComponents/filterTrigger";
 import FilterDropdown from "./filterComponents/filterDropdown";
+import useClickOutside from "../../hook/click_outside_hook";
 
 const FilterUI = ({ sortType, setSortType }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
+  useClickOutside(ref,()=>setOpen(false))
   const { showLoader, hideLoader } = useLoader();
 
   const buttons = [
@@ -21,16 +23,16 @@ const FilterUI = ({ sortType, setSortType }) => {
   const activeLabel =
     buttons.find((btn) => btn.value === sortType)?.label || "Default";
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () =>
-      document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  // useEffect(() => {
+  //   const handleClickOutside = (e) => {
+  //     if (ref.current && !ref.current.contains(e.target)) {
+  //       setOpen(false);
+  //     }
+  //   };
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () =>
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  // }, []);
 
   const handleSortClick = async (value) => {
     showLoader();
@@ -43,7 +45,9 @@ const FilterUI = ({ sortType, setSortType }) => {
   };
 
   return (
-    <div ref={ref} className="relative w-fit text-xs md:text-sm">
+    <div 
+    ref={ref} 
+    className="relative w-fit text-xs md:text-sm">
       <FilterTrigger
         activeLabel={activeLabel}
         open={open}

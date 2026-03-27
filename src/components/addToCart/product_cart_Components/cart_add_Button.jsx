@@ -6,7 +6,7 @@ const AddButton = ({ onAdd }) => {
   const increment = () => setQuantity((prev) => prev + 1);
   const decrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
-  const handleAddToCart = () => {
+  const handleProductDetails = () => {
     if (onAdd) onAdd(quantity); // callback parent ko quantity bhejne ke liye
   };
 
@@ -32,7 +32,7 @@ const AddButton = ({ onAdd }) => {
 
       {/* Add to Cart Button */}
       <button
-        onClick={handleAddToCart}
+        onClick={handleProductDetails}
         className="bg-menu-buttons font-semibold py-2 px-4 transition"
       >
         Add to Cart

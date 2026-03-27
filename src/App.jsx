@@ -13,7 +13,6 @@ import Accessories from "./pages/dashboard/accessories";
 import MakeUp from "./pages/dashboard/make_up";
 import { LoaderProvider } from "./context/loaderContext";
 import Loader from "./components/loader/loader";
-import AddToCart from "./pages/dashboard/add_to_cart";
 import RouteLoader from "./context/navigationLoader";
 import ConditionalBanner from "./layout/conditionalBanner";
 
@@ -23,6 +22,8 @@ import OurPhilosophy from "./pages/footer_pages/about_us/our_philosophy";
 import ContactUs from "./pages/footer_pages/customer_care/contact_us";
 import FAQ from "./pages/footer_pages/customer_care/faqs";
 import RefundPolicy from "./pages/footer_pages/customer_care/refund_policy";
+
+import ProductDetails from "./pages/product_details/product_details";
 
 import SignIn from "./pages/auth/sign_in";
 import SignUp from "./pages/auth/sign_up";
@@ -52,7 +53,7 @@ const App = () => {
             <Route path="/pages/by_bundle" element={<ByBundle />} />
             <Route path="/pages/accessories" element={<Accessories />} />
             <Route path="/pages/make_up" element={<MakeUp/>}/>
-            <Route path="/pages/add_to_cart" element={<AddToCart/>}/>
+            <Route path="/pages/product_details" element={<ProductDetails/>}/>
 
                                   {/*  Footer Routes  */}
             <Route path="/our-story" element={<OurStory />} />

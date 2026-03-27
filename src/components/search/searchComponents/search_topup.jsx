@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import SearchSuggestions from "./topupComponents/search_suggestions";
 import SearchInput from "./topupComponents/search_input";
 import SearchTitle from "./topupComponents/search_title&button";
 import { useNavigate } from "react-router-dom";
 import { useLoader } from "../../../context/loaderContext";
+import useClickOutside from "../../../hook/click_outside_hook";
 
 const SearchTopUp = ({ handleClick }) => {
   const {showLoader , hideLoader} = useLoader();
   const navigate = useNavigate();
   const [query , setQuery] = useState("");
+  const ref = useRef();
+  useClickOutside(ref,handleClick)
 
   const handleSearch = ()=>{
     if(!query.trim()) return;
@@ -25,7 +28,9 @@ const SearchTopUp = ({ handleClick }) => {
 
   }
   return (
-    <div className="absolute  z-50 top-9 md:top-12 right-0 w-72 md:w-[420px] bg-menu-buttons shadow-xl rounded-xl p-2 md:p-4 border border-gray-200">      
+    <div 
+    ref={ref}
+    className="absolute z-50 top-9 md:top-12 right-0 w-72 md:w-[420px] bg-menu-buttons shadow-xl rounded-xl p-2 md:p-4 border border-gray-200">      
       {/* Header */}
       <SearchTitle handleClick={handleClick}/>
 

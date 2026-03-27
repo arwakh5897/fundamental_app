@@ -3,6 +3,8 @@ import Mood from "../components/mood/mood";
 import Cart from "../components/header/cart";
 import SignIn from "../components/header/profile";
 import SearchBar from "../components/search/search_bar";
+import SearchIcon from "../components/search/searchComponents/search_icon";
+
 export default function ModeHook() {
   const [isDark, setIsDark] = useState(false);
 
@@ -15,14 +17,14 @@ export default function ModeHook() {
   }, [isDark]);
 
   return (
-  <div className="order-3 flex gap-4">
+  <div className="flex gap-4">
     <button
       onClick={() => setIsDark(!isDark)}
       className=" hover:cursor-pointer md:flex hidden"
     >
             <Mood darkLight={isDark}/>          
     </button>
-            <SearchBar darkLight={isDark}/>
+            <SearchIcon darkLight={isDark}/>
             <SignIn darkLight={isDark}/>
             <Cart darkLight={isDark}/>
     </div>

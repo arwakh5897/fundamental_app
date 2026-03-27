@@ -15,7 +15,7 @@ const Card = ({ image, title,description, rating = 4.5, price = 4900, discount=5
   const productData={ image, title,description, rating, price, discount,discountedPrice, stock };
   return (
     <div 
-    onClick={()=>{navigate("/pages/add_to_cart" , {state:{productData}})}}
+    onClick={()=>{navigate("/pages/product_details" , {state:{productData}})}}
     className="bg-background-card w-36 md:w-72 shadow-sm overflow-hidden hover:cursor-pointer flex flex-col rounded-xl relative"
     >
       {discount > 0 && (
