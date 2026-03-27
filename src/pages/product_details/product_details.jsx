@@ -5,6 +5,8 @@ import ProductDetailImages from "../../components/addToCart/product_detail_image
 import ProductCartView from "../../components/addToCart/product_cart_view";
 import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
 import RelatedProducts from "../../components/addToCart/related_products";
+import FullDescription from "../../components/addToCart/full_decription";
+import Review from "../../components/addToCart/reviews";
 
 const ProductDetails = () => {
   const { state } = useLocation();
@@ -25,6 +27,10 @@ const ProductDetails = () => {
             <ProductCartView />
           </div>
         </div>
+    </div>
+    <div className="flex py-4">
+      <FullDescription />
+      <Review />
     </div>
     <div className="py-4">
       <RelatedProducts />

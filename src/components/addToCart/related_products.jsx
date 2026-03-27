@@ -13,7 +13,7 @@ const RelatedProducts =()=>{
             <h2 className="text-2xl">Related Products</h2>
             <p className="h-[2px] w-36 bg-menu-buttons"></p>
         </div>
-                    <ScrollingCard allItems={allItems}/>
+    <ScrollingCard allItems={allItems}/>
     </div>
     )
 }

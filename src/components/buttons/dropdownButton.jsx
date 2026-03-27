@@ -12,7 +12,7 @@ const DropDownButton = ({ buttons, title }) => {
       className="relative h-auto flex flex-col items-center w-full border border-color px-3 py-2"
     >
       <button
-        className="flex w-full justify-between"
+        className="flex w-full text-sm justify-between text-heading"
         onClick={() => setOpen(!open)}
       >
         {active}
@@ -28,7 +28,7 @@ const DropDownButton = ({ buttons, title }) => {
           {buttons.map((item, index) => (
             <li
               key={index}
-              className="px-3 py-2 bg-hover-color cursor-pointer"
+              className="px-3 text-sm py-2 bg-hover-color cursor-pointer"
               onClick={() => {
                 setActive(item);
                 setOpen(false);

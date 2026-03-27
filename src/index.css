@@ -44,11 +44,17 @@ body {
 .bg-line {
  background-color: rgb(200,200,200); 
 }
+.text-heading {
+  color: black;
+}
 .text-highlighted {
   color: rgb(248, 113, 113);
 }
+.hover-text-highlighted:hover {
+  color: rgb(185, 14, 14);
+}
 .border-color {
-  border: 1px solid rgb(156, 163, 175);
+  border: 1px solid rgb(206, 210, 216);
 }
 .bg-hover-color:hover {
   background-color: rgb(198, 202, 211); /* gray-500 */
@@ -67,6 +73,9 @@ body {
 }
 .dark .text-foreground {
   color: rgb(255, 255, 255);
+}
+.dark .text-heading {
+  color: white;
 }
 
 /* Hide scrollbar */

@@ -12,7 +12,7 @@ const ProductDetailImages = ({thumbnail}) => {
       return(
         <div className="w-full">
           {/* <div className="h-screen md:h-auto"> */}
-            <div className="aspect-square md:aspect-[4/3]">
+            <div className="aspect-[6/5] md:aspect-[4/3]">
                 <ImageZoom src={activeImage} alt="" />
             </div>
             {/* </div> */}

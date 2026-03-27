@@ -33,20 +33,20 @@ import React from "react";
 const Breadcrumb = ({ title }) => {
   return (
     <nav
-      className="flex md:hidden py-2 text-sm items-center text-gray-600"
+      className="flex md:hidden py-2 text-sm items-center"
       aria-label="Breadcrumb"
     >
       <div className="space-x-2 py-4">
           <span>
           <a
             href="/"
-            className="hover:text-red-300 transition-colors font-medium"
+            className="transition-colors text-highlighted hover-text-highlighted font-medium"
           >
             Home
           </a>
           </span>
           <span className=" ">{">"}</span>
-          <span className="font-semibold text-red-400">{title}</span>
+          <span className="font-semibold">{title}</span>
     </div>
     </nav>
   );

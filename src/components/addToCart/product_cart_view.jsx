@@ -22,7 +22,7 @@ const ProductCartView = () => {
       <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>
 
       {/* Divider */}
-       <Divider className="py-6"/>
+       <Divider className="py-2 md:py-6"/>
 
       {/* Description */}
       <CartDescription description={products?.description}/>
@@ -32,7 +32,7 @@ const ProductCartView = () => {
       <Color/>
 
        <div className="flex flex-col gap-4 py-4 md:py-0 md:sticky md:bottom-0">
-        <Divider className="py-6" />
+        <Divider className="py-2 md:py-6" />
         <AddButton  />
         <CartBuyButton  />
       </div>
