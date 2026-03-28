@@ -24,7 +24,7 @@ const DropDownButton = ({ buttons, title }) => {
       </button>
 
       {open && (
-        <ul className="absolute left-0 mt-8 overflow-y-auto scrollbar-hide w-full border-color bg-background z-10">
+        <ul className="absolute left-0 mt-7.5 overflow-y-auto scrollbar-hide w-full border-color bg-background z-10">
           {buttons.map((item, index) => (
             <li
               key={index}

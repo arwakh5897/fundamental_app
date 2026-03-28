@@ -1,13 +1,11 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-import ProductDetailImages from "../../components/addToCart/product_detail_images"; 
-import ProductCartView from "../../components/addToCart/product_cart_view";
+import ProductDetailImages from "../../components/products_details_components/product_detail_images";
 import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
-import RelatedProducts from "../../components/addToCart/related_products";
-import FullDescription from "../../components/addToCart/full_decription";
-import Review from "../../components/addToCart/reviews";
-import Headings from "../../components/addToCart/headings";
+import RelatedProducts from "../../components/products_details_components/related_products";
+import ProductDetailHeadings from "../../components/products_details_components/product_detail_headings";
+import ProductDetailCart from "../../components/products_details_components/product_detail_cart";
 
 const ProductDetails = () => {
   const { state } = useLocation();
@@ -25,12 +23,18 @@ const ProductDetails = () => {
 
           {/* Right Side - Cart Details */}
           <div className="w-full md:w-1/2  md:px-6">
-            <ProductCartView />
+            <ProductDetailCart 
+            title={products?.title}
+            description={products?.description}
+            price={products?.price}
+            discountedPrice={products?.discountedPrice}
+
+            />
           </div>
         </div>
     </div>
     <div className="flex py-4">
-      <Headings />
+      <ProductDetailHeadings/>
     </div>
     <div className="py-4">
       <RelatedProducts />

@@ -6,26 +6,24 @@ import Size from "./product_cart_Components/cart_size";
 import Color from "./product_cart_Components/cart_color";
 import AddButton from "./product_cart_Components/cart_add_Button";
 import CartBuyButton from "./product_cart_Components/cart_buy_Button";
-import { useLocation } from "react-router-dom";
 import Divider from "../divider/divider";
 
-const ProductCartView = () => {
-  const {state} = useLocation();
-  const products = state?.productData;
+const ProductDetailCart = ({ title, description, price, discountedPrice }) => {
+
   return (
     <div className="w-full space-y-4">
       
       {/* Title */}
-      <CartTitle title={products?.title} />
+      <CartTitle title={title} />
 
       {/* Price */}
-      <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>
+      <CartPrice price={price} discountedPrice={discountedPrice}/>
 
       {/* Divider */}
        <Divider className="py-2 md:py-6"/>
 
       {/* Description */}
-      <CartDescription description={products?.description}/>
+      <CartDescription description={description}/>
 
       {/* Variant Selector */}
       <Size/>
@@ -45,4 +43,4 @@ const ProductCartView = () => {
   );
 };
 
-export default ProductCartView;
+export default ProductDetailCart;

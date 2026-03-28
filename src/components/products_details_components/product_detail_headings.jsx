@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import FullDescription from "./full_decription";
-import Reviews from "./reviews";
+import FullDescription from "./products_description&review/full_decription";
+import Reviews from "./products_description&review/reviews";
 
-const Headings = () => {
+const ProductDetailHeadings = () => {
   const [activeTab, setActiveTab] = useState("description");
 
   const tabs = [
@@ -51,4 +51,4 @@ const Headings = () => {
   );
 };
 
-export default Headings;
+export default ProductDetailHeadings;

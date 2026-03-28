@@ -1,4 +1,5 @@
 import React from "react";
+import CloseButton from "../../../buttons/close_button";
 
 const SearchTitle =({handleClick})=>{
     return(
@@ -6,12 +7,7 @@ const SearchTitle =({handleClick})=>{
         <h4 className="font-semibold text-sm md:text-base">
           Search
         </h4>
-        <button
-          onClick={handleClick}
-          className="text-gray-700 hover:text-gray-900 transition text-lg"
-        >
-          ✕
-        </button>
+        <CloseButton onClick={handleClick}/>
       </div>
     )
 }
