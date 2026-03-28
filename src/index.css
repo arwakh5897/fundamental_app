@@ -59,6 +59,9 @@ body {
 .bg-hover-color:hover {
   background-color: rgb(198, 202, 211); /* gray-500 */
 }
+.bg-overlay {
+  background-color: rgb(0 0 0 / 0.4);
+}
 
 /* Dark Mode */
 .dark .bg-background {

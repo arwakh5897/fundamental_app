@@ -33,7 +33,7 @@ const AddButton = ({ onAdd }) => {
       {/* Add to Cart Button */}
       <button
         onClick={handleProductDetails}
-        className="bg-menu-buttons font-semibold py-2 px-4 transition"
+        className="bg-menu-buttons hover:cursor-pointer font-semibold py-2 px-4 transition"
       >
         Add to Cart
       </button>

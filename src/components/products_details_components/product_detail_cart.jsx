@@ -8,8 +8,8 @@ import AddButton from "./product_cart_Components/cart_add_Button";
 import CartBuyButton from "./product_cart_Components/cart_buy_Button";
 import Divider from "../divider/divider";
 
-const ProductDetailCart = ({ title, description, price, discountedPrice }) => {
-
+const ProductDetailCart = ({ title, description, price, discountedPrice, onAdd }) => {
+   const products = {title, description, price, discountedPrice};
   return (
     <div className="w-full space-y-4">
       
@@ -31,12 +31,9 @@ const ProductDetailCart = ({ title, description, price, discountedPrice }) => {
 
        <div className="flex flex-col gap-4 py-4 md:py-0 md:sticky md:bottom-0">
         <Divider className="py-2 md:py-6" />
-        <AddButton  />
+        <AddButton  products={products} onAdd={onAdd}/>
         <CartBuyButton  />
       </div>
-
-      {/* Add to Cart Button (optional) */}
-      {/* <CardButton /> */}
 
     </div>
     

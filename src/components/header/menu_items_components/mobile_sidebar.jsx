@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MobileLogin from "../../auth/mobile_login";
-import ClickOutside from "../../buttons/click_ouside_close";
 import CloseButton from "../../buttons/close_button";
 
 const MobileSidebar = ({ active, onClose }) => {
@@ -10,7 +9,7 @@ const MobileSidebar = ({ active, onClose }) => {
       {/* Overlay */}
       {active && (
         <div
-          className="fixed inset-0 bg-black/40 z-40"
+          className="fixed inset-0 bg-overlay z-40"
           onClick={onClose}
         />
       )}
