@@ -31,6 +31,10 @@ const ProductDetails = () => {
     setSidebarOpen(true); // open sidebar
   };
 
+  const handleRemoveItem = (id) => {
+  setCart((prev) => prev.filter((item) => item.id !== id));
+};
+
   return (
     <div>
       <div className="flex flex-col p-2">
@@ -67,6 +71,7 @@ const ProductDetails = () => {
       <AddToCartSidebar
         active={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
+        onRemove={handleRemoveItem}
         cart={cart}
       />
     </div>

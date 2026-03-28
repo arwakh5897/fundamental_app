@@ -24,6 +24,7 @@ const AddToCartSidebar = ({ active, onClose , cart=[] }) => {
              name={item.title}
              qty={item.qty}
              price={item.price}
+             onRemove={() => onRemove(item.id)}
          />
          )}
          <Divider />

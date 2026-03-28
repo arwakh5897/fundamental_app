@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShoppingCard = ({ image, name, qty, price }) => {
+const ShoppingCard = ({ image, name, qty, price ,onRemove}) => {
   return (
     <div className="flex items-center gap-3 p-3 border-b">
       
@@ -27,6 +27,13 @@ const ShoppingCard = ({ image, name, qty, price }) => {
           Rs {Math.round(price)}.00
         </p>
       </div>
+            {/* Delete Button */}
+      <button
+        onClick={onRemove}
+        className="hover:cursor-pointer"
+      >
+        <img className="w-4 h-4" src="/assets/icons/delete.png" alt="" />
+      </button>
 
     </div>
   );
