@@ -10,7 +10,7 @@ const CardImage = ({ image, title }) => {
           onMouseEnter={()=>setHover(true)}
           onMouseLeave={()=>setHover(false)}
           alt={title || "Product"}
-          className="w-full h-full object-cover transition-transform duration-500 transform hover:scale-105 "
+          className="w-full h-full object-contain transition-transform duration-500 transform hover:scale-105 "
         />
       </div>
     )
