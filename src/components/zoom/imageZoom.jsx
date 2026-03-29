@@ -34,7 +34,7 @@ const ImageZoom = ({ src }) => {
       <img
         src={src}
         alt="zoom"
-        className="w-full h-full object-cover transition-transform duration-200 ease-out"
+        className="w-full h-full object-contain transition-transform duration-200 ease-out"
         style={zoomStyle}
       />
     </div>
