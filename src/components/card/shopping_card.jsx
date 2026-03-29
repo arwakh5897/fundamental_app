@@ -7,7 +7,7 @@ const ShoppingCard = ({ image, name, qty, price ,onRemove}) => {
       {/* Image */}
       <div className="w-20 h-16 flex-shrink-0">
         <img
-          className="w-full h-full object-cover rounded-md"
+          className="w-full h-full object-contain rounded-md"
           src={image}
           alt="Product Image"
         />
