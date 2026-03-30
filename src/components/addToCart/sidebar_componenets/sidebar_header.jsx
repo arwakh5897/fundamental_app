@@ -7,7 +7,7 @@ const SidebarHeader = ({ onClose , totalItems })=>{
   
           <CloseButton
             onClick={onClose}
-            className="text-white px-2 py-1 font-semibold"
+            className="text-foreground-secondary px-2 py-1 font-semibold"
           />
 
           <h2 className=" px-4 py-1 border-l border-r flex-1 text-center">

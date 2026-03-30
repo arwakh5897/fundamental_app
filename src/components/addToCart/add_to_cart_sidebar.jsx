@@ -1,7 +1,8 @@
 import React from "react";
 import SidebarHeader from "./sidebar_componenets/sidebar_header";
 import ShoppingCard from "../card/shopping_card";
-
+import CartTotal from "./sidebar_componenets/cart_total";
+import SidebarButtons from "./sidebar_componenets/sidebar_buttons";
 const AddToCartSidebar = ({ active, onClose, totalItems, cart = [], onRemove = () => {} }) => {
   return (
     <>
@@ -15,14 +16,14 @@ const AddToCartSidebar = ({ active, onClose, totalItems, cart = [], onRemove = (
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 right-0 h-full w-72 md:w-86 bg-menu-buttons text-white z-50 flex flex-col transition-transform duration-300 transform ${
+        className={`fixed top-0 right-0 h-full w-72 md:w-86 bg-menu-buttons text-foreground-secondary z-50 flex flex-col transition-transform duration-300 transform ${
           active ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <SidebarHeader onClose={onClose} totalItems={totalItems} />
 
         {/* Cart Items */}
-        <div className="flex flex-col overflow-y-auto scrollbar-hide h-1/2">
+        <div className="flex flex-col overflow-y-auto scrollbar-hide h-2/3">
           {cart.length > 0 ? (
             cart.map((item) => (
               <ShoppingCard
@@ -35,10 +36,14 @@ const AddToCartSidebar = ({ active, onClose, totalItems, cart = [], onRemove = (
               />
             ))
           ) : (
-            <p className="text-center text-sm text-gray-300 mt-4">
+            <p className="text-center text-foreground text-sm mt-4">
               Your cart is empty
             </p>
           )}
+        </div>
+        <div className="fixed bottom-0 w-full">
+            <CartTotal />
+            <SidebarButtons />
         </div>
       </nav>
     </>

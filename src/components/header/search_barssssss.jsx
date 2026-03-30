@@ -29,7 +29,7 @@ const SearchBar = ({ search, setSearch }) => {
       />
 
       {/* Button */}
-      <button className="ml-2 bg-menu-buttons hover:bg-primary-light text-white px-3 py-1 rounded-lg transition">
+      <button className="ml-2 bg-menu-buttons hover:bg-primary-light text-foreground-secondary px-3 py-1 rounded-lg transition">
         Search
       </button>
     </div>

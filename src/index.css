@@ -39,7 +39,11 @@ body {
   background-color: rgb(253, 247, 247); /* Light mode default */
 }
 .text-foreground {
-  color: rgba(15, 23, 42, 0.753); /* Light mode default */
+  color: rgba(15, 23, 42, 0.753);
+  /* color:white; */
+}
+.text-foreground-secondary {
+  color: white;
 }
 .text-heading {
   color: black;
