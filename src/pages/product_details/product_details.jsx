@@ -7,7 +7,7 @@ import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
 import RelatedProducts from "../../components/products_details_components/related_products";
 import ProductDetailHeadings from "../../components/products_details_components/product_detail_headings";
 import ProductDetailCart from "../../components/products_details_components/product_detail_cart";
-import AddToCartSidebar from "../../components/addToCart/add_to_cart_sidebar";
+import AddToCartSidebar from "../../components/add_to_cart_sidebar/add_to_cart_sidebar";
 
 const ProductDetails = () => {
   const { state } = useLocation();

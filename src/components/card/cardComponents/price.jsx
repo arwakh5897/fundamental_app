@@ -4,11 +4,11 @@ const CardPrice = ({ price, discountedPrice }) => {
     return (
         <div className="flex gap-1 text-xs justify-center items-center">
           <div className="font-bold md:text-lg">
-            Rs {Math.round(discountedPrice)}.00
+            Rs {Number(discountedPrice).toFixed(2)}
           </div>
 
           <div className="line-through">
-            (Rs {Math.round(price)})
+            (Rs {Number(price || 0).toFixed(2)})
           </div>
         </div>
     )

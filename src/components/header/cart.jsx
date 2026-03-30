@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AddToCartSidebar from "../addToCart/add_to_cart_sidebar";
+import AddToCartSidebar from "../add_to_cart_sidebar/add_to_cart_sidebar";
 import { useCartContext } from "../../context/cartContext"; // ✅ cart context
 
 const Cart = ({ darkLight }) => {
@@ -7,7 +7,7 @@ const Cart = ({ darkLight }) => {
   const { cart, handleRemoveItem} = useCartContext(); // ✅ get cart
  
   const totalItems = cart.reduce((sum , item)=> sum + item.qty,0);
-
+  const totalPrice = cart.reduce((sum , item)=>sum + item.discountedPrice * item.qty,0);
   return (
     <div className="relative">
       <div className="text-text dark:text-text-light hover:cursor-pointer"
@@ -28,6 +28,7 @@ const Cart = ({ darkLight }) => {
       <AddToCartSidebar
         active={active} 
         totalItems={totalItems} 
+        totalPrice={totalPrice}
         onClose={() => setActive(false)}
         cart={cart}
         onRemove={handleRemoveItem} 

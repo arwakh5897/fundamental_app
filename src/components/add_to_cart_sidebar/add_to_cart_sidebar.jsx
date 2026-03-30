@@ -3,7 +3,8 @@ import SidebarHeader from "./sidebar_componenets/sidebar_header";
 import ShoppingCard from "../card/shopping_card";
 import CartTotal from "./sidebar_componenets/cart_total";
 import SidebarButtons from "./sidebar_componenets/sidebar_buttons";
-const AddToCartSidebar = ({ active, onClose, totalItems, cart = [], onRemove = () => {} }) => {
+
+const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], onRemove = () => {} }) => {
   return (
     <>
       {/* Overlay */}
@@ -31,7 +32,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, cart = [], onRemove = (
                 image={item.image}
                 name={item.title}
                 qty={item.qty}
-                price={item.price}
+                price={item.discountedPrice}
                 onRemove={() => onRemove(item.id)}
               />
             ))
@@ -42,7 +43,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, cart = [], onRemove = (
           )}
         </div>
         <div className="fixed bottom-0 w-full">
-            <CartTotal />
+            <CartTotal totalPrice={totalPrice} />
             <SidebarButtons />
         </div>
       </nav>

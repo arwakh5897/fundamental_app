@@ -24,7 +24,7 @@ const ShoppingCard = ({ image, name, qty, price ,onRemove}) => {
         </p>
 
         <p className="text-sm font-semibold ">
-          Rs {Math.round(price)}.00
+          Rs {Number(price || 0).toFixed(2)}
         </p>
       </div>
       <div>
