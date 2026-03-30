@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useCartContext } from "../../context/cartContext";
 
 import ProductDetailImages from "../../components/products_details_components/product_detail_images";
 import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
@@ -11,29 +12,7 @@ import AddToCartSidebar from "../../components/addToCart/add_to_cart_sidebar";
 const ProductDetails = () => {
   const { state } = useLocation();
   const products = state?.productData;
-
-  const [cart, setCart] = useState([]); // cart items
-  const [sidebarOpen, setSidebarOpen] = useState(false); // sidebar toggle
-
-  // callback from AddButton
-  const handleAddToCart = (quantity) => {
-    setCart((prev) => {
-      // check if product already exists
-      const existing = prev.find((p) => p.id === products.id);
-      if (existing) {
-        return prev.map((p) =>
-          p.id === products.id ? { ...p, qty: p.qty + quantity } : p
-        );
-      }
-      return [...prev, { ...products, qty: quantity }];
-    });
-
-    setSidebarOpen(true); // open sidebar
-  };
-
-  const handleRemoveItem = (id) => {
-  setCart((prev) => prev.filter((item) => item.id !== id));
-};
+  const { cart,  handleAddToCart, handleRemoveItem, } = useCartContext();
 
   return (
     <div>
@@ -53,8 +32,7 @@ const ProductDetails = () => {
               description={products?.description}
               price={products?.price}
               discountedPrice={products?.discountedPrice}
-              onAdd={handleAddToCart} // send callback
-            />
+              onAdd={(qty) => handleAddToCart(products, qty)}            />
           </div>
         </div>
       </div>
@@ -69,8 +47,6 @@ const ProductDetails = () => {
 
       {/* Sidebar */}
       <AddToCartSidebar
-        active={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
         onRemove={handleRemoveItem}
         cart={cart}
       />

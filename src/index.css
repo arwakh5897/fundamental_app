@@ -41,9 +41,6 @@ body {
 .text-foreground {
   color: rgba(15, 23, 42, 0.753); /* Light mode default */
 }
-.bg-line {
- background-color: rgb(200,200,200); 
-}
 .text-heading {
   color: black;
 }
@@ -52,6 +49,9 @@ body {
 }
 .hover-text-highlighted:hover {
   color: rgb(185, 14, 14);
+}
+.bg-line {
+ background-color: rgb(200,200,200); 
 }
 .border-color {
   border: 1px solid rgb(206, 210, 216);

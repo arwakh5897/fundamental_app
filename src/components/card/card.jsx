@@ -13,6 +13,7 @@ import EyeButton from "../buttons/eye_button";
 import ProductDetailsPopup from "../product_popUp/product_popUp";
 
 const Card = ({
+  id,
   image,
   title,
   description,
@@ -27,6 +28,7 @@ const Card = ({
   const discountedPrice = price - (price * discount) / 100;
 
   const productData = {
+    id,
     image,
     title,
     description,

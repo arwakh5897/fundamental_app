@@ -1,19 +1,26 @@
 import React, { useEffect } from "react";
-import useLenis from "./hook/lenisHook";
 import {BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/dashboard/dashboard";
+
+import useLenis from "./hook/lenisHook";
+
 import Ad from "./components/header/ad";
 import Menu from "./components/header/menu";
 import Footer from "./components/footer/footer";
+
+import Dashboard from "./pages/dashboard/dashboard";
 import ShopAll from "./pages/dashboard/shop_all";
 import ByType from "./pages/dashboard/by_type";
 import ByConcern from "./pages/dashboard/by_Concern";
 import ByBundle from "./pages/dashboard/by_bundle";
 import Accessories from "./pages/dashboard/accessories";
 import MakeUp from "./pages/dashboard/make_up";
+import ProductDetails from "./pages/product_details/product_details";
+
 import { LoaderProvider } from "./context/loaderContext";
 import Loader from "./components/loader/loader";
 import RouteLoader from "./context/navigationLoader";
+import { CartProvider } from "./context/cartContext";
+
 import ConditionalBanner from "./layout/conditionalBanner";
 
 import OurStory from "./pages/footer_pages/about_us/our_story";
@@ -23,7 +30,6 @@ import ContactUs from "./pages/footer_pages/customer_care/contact_us";
 import FAQ from "./pages/footer_pages/customer_care/faqs";
 import RefundPolicy from "./pages/footer_pages/customer_care/refund_policy";
 
-import ProductDetails from "./pages/product_details/product_details";
 
 import SignIn from "./pages/auth/sign_in";
 import SignUp from "./pages/auth/sign_up";
@@ -32,15 +38,15 @@ const App = () => {
   useLenis();
 
   return (
-    <LoaderProvider>
-      <Loader/>
     <BrowserRouter>
+      <CartProvider>
+      <LoaderProvider>
+        <Loader/>
      <RouteLoader/>
       <div className="text-foreground bg-background">
         <Ad />
         <Menu />
-        <
-          ConditionalBanner/>
+        <ConditionalBanner/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<SignIn/>} />
@@ -67,8 +73,10 @@ const App = () => {
           
         <Footer/>
       </div>
+          </LoaderProvider>
+       </CartProvider>
     </BrowserRouter>
-    </LoaderProvider>
+
   );
 };
 
