@@ -21,7 +21,7 @@ const ProductDetailImages = ({thumbnail}) => {
                   <img
                   key={index}
                   onClick={()=>setActiveImage(item)}
-                  className="w-16 h-16 md:w-28 md:h-28 object-contain"
+                  className="w-16 h-16 md:w-28 md:h-28 bg-image object-contain"
                   src={item}
                   alt="image"
                    />

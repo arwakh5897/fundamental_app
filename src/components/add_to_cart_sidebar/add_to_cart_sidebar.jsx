@@ -30,7 +30,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
               <ShoppingCard
                 key={item.id}
                 image={item.image}
-                name={item.title}
+                title={item.title}
                 qty={item.qty}
                 price={item.discountedPrice}
                 onRemove={() => onRemove(item.id)}
@@ -44,7 +44,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
         </div>
         <div className="fixed bottom-0 w-full">
             <CartTotal totalPrice={totalPrice} />
-            <SidebarButtons />
+            <SidebarButtons onClick={onClose} />
         </div>
       </nav>
     </>

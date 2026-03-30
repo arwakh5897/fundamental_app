@@ -7,7 +7,7 @@ const SearchIcon =({darkLight})=>{
     return(
         <div className="relative">
             <img 
-            className="w-6 h-6"
+            className="w-6 h-6 hover:cursor-pointer"
              src={darkLight ? "/assets/icons/light-search.png" : "/assets/icons/search.png"} 
              alt="" 
              onClick={handleClick}

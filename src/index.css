@@ -54,6 +54,9 @@ body {
 .hover-text-highlighted:hover {
   color: rgb(185, 14, 14);
 }
+.bg-image {
+ background-color: rgb(243, 244, 246);
+}
 .bg-line {
  background-color: rgb(200,200,200); 
 }

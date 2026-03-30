@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShoppingCard = ({ image, name, qty, price ,onRemove}) => {
+const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
   return (
     <div className="flex gap-3 p-3 border-b">
       
@@ -16,7 +16,7 @@ const ShoppingCard = ({ image, name, qty, price ,onRemove}) => {
       {/* Content */}
       <div className="flex flex-col flex-1">
         <h3 className="text-sm font-medium line-clamp-1">
-          {name || "Product"}
+          {title || "Product"}
         </h3>
 
         <p className="text-xs">

@@ -7,7 +7,7 @@ const SignIn=({darkLight})=>{
              <img 
              onClick={()=>navigate("/login")}
              src={darkLight ? "/assets/icons/light-user.png" : "/assets/icons/user.png"} 
-             alt="Cart Icon" className="w-6 h-6"/>
+             alt="Cart Icon" className="w-6 h-6 hover:cursor-pointer"/>
 
      </div>
     )

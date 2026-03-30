@@ -15,6 +15,7 @@ import ByBundle from "./pages/dashboard/by_bundle";
 import Accessories from "./pages/dashboard/accessories";
 import MakeUp from "./pages/dashboard/make_up";
 import ProductDetails from "./pages/product_details/product_details";
+import ShoppingDetails from "./pages/shopping_details/shopping_details";
 
 import { LoaderProvider } from "./context/loaderContext";
 import Loader from "./components/loader/loader";
@@ -30,9 +31,10 @@ import ContactUs from "./pages/footer_pages/customer_care/contact_us";
 import FAQ from "./pages/footer_pages/customer_care/faqs";
 import RefundPolicy from "./pages/footer_pages/customer_care/refund_policy";
 
-
 import SignIn from "./pages/auth/sign_in";
 import SignUp from "./pages/auth/sign_up";
+import MainLayout from "./layout/main_layout";
+import CheckOut from "./pages/check_out/check_out";
 
 const App = () => {
   useLenis();
@@ -44,34 +46,41 @@ const App = () => {
         <Loader/>
      <RouteLoader/>
       <div className="text-foreground bg-background">
-        <Ad />
+        {/* <Ad />
         <Menu />
-        <ConditionalBanner/>
+        <ConditionalBanner/> */}
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/login" element={<SignIn/>} />
-            <Route path="/signup" element={<SignUp/>} />
+              <Route element={<MainLayout />} >
+                <Route path="/" element={<Dashboard />} />
 
-                                  {/*  Header Routes  */}
-            <Route path="/pages/shop_all" element={<ShopAll />} />
-            <Route path="/pages/by_type" element={<ByType />} />
-            <Route path="/pages/by_concern" element={<ByConcern />} />
-            <Route path="/pages/by_bundle" element={<ByBundle />} />
-            <Route path="/pages/accessories" element={<Accessories />} />
-            <Route path="/pages/make_up" element={<MakeUp/>}/>
-            <Route path="/pages/product_details" element={<ProductDetails/>}/>
+                                      {/*  Header Routes  */}
+                <Route path="/pages/shop_all" element={<ShopAll />} />
+                <Route path="/pages/by_type" element={<ByType />} />
+                <Route path="/pages/by_concern" element={<ByConcern />} />
+                <Route path="/pages/by_bundle" element={<ByBundle />} />
+                <Route path="/pages/accessories" element={<Accessories />} />
+                <Route path="/pages/make_up" element={<MakeUp/>}/>
 
-                                  {/*  Footer Routes  */}
-            <Route path="/our-story" element={<OurStory />} />
-            <Route path="/sustainability" element={<Sustainability />} />
-            <Route path="/philosophy" element={<OurPhilosophy />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/refund-policy" element={<RefundPolicy />} />
+                <Route path="/pages/product_details" element={<ProductDetails/>}/>
+                <Route path="/pages/shopping_details" element={<ShoppingDetails/>}/>
+                <Route path="/pages/checkout" element={<CheckOut/>}/>
+
+                                      {/*  Footer Routes  */}
+                <Route path="/our-story" element={<OurStory />} />
+                <Route path="/sustainability" element={<Sustainability />} />
+                <Route path="/philosophy" element={<OurPhilosophy />} />
+                <Route path="/contact" element={<ContactUs />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
+              </Route>
+            
+                                     {/* Auth Routes */}
+                <Route path="/login" element={<SignIn/>} />
+                <Route path="/signup" element={<SignUp/>} />
 
           </Routes>
           
-        <Footer/>
+        {/* <Footer/> */}
       </div>
           </LoaderProvider>
        </CartProvider>
