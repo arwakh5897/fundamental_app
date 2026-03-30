@@ -15,7 +15,7 @@ const ArrowButtons = ({ sliderRef }) => {
   };
 
   return (
-    <div className="hidden md:flex gap-2 mr-4">
+    <div className="hidden lg:flex gap-2 mr-4">
       <button
         onClick={scrollLeft}
         className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"

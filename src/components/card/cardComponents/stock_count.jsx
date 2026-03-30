@@ -16,8 +16,8 @@ const CardStockCount = ({ stock }) => {
   }
 
   return (
-    <div className="hidden md:flex flex-col mt-1">
-      <p className={`text-[10px] md:text-xs ${colorClass}`}>
+    <div className="hidden lg:flex flex-col mt-1">
+      <p className={`text-[10px] lg:text-xs ${colorClass}`}>
         {message}
       </p>
     </div>

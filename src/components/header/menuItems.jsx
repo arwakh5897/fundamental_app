@@ -7,7 +7,7 @@ const MenuItems = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="font-semibold md:font-bold">
+    <div className="font-semibold lg:font-bold">
       {/* Mobile Hamburger */}
       <HamburgerButton onClick={() => setActive(true)} />
 

@@ -17,7 +17,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 right-0 h-full w-72 md:w-86 bg-menu-buttons text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 transform ${
+        className={`fixed top-0 right-0 h-full w-72 lg:w-86 bg-menu-buttons text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 transform ${
           active ? "translate-x-0" : "translate-x-full"
         }`}
       >

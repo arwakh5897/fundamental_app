@@ -2,7 +2,7 @@ import React from "react";
 
 const Sustainability = () => {
   return (
-    <div className="p-4 md:p-10 max-w-4xl mx-auto">
+    <div className="p-4 lg:p-10 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Sustainability</h1>
       <p className="text-gray-600 leading-7">
         We are committed to reducing our environmental impact by adopting

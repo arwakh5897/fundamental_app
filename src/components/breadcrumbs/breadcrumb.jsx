@@ -3,7 +3,7 @@
 // const Breadcrumb = ({ title }) => {
 //   return (
 //     <nav
-//       className="md:hidden py-2 text-sm text-gray-600"
+//       className="lg:hidden py-2 text-sm text-gray-600"
 //       aria-label="Breadcrumb"
 //     >
 //       <ol className="inline-flex flex-wrap items-center space-x-2">
@@ -33,7 +33,7 @@ import React from "react";
 const Breadcrumb = ({ title }) => {
   return (
     <nav
-      className="flex md:hidden py-2 text-sm items-center"
+      className="flex lg:hidden py-2 text-sm items-center"
       aria-label="Breadcrumb"
     >
       <div className="space-x-2 py-4">

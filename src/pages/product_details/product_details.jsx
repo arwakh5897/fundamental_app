@@ -19,14 +19,14 @@ const ProductDetails = () => {
       <div className="flex flex-col p-2">
         <Breadcrumb title={products?.title} />
 
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Side - Images */}
-          <div className="w-full md:p-0 md:w-1/2">
+          <div className="w-full lg:p-0 lg:w-1/2">
             <ProductDetailImages thumbnail={products?.image} />
           </div>
 
           {/* Right Side - Cart Details */}
-          <div className="w-full md:w-1/2 md:px-6">
+          <div className="w-full lg:w-1/2 lg:px-6">
             <ProductDetailCart
               title={products?.title}
               description={products?.description}

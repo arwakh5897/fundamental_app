@@ -14,7 +14,7 @@
 //   return (
 //     <button
 //       onClick={() => setIsDark(!isDark)}
-//       className=" hover:cursor-pointer md:flex hidden"
+//       className=" hover:cursor-pointer lg:flex hidden"
 //     >
 //       <img
 //         src={isDark ? "/assets/icons/sun.png" : "/assets/icons/moon.png"}

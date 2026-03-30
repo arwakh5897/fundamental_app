@@ -15,7 +15,7 @@ const MakeUpTitle = () => {
 
     return (
         <div id="new_arrival">
-          <div className="bg-menu-buttons md:text-4xl text-center py-2 md:py-4">
+          <div className="bg-menu-buttons lg:text-4xl text-center py-2 lg:py-4">
                 KICK  
                 <span className="font-bold mx-2">MUST-HAVES</span>
           </div>

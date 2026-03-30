@@ -2,7 +2,7 @@ import React from "react";
 
 const CardTitle = ({ title }) => {
     return (
-        <h3 className="md:text-lg text-xs line-clamp-1 font-semibold">
+        <h3 className="lg:text-lg text-xs line-clamp-1 font-semibold">
           {title || "Card Title"}
         </h3>
     )

@@ -46,7 +46,7 @@ const Card = ({
         onClick={() =>
           navigate("/pages/product_details", { state: { productData } })
         }
-        className="bg-background-card w-36 md:w-72 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
+        className="bg-background-card w-36 lg:w-72 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
       >
         {/* 👁 Eye Button */}
         <EyeButton onClick={() => setOpen(true)} />

@@ -20,7 +20,7 @@ const ProductDetailCart = ({ title, description, price, discountedPrice, onAdd }
       <CartPrice price={price} discountedPrice={discountedPrice}/>
 
       {/* Divider */}
-       <Divider className="py-2 md:py-6"/>
+       <Divider className="py-2 lg:py-6"/>
 
       {/* Description */}
       <CartDescription description={description}/>
@@ -29,8 +29,8 @@ const ProductDetailCart = ({ title, description, price, discountedPrice, onAdd }
       <Size/>
       <Color/>
 
-       <div className="flex flex-col gap-4 py-4 md:py-0 md:sticky md:bottom-0">
-        <Divider className="py-2 md:py-6" />
+       <div className="flex flex-col gap-4 py-4 lg:py-0 lg:sticky lg:bottom-0">
+        <Divider className="py-2 lg:py-6" />
         <AddButton  products={products} onAdd={onAdd}/>
         <CartBuyButton  />
       </div>

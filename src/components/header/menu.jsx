@@ -7,9 +7,9 @@
 // import Logo from "./logo";
 // const Menu = () => {
 //     return (
-//         <div className="sticky top-0 left-0 z-50 w-full flex bg-menu-buttons gap-4 md:p-4 py-2 px-4 md:justify-around justify-between items-center ">
-//             <a href="/" className="md:order-1 order-2"> <Logo/></a>
-//             <div className="order-1 md:order-2">   <MenuItems/></div>
+//         <div className="sticky top-0 left-0 z-50 w-full flex bg-menu-buttons gap-4 lg:p-4 py-2 px-4 lg:justify-around justify-between items-center ">
+//             <a href="/" className="lg:order-1 order-2"> <Logo/></a>
+//             <div className="order-1 lg:order-2">   <MenuItems/></div>
            
 //             <div className="order-3 flex gap-4">
 //             {/* <SearchBar/> */}
@@ -51,14 +51,14 @@ const Menu = () => {
 
   return (
     <div
-      className={`sticky top-0 left-0 z-50 w-full flex bg-menu-buttons gap-4 md:p-3 py-2 px-4 
-        md:justify-around justify-between items-center
+      className={`sticky top-0 left-0 z-50 w-full flex bg-menu-buttons gap-4 lg:p-3 py-2 px-4 
+        lg:justify-around justify-between items-center
         transition-all duration-500 ease-in-out
       `}
     >
-      <a href="/" className="md:order-1 order-2"> <Logo/></a>
+      <a href="/" className="lg:order-1 order-2"> <Logo/></a>
 
-      <div className="order-1 md:order-2">
+      <div className="order-1 lg:order-2">
         <MenuItems />
       </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const OurPhilosophy = () => {
   return (
-    <div className="p-4 md:p-10 max-w-4xl mx-auto">
+    <div className="p-4 lg:p-10 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Our Philosophy</h1>
       <p className="text-gray-600 leading-7">
         Our philosophy is centered around quality, trust, and innovation.

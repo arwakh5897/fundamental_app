@@ -20,7 +20,7 @@ export default function ModeHook() {
   <div className="flex gap-4">
     <button
       onClick={() => setIsDark(!isDark)}
-      className=" hover:cursor-pointer md:flex hidden"
+      className=" hover:cursor-pointer lg:flex hidden"
     >
             <Mood darkLight={isDark}/>          
     </button>

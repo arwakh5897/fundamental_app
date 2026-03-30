@@ -13,8 +13,8 @@ const ProductsLayout = ({allItems,title,itemsPerPage}) => {
 
     return (
         <div>
-            <div className="flex justify-between items-center p-4 md:p-8">
-                <h2 className="text-sm md:text-xl font-bold">{title}</h2>
+            <div className="flex justify-between items-center p-4 lg:p-8">
+                <h2 className="text-sm lg:text-xl font-bold">{title}</h2>
                 <FilterUI sortType={sortType} setSortType={setSortType}/>
             </div>
             <Products products={visibleProducts} />

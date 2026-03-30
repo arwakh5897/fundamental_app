@@ -11,7 +11,7 @@ const AddButton = ({ onAdd }) => {
   };
 
   return (
-    <div className="flex items-center gap-2 md:gap-4 mt-4">
+    <div className="flex items-center gap-2 lg:gap-4 mt-4">
       
       {/* Quantity Selector */}
       <div className="flex items-center border-color rounded overflow-hidden">

@@ -47,7 +47,7 @@ const FilterUI = ({ sortType, setSortType }) => {
   return (
     <div 
     ref={ref} 
-    className="relative w-fit text-xs md:text-sm">
+    className="relative w-fit text-xs lg:text-sm">
       <FilterTrigger
         activeLabel={activeLabel}
         open={open}

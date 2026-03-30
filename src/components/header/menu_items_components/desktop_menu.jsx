@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const DesktopMenu = () => {
   return (
-    <nav className="hidden md:flex gap-6">
+    <nav className="hidden lg:flex gap-6">
       <Link to="/pages/shop_all">Shop All</Link>
       <Link to="/pages/by_bundle">Shop Bundles</Link>
       <Link to="/pages/by_concern">By Concern</Link>

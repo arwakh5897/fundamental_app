@@ -23,7 +23,7 @@ const ShopAll = () => {
                   {/* No results */}
             {filteredItems.length === 0 && (
               <div className="flex flex-col justify-center items-center py-20 text-center">
-                <p className="text-2xl md:text-3xl font-semibold text-gray-500">
+                <p className="text-2xl lg:text-3xl font-semibold text-gray-500">
                   No products found
                 </p>
               </div>           

@@ -11,8 +11,8 @@ const ProductDetailImages = ({thumbnail}) => {
   const [activeImage, setActiveImage] = useState(thumbnail);
       return(
         <div className="w-full">
-          {/* <div className="h-screen md:h-auto"> */}
-            <div className="aspect-[6/5] md:aspect-[4/3]">
+          {/* <div className="h-screen lg:h-auto"> */}
+            <div className="aspect-[6/5] lg:aspect-[4/3]">
                 <ImageZoom src={activeImage} alt="" />
             </div>
             {/* </div> */}
@@ -21,7 +21,7 @@ const ProductDetailImages = ({thumbnail}) => {
                   <img
                   key={index}
                   onClick={()=>setActiveImage(item)}
-                  className="w-16 h-16 md:w-28 md:h-28 bg-image object-contain"
+                  className="w-16 h-16 lg:w-28 lg:h-28 bg-image object-contain"
                   src={item}
                   alt="image"
                    />

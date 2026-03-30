@@ -8,8 +8,8 @@ import ProductsLinks from "./footer_components/products_links";
 
 const Footer = () => {
     return (
-        <footer className="bg-menu-buttons md:pt-8 p-4">
-            <div className="flex flex-col pt-6 pb-8 md:py-8 md:flex-row gap-8 md:text-start justify-around">
+        <footer className="bg-menu-buttons lg:pt-8 p-4">
+            <div className="flex flex-col pt-6 pb-8 lg:py-8 lg:flex-row gap-8 lg:text-start justify-around">
                 <AboutUs/>
                 <CustomerCare/>
                 <ProductsLinks/>
