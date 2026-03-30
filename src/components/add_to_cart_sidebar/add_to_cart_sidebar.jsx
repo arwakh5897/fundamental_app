@@ -9,7 +9,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-1000 ${
+        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
           active ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={onClose}
@@ -17,7 +17,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 right-0 h-full w-72 md:w-86 bg-menu-buttons text-foreground-secondary z-50 flex flex-col transition-transform duration-300 transform ${
+        className={`fixed top-0 right-0 h-full w-72 md:w-86 bg-menu-buttons text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 transform ${
           active ? "translate-x-0" : "translate-x-full"
         }`}
       >
