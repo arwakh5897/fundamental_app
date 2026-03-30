@@ -15,7 +15,7 @@ const RightArrow = ({ scrollRef }) => {
    <div className="flex bg-transparent right-1 absolute z-10">
       <button
         onClick={handleClick}
-        className="bg-menu-buttons lg:p-2 p-1 rounded-full hover:opacity-80"
+        className="bg-buttons hover-bg-buttons lg:p-2 p-1 rounded-full hover:opacity-80"
       >
         <ChevronRightIcon className="lg:w-5 lg:h-5 w-4 h-4" />
       </button>

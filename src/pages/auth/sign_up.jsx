@@ -38,7 +38,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-menu-buttons z-60">
+    <div className="fixed inset-0 bg-buttons hover-bg-buttons z-60">
       {/* Modal */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-white p-6 rounded-lg shadow-lg z-50">
         
@@ -62,7 +62,7 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="mt-4 w-full bg-menu-buttons py-2 rounded-md font-semibold hover:opacity-90 transition"
+            className="mt-4 w-full bg-buttons hover-bg-buttons py-2 rounded-md font-semibold hover:opacity-90 transition"
           >
             Create Account
           </button>

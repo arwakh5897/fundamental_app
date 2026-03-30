@@ -1,11 +1,12 @@
 import React from "react";
 import ShoppingDetailsCard from "../../components/card/shopping_details_card";
 import { useCartContext } from "../../context/cartContext";
+import ShoppingDeatailsCardButtons from "../../components/card/shopping_details_card_components/shopping_Detail_Card_buttons";
 
 const ShoppingDetails =()=>{
   const { cart, handleRemoveItem} = useCartContext();
     return(
-        <div>
+        <div className="flex flex-col p-4 gap-6">
             <h1 className="text-2xl font-semibold">Shopping Details</h1>
             {/* <div>
                 <h2>Product Name</h2>
@@ -27,7 +28,11 @@ const ShoppingDetails =()=>{
                 color={item.color}
                 onRemove={() => handleRemoveItem(item.id)}
               />
-            ))}</div>
+            ))}
+            </div>
+            <div>
+                <ShoppingDeatailsCardButtons/>
+            </div>
         </div>
     )
 }

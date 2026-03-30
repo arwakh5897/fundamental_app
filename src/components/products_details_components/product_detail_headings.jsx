@@ -12,7 +12,7 @@ const ProductDetailHeadings = () => {
 
   return (
     <div>
-      <p className="h-[1px] w-full bg-menu-buttons"></p>
+      <p className="h-[1px] w-full bg-buttons hover-bg-buttons"></p>
 
       {/* Tabs */}
       <div className="flex justify-center items-center gap-8 py-3 lg:py-2">
@@ -32,21 +32,21 @@ const ProductDetailHeadings = () => {
             {/* Animated underline */}
             <span
               className={`h-[2px] mt-1 transition-all duration-500
-              ${activeTab === tab.key ? "w-full bg-menu-buttons" : "w-0 bg-menu-buttons"}`
+              ${activeTab === tab.key ? "w-full bg-buttons hover-bg-buttons" : "w-0 bg-buttons hover-bg-buttons"}`
             }
             ></span>
           </div>
         ))}
       </div>
 
-      <p className="h-[1px] w-full bg-menu-buttons"></p>
+      <p className="h-[1px] w-full bg-buttons hover-bg-buttons"></p>
 
       {/* Content */}
       <div className="pt-6 px-2 lg:pt-10 transition-all duration-300">
         {activeTab === "description" && <FullDescription />}
         {activeTab === "reviews" && <Reviews />}
       </div>
-      <p className="h-[1px] mt-10 w-full bg-menu-buttons"></p>
+      <p className="h-[1px] mt-10 w-full bg-buttons hover-bg-buttons"></p>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const itemsPerPage = 8;
    },[]);
     return (
         <div>
-            <h1 className="bg-menu-buttons lg:text-2xl font-bold text-center py-2 lg:py-4">CONCERN</h1>
+            <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">CONCERN</h1>
             <ProductsLayout allItems={allItems} title="By Concern" itemsPerPage={itemsPerPage} />
         </div>
     )

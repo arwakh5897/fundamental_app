@@ -27,7 +27,7 @@ const ShoppingDetailsCard = ({
         
         {/* Title + Delete */}
         <div className="flex justify-between items-start">
-          <h3 className="text-sm lg:text-base font-semibold line-clamp-2">
+          <h3 className="text-sm lg:text-base font-semibold line-clamp-2 w-5/6 ">
             {name || "Product Name"}
           </h3>
 

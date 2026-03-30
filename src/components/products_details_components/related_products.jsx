@@ -11,7 +11,7 @@ const RelatedProducts =()=>{
     <div>
         <div className="flex flex-col justify-center items-center">
             <h2 className="text-2xl">Related Products</h2>
-            <p className="h-[2px] w-36 bg-menu-buttons"></p>
+            <p className="h-[2px] w-36 bg-buttons hover-bg-buttons"></p>
         </div>
     <ScrollingCard allItems={allItems}/>
     </div>

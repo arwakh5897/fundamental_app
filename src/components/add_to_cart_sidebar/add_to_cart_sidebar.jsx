@@ -17,14 +17,14 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 right-0 h-full w-72 lg:w-86 bg-menu-buttons text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 transform ${
+        className={`fixed top-0 right-0 h-full w-72 lg:w-86 bg-menu text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 transform ${
           active ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <SidebarHeader onClose={onClose} totalItems={totalItems} />
 
         {/* Cart Items */}
-        <div className="flex flex-col overflow-y-auto scrollbar-hide h-2/3">
+        <div className="flex flex-col overflow-y-auto scrollbar-hide py-2 h-3/4">
           {cart.length > 0 ? (
             cart.map((item) => (
               <ShoppingCard

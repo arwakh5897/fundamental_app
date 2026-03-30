@@ -31,8 +31,14 @@ body {
 .bg-background-header {
   background-color: rgb(245 245 245 / 1); /* Light mode default */
 }
-.bg-menu-buttons {
+.bg-menu {
   background-color: rgb(170, 134, 134);
+}
+.bg-buttons {
+  background-color: rgb(170, 134, 134);
+}
+.hover-bg-buttons:hover {
+  background-color: rgb(140, 100, 100); /* darker elegant */
 }
 
 .bg-background-card {

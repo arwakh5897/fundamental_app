@@ -12,7 +12,7 @@ const ByType = () => {
 
     return (
         <div>
-            <h1 className="bg-menu-buttons lg:text-2xl font-bold text-center py-2 lg:py-4">TYPE</h1>
+            <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">TYPE</h1>
             <ProductsLayout allItems={allItems} title="By Type" itemsPerPage={itemsPerPage} />
         </div>
     )

@@ -5,7 +5,7 @@ import Card from "../card/card";
 const CardAndTitle = ({ title }) => {
     return (
         <div>
-            <div className="bg-menu-buttons text-4xl  text-center py-4">
+            <div className="bg-buttons hover-bg-buttons text-4xl  text-center py-4">
                 {title}
             </div>
             <Card />

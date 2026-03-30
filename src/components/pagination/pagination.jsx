@@ -12,7 +12,7 @@
 //      <div className="flex justify-center items-center py-8">
 //         <button 
 //         onClick={handleClick}
-//         className=" flex bg-menu-buttons py-1 px-4 rounded-sm text-sm lg:text-lg hover:opacity-90 lg:font-semibold hover:cursor-pointer transition">
+//         className=" flex bg-buttons hover-bg-buttons py-1 px-4 rounded-sm text-sm lg:text-lg hover:opacity-90 lg:font-semibold hover:cursor-pointer transition">
 //             Load More</button>
 //      </div>
 //     )
@@ -41,7 +41,7 @@ const Pagination = ({loadMore})=>{
      <div className="flex justify-center items-center py-8">
         <button 
             onClick={loadMore}
-            className=" flex bg-menu-buttons py-1 px-4 rounded-sm text-sm lg:text-lg hover:opacity-90 lg:font-semibold hover:cursor-pointer transition">
+            className=" flex bg-buttons hover-bg-buttons py-1 px-4 rounded-sm text-sm lg:text-lg hover:opacity-90 lg:font-semibold hover:cursor-pointer transition">
                 Load More
         </button>
      </div>

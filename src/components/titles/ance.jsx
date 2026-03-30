@@ -12,7 +12,7 @@ const Ance = () => {
   .slice(0, 8); // top 8
       return (
         <div>
-      <div className="bg-menu-buttons lg:text-4xl text-center py-2 lg:py-4">
+      <div className="bg-menu lg:text-4xl text-center py-2 lg:py-4">
             FOOTWARE
             <span className="font-bold mx-2">ESSENTIALS</span>
         </div>

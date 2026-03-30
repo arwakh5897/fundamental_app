@@ -2,7 +2,7 @@ import React from "react";
 
 const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
   return (
-    <div className="flex gap-3 p-3 border-b">
+    <div className="flex gap-3 p-2 border-b">
       
       {/* Image */}
       <div className="w-20 h-16 flex-shrink-0">
