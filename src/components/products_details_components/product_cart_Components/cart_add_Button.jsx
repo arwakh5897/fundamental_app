@@ -37,7 +37,7 @@ const AddButton = ({ onAdd }) => {
       {/* Add to Cart Button */}
       <button
         onClick={handleProductDetails}
-        className="bg-buttons hover-bg-buttons hover:cursor-pointer font-semibold py-2 px-4 transition"
+        className="bg-buttons hover-bg-buttons rounded hover:cursor-pointer font-semibold py-2 px-4 transition"
       >
         Add to Cart
       </button>

@@ -1,47 +1,10 @@
-// import React from "react";
-
-// const Pagination = ({currentPage, totalPages, onPageChange})=>{
-//     const handleClick = () => {
-//         if (currentPage < totalPages) {
-//             onPageChange(currentPage + 1);
-//         }
-//     };
-//     if (currentPage >= totalPages) return null;
-
-//     return (
-//      <div className="flex justify-center items-center py-8">
-//         <button 
-//         onClick={handleClick}
-//         className=" flex bg-buttons hover-bg-buttons py-1 px-4 rounded-sm text-sm lg:text-lg hover:opacity-90 lg:font-semibold hover:cursor-pointer transition">
-//             Load More</button>
-//      </div>
-//     )
-// }
-// export default Pagination;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 const Pagination = ({loadMore})=>{
     return (
      <div className="flex justify-center items-center py-8">
         <button 
             onClick={loadMore}
-            className=" flex bg-buttons hover-bg-buttons py-1 px-4 rounded-sm text-sm lg:text-lg hover:opacity-90 lg:font-semibold hover:cursor-pointer transition">
+            className=" flex bg-buttons hover-bg-buttons md:py-1.5 py-1 px-2 md:px-4 rounded-sm text-xs md:text-sm lg:text-lg hover:opacity-90 lg:font-semibold hover:cursor-pointer transition">
                 Load More
         </button>
      </div>
