@@ -18,14 +18,13 @@ const ProductDetailsPopup = ({ isOpen, onClose, product }) => {
       ></div>
 
       {/* Modal Content */}
-      <div className="relative bg-white w-[95%] lg:w-[90%] max-h-[90vh] overflow-y-auto rounded-xl shadow-lg z-10 p-4">
+      <div className="relative bg-white w-[95%] lg:w-[90%] max-h-[90vh] overflow-y-auto scroll-auto rounded-xl shadow-lg z-10 p-4">
 
         {/* Close Button */}
         <CloseButton onClick={onClose} className={"absolute top-2 right-2 px-2 py-1 "}/>
 
         {/* Content (Same as ProductDetails) */}
         <div className="flex flex-col p-2">
-          <Breadcrumb title={product?.title} />
 
           <div className="flex flex-col lg:flex-row gap-6">
             

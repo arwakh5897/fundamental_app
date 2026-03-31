@@ -26,10 +26,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .bg-background {
-  background-color: #ffffff; /* Light mode default */
+  background-color: #ffffff; 
 }
 .bg-background-header {
-  background-color: rgb(245 245 245 / 1); /* Light mode default */
+  background-color: rgb(245 245 245 / 1); 
 }
 .bg-menu {
   background-color: rgb(170, 134, 134);
@@ -38,15 +38,14 @@ body {
   background-color: rgb(170, 134, 134);
 }
 .hover-bg-buttons:hover {
-  background-color: rgb(140, 100, 100); /* darker elegant */
+  background-color: rgb(140, 100, 100);
 }
 
 .bg-background-card {
-  background-color: rgb(253, 247, 247); /* Light mode default */
+  background-color: rgb(253, 247, 247); 
 }
 .text-foreground {
   color: rgba(15, 23, 42, 0.753);
-  /* color:white; */
 }
 .text-foreground-secondary {
   color: white;
@@ -70,7 +69,7 @@ body {
   border: 1px solid rgb(206, 210, 216);
 }
 .bg-hover-color:hover {
-  background-color: rgb(198, 202, 211); /* gray-500 */
+  background-color: rgb(198, 202, 211); 
 }
 .bg-overlay {
   background-color: rgb(0 0 0 / 0.4);

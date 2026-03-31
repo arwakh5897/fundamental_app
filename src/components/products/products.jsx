@@ -11,11 +11,14 @@ const Products = ({products})=>{
                 title={item.title}
                 description={item.description}
                 price={item.price}
-                rating={item.rating.rate}
-                stock={item.rating.count}
+                rating={item.rating}
+                stock={item.stock}
                 category={item.category}
-                image={item.image}
-                discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
+                image={item.images}
+                // image={item.image}
+                discount={Number(item.discountPercentage).toFixed(0)}
+
+                // discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
               />
             ))}
       </div>

@@ -11,7 +11,7 @@ const MakeUpTitle = () => {
     fetchProducts().then(setProducts)
    },[]);
     const {currentPage, totalPages,visibleProducts, loadMore}= usePagination({allItems,itemsPerPage})
-
+    const specifiedProducts = visibleProducts.slice(0 , 15)
 
     return (
         <div id="new_arrival">
@@ -20,7 +20,7 @@ const MakeUpTitle = () => {
                 <span className="font-bold mx-2">MUST-HAVES</span>
           </div>
           <img className="w-full" src="/assets/images/banner3.png"/>
-          <Products products={visibleProducts}/>
+          <Products products={specifiedProducts}/>
           {currentPage < totalPages && <Pagination loadMore={loadMore} />}
 
        </div>

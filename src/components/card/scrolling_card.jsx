@@ -19,7 +19,7 @@ const ScrollingCard =({allItems})=>{
                 price={item.price}
                 rating={item.rating.rate}
                 reviews={item.rating.count}
-                image={item.image}
+                image={item.images[0]}
                 discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
               />
               </div>

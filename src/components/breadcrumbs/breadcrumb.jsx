@@ -33,7 +33,7 @@ import React from "react";
 const Breadcrumb = ({ title }) => {
   return (
     <nav
-      className="flex lg:hidden py-2 text-sm items-center"
+      className="flex lg:justify-end py-2 text-sm items-center"
       aria-label="Breadcrumb"
     >
       <div className="space-x-2 py-4">
