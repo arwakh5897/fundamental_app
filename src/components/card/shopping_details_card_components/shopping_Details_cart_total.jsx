@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShoppingDetailsCartTotal = ({ totalPrice = 0 }) => {
+const ShoppingDetailsCartTotal = ({ totalPrice  }) => {
     return (
         <div className="flex justify-end
          gap-3 text-sm lg:text-xl font-bold lg:font-semibold p-2">

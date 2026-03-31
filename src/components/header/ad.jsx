@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 const Ad = () => {
   return (
     <div className="py-2 text-xs lg:text-sm  font-medium">
-      <Swiper modules={[Autoplay]} autoplay={{ delay: 3000, disableOnInteraction: false }} loop={true} className="mySwiper"   >
+      <Swiper modules={[Autoplay]} autoplay={{ delay:3000, disableOnInteraction: false }} loop={true} className="mySwiper"   >
         <SwiperSlide >
           <div className="flex flex-row gap-4 justify-center">
               <span>FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>

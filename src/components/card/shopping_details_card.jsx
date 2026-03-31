@@ -51,7 +51,7 @@ const ShoppingDetailsCard = ({
         </div>
 
         {/* Bottom Section */}
-        <div className="flex items-center justify-end mt-2">
+        <div className="flex items-center justify-end">
           
           {/* Price */}
           <p className="text-sm lg:text-base font-bold text-green-600">

@@ -93,12 +93,12 @@ const CheckOut = () => {
               placeholder="ZIP Code"
               value={formData.zip}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full p-3 border border-gray-300 rounded focus:outline-none "
               required
             />
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white p-3 rounded font-semibold hover:bg-indigo-700 transition"
+              className="w-full bg-buttons hover-bg-buttons hover:cursor-pointer text-white p-3 rounded font-semibold  transition"
             >
               Place Order
             </button>
