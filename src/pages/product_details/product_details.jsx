@@ -16,10 +16,10 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <div className="flex flex-col p-2">
+      <div className="flex flex-col p-4">
         <Breadcrumb title={products?.title} />
 
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col lg:p-4 lg:flex-row gap-6">
           {/* Left Side - Images */}
           <div className="w-full lg:p-0 lg:w-1/2">
             <ProductDetailImages thumbnail={products?.image} />

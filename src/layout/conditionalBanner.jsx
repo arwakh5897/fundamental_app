@@ -5,7 +5,7 @@ import Banner from "../components/banners/banner";
 const ConditionalBanner = ()=>{
     const locaion = useLocation();
 
-    const hidenPaths = ["/pages/product_details" , "/pages/shopping_details"]
+    const hidenPaths = ["/pages/product_details" , "/pages/shopping_details" , "/pages/checkout"]
     if(hidenPaths.includes(locaion.pathname)) return null;
     return<Banner/>;
 }

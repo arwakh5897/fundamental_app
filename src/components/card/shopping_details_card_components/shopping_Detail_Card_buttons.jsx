@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ShoppingDetailsCardButtons = ({ cart}) => {
+const ShoppingDetailsCardButtons = () => {
     const navigate = useNavigate();
     return(        
     <div className="flex flex-col gap-3 p-2 font-semibold text-xs lg:text-sm transition-colors duration-200 mt-auto">

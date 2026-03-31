@@ -10,7 +10,7 @@ const ShoppingDetails =()=>{
     return(
         <div className="flex flex-col p-4 gap-6">
           <Breadcrumb title="Shopping Details" />
-            <h1 className="text-2xl font-semibold">Shopping Details</h1>
+            {/* <h1 className="text-2xl font-semibold">Shopping Details</h1> */}
             {/* <div>
                 <h2>Product Name</h2>
                 <h2>Product Description</h2>
@@ -35,7 +35,7 @@ const ShoppingDetails =()=>{
             </div>
             <ShoppingDetailsCartTotal totalPrice={cart.reduce((total, item) => total + item.discountedPrice * item.qty, 0)} />
             <div>
-                <ShoppingDetailsCardButtons cart={cart} />
+                <ShoppingDetailsCardButtons />
             </div>
         </div>
     )
