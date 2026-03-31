@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddButton = ({ onAdd }) => {
   const [quantity, setQuantity] = useState(1);
-
+  const navigate = useNavigate();
 
   const increment = () => setQuantity((prev) => prev + 1);
   const decrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
   const handleProductDetails = () => {
     if (onAdd) onAdd(quantity);
+    navigate("/pages/shop_all");
   };
 
   return (
