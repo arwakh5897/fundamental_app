@@ -8,9 +8,11 @@ import AddButton from "./product_cart_Components/cart_add_Button";
 import CartBuyButton from "./product_cart_Components/cart_buy_Button";
 import Divider from "../divider/divider";
 import useToast from "../../../utils/useToast";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetailCart = ({ products , onAdd ,  onUpdateSize}) => {
   const { error , success } = useToast();
+  const navigate = useNavigate();
   const [selectedSize, setSelectedSize] = useState(null);  
   const handleSizeChange = (newSize)=>{
     setSelectedSize(newSize);
@@ -23,6 +25,7 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize}) => {
   }
   else {
     success("Item added to cart 🛒");
+    navigate("/pages/shop_all");
   }
 
   onAdd(qty, selectedSize); // ✅ dono pass karo
