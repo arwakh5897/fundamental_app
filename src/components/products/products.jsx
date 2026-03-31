@@ -15,7 +15,7 @@ const Products = ({products})=>{
                 rating={item.rating}
                 stock={item.stock}
                 category={item.category}
-                image={item.image}
+                image={item.images}
                 sizes={["24", "32", "40"]}
                 colors={["red", "blue", "green", "black", "white"]}
                 discount={Number(item.discountPercentage).toFixed(0)}
