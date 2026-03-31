@@ -5,6 +5,10 @@ const useToast = () => {
   const success = (msg) => {
     toast.success(msg, {
       icon: "✅",
+      style:{
+        background: "white",
+        color: "#1f2937",
+      }
     });
   };
 
@@ -17,6 +21,9 @@ const useToast = () => {
   const info = (msg) => {
     toast(msg, {
       icon: "ℹ️",
+      style:{
+        background: "#2563eb",
+      }
     });
   };
 
