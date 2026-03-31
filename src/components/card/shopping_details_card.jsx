@@ -33,7 +33,7 @@ const ShoppingDetailsCard = ({
 
           <button
             onClick={onRemove}
-            className="p-1 hover:bg-red-100 rounded"
+            className="p-1 hover:bg-red-100 hover:cursor-pointer rounded"
           >
             <img
               className="w-4 h-4"
@@ -51,7 +51,7 @@ const ShoppingDetailsCard = ({
         </div>
 
         {/* Bottom Section */}
-        <div className="flex items-center justify-between mt-2">
+        <div className="flex items-center justify-end mt-2">
           
           {/* Price */}
           <p className="text-sm lg:text-base font-bold text-green-600">
@@ -59,7 +59,7 @@ const ShoppingDetailsCard = ({
           </p>
 
           {/* Quantity Buttons */}
-          <IncreamentDecreamentButton />
+          {/* <IncreamentDecreamentButton qty={qty} /> */}
         </div>
       </div>
     </div>

@@ -35,6 +35,13 @@ const handleAddToCart = (product, quantity) => {
     
   });
 };
+  const updateCartQty = (id, newQty) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, qty: newQty } : item
+      )
+    );
+  };
 
   const handleRemoveItem = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
@@ -50,6 +57,7 @@ const handleAddToCart = (product, quantity) => {
     handleAddToCart,
     handleRemoveItem,
     clearCart,
+    updateCartQty,
   };
 };
 

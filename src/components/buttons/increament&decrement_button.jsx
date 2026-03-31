@@ -1,7 +1,7 @@
 import React , {useState} from "react";
 
-const IncreamentDecreamentButton = () => {
-      const [quantity, setQuantity] = useState(1);
+const IncreamentDecreamentButton = ({ qty }) => {
+      const [quantity, setQuantity] = useState(qty);
       const increment = () => setQuantity((prev) => prev + 1);
       const decrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
