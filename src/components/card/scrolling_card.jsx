@@ -16,10 +16,13 @@ const ScrollingCard =({allItems})=>{
                 key={item.id}
                 id={item.id}
                 title={item.title}
+                description={item.description}
                 price={item.price}
-                rating={item.rating.rate}
-                reviews={item.rating.count}
-                image={item.images[0]}
+                rating={item.rating}
+                stock={item.stock}
+                image={item.image}
+                sizes={item.sizes}
+                colors={item.colors}
                 discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
               />
               </div>

@@ -16,8 +16,8 @@ const useCart = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-const handleAddToCart = (product, quantity) => {
-  if (!product || !product.id) return; // ❌ ignore invalid products
+const handleAddToCart = (product, quantity, size) => {
+  if (!product || !product.id) return;
 
   setCart((prev) => {
     const existing = prev.find((p) => p.id === product.id);
@@ -25,14 +25,12 @@ const handleAddToCart = (product, quantity) => {
     if (existing) {
       return prev.map((p) =>
         p.id === product.id
-          ? { ...p, qty: p.qty + quantity }
+          ? { ...p, qty: p.qty + quantity, selectedSize: size }
           : p
       );
     }
 
-
-    return [...prev, { ...product, qty: quantity }]; // ✅ push new product
-    
+    return [...prev, { ...product, qty: quantity, selectedSize: size }];
   });
 };
   const updateCartQty = (id, newQty) => {
@@ -42,6 +40,13 @@ const handleAddToCart = (product, quantity) => {
       )
     );
   };
+  const updateCartItemSize = (id, size) => {
+  setCart((prevCart) =>
+    prevCart.map((item) =>
+      item.id === id ? { ...item, selectedSize: size } : item
+    )
+  );
+};
 
   const handleRemoveItem = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
@@ -58,6 +63,7 @@ const handleAddToCart = (product, quantity) => {
     handleRemoveItem,
     clearCart,
     updateCartQty,
+    updateCartItemSize,
   };
 };
 

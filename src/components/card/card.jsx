@@ -12,33 +12,13 @@ import EyeButton from "../buttons/eye_button";
 
 import ProductDetailsPopup from "../product_popUp/product_popUp";
 
-const Card = ({
-  id,
-  image,
-  title,
-  description,
-  rating = 4.5,
-  price = 4900,
-  discount = 50,
-  stock = 10
-}) => {
+const Card = ({ id, image, title, description, rating,  price ,  discount ,  stock ,  sizes,  colors,}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-
   const discountedPrice = price - (price * discount) / 100;
 
-  const productData = {
-    id,
-    image,
-    title,
-    description,
-    rating,
-    price,
-    discount,
-    discountedPrice,
-    stock
-  };
-
+  const productData = { id, image, title, description, rating, price, discount, discountedPrice, stock, sizes, colors };
+   // console.log("Card Component - Product Data:", productData);
   return (
     <>
       {/* ✅ Card */}
@@ -52,23 +32,23 @@ const Card = ({
         <EyeButton onClick={() => setOpen(true)} />
 
         {discount > 0 && (
-          <CardDiscountBadge discount={discount} price={price} />
+          <CardDiscountBadge discount={productData.discount} price={productData.price} />
         )}
 
-        <CardStock stock={stock} />
-        <CardImage image={image} />
+        <CardStock stock={productData.stock} />
+        <CardImage image={productData.image} />
 
-        <div className="flex flex-col p-2 text-center items-center w-full">
-          <CardTitle title={title} />
-          <CardRating rating={rating} />
+        <div className="flex flex-col py-2 text-center items-center w-full">
+          <CardTitle title={productData.title} />
+          <CardRating rating={productData.rating} />
 
           <CardPrice
-            price={price}
-            discount={discount}
-            discountedPrice={discountedPrice}
+            price={productData.price}
+            discount={productData.discount}
+            discountedPrice={productData.discountedPrice}
           />
 
-          <CardStockCount stock={stock} />
+          <CardStockCount stock={productData.stock} />
         </div>
       </div>
 

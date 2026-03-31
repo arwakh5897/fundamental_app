@@ -12,8 +12,7 @@ import AddToCartSidebar from "../../components/add_to_cart_sidebar/add_to_cart_s
 const ProductDetails = () => {
   const { state } = useLocation();
   const products = state?.productData;
-  const { cart,  handleAddToCart, handleRemoveItem, } = useCartContext();
-
+  const { cart,  handleAddToCart, handleRemoveItem, updateCartItemSize } = useCartContext();
   return (
     <div>
       <div className="flex flex-col p-4">
@@ -27,12 +26,11 @@ const ProductDetails = () => {
 
           {/* Right Side - Cart Details */}
           <div className="w-full lg:w-1/2 lg:px-6">
-            <ProductDetailCart
-              title={products?.title}
-              description={products?.description}
-              price={products?.price}
-              discountedPrice={products?.discountedPrice}
-              onAdd={(qty) => handleAddToCart(products, qty)}            />
+            <ProductDetailCart 
+            products={products}
+            onUpdateSize={updateCartItemSize } 
+            onAdd={(qty , size) => handleAddToCart(products, qty , size)} 
+            />
           </div>
         </div>
       </div>
@@ -47,7 +45,7 @@ const ProductDetails = () => {
 
       {/* Sidebar */}
       <AddToCartSidebar
-        onRemove={handleRemoveItem}
+        onRemove={handleRemoveItem}        
         cart={cart}
       />
     </div>

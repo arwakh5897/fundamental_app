@@ -1,14 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import useClickOutside from "../../hook/click_outside_hook";
 
-const DropDownButton = ({ buttons, title }) => {
+const DropDownButton = ({ buttons = [], title, onClick }) => {
   const [active, setActive] = useState(title);
   const [open, setOpen] = useState(false);
   const ref = useRef();
-  useClickOutside(ref,()=>setOpen(false))
+
+  useClickOutside(ref, () => setOpen(false));
+
   return (
     <div
-    ref={ref}
+      ref={ref}
       className="relative h-auto flex flex-col items-center w-full border border-color px-3 py-2"
     >
       <button
@@ -25,18 +27,25 @@ const DropDownButton = ({ buttons, title }) => {
 
       {open && (
         <ul className="absolute left-0 mt-7.5 overflow-y-auto scrollbar-hide w-full border-color bg-background z-10">
-          {buttons.map((item, index) => (
-            <li
-              key={index}
-              className="px-3 text-sm py-2 bg-hover-color cursor-pointer"
-              onClick={() => {
-                setActive(item);
-                setOpen(false);
-              }}
-            >
-              {item}
+          {buttons.length === 0 ? (
+            <li className="px-3 py-2 text-sm text-gray-400">
+              No options
             </li>
-          ))}
+          ) : (
+            buttons.map((item, index) => (
+              <li
+                key={index}
+                className="px-3 text-sm py-2 bg-hover-color cursor-pointer"
+                onClick={() => {
+                  setActive(item);
+                  setOpen(false);
+                  onClick?.(item); // ✅ call parent callback
+                }}
+              >
+                {item}
+              </li>
+            ))
+          )}
         </ul>
       )}
     </div>

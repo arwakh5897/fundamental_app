@@ -6,8 +6,8 @@ const ShoppingDetailsCard = ({
   name,
   qty = 1,
   price = 233,
-  size = "M",
-  color = "Black",
+  size,
+  color,
   onRemove,
 }) => {
   return (

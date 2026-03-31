@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import useToast from "../../../../utils/useToast";
 
 const AddButton = ({ onAdd }) => {
   const [quantity, setQuantity] = useState(1);
-  const { success  } = useToast();
 
 
   const increment = () => setQuantity((prev) => prev + 1);
@@ -11,7 +9,6 @@ const AddButton = ({ onAdd }) => {
 
   const handleProductDetails = () => {
     if (onAdd) onAdd(quantity);
-    success("Item added to cart 🛒");
   };
 
   return (
