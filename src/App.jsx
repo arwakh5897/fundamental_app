@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 
 import useLenis from "./hook/lenisHook";
-
-import Ad from "./components/header/ad";
-import Menu from "./components/header/menu";
-import Footer from "./components/footer/footer";
+import ToastContext from "./context/toastContext";
 
 import Dashboard from "./pages/dashboard/dashboard";
 import ShopAll from "./pages/dashboard/shop_all";
@@ -44,44 +41,40 @@ const App = () => {
       <CartProvider>
       <LoaderProvider>
         <Loader/>
-     <RouteLoader/>
-      <div className="text-foreground bg-background">
-        {/* <Ad />
-        <Menu />
-        <ConditionalBanner/> */}
-          <Routes>
-              <Route element={<MainLayout />} >
-                <Route path="/" element={<Dashboard />} />
+          <RouteLoader/>
+           <ToastContext/>
+            <div className="text-foreground bg-background">
+                <Routes>
+                    <Route element={<MainLayout />} >
+                      <Route path="/" element={<Dashboard />} />
 
-                                      {/*  Header Routes  */}
-                <Route path="/pages/shop_all" element={<ShopAll />} />
-                <Route path="/pages/by_type" element={<ByType />} />
-                <Route path="/pages/by_concern" element={<ByConcern />} />
-                <Route path="/pages/by_bundle" element={<ByBundle />} />
-                <Route path="/pages/accessories" element={<Accessories />} />
-                <Route path="/pages/make_up" element={<MakeUp/>}/>
+                                            {/*  Header Routes  */}
+                      <Route path="/pages/shop_all" element={<ShopAll />} />
+                      <Route path="/pages/by_type" element={<ByType />} />
+                      <Route path="/pages/by_concern" element={<ByConcern />} />
+                      <Route path="/pages/by_bundle" element={<ByBundle />} />
+                      <Route path="/pages/accessories" element={<Accessories />} />
+                      <Route path="/pages/make_up" element={<MakeUp/>}/>
 
-                <Route path="/pages/product_details" element={<ProductDetails/>}/>
-                <Route path="/pages/shopping_details" element={<ShoppingDetails/>}/>
-                <Route path="/pages/checkout" element={<CheckOut/>}/>
+                      <Route path="/pages/product_details" element={<ProductDetails/>}/>
+                      <Route path="/pages/shopping_details" element={<ShoppingDetails/>}/>
+                      <Route path="/pages/checkout" element={<CheckOut/>}/>
 
-                                      {/*  Footer Routes  */}
-                <Route path="/our-story" element={<OurStory />} />
-                <Route path="/sustainability" element={<Sustainability />} />
-                <Route path="/philosophy" element={<OurPhilosophy />} />
-                <Route path="/contact" element={<ContactUs />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/refund-policy" element={<RefundPolicy />} />
-              </Route>
-            
-                                     {/* Auth Routes */}
-                <Route path="/login" element={<SignIn/>} />
-                <Route path="/signup" element={<SignUp/>} />
+                                            {/*  Footer Routes  */}
+                      <Route path="/our-story" element={<OurStory />} />
+                      <Route path="/sustainability" element={<Sustainability />} />
+                      <Route path="/philosophy" element={<OurPhilosophy />} />
+                      <Route path="/contact" element={<ContactUs />} />
+                      <Route path="/faq" element={<FAQ />} />
+                      <Route path="/refund-policy" element={<RefundPolicy />} />
+                    </Route>
+                  
+                                          {/* Auth Routes */}
+                      <Route path="/login" element={<SignIn/>} />
+                      <Route path="/signup" element={<SignUp/>} />
 
-          </Routes>
-          
-        {/* <Footer/> */}
-      </div>
+                </Routes>
+              </div>
           </LoaderProvider>
        </CartProvider>
     </BrowserRouter>
