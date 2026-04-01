@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import MobileLogin from "../../auth/mobile_login";
-import CloseButton from "../../buttons/close_button";
+import MobileSidebarContent from "./mobile_sidebar_content";
 
 const MobileSidebar = ({ active, onClose }) => {
   return (
@@ -20,21 +19,7 @@ const MobileSidebar = ({ active, onClose }) => {
           active ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Close Button + Menu Links */}
-        <div className="p-4">
-        <CloseButton onClick={onClose} className={"mb-6 text-3xl text-foreground-secondary font-semibold"}/>
-
-          <nav className="space-y-4">
-            <Link to="/pages/shop_all" className="block border-b-2 border-white pb-2" onClick={onClose}>Shop All</Link>
-            <Link to="/pages/by_bundle" className="block border-b-2 border-white pb-2" onClick={onClose}>Shop Bundles</Link>
-            <Link to="/pages/by_concern" className="block border-b-2 border-white pb-2" onClick={onClose}>By Concern</Link>
-            <Link to="/pages/by_type" className="block border-b-2 border-white pb-2" onClick={onClose}>By Type</Link>
-            <Link to="/pages/accessories" className="block border-b-2 border-white pb-2" onClick={onClose}>Accessories</Link>
-            <Link to="/pages/make_up" className="block border-b-2 border-white pb-2" onClick={onClose}>MAKEUP</Link>
-          </nav>
-        </div>
-
-        {/* Bottom Sign In */}
+        <MobileSidebarContent onClose={onClose}/>
         <MobileLogin closeSidebar={onClose}/>
       </nav>
     </>
