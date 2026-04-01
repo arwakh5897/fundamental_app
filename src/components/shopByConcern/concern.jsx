@@ -11,7 +11,7 @@ const Concern = () => {
       </div>
 
       <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 py-4 px-6 mx-auto text-center">
-        {menuData.concern.map((item, index) => (
+        {menuData.concerns.map((item, index) => (
           <a key={index} href={item.link} className="bg-background text-sm font-bold lg:font-medium lg:text-xl p-2 cursor-pointer hover:scale-105 transition">
             {item.name}
           </a>
