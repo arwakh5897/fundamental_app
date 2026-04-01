@@ -10,17 +10,24 @@ import Divider from "../divider/divider";
 import useToast from "../../../utils/useToast";
 import { useNavigate } from "react-router-dom";
 
-const ProductDetailCart = ({ products , onAdd ,  onUpdateSize}) => {
+const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor }) => {
   const { error , success } = useToast();
   const navigate = useNavigate();
-  const [selectedSize, setSelectedSize] = useState(null);  
+  
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);  
+
   const handleSizeChange = (newSize)=>{
     setSelectedSize(newSize);
     onUpdateSize(products.id , newSize);
     }
+  const handleColorChange = (newColor)=>{
+    setSelectedColor(newColor);
+    onUpdateColor(products.id , newColor);
+  }
   const handleAddClick = (qty) => {
-  if (!selectedSize) {
-    error("Please select size first");
+  if (!selectedSize , !selectedColor) {
+    error("Please select size and color first");
     return;
   }
   else {
@@ -28,8 +35,10 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize}) => {
     navigate("/pages/shop_all");
   }
 
-  onAdd(qty, selectedSize); // ✅ dono pass karo
+  onAdd(qty, selectedSize , selectedColor); // ✅ dono pass karo
 };
+
+
   return (
     <div className="w-full space-y-4">
       
@@ -51,7 +60,11 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize}) => {
        selectedSize={selectedSize}
        onSelectSize={handleSizeChange}
       />
-      <Color colors={products?.colors}/>
+      <Color 
+      colors={products?.colors}
+      selectedColor={selectedColor}
+      onSelectColor={handleColorChange}
+      />
 
        <div className="flex flex-col gap-4 py-4 lg:py-0 lg:sticky lg:bottom-0">
         <Divider className="py-2 lg:py-6" />

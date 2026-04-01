@@ -6,8 +6,8 @@ const ShoppingDetailsCard = ({
   name,
   qty = 1,
   price = 233,
-  size,
-  color,
+  selectedSize,
+  selectedColor,
   onRemove,
 }) => {
   return (
@@ -46,8 +46,8 @@ const ShoppingDetailsCard = ({
         {/* Details */}
         <div className="text-xs lg:text-sm text-gray-600 space-y-1">
           <p>QTY: {qty}</p>
-          <p>Size: {size}</p>
-          <p>Color: {color}</p>
+          <p>Size: {selectedSize}</p>
+          <p>Color: {selectedColor}</p>
         </div>
 
         {/* Bottom Section */}

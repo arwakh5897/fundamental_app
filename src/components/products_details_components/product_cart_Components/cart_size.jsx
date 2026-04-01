@@ -10,7 +10,6 @@ const Size = ({ sizes, selectedSize, onSelectSize }) => {
       onSelectSize(size); // ✅ call the parent handler
     }
   };
-
   return (
     <div className="space-y-4">
       <div className="flex items-center">

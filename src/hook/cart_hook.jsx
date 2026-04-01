@@ -16,7 +16,7 @@ const useCart = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-const handleAddToCart = (product, quantity, size) => {
+const handleAddToCart = (product, quantity, size , color) => {
   if (!product || !product.id) return;
 
   setCart((prev) => {
@@ -25,12 +25,12 @@ const handleAddToCart = (product, quantity, size) => {
     if (existing) {
       return prev.map((p) =>
         p.id === product.id
-          ? { ...p, qty: p.qty + quantity, selectedSize: size }
+          ? { ...p, qty: p.qty + quantity, selectedSize: size , selectedColor: color }
           : p
       );
     }
 
-    return [...prev, { ...product, qty: quantity, selectedSize: size }];
+    return [...prev, { ...product, qty: quantity, selectedSize: size , selectedColor: color }];
   });
 };
   const updateCartQty = (id, newQty) => {
@@ -47,6 +47,13 @@ const handleAddToCart = (product, quantity, size) => {
     )
   );
 };
+ const updateCartItemColor = (id , color)=>{
+   setCart((prevCarts)=>
+    prevCarts.map((item)=>
+    item.id === id ? {...item, selectedColor : color}: item
+    )
+  )
+ };
 
   const handleRemoveItem = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
@@ -64,6 +71,7 @@ const handleAddToCart = (product, quantity, size) => {
     clearCart,
     updateCartQty,
     updateCartItemSize,
+    updateCartItemColor,
   };
 };
 

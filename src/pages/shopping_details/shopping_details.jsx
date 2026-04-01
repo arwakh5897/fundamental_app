@@ -21,7 +21,9 @@ const ShoppingDetails =()=>{
                 price={item.discountedPrice}
                 color={item.colors}
                 onRemove={() => handleRemoveItem(item.id)}
-                size={item.selectedSize}
+                selectedSize={item.selectedSize}
+                selectedColor={item.selectedColor}
+
               />
             ))}
             </div>

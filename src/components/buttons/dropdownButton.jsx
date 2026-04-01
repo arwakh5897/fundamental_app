@@ -4,8 +4,8 @@ import useClickOutside from "../../hook/click_outside_hook";
 const DropDownButton = ({ buttons = [], title, onClick }) => {
   const [active, setActive] = useState(title);
   const [open, setOpen] = useState(false);
+  
   const ref = useRef();
-
   useClickOutside(ref, () => setOpen(false));
 
   return (

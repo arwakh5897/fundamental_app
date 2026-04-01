@@ -6,9 +6,6 @@ import ToastContext from "./context/toastContext";
 
 import Dashboard from "./pages/dashboard/dashboard";
 import ShopAll from "./pages/dashboard/shop_all";
-import ByType from "./pages/dashboard/by_type";
-import ByConcern from "./pages/dashboard/by_Concern";
-import ByBundle from "./pages/dashboard/by_bundle";
 import Accessories from "./pages/dashboard/accessories";
 import MakeUp from "./pages/dashboard/make_up";
 import ProductDetails from "./pages/product_details/product_details";
@@ -19,8 +16,6 @@ import Loader from "./components/loader/loader";
 import RouteLoader from "./context/navigationLoader";
 import { CartProvider } from "./context/cartContext";
 
-import ConditionalBanner from "./layout/conditionalBanner";
-
 import OurStory from "./pages/footer_pages/about_us/our_story";
 import Sustainability from "./pages/footer_pages/about_us/sustainability";
 import OurPhilosophy from "./pages/footer_pages/about_us/our_philosophy";
@@ -30,8 +25,18 @@ import RefundPolicy from "./pages/footer_pages/customer_care/refund_policy";
 
 import SignIn from "./pages/auth/sign_in";
 import SignUp from "./pages/auth/sign_up";
+
 import MainLayout from "./layout/main_layout";
 import CheckOut from "./pages/check_out/check_out";
+
+import Casual from "./pages/by_concern/causal";
+import PartyWear from "./pages/by_concern/partywear";
+import Formal from "./pages/by_concern/formal";
+import Sports from "./pages/by_concern/sports";
+import Outdoor from "./pages/by_concern/outdoor";
+import Lightweight from "./pages/by_concern/lightweight";
+import Flat from "./pages/by_concern/flat";
+import Waterproof from "./pages/by_concern/waterproof";
 
 const App = () => {
   useLenis();
@@ -50,15 +55,23 @@ const App = () => {
 
                                             {/*  Header Routes  */}
                       <Route path="/pages/shop_all" element={<ShopAll />} />
-                      <Route path="/pages/by_type" element={<ByType />} />
-                      <Route path="/pages/by_concern" element={<ByConcern />} />
-                      <Route path="/pages/by_bundle" element={<ByBundle />} />
                       <Route path="/pages/accessories" element={<Accessories />} />
                       <Route path="/pages/make_up" element={<MakeUp/>}/>
 
+                                            {/*  Extra Pages Routes  */}
                       <Route path="/pages/product_details" element={<ProductDetails/>}/>
                       <Route path="/pages/shopping_details" element={<ShoppingDetails/>}/>
                       <Route path="/pages/checkout" element={<CheckOut/>}/>
+
+                                            {/*  Concern Routes  */}
+                      <Route path="/concern/casual-wear" element={<Casual/>} />
+                      <Route path="/concern/formal-wear" element={<Formal/>} />
+                      <Route path="/concern/sports-performance" element={<Sports/>} />
+                      <Route path="/concern/outdoor-hiking" element={<Outdoor/>} />
+                      <Route path="/concern/lightweight" element={<Lightweight/>} />
+                      <Route path="/concern/flat-feet" element={<Flat/>} />
+                      <Route path="/concern/waterproof" element={<Waterproof/>} />
+                      <Route path="/concern/party-wear" element={<PartyWear/>} />
 
                                             {/*  Footer Routes  */}
                       <Route path="/our-story" element={<OurStory />} />
