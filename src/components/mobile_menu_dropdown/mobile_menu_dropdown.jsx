@@ -2,7 +2,7 @@ import React from "react";
 import CloseButton from "../../buttons/close_button";
 import { Link } from "react-router-dom";
 
-const MobileSidebarContent = ({ onClose }) => {
+const MobileSidebarContentSlider = ({ onClose }) => {
     return (
         <div className="p-4">
         <CloseButton onClick={onClose} className={"mb-6 text-3xl text-foreground-secondary font-semibold"}/>
@@ -19,4 +19,4 @@ const MobileSidebarContent = ({ onClose }) => {
     );
 };
 
-export default MobileSidebarContent;
+export default MobileSidebarContentSlider;

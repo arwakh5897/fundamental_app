@@ -5,56 +5,65 @@ import { ChevronRightIcon } from "@heroicons/react/16/solid";
 
 const MobileSidebarContent = ({ onClose }) => {
   return (
-    <div className="p-5 h-full bg-menu text-gray-800 flex flex-col">
-      
-      {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold tracking-wide">Menu</h2>
-        <CloseButton
-          onClick={onClose}
-          className="text-2xl text-gray-400 hover:text-black transition duration-200"
-        />
-      </div>
-
-      {/* Divider */}
-      <div className="border-b border-gray-200 mb-4"></div>
+    <div className="p-4">
+      {/* Close Button */}
+      <CloseButton
+        onClick={onClose}
+        className="mb-6 text-3xl text-foreground-secondary font-semibold"
+      />
 
       {/* Nav */}
-      <nav className="space-y-2 flex-1">
+      <nav className="space-y-3">
         
-        {/* Reusable Item */}
-        {[
-          { name: "Shop All", path: "/pages/shop_all" },
-          { name: "By Concern", path: "/pages/by_concern" },
-          { name: "By Type", path: "/pages/by_type" },
-          { name: "Accessories", path: "/pages/accessories" },
-          { name: "Makeup", path: "/pages/make_up" },
-        ].map((item, i) => (
-          <Link
-            key={i}
-            to={item.path}
-            onClick={onClose}
-            className="flex justify-between items-center px-4 py-3 rounded-xl 
-                       hover:bg-white/70 backdrop-blur-sm
-                       transition-all duration-200 group shadow-sm hover:shadow-md"
-          >
-            <span className="font-medium tracking-wide">
-              {item.name}
-            </span>
+        {/* Reusable Style */}
+        <Link
+          to="/pages/shop_all"
+          onClick={onClose}
+          className="flex justify-between items-center border-b border-gray-300 pb-2"
+        >
+          <span>Shop All</span>
+        </Link>
 
-            <ChevronRightIcon
-              className="w-5 h-5 text-gray-400 
-                         group-hover:text-black 
-                         group-hover:translate-x-1 
-                         transition-all duration-200"
-            />
-          </Link>
-        ))}
+        {/* Bundle (Fixed alignment) */}
+        <div className="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer">
+          <span>Shop Bundle</span>
+          <ChevronRightIcon className="w-5 h-5" />
+        </div>
 
-        {/* Special Highlight Item (Bundle) */}
+        <Link
+          to="/pages/by_concern"
+          onClick={onClose}
+          className="flex justify-between items-center border-b border-gray-300 pb-2"
+        >
+          <span>By Concern</span>
+          <ChevronRightIcon className="w-5 h-5" />
+        </Link>
 
+        <Link
+          to="/pages/by_type"
+          onClick={onClose}
+          className="flex justify-between items-center border-b border-gray-300 pb-2"
+        >
+          <span>By Type</span>
+          <ChevronRightIcon className="w-5 h-5" />
+        </Link>
+
+        <Link
+          to="/pages/accessories"
+          onClick={onClose}
+          className="flex justify-between items-center border-b border-gray-300 pb-2"
+        >
+          <span>Accessories</span>
+        </Link>
+
+        <Link
+          to="/pages/make_up"
+          onClick={onClose}
+          className="flex justify-between items-center border-b border-gray-300 pb-2"
+        >
+          <span>Makeup</span>
+        </Link>
       </nav>
-
     </div>
   );
 };
