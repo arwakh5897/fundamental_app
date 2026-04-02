@@ -11,7 +11,7 @@ const MobileMenuDropdown = ({ onClose, showMenu, setShowMenu, data = [] }) => {
       {/* BACK */}
       <div
         onClick={setShowMenu}
-        className="flex items-center gap-2 mb-8 cursor-pointer"
+        className="flex items-center bg-black gap-2 mb-8 cursor-pointer"
       >
         <span>← Back</span>
       </div>
