@@ -25,7 +25,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
         <SidebarHeader onClose={onClose} totalItems={totalItems} />
 
         {/* Cart Items */}
-        <div className="flex flex-col overflow-y-auto scrollbar-hide py-2 h-3/4">
+        <div className="flex flex-col overflow-y-auto scrollbar-hide mt-2 h-2/3">
           {cart.length > 0 ? (
             cart.map((item) => (
               <ShoppingCard
@@ -43,7 +43,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
             </p>
           )}
         </div>
-        <div className="fixed bottom-0 pt-4 w-full">
+        <div className="fixed bottom-0 w-full">
             <CartTotal totalPrice={totalPrice} />
             <SidebarButtons onClick={onClose} />
         </div>
