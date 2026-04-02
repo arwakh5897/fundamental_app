@@ -53,7 +53,7 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor })
       <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>
 
       {/* Divider */}
-       <Divider className="py-2 lg:py-6"/>
+       <Divider className="py-2 lg:py-4"/>
 
       {/* Description */}
       <CartDescription description={products?.description}/>
@@ -70,8 +70,8 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor })
       onSelectColor={handleColorChange}
       />
 
-       <div className="flex flex-col gap-4 py-4 lg:py-0 lg:sticky lg:bottom-0">
-        <Divider className="py-2 lg:py-6" />
+       <div className="flex flex-col gap-4 py-4 lg:py-0 lg:bottom-0">
+        <Divider className="py-2 lg:py-4" />
         <AddButton  products={products} onAdd={handleAddClick}/>
         <CartBuyButton  />
       </div>
