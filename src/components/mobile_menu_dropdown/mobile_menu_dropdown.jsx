@@ -1,22 +1,35 @@
-import React from "react";
-import CloseButton from "../../buttons/close_button";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const MobileSidebarContentSlider = ({ onClose }) => {
-    return (
-        <div className="p-4">
-        <CloseButton onClick={onClose} className={"mb-6 text-3xl text-foreground-secondary font-semibold"}/>
+const MobileMenuDropdown = ({ onClose, showMenu, setShowMenu, data = [] }) => {
+  return (
+    <div
+      className={`absolute top-0 left-0 w-full p-4 transition-transform duration-300 ${
+        showMenu ? "translate-x-0" : "translate-x-full"
+      }`}
+    >
+      {/* BACK */}
+      <div
+        onClick={setShowMenu}
+        className="flex items-center gap-2 mb-8 cursor-pointer"
+      >
+        <span>← Back</span>
+      </div>
 
-          <nav className="space-y-4">
-            <Link to="/pages/shop_all" className="block border-b-2 border-white pb-2" onClick={onClose}>Shop All</Link>
-            <Link to="/pages/by_bundle" className="block border-b-2 border-white pb-2" onClick={onClose}>Shop Bundles</Link>
-            <Link to="/pages/by_concern" className="block border-b-2 border-white pb-2" onClick={onClose}>By Concern</Link>
-            <Link to="/pages/by_type" className="block border-b-2 border-white pb-2" onClick={onClose}>By Type</Link>
-            <Link to="/pages/accessories" className="block border-b-2 border-white pb-2" onClick={onClose}>Accessories</Link>
-            <Link to="/pages/make_up" className="block border-b-2 border-white pb-2" onClick={onClose}>MAKEUP</Link>
-          </nav>
-        </div>
-    );
+      <nav className="space-y-3">
+        {data.map((item, index) => (
+          <Link
+            key={index}
+            to={item.link}
+            onClick={onClose}
+            className="block border-b pb-2"
+          >
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+    </div>
+  );
 };
 
-export default MobileSidebarContentSlider;
+export default MobileMenuDropdown;
