@@ -5,9 +5,9 @@ const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
     <div className="flex gap-3 p-2 border-b">
       
       {/* Image */}
-      <div className="w-20 h-16 flex-shrink-0">
+      <div className="w-16 h-16 flex-shrink-0">
         <img
-          className="w-full h-full object-contain rounded-md"
+          className="w-full h-full object-cover rounded-md"
           src={image || "/assets/images/banner.png"}
           alt="Product Image"
         />

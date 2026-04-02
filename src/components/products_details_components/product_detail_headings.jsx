@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FullDescription from "./products_description&review/full_decription";
 import Reviews from "./products_description&review/reviews";
 
-const ProductDetailHeadings = () => {
+const ProductDetailHeadings = ({products}) => {
   const [activeTab, setActiveTab] = useState("description");
 
   const tabs = [
@@ -11,7 +11,7 @@ const ProductDetailHeadings = () => {
   ];
 
   return (
-    <div>
+    <div className="w-full">
       <p className="h-[1px] w-full bg-buttons hover-bg-buttons"></p>
 
       {/* Tabs */}
@@ -43,7 +43,7 @@ const ProductDetailHeadings = () => {
 
       {/* Content */}
       <div className="pt-6 px-2 lg:pt-10 transition-all duration-300">
-        {activeTab === "description" && <FullDescription />}
+        {activeTab === "description" && <FullDescription products={products} />}
         {activeTab === "reviews" && <Reviews />}
       </div>
       <p className="h-[1px] mt-10 w-full bg-buttons hover-bg-buttons"></p>

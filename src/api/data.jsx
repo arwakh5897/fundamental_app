@@ -18,7 +18,37 @@ export const fetchProducts = async () => {
     {
       id: 1,
       title: "Essence Mascara Lash Princess",
-      description: "Volumizing mascara for dramatic lashes.",
+      description: `
+Step into the future of smartphones with the iPhone 16 Pro Max. Featuring a stunning titanium body, 4K Dolby Vision video, and the powerful A18 Pro chip, this device is designed for tech enthusiasts, professionals, content creators, and everyday users in the UAE who demand premium performance and style.
+
+Key Features & Details:
+Stunning Titanium Design – Strong, lightweight, and ultra-durable with a 6.9-inch Super Retina XDR display and next-generation Ceramic Shield that’s 2x tougher than any smartphone glass.
+Total Camera Control – Quickly access camera tools, zoom, and depth-of-field features for perfect shots anytime.
+48MP Ultra Wide & 5x Telephoto Camera – Capture breathtaking macro, wide-angle, and distant shots in incredible detail.
+Pro Video Recording – Shoot cinematic 4K 120 fps Dolby Vision videos with studio-quality audio using the 48MP Fusion camera.
+Photographic Styles – Customize your photos with advanced creative filters that can be reversed anytime.
+A18 Pro Chip Power – Seamless graphics performance for AAA gaming, advanced photo, and video features.
+Extended Battery Life – Up to 33 hours of video playback with fast USB-C and MagSafe wireless charging.
+iOS 18 Customization – Tint home screen icons, add animations, and manage photos easily with redesigned apps.
+Vital Safety Features – Crash Detection can alert emergency services in case of a severe car accident.
+
+Why This iPhone 16 Pro Max is Trending in the UAE ?
+Most sought-after premium smartphone in Dubai and across the UAE
+Ideal for content creators, business professionals, and tech-savvy users
+Cutting-edge camera, video, and gaming performance
+Sleek titanium design combined with durable build and advanced features
+Perfect for iPhone enthusiasts upgrading to the latest model
+
+Why Buy from Hub Al Souq ?
+Delivery within 72 working hours across the UAE
+Secure payments via authentic payment gateways
+Cash on Delivery (COD) available
+Trusted UAE online marketplace supporting verified local sellers
+Quality-checked products with customer satisfaction guarantee
+
+Upgrade to the ultimate smartphone experience.
+Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 working hours anywhere in the UAE!      
+      `,
       price: 9.99,
       discountPercentage: 10,
       rating: 4.2,

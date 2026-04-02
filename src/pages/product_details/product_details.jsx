@@ -37,7 +37,7 @@ const ProductDetails = () => {
       </div>
 
       <div className="flex py-4">
-        <ProductDetailHeadings />
+        <ProductDetailHeadings products={products} />
       </div>
 
       <div className="py-4">

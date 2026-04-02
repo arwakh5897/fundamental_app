@@ -19,8 +19,8 @@ const ApiMappingCard =({products})=>{
                 hoverImage={item.hoverImage}
                 subImages={item.subImages}
               
-                sizes={["24", "32", "40"]}
-                colors={["red", "blue", "green", "black", "white"]}
+                sizes={item.sizes}
+                colors={item.colors}
                 discount={Number(item.discountPercentage).toFixed(0)}
                 
                 // discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%

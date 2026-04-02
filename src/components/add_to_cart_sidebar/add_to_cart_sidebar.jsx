@@ -43,7 +43,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
             </p>
           )}
         </div>
-        <div className="fixed bottom-0 w-full">
+        <div className="fixed bottom-0 pt-4 w-full">
             <CartTotal totalPrice={totalPrice} />
             <SidebarButtons onClick={onClose} />
         </div>
