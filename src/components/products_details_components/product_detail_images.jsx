@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ImageZoom from "../zoom/imageZoom";
 
-const ProductDetailImages = ({thumbnail}) => {
+const ProductDetailImages = ({thumbnail , subImages =[]}) => {
   const images = [
     "/assets/images/banner.png",
     "/assets/images/banner1.png",
@@ -17,11 +17,11 @@ const ProductDetailImages = ({thumbnail}) => {
             </div>
             {/* </div> */}
             <div className="flex py-6 gap-2 overflow-auto scrollbar-hide"> 
-                {images.map((item,index)=>(
+                {subImages.map((item,index)=>(
                   <img
                   key={index}
                   onClick={()=>setActiveImage(item)}
-                  className="w-16 h-16 lg:w-28 lg:h-28 bg-image object-contain"
+                  className="w-16 h-16 lg:w-28 lg:h-28 bg-image hover:cursor-pointer rounded object-contain"
                   src={item}
                   alt="image"
                    />

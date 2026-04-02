@@ -9,6 +9,7 @@ import CartBuyButton from "./product_cart_Components/cart_buy_Button";
 import Divider from "../divider/divider";
 import useToast from "../../../utils/useToast";
 import { useNavigate } from "react-router-dom";
+import CartReviews from "./product_cart_Components/cart_review";
 
 const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor }) => {
   const { error , success } = useToast();
@@ -26,7 +27,7 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor })
     onUpdateColor(products.id , newColor);
   }
   const handleAddClick = (qty) => {
-  if (!selectedSize , !selectedColor) {
+  if (!selectedSize || !selectedColor) {
     error("Please select size and color first");
     return;
   }
@@ -44,6 +45,9 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor })
       
       {/* Title */}
       <CartTitle title={products?.title} />
+
+      {/* Reviews */}
+      <CartReviews rating={products?.rating} totalReviews={products?.count}/>
 
       {/* Price */}
       <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>

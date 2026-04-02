@@ -12,15 +12,16 @@ import EyeButton from "../buttons/eye_button";
 
 import ProductDetailsPopup from "../product_popUp/product_popUp";
 
-const Card = ({ id, image, title, description, rating,  price ,  discount ,  stock ,  sizes,  colors,}) => {
+const Card = ({ id, image, title, description, rating,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const discountedPrice = price - (price * discount) / 100;
 
-  const productData = { id, image, title, description, rating, price, discount, discountedPrice, stock, sizes, colors };
+  const productData = { id, image, title, description, rating, price, discount, discountedPrice, stock, sizes, colors , count , hoverImage , subImages};
    // console.log("Card Component - Product Data:", productData);
   return (
     <>
+    <div>
       {/* ✅ Card */}
       <div
         onClick={() =>
@@ -36,7 +37,7 @@ const Card = ({ id, image, title, description, rating,  price ,  discount ,  sto
         )}
 
         <CardStock stock={productData.stock} />
-        <CardImage image={productData.image} />
+        <CardImage image={productData.image} hoverImage={productData.hoverImage} />
 
         <div className="flex flex-col py-2 text-center items-center w-full">
           <CardTitle title={productData.title} />
@@ -58,6 +59,7 @@ const Card = ({ id, image, title, description, rating,  price ,  discount ,  sto
         isOpen={open}
         onClose={() => setOpen(false)}
       />
+      </div>
     </>
   );
 };

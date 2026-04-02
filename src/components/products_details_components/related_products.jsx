@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ScrollingCard from "../card/scrolling_card";
+import ScrollingProducts from "../products/scrolling_Products";
 import { fetchProducts } from "../../api/data";
 
 const RelatedProducts =()=>{
@@ -13,7 +13,7 @@ const RelatedProducts =()=>{
             <h2 className="text-2xl">Related Products</h2>
             <p className="h-[2px] w-36 bg-buttons hover-bg-buttons"></p>
         </div>
-    <ScrollingCard allItems={allItems}/>
+    <ScrollingProducts allItems={allItems}/>
     </div>
     )
 }

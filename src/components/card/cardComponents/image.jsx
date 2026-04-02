@@ -1,16 +1,16 @@
 import React,{useState} from "react";
 
-const CardImage = ({ image, title }) => {
+const CardImage = ({ image, hoverImage, title }) => {
       const [hover,setHover] = useState(false);
     
     return (
       <div className="w-full lg:h-64 h-24">
         <img
-          src={image || (hover ? "/assets/images/banner1.png" : "/assets/images/banner2.png")}
+          src={(hover ? hoverImage : image)}
           onMouseEnter={()=>setHover(true)}
           onMouseLeave={()=>setHover(false)}
           alt={title || "Product"}
-          className="w-full h-full object-contain bg-image transition-transform duration-500 transform hover:scale-105 "
+          className="w-full h-full object-cover bg-image transition-transform duration-500 transform hover:scale-105 "
         />
       </div>
     )

@@ -77,6 +77,9 @@ body {
 .bg-overlay {
   background-color: rgb(0 0 0 / 0.4);
 }
+.text-reviews {
+  color: rgb(234, 179, 8);
+}
 
 /* Dark Mode */
 .dark .bg-background {

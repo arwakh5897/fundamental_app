@@ -21,7 +21,7 @@ const ProductDetails = () => {
         <div className="flex flex-col lg:p-4 lg:flex-row gap-6">
           {/* Left Side - Images */}
           <div className="w-full lg:p-0 lg:w-1/2">
-            <ProductDetailImages thumbnail={products?.image} />
+            <ProductDetailImages thumbnail={products?.image} subImages={products?.subImages} />
           </div>
 
           {/* Right Side - Cart Details */}

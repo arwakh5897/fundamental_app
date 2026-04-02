@@ -1,9 +1,6 @@
 import React, {useEffect , useState } from "react";
-import Card from "../card/card";
-import LeftArrow from "../buttons/leftArrow";
-import RightArrow from "../buttons/rightArrow";
 import { fetchProducts } from "../../api/data";
-import ScrollingCard from "../card/scrolling_card";
+import ScrollingProducts from "../products/scrolling_Products";
 
 const RamadanTitle = () => {
   const [allItems, setProducts] = useState([]);
@@ -16,7 +13,7 @@ const RamadanTitle = () => {
         RAMADAN
         <span className="font-bold mx-2">BLESSINGS</span>
       </div>
-      <ScrollingCard allItems={allItems}/>
+      <ScrollingProducts allItems={allItems}/>
     </div>
   );
 };
