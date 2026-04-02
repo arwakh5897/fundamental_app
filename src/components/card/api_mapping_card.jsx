@@ -15,7 +15,7 @@ const ApiMappingCard =({products})=>{
                 count={item.count}
                 stock={item.stock}
                 category={item.category}
-                image={item.thumbnail}
+                image={item.subImages?.[0]}
                 hoverImage={item.hoverImage}
                 subImages={item.subImages}
               

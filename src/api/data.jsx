@@ -32,7 +32,7 @@ Extended Battery Life – Up to 33 hours of video playback with fast USB-C and M
 iOS 18 Customization – Tint home screen icons, add animations, and manage photos easily with redesigned apps.
 Vital Safety Features – Crash Detection can alert emergency services in case of a severe car accident.
 
-Why This iPhone 16 Pro Max is Trending in the UAE ?
+Why This iPhone 16 Pro Max is Trending in the PAK ?
 Most sought-after premium smartphone in Dubai and across the UAE
 Ideal for content creators, business professionals, and tech-savvy users
 Cutting-edge camera, video, and gaming performance
