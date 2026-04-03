@@ -1,11 +1,12 @@
 import React from "react";
 import IncreamentDecreamentButton from "../buttons/increament&decrement_button";
+import { formatCurrency } from "../../../utils/formatCurrency";
 
 const ShoppingDetailsCard = ({
   image,
   name,
   qty = 1,
-  price = 233,
+  price = "",
   selectedSize,
   selectedColor,
   onRemove,
@@ -50,12 +51,13 @@ const ShoppingDetailsCard = ({
           <p>Color: {selectedColor}</p>
         </div>
 
+
         {/* Bottom Section */}
         <div className="flex items-center justify-end">
           
           {/* Price */}
           <p className="text-sm lg:text-base font-bold text-green-600">
-            Rs {Number(price).toFixed(2)}
+            Rs {formatCurrency(price)}
           </p>
 
           {/* Quantity Buttons */}

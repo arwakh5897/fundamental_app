@@ -10,11 +10,12 @@ import Divider from "../divider/divider";
 import useToast from "../../../utils/useToast";
 import { useNavigate } from "react-router-dom";
 import CartReviews from "./product_cart_Components/cart_review";
+import CartQuantity from "./product_cart_Components/cart_quantity";
 
 const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , shortDescription}) => {
   const { error , success } = useToast();
   const navigate = useNavigate();
-  
+  const [quantity , setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);  
 
@@ -36,7 +37,7 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , 
     navigate("/pages/shop_all");
   }
 
-  onAdd(qty, selectedSize , selectedColor); // ✅ dono pass karo
+  onAdd(qty, selectedSize , selectedColor);
 };
 
 
@@ -72,8 +73,25 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , 
 
        <div className="flex flex-col gap-4 py-4 lg:py-0">
         <Divider className="py-2" />
-        <AddButton  products={products} onAdd={handleAddClick}/>
-        <CartBuyButton  />
+
+        <div className="flex items-center gap-2 lg:gap-4 mt-4">
+          
+            <CartQuantity 
+              quantity={quantity} 
+              setQuantity={setQuantity}
+            />
+
+            <AddButton 
+              onAdd={()=>handleAddClick(quantity)}
+            />            
+        </div>
+
+            <CartBuyButton 
+              products={products}
+              qty={quantity}
+              selectedSize={selectedSize}
+              selectedColor={selectedColor} 
+            />
       </div>
 
     </div>

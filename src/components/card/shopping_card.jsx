@@ -1,4 +1,5 @@
 import React from "react";
+import { formatCurrency } from "../../../utils/formatCurrency";
 
 const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
   return (
@@ -24,7 +25,7 @@ const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
         </p>
 
         <p className="text-sm font-semibold ">
-          Rs {Number(price || 0).toFixed(2)}
+          Rs {formatCurrency(price)}
         </p>
       </div>
       <div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCartContext } from "../../context/cartContext";
+import { useParams, useLocation } from "react-router-dom";
 
 import ProductDetailImages from "../../components/products_details_components/product_detail_images";
 import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
@@ -8,12 +9,10 @@ import ProductDetailHeadings from "../../components/products_details_components/
 import ProductDetailCart from "../../components/products_details_components/product_detail_cart";
 import AddToCartSidebar from "../../components/add_to_cart_sidebar/add_to_cart_sidebar";
 
-import { useParams, useLocation } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams(); // ✅ yahan se id milegi
   const location = useLocation();
-
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
@@ -26,8 +25,8 @@ const ProductDetails = () => {
   const myDescription = description.split(" ");
   const shortDescription = myDescription.length > 100 ? myDescription.slice(0, 100).join(" ") + "..." : description;
 
-
   const { cart,  handleAddToCart, handleRemoveItem, updateCartItemSize , updateCartItemColor } = useCartContext();
+
   return (
     <div>
       <div className="flex flex-col p-4">

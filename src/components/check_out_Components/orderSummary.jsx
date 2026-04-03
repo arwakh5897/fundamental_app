@@ -1,4 +1,5 @@
 import React from "react";
+import { formatCurrency } from "../../../utils/formatCurrency";
 
 const OrderSummary = ({ cart, totalPrice }) => {
   const shippingCost = totalPrice >= 5000 ? 0 : 130;
@@ -37,7 +38,7 @@ const OrderSummary = ({ cart, totalPrice }) => {
             {/* Price */}
             <div className="text-sm font-semibold">
               Rs.
-              {(item.discountedPrice * item.qty).toLocaleString()}
+              {formatCurrency (item.discountedPrice * item.qty|| 0)}
             </div>
           </div>
         ))}
@@ -51,7 +52,7 @@ const OrderSummary = ({ cart, totalPrice }) => {
 
         <div className="flex justify-between">
           <span className="text-gray-500">Subtotal</span>
-          <span>Rs.{totalPrice.toLocaleString()}</span>
+          <span>Rs.{formatCurrency (totalPrice)}</span>
         </div>
 
         <div className="flex justify-between">
@@ -70,14 +71,14 @@ const OrderSummary = ({ cart, totalPrice }) => {
       <div className="flex justify-between items-center text-lg font-semibold">
         <span>Total</span>
         <span className="text-black">
-          Rs.{finalTotal.toLocaleString()}
+          Rs.{formatCurrency (finalTotal)}
         </span>
       </div>
 
       {/* 🚀 Free Shipping Hint */}
       {shippingCost > 0 && (
         <div className="bg-gray-100 text-xs p-2 rounded-lg text-gray-600 text-center">
-          Add Rs.{(5000 - totalPrice).toLocaleString()} more for FREE delivery 🚚
+          Add Rs.{formatCurrency(5000 - totalPrice)} more for FREE delivery 🚚
         </div>
       )}
     </div>
