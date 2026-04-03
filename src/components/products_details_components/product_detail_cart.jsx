@@ -11,7 +11,7 @@ import useToast from "../../../utils/useToast";
 import { useNavigate } from "react-router-dom";
 import CartReviews from "./product_cart_Components/cart_review";
 
-const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor }) => {
+const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , shortDescription}) => {
   const { error , success } = useToast();
   const navigate = useNavigate();
   
@@ -41,7 +41,7 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor })
 
 
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full space-y-2 top-0 ">
       
       {/* Title */}
       <CartTitle title={products?.title} />
@@ -53,10 +53,10 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor })
       <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>
 
       {/* Divider */}
-       <Divider className="py-2 lg:py-4"/>
+       <Divider className="py-2"/>
 
       {/* Description */}
-      <CartDescription description={products?.description}/>
+      <CartDescription description={shortDescription}/>
 
       {/* Variant Selector */}
       <Size 
@@ -70,8 +70,8 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor })
       onSelectColor={handleColorChange}
       />
 
-       <div className="flex flex-col gap-4 py-4 lg:py-0 lg:bottom-0">
-        <Divider className="py-2 lg:py-4" />
+       <div className="flex flex-col gap-4 py-4 lg:py-0">
+        <Divider className="py-2" />
         <AddButton  products={products} onAdd={handleAddClick}/>
         <CartBuyButton  />
       </div>

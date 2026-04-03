@@ -2,11 +2,22 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Banner from "../components/banners/banner";
 
-const ConditionalBanner = ()=>{
-    const locaion = useLocation();
+const ConditionalBanner = () => {
+  const location = useLocation();
 
-    const hidenPaths = ["/pages/product_details" , "/pages/shopping_details" , "/pages/checkout"]
-    if(hidenPaths.includes(locaion.pathname)) return null;
-    return<Banner/>;
-}
+  const hidePaths = [
+    "/pages/shopping_details",
+    "/pages/checkout",
+  ];
+
+  // 🔥 dynamic route check
+  const isProductDetails = location.pathname.startsWith("/pages/product_details/");
+
+  if (hidePaths.includes(location.pathname) || isProductDetails) {
+    return null;
+  }
+
+  return <Banner />;
+};
+
 export default ConditionalBanner;

@@ -7,7 +7,11 @@ import ProductDetailCart from "../products_details_components/product_detail_car
 
 const ProductDetailsPopup = ({ isOpen, onClose, product }) => {
   if (!isOpen) return null;
-  const { handleAddToCart } = useCartContext();
+  const {  handleAddToCart,  updateCartItemSize , updateCartItemColor } = useCartContext();
+
+  const description = product?.description || "";
+  const myDescription = description.split(" ");
+  const shortDescription = myDescription.length > 50 ? myDescription.slice(0, 50).join(" ") + "..." : description;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -31,19 +35,18 @@ const ProductDetailsPopup = ({ isOpen, onClose, product }) => {
             
             {/* Images */}
             <div className="w-full lg:w-1/2">
-              <ProductDetailImages thumbnail={product?.image} />
+              <ProductDetailImages thumbnail={product?.image} subImages={product?.subImages}/>
             </div>
 
             {/* Cart View */}
             <div className="w-full lg:w-1/2 lg:px-6">
-              <ProductDetailCart
-                title={product?.title}
-                description={product?.description}
-                price={product?.price}
-                discountedPrice={product?.discountedPrice}
-                onAdd={(qty)=> handleAddToCart(product,qty)}
-
-              />
+            <ProductDetailCart 
+              products={product}
+              onUpdateSize={updateCartItemSize } 
+              onUpdateColor={updateCartItemColor}
+              shortDescription={shortDescription}
+              onAdd={(qty , size , color) => handleAddToCart(product, qty , size , color)} 
+            />
             </div>
           </div>
         </div>

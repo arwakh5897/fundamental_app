@@ -25,7 +25,8 @@ const Card = ({ id, image, title, description, rating,  price ,  discount ,  sto
       {/* ✅ Card */}
       <div
         onClick={() =>
-          navigate("/pages/product_details", { state: { productData } })
+          // navigate("/pages/product_details", { state: { productData } })
+          navigate(`/pages/product_details/${productData.id}`  , { state: { productData } })
         }
         className="bg-background-card w-36 lg:w-72 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
       >

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartDescription = ({ description }) => {
+const CartDescription = ({ description = "" }) => {
  
   const myDescription = description.split(" ");
   const shortDescription = myDescription.length > 100 ? myDescription.slice(0, 100).join(" ") + "..." : description;
