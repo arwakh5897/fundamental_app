@@ -30,7 +30,7 @@ const SearchTopUp = ({ handleClick }) => {
   return (
     <div 
     ref={ref}
-    className="absolute z-50 top-9.5 lg:top-11 right-0 w-72 lg:w-[420px] bg-buttons shadow-xl rounded-xl p-2 lg:p-4 border border-gray-200">      
+    className="absolute z-50 top-10.5 lg:top-11 right-0 w-72 lg:w-[420px] bg-buttons shadow-xl rounded-xl p-2 lg:p-4 border border-gray-200">      
       {/* Header */}
       <SearchTitle handleClick={handleClick}/>
 
