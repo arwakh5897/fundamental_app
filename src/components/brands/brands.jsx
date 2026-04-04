@@ -11,10 +11,10 @@ const Brands = () => {
   const loopData = [...brandsData, ...brandsData]; // must duplicate
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-8 md:py-16 bg-white overflow-hidden">
       <div className="text-center mb-10 px-4">
-        <h1 className="text-4xl font-bold">
-          Trusted By Leading Brands
+        <h1 className="text-2xl md:text-4xl font-bold">
+          Our Brands
         </h1>
         <p className="mt-3 max-w-xl mx-auto">
           We collaborate with top-tier brands to bring you the best skincare experience.
