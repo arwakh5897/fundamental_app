@@ -5,11 +5,25 @@ const Ad = () => {
     <div className="py-2 overflow-hidden">
       <div className="marquee-wrapper">
         <div className="marquee-track">
-          <span className="md:mx-36 mx-12  text-xs ">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
-          <span className="md:mx-36 mx-12  text-xs">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
-          {/* duplicate again for seamless loop */}
-          <span className="md:mx-36 mx-12  text-xs">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
-          <span className="md:mx-36 mx-12  text-xs">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+          <section className="flex md:mx-36 mx-12 gap-4 text-xs">
+            <span >FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+            <a className="underline" href="/pages/shop_all">Shop now</a>
+          </section>
+
+          <section className="flex md:mx-36 mx-12 gap-4 text-xs">
+            <span >FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+            <a className="underline" href="/pages/shop_all">Shop now</a>
+          </section>
+
+          <section className="flex md:mx-36 mx-12 gap-4 text-xs">
+            <span >FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+            <a className="underline" href="/pages/shop_all">Shop now</a>
+          </section>
+
+          <section className="flex md:mx-36 mx-12 gap-4 text-xs">
+            <span >FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+            <a className="underline" href="/pages/shop_all">Shop now</a>
+          </section>
         </div>
       </div>
     </div>
