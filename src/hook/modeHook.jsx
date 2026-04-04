@@ -24,7 +24,7 @@ export default function ModeHook() {
     >
             <Mood darkLight={isDark}/>          
     </button>
-            <SearchIcon darkLight={isDark}/>
+            <SearchIcon darkLight={isDark} className="hidden md:flex"/>
             <SignIn darkLight={isDark}/>
             <Cart darkLight={isDark}/>
     </div>

@@ -38,9 +38,9 @@ const SignUp = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-buttons hover-bg-buttons z-60">
+    <div className="fixed inset-0 bg-buttons z-60">
       {/* Modal */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-white p-6 rounded-lg shadow-lg z-50">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-background p-6 rounded-lg shadow-lg z-50">
         
         <h1 className="text-xl font-bold mb-6 text-center">Sign Up</h1>
 

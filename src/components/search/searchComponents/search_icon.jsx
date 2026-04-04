@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import SerachTopUp from "./search_topup";
 
-const SearchIcon =({darkLight})=>{
+const SearchIcon =({darkLight , className})=>{
     const [open , setOpen] = useState(false);
     const handleClick = ()=> setOpen(trues => !trues);
     return(
-        <div className="relative">
+        <div className={`relative ${className}`}>
             <img 
             className="w-6 h-6 hover:cursor-pointer"
              src={darkLight ? "/assets/icons/light-search.png" : "/assets/icons/search.png"} 

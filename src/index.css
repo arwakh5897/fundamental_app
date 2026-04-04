@@ -126,6 +126,9 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+.marquee:hover {
+  animation-play-state: paused;
+}
 
 @keyframes marquee {
   0% { transform: translateX(0); }

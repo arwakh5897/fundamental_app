@@ -25,8 +25,8 @@ const SignIn = () => {
   };
 
   return (
-  <div className="fixed inset-0 bg-buttons hover-bg-buttons z-60" >  
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 opacity-100 bg-white p-6 rounded-lg shadow-lg z-50">
+  <div className="fixed inset-0 bg-buttons z-60" >  
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 opacity-100 bg-background p-6 rounded-lg shadow-lg z-50">
      <h1 className="text-xl font-bold mb-6 text-center">Log In</h1>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         {fields.map((field, index) => (

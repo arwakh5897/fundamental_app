@@ -23,16 +23,16 @@ const Brands = () => {
 
       {/* Moving Strip */}
       <div className="relative marquee-wraper overflow-hidden">
-        <div className="marquee-track flex w-max">
+        <div className="marquee marquee-track flex w-max">
           {loopData.map((brand, index) => (
             <div
               key={index}
-              className="flex items-center justify-center min-w-[40px] md:min-w-[300px] mx-0 md:mx-6"
+              className="flex items-center justify-center min-w-[30px] md:min-w-[300px] mx-0 md:mx-6"
             >
               <img
                 src={brand.img}
                 alt="brand"
-                className="h-28 md:h-42 object-contain opacity-70 hover:opacity-100 transition"
+                className="h-20 md:h-42 object-contain opacity-70 hover:opacity-100 transition"
               />
             </div>
           ))}
