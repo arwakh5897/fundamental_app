@@ -16,7 +16,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
           placeholder="Full Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500"
+          className="w-full p-2 outline-none border rounded "
           required
         />
 
@@ -27,7 +27,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-2 outline-none border rounded"
             required
           />
 
@@ -37,7 +37,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-2 outline-none border rounded"
             required
           />
         </div>
@@ -48,7 +48,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
           placeholder="Address"
           value={formData.address}
           onChange={handleChange}
-          className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500"
+          className="w-full p-2 outline-none border rounded"
           required
         />
 
@@ -59,7 +59,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
             placeholder="City"
             value={formData.city}
             onChange={handleChange}
-            className="w-full p-3 border rounded-xl"
+            className="w-full p-2 outline-none border rounded"
             required
           />
           <input
@@ -68,7 +68,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
             placeholder="Province"
             value={formData.province}
             onChange={handleChange}
-            className="w-full p-3 border rounded-xl"
+            className="w-full p-2 outline-none border rounded"
             required
           />
           <input
@@ -77,7 +77,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
             placeholder="ZIP"
             value={formData.zip}
             onChange={handleChange}
-            className="w-full p-3 border rounded-xl"
+            className="w-full p-2 outline-none border rounded"
             required
           />
         </div>

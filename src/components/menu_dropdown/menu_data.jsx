@@ -10,16 +10,16 @@ export const menuData = {
                 { name: "Party Wear", link: "/concern/party-wear" },
               ],
     "types":[
-                { name: "Sneakers", link: "/by-type/sneakers" },
-                { name: "Boots", link: "/by-type/boots" },
-                { name: "Sandals", link: "/by-type/sandals" },
-                { name: "Loafers", link: "/by-type/loafers" },
-                { name: "Heels", link: "/by-type/heels" },
+                { name: "Sneakers", link: "/pages/shop_all" },
+                { name: "Boots", link: "/pages/shop_all" },
+                { name: "Sandals", link: "/pages/shop_all" },
+                { name: "Loafers", link: "/pages/shop_all"},
+                { name: "Heels", link: "/pages/shop_all" },
                 
              ],
     "bundles":[
-                { name: "Summer Collection", link: "/bundles/summer-collection" },
-                { name: "Winter Sale", link: "/bundles/winter-sale" },
-                { name: "Back to School", link: "/bundles/back-to-school" },
+                { name: "Summer Collection", link: "/pages/shop_all" },
+                { name: "Winter Sale", link: "/pages/shop_all" },
+                { name: "Back to School", link: "/pages/shop_all" },
              ],
 };
