@@ -4,8 +4,10 @@ import BillingForm from "../../components/check_out_Components/billingForm";
 import OrderSummary from "../../components/check_out_Components/orderSummary";
 import { useCartContext } from "../../context/cartContext";
 import { useLocation } from "react-router-dom";
+import OrderPopup from "../../components/check_out_Components/order_popup";
 
 const CheckOut = () => {
+  const [showModel , setShowModel ] = useState(false);
   const location = useLocation();
   const product = location.state?.productData;
   const {cart } = useCartContext();
@@ -18,7 +20,6 @@ const CheckOut = () => {
     province: "",
     zip: "",
   });
-  const totalPrice = product?.discountedPrice * product?.qty || 0;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,7 +27,7 @@ const CheckOut = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("✅ Order placed successfully!");
+    setShowModel(true);
   };
 
   return (
@@ -43,13 +44,20 @@ const CheckOut = () => {
         />
 
         {/* Summary */}
-<OrderSummary 
-  cart={product ? [product] : cart} // Buy se product aya to array me wrap karo
-  totalPrice={product ? product.discountedPrice * product.qty : 
-    cart.reduce((total, item) => total + item.discountedPrice * item.qty, 0)
-  }
-/>
+        <OrderSummary 
+          cart={product ? [product] : cart} // Buy se product aya to array me wrap karo
+          totalPrice={product ? product.discountedPrice * product.qty : 
+            cart.reduce((total, item) => total + item.discountedPrice * item.qty, 0)
+          }
+        />
       </div>
+      <OrderPopup 
+      showModel={showModel}
+      setShowModel={setShowModel}
+      formData={formData}
+      cart={cart}
+      product={product}
+      />
     </div>
   );
 };
