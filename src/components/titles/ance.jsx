@@ -14,7 +14,7 @@ const Ance = () => {
         <div>
       <div className="bg-menu lg:text-4xl text-center py-2 lg:py-4">
             FOOTWARE
-            <span className="font-bold mx-2">ESSENTIALS</span>
+            <span className="font-semibold mx-2">ESSENTIALS</span>
         </div>
                <img className="w-full"src="/assets/images/banner2.png"/>
           {  <Products products={specificProducts} />}

@@ -17,7 +17,7 @@ const MakeUpTitle = () => {
         <div id="new_arrival">
           <div className="bg-menu lg:text-4xl text-center py-2 lg:py-4">
                 KICK  
-                <span className="font-bold mx-2">MUST-HAVES</span>
+                <span className="font-semibold mx-2">MUST-HAVES</span>
           </div>
           <img className="w-full" src="/assets/images/banner3.png"/>
           <Products products={specifiedProducts}/>

@@ -3,7 +3,7 @@ import ApiMappingCard from "../card/api_mapping_card";
 
 const Products = ({products})=>{
     return(
-      <div className="flex flex-wrap flex-row justify-center gap-8 p-4 overflow-x-auto">
+      <div className="flex flex-wrap flex-row gap-4 justify-around md:justify-center p-4">
         <ApiMappingCard products={products} />
       </div>
     )
