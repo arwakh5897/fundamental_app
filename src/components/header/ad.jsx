@@ -1,38 +1,17 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay } from "swiper/modules";
 
 const Ad = () => {
   return (
-    <div className="py-2 text-xs lg:text-sm  font-medium">
-      <Swiper modules={[Autoplay]} autoplay={{ delay:3000, disableOnInteraction: false }} loop={true} className="mySwiper"   >
-        <SwiperSlide >
-          <div className="flex flex-row gap-4 justify-center">
-              <span>FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
-              <a href="#new_arrival" className="underline font-semibold hover:opacity-80 transition">
-                Shop now
-              </a>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex gap-4 justify-center">
-            <span>RAMADAN SALE - UP TO 50% OFF</span>
-            <a href="#ramadan" className="underline font-semibold hover:opacity-80 transition">
-              Shop now
-            </a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex gap-4 justify-center">
-            <span>NEW ARRIVALS JUST DROPPED</span>
-            <a href="#new_arrival" className="underline font-semibold hover:opacity-80 transition">
-              Explore
-            </a>
-          </div>
-        </SwiperSlide>
-      </Swiper>
+    <div className="py-2 overflow-hidden">
+      <div className="marquee-wrapper">
+        <div className="marquee-track">
+          <span className="md:mx-36 mx-12  text-xs ">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+          <span className="md:mx-36 mx-12  text-xs">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+          {/* duplicate again for seamless loop */}
+          <span className="md:mx-36 mx-12  text-xs">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+          <span className="md:mx-36 mx-12  text-xs">FREE SHIPPING ON ALL ORDERS ABOVE Rs. 2,500</span>
+        </div>
+      </div>
     </div>
   );
 };
