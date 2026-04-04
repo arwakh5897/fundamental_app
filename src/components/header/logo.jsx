@@ -2,7 +2,7 @@ import React from "react";
 
 const Logo=()=>{
     return(
-        <div className="md:text-2xl font-semibold"><h1> Shoes Store</h1></div>
+        <div className="text-2xl font-semibold"><h1> Shoes Store</h1></div>
     )
 }
 export default Logo;

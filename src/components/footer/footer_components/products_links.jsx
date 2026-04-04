@@ -8,10 +8,10 @@ const ProductsLinks = () => {
                     <a href="/pages/shop_all" className="hover:underline">
                         All Products
                     </a>
-                    <a href="/pages/new_arrivals" className="hover:underline">
+                    <a href="/pages/shop_all" className="hover:underline">
                         New Arrivals
                     </a>
-                    <a href="/pages/best_sellers" className="hover:underline">
+                    <a href="/pages/shop_all" className="hover:underline">
                         Best Sellers
                     </a>
                 </div>

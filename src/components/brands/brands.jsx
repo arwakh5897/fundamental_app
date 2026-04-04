@@ -8,7 +8,7 @@ const Brands = () => {
     { img: "/assets/images/brand4.png" },
   ];
 
-  const loopData = [...brandsData, ...brandsData]; // must duplicate
+  const loopData = [...brandsData, ...brandsData , ...brandsData , ...brandsData]; // must duplicate
 
   return (
     <section className="py-8 md:py-16 bg-white overflow-hidden">
@@ -27,7 +27,7 @@ const Brands = () => {
           {loopData.map((brand, index) => (
             <div
               key={index}
-              className="flex items-center justify-center min-w-[30px] md:min-w-[300px] mx-0 md:mx-6"
+              className="flex items-center justify-center min-w-[30px] md:min-w-[300px] mx-0 2xl:mx-16"
             >
               <img
                 src={brand.img}
