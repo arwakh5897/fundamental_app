@@ -1,5 +1,6 @@
 import React from "react";
 import { formatCurrency } from "../../../utils/formatCurrency";
+import { useNavigate } from "react-router-dom";
 
 const OrderPopup = ({
   showModel,
@@ -11,6 +12,7 @@ const OrderPopup = ({
   if (!showModel) return null;
 
   const items = product ? [product] : cart;
+  const navigate = useNavigate();
 
   const total = product
     ? product.discountedPrice * product.qty
@@ -104,7 +106,7 @@ const OrderPopup = ({
             <button
               onClick={() => {
                 setShowModel(false);
-                // optional redirect
+                navigate("/pages/shop_all");
               }}
               className="w-full bg-buttons text-white py-2 rounded-lg hover:opacity-90 transition"
             >
