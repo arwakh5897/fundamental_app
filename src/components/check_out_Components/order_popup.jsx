@@ -39,7 +39,7 @@ const OrderPopup = ({
         <div className="p-6 space-y-5">
 
           {/* Customer Info */}
-          <div className="bg-gray-50 rounded-xl p-4">
+          <div className="hidden md:flex flex-col bg-gray-50 rounded-xl p-4">
             <h3 className="font-semibold text-gray-700 mb-2">
               Customer Details
             </h3>
