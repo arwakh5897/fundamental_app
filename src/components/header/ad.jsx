@@ -11,9 +11,9 @@ const Ad = () => {
   return (
     <div className="py-2 overflow-hidden">
       <div className="marquee-wrapper">
-        <div className="marquee marquee-track">
+        <div className="marquee marquee-track text-[15px] md:text-xs">
           {loopData.map((item,index)=>(
-          <section key={index} className="flex md:mx-36 2xl:mx-80 mx-12 gap-4 text-[5px] md:text-xs">
+          <section key={index} className="flex md:mx-36 2xl:mx-80 mx-12 gap-4">
             <span >{item.name}</span>
             <a className="underline" href="/pages/shop_all">{item.btn_text}</a>
           </section>
