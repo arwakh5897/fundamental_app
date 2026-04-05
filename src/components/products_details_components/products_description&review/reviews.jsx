@@ -21,7 +21,7 @@ const Reviews = () => {
       date: "30 March 2026",
     },
     {
-      name: "Arwa",
+      name: "Nomi",
       rating: 5,
       comment: "Loved it! Bilkul same as shown, definitely buy again.",
       date: "28 March 2026",
