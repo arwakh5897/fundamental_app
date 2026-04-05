@@ -14,12 +14,15 @@ const OrderPopup = ({
   const items = product ? [product] : cart;
   const navigate = useNavigate();
 
-  const total = product
+  const totalPrice = product
     ? product.discountedPrice * product.qty
     : cart.reduce(
         (total, item) => total + item.discountedPrice * item.qty,
         0
       );
+
+  const shippingCost = totalPrice >= 5000 ? 0 : 130;
+  const total = totalPrice + shippingCost;
 
   return (
     <div
