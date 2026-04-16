@@ -3,7 +3,7 @@ import { formatCurrency } from "../../../utils/formatCurrency";
 
 const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
   return (
-    <div className="flex gap-3 p-2 border-b">
+    <div className="flex gap-3 p-2 mt-2 rounded-2xl shadow-md">
       
       {/* Image */}
       <div className="w-16 h-16 flex-shrink-0">
