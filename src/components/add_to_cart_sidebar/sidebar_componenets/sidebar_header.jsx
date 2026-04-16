@@ -10,7 +10,7 @@ const SidebarHeader = ({ onClose , totalItems })=>{
             className="text-foreground px-2 py-1 font-semibold"
           />
 
-          <h2 className=" px-4 py-1 md:text-xl border-l border-r flex-1 text-center">
+          <h2 className=" px-0 py-1 lg:text-lg border-l border-r flex-1 text-center">
             Your Shopping Cart
           </h2>
 

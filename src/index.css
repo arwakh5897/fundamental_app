@@ -32,6 +32,9 @@ body {
   background-color: rgb(245 245 245 / 1); 
 }
 .bg-menu {
+  background-color: rgb(190, 168, 155);
+}
+.bg-footer {
   background-color: rgb(170, 134, 134);
 }
 .bg-buttons {

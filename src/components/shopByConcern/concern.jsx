@@ -4,7 +4,7 @@ import { menuData } from "../menu_dropdown/menu_data";
 const Concern = () => {
 
   return (
-    <div id="ShopByConcern" className="bg-buttons rounded ">
+    <div id="ShopByConcern" className="bg-menu rounded ">
       <div className="text-2xl lg:text-4xl text-center pt-4">
         SHOP BY
         <span className="font-bold mx-2">CONCERN</span>
