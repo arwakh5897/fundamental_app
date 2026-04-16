@@ -10,12 +10,15 @@ const SidebarHeader = ({ onClose , totalItems })=>{
             className="text-foreground px-2 py-1 font-semibold"
           />
 
-          <h2 className=" px-0 py-1 lg:text-lg border-l border-r flex-1 text-center">
+          <h2 className=" px-0 py-1 lg:text-lg border-l  flex-1 text-center">
             Your Shopping Cart
           </h2>
 
-          <span className="px-2 py-1 text-right min-w-[30px]">
+          <span className="relative flex items-center justify-center min-w-[32px] h-[32px] px-2 text-md font-semibold text-white rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-[0_0_10px_rgba(255,255,255,0.2)]">
             {totalItems}
+
+            {/* Glow pulse */}
+            <span className="absolute inset-0 rounded-full  bg-white/20"></span>
           </span>
 
         </div>

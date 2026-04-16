@@ -15,6 +15,7 @@ import { LoaderProvider } from "./context/loaderContext";
 import Loader from "./components/loader/loader";
 import RouteLoader from "./context/navigationLoader";
 import { CartProvider } from "./context/cartContext";
+import ScrollToTop from "./hook/scrollToTop";
 
 import OurStory from "./pages/footer_pages/about_us/our_story";
 import Sustainability from "./pages/footer_pages/about_us/sustainability";
@@ -43,6 +44,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+     <ScrollToTop/>
       <CartProvider>
       <LoaderProvider>
         <Loader/>
