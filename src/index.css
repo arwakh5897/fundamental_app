@@ -32,18 +32,37 @@ body {
   background-color: rgb(245 245 245 / 1); 
 }
 .bg-menu {
-  background-color: rgb(190, 168, 155);
+    /* background-color: rgb(170, 134, 134); */
+  background: linear-gradient(135deg, rgb(190, 168, 155) 0%, rgb(170, 148, 135) 100%);
 }
+
 .bg-footer {
-  background-color: rgb(170, 134, 134);
+  background: linear-gradient(135deg, rgb(150, 127, 114) 0%, rgb(130, 110, 100) 100%);
 }
-.bg-buttons {
+/* .bg-buttons {
   background: linear-gradient(135deg, #c19a9a 0%, #7f5a5a 100%);
   transition: all 0.3s ease;
 }
 
 .hover-bg-buttons:hover {
   background: linear-gradient(135deg, #a87b7b 0%, #6e4b4b 100%);
+  transform: translateY(-1px);
+} */
+ .bg-buttons {
+  background: linear-gradient(
+    135deg,
+    rgb(193, 172, 160) 0%,
+    rgb(140, 110, 100) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.hover-bg-buttons:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(170, 145, 135) 0%,
+    rgb(120, 95, 85) 100%
+  );
   transform: translateY(-1px);
 }
 
