@@ -23,7 +23,7 @@ const MobileSidebarContent = ({ onClose }) => {
           activeMenu ? "-translate-x-full" : "translate-x-0"
         }`}
       >
-        <CloseButton onClick={onClose} className="mb-6 text-3xl text-white" />
+        <CloseButton onClick={onClose} className="mb-6 text-3xl" />
 
         <nav className="space-y-3">
           <Link to="/pages/shop_all" onClick={onClose}

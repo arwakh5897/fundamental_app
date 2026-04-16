@@ -31,13 +31,12 @@ body {
 .bg-background-header {
   background-color: rgb(245 245 245 / 1); 
 }
-.bg-menu {
-    /* background-color: rgb(170, 134, 134); */
-  background: linear-gradient(135deg, rgb(190, 168, 155) 0%, rgb(170, 148, 135) 100%);
-}
-
-.bg-footer {
-  background: linear-gradient(135deg, rgb(150, 127, 114) 0%, rgb(130, 110, 100) 100%);
+.bg-menu { 
+  /* background-color: rgb(170, 134, 134); */ 
+  background-color: rgb(190, 168, 155); 
+} 
+.bg-footer { 
+  background-color: rgb(150, 127, 114); 
 }
 /* .bg-buttons {
   background: linear-gradient(135deg, #c19a9a 0%, #7f5a5a 100%);
@@ -67,10 +66,16 @@ body {
 }
 
 .bg-background-card {
-  background-color: rgb(253, 247, 247); 
+  background-color: rgb(190, 168, 155); 
 }
 .text-foreground {
-  color: rgba(15, 23, 42, 0.753);
+    color: rgba(25, 23, 42, 0.753);
+}
+
+@media (min-width: 768px) {
+  .text-foreground {
+    color: rgba(25, 23, 42, 0.753);
+  }
 }
 .text-foreground-secondary {
   color: white;
@@ -114,9 +119,9 @@ body {
   background-color: rgba(15, 23, 42, 0.623);
 }
 
-.dark .bg-background-card {
+/* .dark .bg-background-card {
   background-color: rgba(218, 221, 230, 0.623);
-}
+} */
 .dark .text-foreground {
   color: rgb(255, 255, 255);
 }

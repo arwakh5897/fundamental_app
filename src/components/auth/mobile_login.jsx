@@ -16,7 +16,7 @@ const MobileLogin = ({ closeSidebar }) => {
     <div className="w-full mt-4">
       <button
         onClick={handleClick}
-        className="w-full bg-white text-foreground py-3 border-t rounded-t-lg font-semibold shadow-sm hover:cursor-pointer transition"
+        className="w-full bg-buttons py-3 border-t rounded-t-lg font-semibold shadow-sm hover:cursor-pointer transition"
       >
         Sign In
       </button>

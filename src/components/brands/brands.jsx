@@ -11,7 +11,7 @@ const Brands = () => {
   const loopData = [...brandsData, ...brandsData , ...brandsData , ...brandsData]; // must duplicate
 
   return (
-    <section className="py-8 md:py-16 bg-white overflow-hidden">
+    <section className="py-8 md:py-16 overflow-hidden">
       <div className="text-center mb-10 px-4">
         <h1 className="text-2xl md:text-4xl font-bold">
           Our Brands
