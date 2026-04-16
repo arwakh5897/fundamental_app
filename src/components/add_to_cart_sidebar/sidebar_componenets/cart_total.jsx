@@ -4,9 +4,9 @@ import { formatCurrency } from "../../../../utils/formatCurrency";
 const CartTotal = ({ totalPrice = 0 }) => {
   return (
     <div className="p-4">
-      <div className="rounded-2xl bg-gradient-to-r from-gray-900 to-gray-700 text-white p-4 shadow-lg">
+      <div className="rounded-2xl bg-cart-total p-4 shadow-lg">
         
-        <p className="text-xs uppercase tracking-wide text-gray-300">
+        <p className="text-xs uppercase tracking-wide text-halfWhite">
           Total Amount
         </p>
 
@@ -15,7 +15,7 @@ const CartTotal = ({ totalPrice = 0 }) => {
             Rs {formatCurrency(totalPrice)}
           </h2>
 
-          <span className="text-xs text-gray-300">
+          <span className="text-xs text-halfWhite">
             incl. taxes
           </span>
         </div>

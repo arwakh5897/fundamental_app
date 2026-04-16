@@ -19,7 +19,7 @@ const MobileSidebarContent = ({ onClose }) => {
     "flex justify-between items-center px-4 py-3 rounded-xl transition-all duration-200 active:scale-95";
 
   return (
-    <div className="relative h-full bg-gradient-to-b from-black/60 to-black/30 backdrop-blur-2xl text-white overflow-hidden">
+    <div className="relative h-full   text-foreground-secondary overflow-hidden">
 
       {/* MAIN */}
       <motion.div

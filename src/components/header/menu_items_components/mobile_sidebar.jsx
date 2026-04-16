@@ -8,14 +8,14 @@ const MobileSidebar = ({ active, onClose }) => {
       {/* Overlay */}
       {active && (
         <div
-          className="fixed inset-0 bg-overlay z-40"
+          className="fixed  inset-0 bg-overlay z-40"
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-full w-72 md:w-86 bg-menu z-50 p-0 flex flex-col justify-between transition-transform duration-1000 ${
+        className={`fixed top-0 bg-sidebar backdrop-blur-2xl left-0 h-full w-72 md:w-86 bg-menu z-50 p-0 flex flex-col justify-between transition-transform duration-1000 ${
           active ? "translate-x-0" : "-translate-x-full"
         }`}
       >
