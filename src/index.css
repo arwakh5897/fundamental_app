@@ -66,7 +66,7 @@ body {
 }
 
 .bg-background-card {
-  background-color: rgb(190, 168, 155); 
+  background-color: white; 
 }
 .text-foreground {
     color: rgba(25, 23, 42, 0.753);
@@ -113,15 +113,15 @@ body {
 
 /* Dark Mode */
 .dark .bg-background {
-  background-color: rgba(1, 14, 43, 0.623);
+  background-color: black;
 }
 .dark .bg-background-header {
   background-color: rgba(15, 23, 42, 0.623);
 }
 
-/* .dark .bg-background-card {
+.dark .bg-background-card {
   background-color: rgba(218, 221, 230, 0.623);
-} */
+}
 .dark .text-foreground {
   color: rgb(255, 255, 255);
 }
