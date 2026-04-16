@@ -18,14 +18,14 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
       {/* Sidebar */}
       <nav
        data-lenis-prevent
-        className={`fixed top-0 right-0 h-full w-72 md:w-86 bg-menu text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 transform ${
+        className={`fixed top-0 right-0 h-full w-72 md:w-86 bg-menu text-foreground z-50 flex flex-col transition-transform duration-1000 transform ${
           active ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <SidebarHeader onClose={onClose} totalItems={totalItems} />
 
         {/* Cart Items */}
-        <div className="flex flex-col overflow-y-auto scrollbar-hide mt-2 h-2/3">
+        <div className="flex-1 overflow-y-auto scrollbar-hide space-y-0 mt-4">
           {cart.length > 0 ? (
             cart.map((item) => (
               <ShoppingCard
@@ -43,7 +43,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
             </p>
           )}
         </div>
-        <div className="fixed bottom-0 w-full">
+        <div className=" w-full">
             <CartTotal totalPrice={totalPrice} />
             <SidebarButtons onClick={onClose} />
         </div>

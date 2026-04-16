@@ -54,7 +54,7 @@ const DesktopMenu = () => {
       </div>
       
       <Link to="/pages/accessories">Accessories</Link>
-      <Link to="/pages/make_up">MAKEUP</Link>
+      {/* <Link to="/pages/make_up">MAKEUP</Link> */}
     </nav>
   );
 };

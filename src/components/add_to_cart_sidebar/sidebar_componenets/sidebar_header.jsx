@@ -3,14 +3,14 @@ import CloseButton from "../../buttons/close_button";
 
 const SidebarHeader = ({ onClose , totalItems })=>{
     return(
-        <div className="flex p-1 items-center font-semibold border-t border-b overflow-hidden">
+        <div className="flex p-2 items-center font-semibold border-t border-b rounded overflow-hidden">
   
           <CloseButton
             onClick={onClose}
-            className="text-foreground-secondary px-2 py-1 font-semibold"
+            className="text-foreground px-2 py-1 font-semibold"
           />
 
-          <h2 className=" px-4 py-1 border-l border-r flex-1 text-center">
+          <h2 className=" px-4 py-1 md:text-xl border-l border-r flex-1 text-center">
             Your Shopping Cart
           </h2>
 

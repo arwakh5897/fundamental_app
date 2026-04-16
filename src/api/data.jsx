@@ -1,9 +1,9 @@
 // utils/fetchProducts.js
 // export const fetchProducts = async () => {
 //   try { 
-//     const res = await fetch("https://dummyjson.com/products/category/mens-shirts");
+//     const res = await fetch("http://127.0.0.1:8000/api/products");
 //     const data = await res.json();
-//     return data.products;
+//     return data.data;
 //   } catch (err) {
 //     console.error("API fetch error:", err);
 //     return [];
@@ -13,6 +13,8 @@
 
 // utils/fetchProducts.js
 // utils/fetchProducts.js
+
+
 export const fetchProducts = async () => {
   return [
     {
@@ -50,13 +52,13 @@ Upgrade to the ultimate smartphone experience.
 Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 working hours anywhere in the UAE!      
       `,
       price: 9.99,
-      discountPercentage: 10,
+      discount: 10,
       rating: 4.2,
       count: 130,
       stock: 99,
       category: "beauty",
-      sizes: ["24", "32", "40"],
-      colors: ["black", "brown"],
+      size: ["24", "32", "40"],
+      color: ["black", "brown"],
       thumbnail: "https://picsum.photos/300/300?random=1",
       hoverImage: "https://picsum.photos/300/300?random=2",
       subImages: [
@@ -71,13 +73,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Knoll Executive Chair",
       description: "Ergonomic office chair.",
       price: 299.99,
-      discountPercentage: 15,
+      discount: 15,
       rating: 4.5,
       count: 30,
       stock: 45,
       category: "furniture",
-      sizes: ["Standard"],
-      colors: ["black", "grey"],
+      size: ["Standard"],
+      color: ["black", "grey"],
       thumbnail: "https://picsum.photos/300/300?random=5",
       hoverImage: "https://picsum.photos/300/300?random=6",
       subImages: [
@@ -91,13 +93,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Apple AirPods Pro",
       description: "Noise-cancelling earbuds.",
       price: 249.99,
-      discountPercentage: 5,
+      discount: 5,
       rating: 4.8,
       count: 129,
       stock: 200,
       category: "electronics",
-      sizes: ["One Size"],
-      colors: ["white"],
+      size: ["One Size"],
+      color: ["white"],
       thumbnail: "https://picsum.photos/300/300?random=10",
       hoverImage: "https://picsum.photos/300/300?random=11",
       subImages: [
@@ -110,13 +112,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Nike Running Shoes",
       description: "Lightweight running shoes.",
       price: 119.99,
-      discountPercentage: 20,
+      discount: 20,
       rating: 4.6,
       count: 10,
       stock: 120,
       category: "fashion",
-      sizes: ["7", "8", "9", "10"],
-      colors: ["red", "blue", "black"],
+      size: ["7", "8", "9", "10"],
+      color: ["red", "blue", "black"],
       thumbnail: "https://picsum.photos/300/300?random=14",
       hoverImage: "https://picsum.photos/300/300?random=15",
       subImages: [
@@ -129,13 +131,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Wooden Coffee Table",
       description: "Stylish living room table.",
       price: 159.99,
-      discountPercentage: 12,
+      discount: 12,
       rating: 4.3,
       count: 16,
       stock: 30,
       category: "furniture",
-      sizes: ["Standard"],
-      colors: ["brown", "oak"],
+      size: ["Standard"],
+      color: ["brown", "oak"],
       thumbnail: "https://picsum.photos/300/300?random=18",
       hoverImage: "https://picsum.photos/300/300?random=19",
       subImages: [
@@ -148,13 +150,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Revlon Lipstick Set",
       description: "Long-lasting lipstick.",
       price: 29.99,
-      discountPercentage: 8,
+      discount: 8,
       rating: 4.1,
       count: 22,
       stock: 80,
       category: "beauty",
-      sizes: ["Standard"],
-      colors: ["red", "pink"],
+      size: ["Standard"],
+      color: ["red", "pink"],
       thumbnail: "https://picsum.photos/300/300?random=22",
       hoverImage: "https://picsum.photos/300/300?random=23",
       subImages: [
@@ -167,13 +169,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Gaming Mouse",
       description: "RGB high precision mouse.",
       price: 49.99,
-      discountPercentage: 18,
+      discount: 18,
       rating: 4.7,
       count: 50,
       stock: 150,
       category: "electronics",
-      sizes: ["Standard"],
-      colors: ["black"],
+      size: ["Standard"],
+      color: ["black"],
       thumbnail: "https://picsum.photos/300/300?random=26",
       hoverImage: "https://picsum.photos/300/300?random=27",
       subImages: [
@@ -186,13 +188,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Leather Wallet",
       description: "Premium leather wallet.",
       price: 39.99,
-      discountPercentage: 10,
+      discount: 10,
       rating: 4.4,
       count: 80,
       stock: 200,
       category: "fashion",
-      sizes: ["Standard"],
-      colors: ["brown", "black"],
+      size: ["Standard"],
+      color: ["brown", "black"],
       thumbnail: "https://picsum.photos/300/300?random=30",
       hoverImage: "https://picsum.photos/300/300?random=31",
       subImages: [
@@ -205,13 +207,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Smart Watch",
       description: "Fitness tracking smartwatch.",
       price: 199.99,
-      discountPercentage: 22,
+      discount: 22,
       rating: 4.6,
       count: 60,
       stock: 90,
       category: "electronics",
-      sizes: ["Standard"],
-      colors: ["black", "silver"],
+      size: ["Standard"],
+      color: ["black", "silver"],
       thumbnail: "https://picsum.photos/300/300?random=34",
       hoverImage: "https://picsum.photos/300/300?random=35",
       subImages: [
@@ -224,13 +226,13 @@ Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 w
       title: "Backpack",
       description: "Durable travel backpack.",
       price: 59.99,
-      discountPercentage: 14,
+      discount: 14,
       rating: 4.3,
       count: 45,
-      stock: 110,
+      stock: 0,
       category: "fashion",
-      sizes: ["Standard"],
-      colors: ["blue", "black"],
+      size: ["Standard"],
+      color: ["blue", "black"],
       thumbnail: "https://picsum.photos/300/300?random=38",
       hoverImage: "https://picsum.photos/300/300?random=39",
       subImages: [

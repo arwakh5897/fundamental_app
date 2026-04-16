@@ -35,10 +35,13 @@ body {
   background-color: rgb(170, 134, 134);
 }
 .bg-buttons {
-  background-color: rgb(170, 134, 134);
+  background: linear-gradient(135deg, #c19a9a 0%, #7f5a5a 100%);
+  transition: all 0.3s ease;
 }
+
 .hover-bg-buttons:hover {
-  background-color: rgb(140, 100, 100);
+  background: linear-gradient(135deg, #a87b7b 0%, #6e4b4b 100%);
+  transform: translateY(-1px);
 }
 
 .bg-background-card {

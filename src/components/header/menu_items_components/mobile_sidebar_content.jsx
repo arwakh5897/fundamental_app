@@ -62,10 +62,10 @@ const MobileSidebarContent = ({ onClose }) => {
             <span>Accessories</span>
           </Link>
 
-          <Link to="/pages/make_up" onClick={onClose}
+          {/* <Link to="/pages/make_up" onClick={onClose}
             className="flex justify-between items-center border-b pb-2">
             <span>Makeup</span>
-          </Link>
+          </Link> */}
         </nav>
       </div>
 

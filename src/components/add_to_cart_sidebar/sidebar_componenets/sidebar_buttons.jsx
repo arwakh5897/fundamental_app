@@ -3,26 +3,34 @@ import { useNavigate } from "react-router-dom";
 
 const SidebarButtons = ({ onClick }) => {
   const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    navigate(path);
+    onClick && onClick();
+  };
+
   return (
-    <div className="flex bg-gray-800 font-semibold text-foreground-secondary transition-colors duration-200 mt-auto">
-      <button
-        className="w-full  py-4 hover:bg-gray-600 hover:cursor-pointer"
-        onClick={() => {
-          navigate("/pages/shopping_details");
-          onClick();
-        }}
-      >
-        View Cart
-      </button>
-      <button
-        className="w-full py-4  hover:bg-gray-600 hover:cursor-pointer "
-        onClick={() => {
-          navigate("/pages/checkout");
-          onClick();
-        }}
-      >
-        Checkout
-      </button>
+    <div className="mt-auto p-4 border-t shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+      <div className="flex gap-3">
+        
+        {/* View Cart */}
+        <button
+          onClick={() => handleNavigate("/pages/shopping_details")}
+          className="flex-1 py-3 rounded-xl bg-buttons hover-bg-buttons font-medium 
+          hover:cursor-pointer transition-all duration-200 shadow-md"        >
+          View Cart
+        </button>
+
+        {/* Checkout */}
+        <button
+          onClick={() => handleNavigate("/pages/checkout")}
+          className="flex-1 py-3 rounded-xl bg-buttons hover-bg-buttons font-semibold 
+          hover:cursor-pointer transition-all duration-200 shadow-md"
+        >
+          Checkout
+        </button>
+
+      </div>
     </div>
   );
 };
