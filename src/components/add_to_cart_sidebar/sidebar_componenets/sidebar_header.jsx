@@ -3,7 +3,7 @@ import CloseButton from "../../buttons/close_button";
 
 const SidebarHeader = ({ onClose , totalItems })=>{
     return(
-        <div className="flex p-2 items-center font-semibold border-t border-b rounded overflow-hidden">
+        <div className="flex bg-buttons p-2 items-center font-semibold border-t border-b rounded overflow-hidden">
   
           <CloseButton
             onClick={onClose}

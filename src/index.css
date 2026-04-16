@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* =========================
+   LENIS SCROLL
+========================= */
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -21,41 +25,54 @@ html.lenis body {
   pointer-events: none !important;
 }
 
-/* Custom Theme Classes */
+/* =========================
+   BASE STYLES
+========================= */
+
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+/* =========================
+   BACKGROUNDS
+========================= */
+
 .bg-background {
-  background-color: #ffffff; 
-}
-.bg-background-header {
-  background-color: rgb(245 245 245 / 1); 
-}
-.bg-menu { 
-  /* background-color: rgb(170, 134, 134); */ 
-  background-color: rgb(190, 168, 155); 
-} 
-.bg-sidebar {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.3)
-  );
-  backdrop-filter: blur(40px);
-}
-.bg-footer { 
-  background-color: rgb(150, 127, 114); 
-}
-/* .bg-buttons {
-  background: linear-gradient(135deg, #c19a9a 0%, #7f5a5a 100%);
-  transition: all 0.3s ease;
+  background-color: #ffffff;
 }
 
-.hover-bg-buttons:hover {
-  background: linear-gradient(135deg, #a87b7b 0%, #6e4b4b 100%);
-  transform: translateY(-1px);
-} */
- .bg-buttons {
+.bg-background-header {
+  background-color: rgb(245 245 245 / 1);
+}
+
+.bg-menu {
+  background-color: rgb(190, 168, 155);
+}
+
+.bg-sidebar {
+  background: linear-gradient(
+    180deg,
+    rgba(190, 168, 155, 0.55),
+    rgba(170, 145, 135, 0.35),
+    rgba(140, 110, 100, 0.25),
+    rgba(120, 95, 85, 0.20)
+  );
+
+  backdrop-filter: blur(45px);
+  -webkit-backdrop-filter: blur(45px);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.bg-footer {
+  background-color: rgb(150, 127, 114);
+}
+
+.bg-buttons {
   background: linear-gradient(
     135deg,
     rgb(193, 172, 160) 0%,
@@ -74,10 +91,42 @@ body {
 }
 
 .bg-background-card {
-  background-color: white; 
+  background-color: white;
 }
+
+.bg-image {
+  background-color: rgb(243, 244, 246);
+}
+
+.bg-line {
+  background-color: rgb(200, 200, 200);
+}
+
+.bg-overlay {
+  background-color: rgb(0 0 0 / 0.4);
+}
+
+.bg-cart-total {
+  background: linear-gradient(
+    to right,
+    rgb(17, 24, 39),
+    rgb(55, 65, 81)
+  );
+}
+
+.bg-halfWhite {
+  background: rgba(255, 255, 255, 0.05);
+}
+.hover-bg-box:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* =========================
+   TEXT COLORS
+========================= */
+
 .text-foreground {
-    color: rgba(25, 23, 42, 0.753);
+  color: rgba(25, 23, 42, 0.753);
 }
 
 @media (min-width: 768px) {
@@ -85,50 +134,63 @@ body {
     color: rgba(25, 23, 42, 0.753);
   }
 }
-.text-halfWhite {
-  color: rgb(209, 213, 219);
-}
+
 .text-foreground-secondary {
   color: white;
 }
+
+.text-halfGray {
+  color: rgb(209, 213, 219);
+}
+
+.text-halfWhite {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .text-heading {
   color: black;
 }
+
 .text-highlighted {
   color: rgb(248, 113, 113);
 }
+
 .hover-text-highlighted:hover {
   color: rgb(185, 14, 14);
 }
-.bg-image {
- background-color: rgb(243, 244, 246);
-}
-.bg-line {
- background-color: rgb(200,200,200); 
-}
-.border-color {
-  border: 1px solid rgb(206, 210, 216);
-}
-.border-bottom {
-  border-bottom: 1px solid rgb(206, 210, 216);;
-}
-.bg-hover-color:hover {
-  background-color: rgb(198, 202, 211); 
-}
-.bg-overlay {
-  background-color: rgb(0 0 0 / 0.4);
-}
-.bg-cart-total {
-  background: linear-gradient(to right, rgb(17, 24, 39), rgb(55, 65, 81));
-}
+
 .text-reviews {
   color: rgb(234, 179, 8);
 }
 
-/* Dark Mode */
+/* =========================
+   BORDER
+========================= */
+
+.border-color {
+  border: 1px solid rgb(206, 210, 216);
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgb(206, 210, 216);
+}
+
+/* =========================
+   HOVER STATES
+========================= */
+
+.bg-hover-color:hover {
+  background-color: rgb(198, 202, 211);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
 .dark .bg-background {
   background-color: black;
 }
+
 .dark .bg-background-header {
   background-color: rgba(15, 23, 42, 0.623);
 }
@@ -136,23 +198,31 @@ body {
 .dark .bg-background-card {
   background-color: rgba(218, 221, 230, 0.623);
 }
+
 .dark .text-foreground {
   color: rgb(255, 255, 255);
 }
+
 .dark .text-heading {
   color: white;
 }
 
-/* Hide scrollbar */
+/* =========================
+   SCROLLBAR HIDE
+========================= */
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
+/* =========================
+   MARQUEE
+========================= */
 
 .marquee-wrapper {
   overflow: hidden;
@@ -170,11 +240,16 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+
 .marquee:hover {
   animation-play-state: paused;
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
