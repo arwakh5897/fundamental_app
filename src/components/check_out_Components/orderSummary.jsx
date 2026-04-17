@@ -2,7 +2,7 @@ import React from "react";
 import { formatCurrency } from "../../../utils/formatCurrency";
 
 const OrderSummary = ({ cart, totalPrice }) => {
-  const shippingCost = totalPrice >= 5000 ? 0 : 130;
+  const shippingCost = totalPrice >= 2500 ? 0 : 130;
   const finalTotal = totalPrice + shippingCost;
 
   return (
@@ -78,7 +78,7 @@ const OrderSummary = ({ cart, totalPrice }) => {
       {/* 🚀 Free Shipping Hint */}
       {shippingCost > 0 && (
         <div className="bg-gray-100 text-xs p-2 rounded-lg text-gray-600 text-center">
-          Add Rs.{formatCurrency(5000 - totalPrice)} more for FREE delivery 🚚
+          Add Rs.{formatCurrency(2500 - totalPrice)} more for FREE delivery 🚚
         </div>
       )}
     </div>

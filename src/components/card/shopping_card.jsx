@@ -25,7 +25,7 @@ const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
         </p>
 
         <p className="text-sm font-semibold ">
-          Rs {formatCurrency(price)}
+          Rs {formatCurrency(price * qty)}
         </p>
       </div>
       <div>
