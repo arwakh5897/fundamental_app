@@ -55,7 +55,7 @@ const MobileSidebarContent = ({ onClose }) => {
 
         {/* SHOP */}
         <div className="mb-6">
-          <p className="text-[11px] text-halfWhite mb-2 px-2 tracking-widest">
+          <p className="box-heading">
             SHOP
           </p>
 
@@ -74,7 +74,7 @@ const MobileSidebarContent = ({ onClose }) => {
 
         {/* EXPLORE */}
         <div className="mb-6">
-          <p className="text-[11px] text-halfWhite mb-2 px-2 tracking-widest">
+          <p className="box-heading">
             EXPLORE
           </p>
 
@@ -100,7 +100,7 @@ const MobileSidebarContent = ({ onClose }) => {
 
         {/* BROWSE */}
         <div className="mb-6">
-          <p className="text-[11px] text-halfWhite mb-2 px-2 tracking-widest">
+          <p className="box-heading">
             BROWSE
           </p>
 
