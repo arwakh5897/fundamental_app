@@ -33,7 +33,7 @@ const Reviews = () => {
       {reviews.map((review, index) => (
         <div
           key={index}
-          className="border rounded-xl p-3 shadow-sm bg-background-card"
+          className="border-b rounded-xl p-3 shadow-sm bg-background-card"
         >
           {/* Top */}
           <div className="flex justify-between items-center mb-1">
@@ -42,8 +42,8 @@ const Reviews = () => {
           </div>
 
           {/* Rating */}
-          <div className="text-yellow-500 text-xs mb-1">
-            {"⭐".repeat(review.rating)}
+          <div className="text-green-400 text-xs mb-1">
+            {"★".repeat(review.rating)}
           </div>
 
           {/* Comment */}

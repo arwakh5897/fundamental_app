@@ -23,7 +23,7 @@ const ProductDetailHeadings = ({products}) => {
             className="flex flex-col items-center cursor-pointer group"
           >
             <h1
-              className={`text-lg lg:text-2xl font-semibold transition-all duration-200
+              className={`text-sm lg:text-2xl font-semibold transition-all duration-200
               ${activeTab === tab.key ? "text-heading" : "text-foreground"}`}
             >
               {tab.label}
