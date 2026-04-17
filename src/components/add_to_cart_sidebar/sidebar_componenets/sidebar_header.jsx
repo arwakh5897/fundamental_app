@@ -18,7 +18,7 @@ const SidebarHeader = ({ onClose , totalItems })=>{
             {totalItems}
 
             {/* Glow pulse */}
-            <span className="absolute inset-0 rounded-full  bg-white/20"></span>
+            <span className="absolute inset-0 rounded-full animate-pulse bg-white/20"></span>
           </span>
 
         </div>
