@@ -8,8 +8,8 @@ const Ance = () => {
     fetchProducts().then(setProducts)
    },[]);
    const specificProducts = allItems
-  // .sort((a, b) => b.rating.rate - a.rating.rate)
-  // .slice(0, 8);
+  .sort((a, b) => b.rating.rate - a.rating.rate)
+  .slice(0, 8);
       return (
         <div>
       <div className="bg-menu lg:text-4xl text-center py-2 lg:py-4">
