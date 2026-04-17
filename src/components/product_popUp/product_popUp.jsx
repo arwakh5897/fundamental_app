@@ -6,7 +6,7 @@ import ProductDetailImages from "../products_details_components/product_detail_i
 import ProductDetailCart from "../products_details_components/product_detail_cart";
 
 const ProductDetailsPopup = ({ isOpen, onClose, product }) => {
-  if (!isOpen) return null;
+  if (!isOpen || product.stock === 0) return null;
   const {  handleAddToCart,  updateCartItemSize , updateCartItemColor } = useCartContext();
 
   const description = product?.description || "";

@@ -174,7 +174,7 @@ export const fetchProducts = async () => {
       discount: 8,
       rating: 4.4,
       count: 65,
-      stock: 40,
+      stock: 0,
       category: "shoes",
       size: ["7", "8", "9"],
       color: ["blue", "yellow"],
