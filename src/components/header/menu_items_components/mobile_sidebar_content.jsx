@@ -21,7 +21,7 @@ const MobileSidebarContent = ({ onClose }) => {
  return (
   <div
     data-lenis-prevent
-    className="relative h-full  overflow-hidden flex flex-col"
+    className="relative h-full overflow-hidden flex flex-col"
   >
 
     {/* MAIN CONTENT WRAPPER */}

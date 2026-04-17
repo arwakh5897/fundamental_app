@@ -9,7 +9,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 bg-overlay transition-opacity duration-300 ${
           active ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={onClose}
