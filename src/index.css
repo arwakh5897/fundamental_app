@@ -48,6 +48,10 @@ body {
 .bg-menu {
   background-color: rgb(190, 168, 155);
 }
+.bg-menu-gradiant {
+    background: linear-gradient(135deg,rgb(193, 172, 160) 0%, rgb(140, 110, 100) 100%
+  );
+}
 
 .bg-sidebar {
   background: linear-gradient(
