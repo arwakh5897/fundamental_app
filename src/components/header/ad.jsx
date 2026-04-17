@@ -13,7 +13,7 @@ const Ad = () => {
       <div className="marquee-wrapper">
         <div className="marquee marquee-track">
           {loopData.map((item,index)=>(
-          <section key={index} className="flex text-[8px] md:text-xs font-semibold md:mx-36 2xl:mx-80 mx-12 gap-4">
+          <section key={index} className="flex text-xs font-semibold md:mx-36 2xl:mx-80 mx-12 gap-4">
             <p>{item.name}</p>
             <a className="underline" href="/pages/shop_all">{item.btn_text}</a>
           </section>
