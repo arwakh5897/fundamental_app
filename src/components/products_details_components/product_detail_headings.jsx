@@ -44,7 +44,7 @@ const ProductDetailHeadings = ({products}) => {
       {/* Content */}
       <div className="pt-6 px-2 lg:pt-10 transition-all duration-300">
         {activeTab === "description" && <FullDescription products={products} />}
-        {activeTab === "reviews" && <Reviews />}
+        {activeTab === "reviews" && <Reviews products={products}/>}
       </div>
       <p className="h-[1px] mt-10 w-full bg-buttons hover-bg-buttons"></p>
     </div>

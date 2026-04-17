@@ -11,6 +11,8 @@ import useToast from "../../../utils/useToast";
 import { useNavigate } from "react-router-dom";
 import CartReviews from "./product_cart_Components/cart_review";
 import CartQuantity from "./product_cart_Components/cart_quantity";
+import CartSaving from "./product_cart_Components/cart_saving";
+import AvailableStock from "./product_cart_Components/cart_availableStock";
 
 const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , shortDescription}) => {
   const { error , success } = useToast();
@@ -52,6 +54,12 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , 
 
       {/* Price */}
       <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>
+
+      {/* Saving */}
+      <CartSaving discount={products?.discount}/>
+
+      {/* available Stock */}
+      <AvailableStock stock={products?.stock}/>
 
       {/* Divider */}
        <Divider className="py-2"/>

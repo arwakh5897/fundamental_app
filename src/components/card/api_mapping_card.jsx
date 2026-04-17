@@ -12,7 +12,7 @@ const ApiMappingCard =({products})=>{
                 description={item.description}
                 price={item.price}
                 rating={item.rating || "5"}
-                review={item.reviews}
+                reviews={item.reviews}
                 count={item.count}
                 stock={item.stock}
                 category={item.category}

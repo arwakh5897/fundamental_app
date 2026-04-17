@@ -12,12 +12,12 @@ import EyeButton from "../buttons/eye_button";
 
 import ProductDetailsPopup from "../product_popUp/product_popUp";
 
-const Card = ({ id, image, title, description, rating,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages}) => {
+const Card = ({ id, image, title, description, rating, reviews,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const discountedPrice = price - (price * discount) / 100;
 
-  const productData = { id, image, title, description, rating, price, discount, discountedPrice, stock, sizes, colors , count , hoverImage , subImages};
+  const productData = { id, image, title, description, rating, reviews, price, discount, discountedPrice, stock, sizes, colors , count , hoverImage , subImages};
    // console.log("Card Component - Product Data:", productData);
   return (
     <>

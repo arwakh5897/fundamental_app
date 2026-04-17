@@ -14,230 +14,186 @@
 // utils/fetchProducts.js
 // utils/fetchProducts.js
 
-
 export const fetchProducts = async () => {
   return [
     {
       id: 1,
-      title: "Essence Mascara Lash Princess",
-      description: `
-Step into the future of smartphones with the iPhone 16 Pro Max. Featuring a stunning titanium body, 4K Dolby Vision video, and the powerful A18 Pro chip, this device is designed for tech enthusiasts, professionals, content creators, and everyday users in the UAE who demand premium performance and style.
-
-Key Features & Details:
-Stunning Titanium Design – Strong, lightweight, and ultra-durable with a 6.9-inch Super Retina XDR display and next-generation Ceramic Shield that’s 2x tougher than any smartphone glass.
-Total Camera Control – Quickly access camera tools, zoom, and depth-of-field features for perfect shots anytime.
-48MP Ultra Wide & 5x Telephoto Camera – Capture breathtaking macro, wide-angle, and distant shots in incredible detail.
-Pro Video Recording – Shoot cinematic 4K 120 fps Dolby Vision videos with studio-quality audio using the 48MP Fusion camera.
-Photographic Styles – Customize your photos with advanced creative filters that can be reversed anytime.
-A18 Pro Chip Power – Seamless graphics performance for AAA gaming, advanced photo, and video features.
-Extended Battery Life – Up to 33 hours of video playback with fast USB-C and MagSafe wireless charging.
-iOS 18 Customization – Tint home screen icons, add animations, and manage photos easily with redesigned apps.
-Vital Safety Features – Crash Detection can alert emergency services in case of a severe car accident.
-
-Why This iPhone 16 Pro Max is Trending in the PAK ?
-Most sought-after premium smartphone in Dubai and across the UAE
-Ideal for content creators, business professionals, and tech-savvy users
-Cutting-edge camera, video, and gaming performance
-Sleek titanium design combined with durable build and advanced features
-Perfect for iPhone enthusiasts upgrading to the latest model
-
-Why Buy from Hub Al Souq ?
-Delivery within 72 working hours across the UAE
-Secure payments via authentic payment gateways
-Cash on Delivery (COD) available
-Trusted UAE online marketplace supporting verified local sellers
-Quality-checked products with customer satisfaction guarantee
-
-Upgrade to the ultimate smartphone experience.
-Order your iPhone 16 Pro Max now from Hub Al Souq and enjoy delivery within 72 working hours anywhere in the UAE!      
-      `,
-      price: 9.99,
+      title: "Nike Air Zoom Pegasus",
+      description: "Lightweight running shoes designed for everyday training with responsive cushioning.",
+      price: 120,
       discount: 10,
-      rating: 4.2,
-      count: 130,
-      stock: 99,
-      category: "beauty",
-      size: ["24", "32", "40"],
-      color: ["black", "brown"],
+      rating: 4.7,
+      count: 90,
+      stock: 50,
+      category: "shoes",
+      size: ["7", "8", "9", "10", "11"],
+      color: ["black", "blue"],
       thumbnail: "https://picsum.photos/300/300?random=1",
       hoverImage: "https://picsum.photos/300/300?random=2",
-      subImages: [
-        "https://picsum.photos/300/300?random=3",
-        "https://picsum.photos/300/300?random=4",
-        "https://picsum.photos/300/300?random=5",
-        "https://picsum.photos/300/300?random=6",
+      subImages: ["https://picsum.photos/300/300?random=3"],
+      reviews: [
+        {
+          name: "Ali",
+          rating: 5,
+          comment: "Running ke liye perfect shoes hain, bohat comfortable.",
+          date: "2 April 2026",
+        },
+        {
+          name: "Zain",
+          rating: 4,
+          comment: "Grip achi hai lekin price thoda high hai.",
+          date: "1 April 2026",
+        },
       ],
     },
     {
       id: 2,
-      title: "Knoll Executive Chair",
-      description: "Ergonomic office chair.",
-      price: 299.99,
+      title: "Adidas Ultraboost 22",
+      description: "Premium running shoes with Boost cushioning for maximum energy return.",
+      price: 180,
       discount: 15,
-      rating: 4.5,
-      count: 30,
-      stock: 45,
-      category: "furniture",
-      size: ["Standard"],
-      color: ["black", "grey"],
-      thumbnail: "https://picsum.photos/300/300?random=5",
-      hoverImage: "https://picsum.photos/300/300?random=6",
-      subImages: [
-        "https://picsum.photos/300/300?random=7",
-        "https://picsum.photos/300/300?random=8",
-        "https://picsum.photos/300/300?random=9",
+      rating: 4.8,
+      count: 120,
+      stock: 70,
+      category: "shoes",
+      size: ["7", "8", "9", "10"],
+      color: ["white", "black"],
+      thumbnail: "https://picsum.photos/300/300?random=4",
+      hoverImage: "https://picsum.photos/300/300?random=5",
+      subImages: ["https://picsum.photos/300/300?random=6"],
+      reviews: [
+        {
+          name: "Usman",
+          rating: 5,
+          comment: "Best cushioning ever, long runs ke liye zabardast.",
+          date: "3 April 2026",
+        },
+        {
+          name: "Hamza",
+          rating: 4,
+          comment: "Design aur comfort dono top class hain.",
+          date: "2 April 2026",
+        },
       ],
     },
     {
       id: 3,
-      title: "Apple AirPods Pro",
-      description: "Noise-cancelling earbuds.",
-      price: 249.99,
-      discount: 5,
-      rating: 4.8,
-      count: 129,
-      stock: 200,
-      category: "electronics",
-      size: ["One Size"],
-      color: ["white"],
-      thumbnail: "https://picsum.photos/300/300?random=10",
-      hoverImage: "https://picsum.photos/300/300?random=11",
-      subImages: [
-        "https://picsum.photos/300/300?random=12",
-        "https://picsum.photos/300/300?random=13",
+      title: "Puma RS-X Sneakers",
+      description: "Stylish sneakers with bold design and superior comfort.",
+      price: 110,
+      discount: 12,
+      rating: 4.5,
+      count: 75,
+      stock: 60,
+      category: "shoes",
+      size: ["6", "7", "8", "9"],
+      color: ["red", "black"],
+      thumbnail: "https://picsum.photos/300/300?random=7",
+      hoverImage: "https://picsum.photos/300/300?random=8",
+      subImages: ["https://picsum.photos/300/300?random=9"],
+      reviews: [
+        {
+          name: "Bilal",
+          rating: 5,
+          comment: "Street style ke liye perfect sneakers hain 🔥",
+          date: "4 April 2026",
+        },
+        {
+          name: "Saad",
+          rating: 4,
+          comment: "Design unique hai aur comfortable bhi.",
+          date: "3 April 2026",
+        },
       ],
     },
     {
       id: 4,
-      title: "Nike Running Shoes",
-      description: "Lightweight running shoes.",
-      price: 119.99,
+      title: "Nike Revolution 6",
+      description: "Affordable running shoes with breathable mesh upper.",
+      price: 80,
       discount: 20,
-      rating: 4.6,
-      count: 10,
-      stock: 120,
-      category: "fashion",
+      rating: 4.3,
+      count: 50,
+      stock: 100,
+      category: "shoes",
       size: ["7", "8", "9", "10"],
-      color: ["red", "blue", "black"],
-      thumbnail: "https://picsum.photos/300/300?random=14",
-      hoverImage: "https://picsum.photos/300/300?random=15",
-      subImages: [
-        "https://picsum.photos/300/300?random=16",
-        "https://picsum.photos/300/300?random=17",
+      color: ["grey", "black"],
+      thumbnail: "https://picsum.photos/300/300?random=10",
+      hoverImage: "https://picsum.photos/300/300?random=11",
+      subImages: ["https://picsum.photos/300/300?random=12"],
+      reviews: [
+        {
+          name: "Ahmad",
+          rating: 4,
+          comment: "Budget friendly aur comfortable hain.",
+          date: "5 April 2026",
+        },
+        {
+          name: "Tariq",
+          rating: 3,
+          comment: "Daily use ke liye theek hain.",
+          date: "4 April 2026",
+        },
       ],
     },
     {
       id: 5,
-      title: "Wooden Coffee Table",
-      description: "Stylish living room table.",
-      price: 159.99,
-      discount: 12,
-      rating: 4.3,
-      count: 16,
-      stock: 30,
-      category: "furniture",
-      size: ["Standard"],
-      color: ["brown", "oak"],
-      thumbnail: "https://picsum.photos/300/300?random=18",
-      hoverImage: "https://picsum.photos/300/300?random=19",
-      subImages: [
-        "https://picsum.photos/300/300?random=20",
-        "https://picsum.photos/300/300?random=21",
+      title: "Adidas Superstar",
+      description: "Classic lifestyle sneakers with iconic shell toe design.",
+      price: 95,
+      discount: 10,
+      rating: 4.6,
+      count: 110,
+      stock: 85,
+      category: "shoes",
+      size: ["6", "7", "8", "9", "10"],
+      color: ["white", "black"],
+      thumbnail: "https://picsum.photos/300/300?random=13",
+      hoverImage: "https://picsum.photos/300/300?random=14",
+      subImages: ["https://picsum.photos/300/300?random=15"],
+      reviews: [
+        {
+          name: "Hassan",
+          rating: 5,
+          comment: "Classic look, har outfit ke sath match ho jata hai.",
+          date: "6 April 2026",
+        },
+        {
+          name: "Imran",
+          rating: 4,
+          comment: "Quality bohat achi hai.",
+          date: "5 April 2026",
+        },
       ],
     },
     {
       id: 6,
-      title: "Revlon Lipstick Set",
-      description: "Long-lasting lipstick.",
-      price: 29.99,
+      title: "Puma Future Rider",
+      description: "Retro style sneakers with lightweight cushioning.",
+      price: 90,
       discount: 8,
-      rating: 4.1,
-      count: 22,
-      stock: 80,
-      category: "beauty",
-      size: ["Standard"],
-      color: ["red", "pink"],
-      thumbnail: "https://picsum.photos/300/300?random=22",
-      hoverImage: "https://picsum.photos/300/300?random=23",
-      subImages: [
-        "https://picsum.photos/300/300?random=24",
-        "https://picsum.photos/300/300?random=25",
-      ],
-    },
-    {
-      id: 7,
-      title: "Gaming Mouse",
-      description: "RGB high precision mouse.",
-      price: 49.99,
-      discount: 18,
-      rating: 4.7,
-      count: 50,
-      stock: 150,
-      category: "electronics",
-      size: ["Standard"],
-      color: ["black"],
-      thumbnail: "https://picsum.photos/300/300?random=26",
-      hoverImage: "https://picsum.photos/300/300?random=27",
-      subImages: [
-        "https://picsum.photos/300/300?random=28",
-        "https://picsum.photos/300/300?random=29",
-      ],
-    },
-    {
-      id: 8,
-      title: "Leather Wallet",
-      description: "Premium leather wallet.",
-      price: 39.99,
-      discount: 10,
       rating: 4.4,
-      count: 80,
-      stock: 200,
-      category: "fashion",
-      size: ["Standard"],
-      color: ["brown", "black"],
-      thumbnail: "https://picsum.photos/300/300?random=30",
-      hoverImage: "https://picsum.photos/300/300?random=31",
-      subImages: [
-        "https://picsum.photos/300/300?random=32",
-        "https://picsum.photos/300/300?random=33",
-      ],
-    },
-    {
-      id: 9,
-      title: "Smart Watch",
-      description: "Fitness tracking smartwatch.",
-      price: 199.99,
-      discount: 22,
-      rating: 4.6,
-      count: 60,
-      stock: 90,
-      category: "electronics",
-      size: ["Standard"],
-      color: ["black", "silver"],
-      thumbnail: "https://picsum.photos/300/300?random=34",
-      hoverImage: "https://picsum.photos/300/300?random=35",
-      subImages: [
-        "https://picsum.photos/300/300?random=36",
-        "https://picsum.photos/300/300?random=37",
-      ],
-    },
-    {
-      id: 10,
-      title: "Backpack",
-      description: "Durable travel backpack.",
-      price: 59.99,
-      discount: 14,
-      rating: 4.3,
-      count: 45,
-      stock: 0,
-      category: "fashion",
-      size: ["Standard"],
-      color: ["blue", "black"],
-      thumbnail: "https://picsum.photos/300/300?random=38",
-      hoverImage: "https://picsum.photos/300/300?random=39",
-      subImages: [
-        "https://picsum.photos/300/300?random=40",
-        "https://picsum.photos/300/300?random=41",
+      count: 65,
+      stock: 40,
+      category: "shoes",
+      size: ["7", "8", "9"],
+      color: ["blue", "yellow"],
+      thumbnail: "https://picsum.photos/300/300?random=16",
+      hoverImage: "https://picsum.photos/300/300?random=17",
+      subImages: ["https://picsum.photos/300/300?random=18"],
+      reviews: [
+        {
+          name: "Farhan",
+          rating: 5,
+          comment: "Retro vibe bohat achi lagti hai 👌",
+          date: "7 April 2026",
+        },
+        {
+          name: "Raza",
+          rating: 4,
+          comment: "Lightweight aur stylish hain.",
+          date: "6 April 2026",
+        },
       ],
     },
   ];
