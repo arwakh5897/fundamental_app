@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useToast from "../../../utils/useToast";
 
 import CardDiscountBadge from "./cardComponents/discount_badge";
 import CardImage from "./cardComponents/image";
@@ -15,23 +16,36 @@ import ProductDetailsPopup from "../product_popUp/product_popUp";
 const Card = ({ id, image, title, description, rating, reviews,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const { error } = useToast();
+
   const discountedPrice = price - (price * discount) / 100;
 
   const productData = { id, image, title, description, rating, reviews, price, discount, discountedPrice, stock, sizes, colors , count , hoverImage , subImages};
-   // console.log("Card Component - Product Data:", productData);
+  
+  const handleClick = (e)=>{
+      e.preventDefault();
+
+      if (productData?.stock === 0) {
+        error("Product out of stock!");
+        return;
+      }
+
+       navigate(`/pages/product_details/${productData.id}`  , { state: { productData }
+      
+      });
+  }
   return (
     <>
     <div>
       {/* ✅ Card */}
       <div
-        onClick={() =>
-          // navigate("/pages/product_details", { state: { productData } })
-          navigate(`/pages/product_details/${productData.id}`  , { state: { productData } })
-        }
+        onClick={handleClick}
         className="bg-background-card w-36 lg:w-72 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
       >
         {/* 👁 Eye Button */}
-        <EyeButton onClick={() => setOpen(true)} />
+        {stock > 0 && (
+          <EyeButton onClick={() => setOpen(true)} />
+         )}
 
         {discount > 0 && (
           <CardDiscountBadge discount={productData.discount} price={productData.price} />

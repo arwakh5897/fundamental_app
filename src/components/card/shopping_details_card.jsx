@@ -53,15 +53,11 @@ const ShoppingDetailsCard = ({
 
 
         {/* Bottom Section */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-end">
           
           {/* Price */}
-          <p className="text-sm lg:text-base font-medium">
-            Rs {formatCurrency(price)}
-          </p>
-                    {/* Price */}
           <p className="text-sm lg:text-base font-bold text-green-600">
-            Total: {formatCurrency(price * qty)}
+            Rs {formatCurrency(price * qty)}
           </p>
 
           {/* Quantity Buttons */}
