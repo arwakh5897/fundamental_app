@@ -223,6 +223,40 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.box {
+  margin-bottom: 0rem; /* mb-6 */
+  width: 14rem;          /* w-56 */
+}
+.box-heading {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  letter-spacing: 0.1em; /* tracking-widest approx */
+}
+.box-container > * + * {
+  margin-top: 0.5rem; /* space-y-2 */
+}
+
+.box-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;          /* p-2 */
+  border-radius: 1rem;      /* rounded-2xl */
+}
+.box-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.25rem;
+  display: block;
+  font-size: small;
+  font-weight:500;
+}
+
+.box-item:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.10);
+}
 
 /* =========================
    MARQUEE
