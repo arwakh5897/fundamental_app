@@ -17,7 +17,7 @@
 
 export const fetchProducts = async () => {
   return [
-    ...Array.from({ length: 30 }, (_, i) => {
+    ...Array.from({ length: 80 }, (_, i) => {
       const id = i + 1;
 
       const brands = ["Nike", "Adidas", "Puma", "Reebok", "New Balance"];
@@ -30,7 +30,7 @@ export const fetchProducts = async () => {
         id,
         title: `${brand} ${model} ${id}`,
         description: `Premium ${brand.toLowerCase()} running and lifestyle shoes designed for comfort, durability, and modern style.`,
-        price: 80 + (i * 5),
+        price: 82 + (i * 5),
         discount: (i % 5) * 5,
         rating: (4 + (i % 10) * 0.1).toFixed(1),
         count: 20 + i,
@@ -44,6 +44,8 @@ export const fetchProducts = async () => {
           `https://picsum.photos/300/300?random=${i * 3 + 1}`,
           `https://picsum.photos/300/300?random=${i * 3 + 2}`,
           `https://picsum.photos/300/300?random=${i * 3 + 3}`,
+          `https://picsum.photos/300/300?random=${i * 3 + 4}`,
+          `https://picsum.photos/300/300?random=${i * 3 + 5}`,
         ],
 
         reviews: [
