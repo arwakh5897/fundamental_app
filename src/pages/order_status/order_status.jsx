@@ -4,7 +4,7 @@ import OrderStatusDetails from "../../components/user_profile_components/order_s
 
 const OrderStatus =()=>{
     return(
-        <div className="p-6">
+        <div className="p-2 lg:p-6">
             <OrderStatusDetails/>
             <MoreShopping/>
         </div>

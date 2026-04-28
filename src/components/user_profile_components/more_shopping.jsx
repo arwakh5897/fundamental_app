@@ -13,7 +13,7 @@ const MoreShopping =()=>{
             <h2 className="text-xs lg:text-xl">More Shopping</h2>
             <p className="h-[2px] w-20 lg:w-36 bg-buttons hover-bg-buttons"></p>
         </div>
-    <ScrollingProducts allItems={allItems}/>
+    <ScrollingProducts allItems={allItems} />
     </div>
     )
 }
