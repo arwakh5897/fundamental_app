@@ -5,7 +5,7 @@ import SignIn from "../components/header/profile";
 import SearchBar from "../components/search/search_bar";
 import SearchIcon from "../components/search/searchComponents/search_icon";
 
-export default function ModeHook() {
+export default function useModeHook() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -16,17 +16,5 @@ export default function ModeHook() {
     }
   }, [isDark]);
 
-  return (
-  <div className="flex gap-2 md:gap-4">
-    <button
-      onClick={() => setIsDark(!isDark)}
-      className=" hover:cursor-pointer lg:flex hidden"
-    >
-            <Mood darkLight={isDark}/>          
-    </button>
-            <SearchIcon darkLight={isDark}/>
-            <SignIn darkLight={isDark}/>
-            <Cart darkLight={isDark}/>
-    </div>
-  );
+  return {isDark , setIsDark};
 }

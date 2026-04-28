@@ -83,7 +83,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
         </div>
 
         {/* Payment */}
-        <PaymentMethod />
+        <PaymentMethod formData={formData} handleChange={handleChange}/>
 
         <button
           type="submit"

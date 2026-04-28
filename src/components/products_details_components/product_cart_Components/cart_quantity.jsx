@@ -1,7 +1,7 @@
 import React from "react";
 
-const CartQuantity = ({ quantity, setQuantity }) => {
-  const increment = () => setQuantity(prev => prev + 1);
+const CartQuantity = ({ stock, quantity, setQuantity }) => {
+  const increment = () => setQuantity(prev => (prev < stock ? prev + 1 : prev));
   const decrement = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
 
   return (

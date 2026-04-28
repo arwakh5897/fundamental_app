@@ -20,7 +20,7 @@ const MobileSidebar = ({ active, onClose }) => {
         }`}
       >
         <MobileSidebarContent onClose={onClose}/>
-        <MobileLogin closeSidebar={onClose}/>
+        {/* <MobileLogin closeSidebar={onClose}/> */}
       </nav>
     </>
   );

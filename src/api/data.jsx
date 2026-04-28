@@ -9,6 +9,23 @@
 //     return [];
 //   }
 // };
+// export const placeOrder = async (orderData) =>{
+//   try{
+//     const res = await fetch ("http://127.0.0.1:8000/api/orders" , {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//         "Accept": "application/json",
+//       },
+//       body:JSON.stringify(orderData),
+//     });
+//     const data = await res.json();
+//     return data;
+//   } catch(err){
+//     console.error("Order API error:" , err)
+//     return null;
+//   }
+// }
 
 
 // utils/fetchProducts.js

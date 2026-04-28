@@ -1,9 +1,9 @@
 import React from "react";
 import { formatCurrency } from "../../../utils/formatCurrency";
 
-const OrderSummary = ({ cart, totalPrice }) => {
-  const shippingCost = totalPrice >= 2500 ? 0 : 130;
-  const finalTotal = totalPrice + shippingCost;
+const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
+  // const shippingCost = totalPrice >= 2500 ? 0 : 130;
+  // const finalTotal = totalPrice + shippingCost;
 
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 h-fit sticky top-6 space-y-6">

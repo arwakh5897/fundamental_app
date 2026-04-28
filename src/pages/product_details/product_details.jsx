@@ -18,6 +18,7 @@ const ProductDetails = () => {
   useEffect(() => {
     if (location.state?.productData) {
       setProducts(location.state.productData);
+      
     }
   }, [location.state, id]); // 🔥 id bhi dependency me rakho
 

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useLoader } from "../../../context/loaderContext";
 import useClickOutside from "../../../hook/click_outside_hook";
 
-const SearchTopUp = ({ handleClick }) => {
+const SearchTopUp = ({ handleClick , className }) => {
   const {showLoader , hideLoader} = useLoader();
   const navigate = useNavigate();
   const [query , setQuery] = useState("");
@@ -30,7 +30,7 @@ const SearchTopUp = ({ handleClick }) => {
   return (
     <div 
     ref={ref}
-    className="absolute z-50 right-0 w-72 lg:w-[420px] bg-buttons shadow-xl rounded-xl p-2 lg:p-4 border border-gray-200">      
+    className={`absolute z-50 w-72 lg:w-[420px] bg-buttons shadow-xl rounded-xl p-2 lg:p-4 border border-gray-200 ${className}`}>      
       {/* Header */}
       <SearchTitle handleClick={handleClick}/>
 

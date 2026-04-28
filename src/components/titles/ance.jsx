@@ -8,7 +8,7 @@ const Ance = () => {
     fetchProducts().then(setProducts)
    },[]);
    const specificProducts = allItems
-  .sort((a, b) => b.rating.rate - a.rating.rate)
+  .sort((a, b) => b.avarage_rating- a.avarage_rating)
   .slice(0, 8);
       return (
         <div>

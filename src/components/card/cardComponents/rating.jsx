@@ -5,7 +5,7 @@ const CardRating = ({ rating }) => {
 
    return (
         <div className="flex text-highlighted justify-between items-center">
-        <div className="text-sm">
+        <div className="text-sm md:text-lg">
             {[...Array(totalStars)].map((item,index)=>{
                 const strNumber = index + 1;
                 if (rating >= strNumber){
@@ -19,7 +19,7 @@ const CardRating = ({ rating }) => {
                 }
             })}
         </div> 
-            <div className="text-[11px] font-semibold pl-2">
+            <div className="text-[11px] md:text-sm font-semibold pl-2">
                 ({rating})
             </div>
     </div>

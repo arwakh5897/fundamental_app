@@ -11,7 +11,7 @@ const CartBuyButton = ({ qty , selectedSize, selectedColor, products })=>{
             error("Please select size and color first");
             return;
         }
-      const orderProduct = { ...products , qty , size : selectedSize , color : selectedColor }
+      const orderProduct = { ...products , qty , selectedSize : selectedSize , selectedColor : selectedColor }
       navigate("/pages/checkout" , {state : {productData : orderProduct }})
     };
     return(

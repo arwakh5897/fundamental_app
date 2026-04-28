@@ -4,6 +4,7 @@ import BillingForm from "../../components/check_out_Components/billingForm";
 import OrderSummary from "../../components/check_out_Components/orderSummary";
 import { useCartContext } from "../../context/cartContext";
 import { useLocation } from "react-router-dom";
+// import { placeOrder } from "../../api/data";
 import OrderPopup from "../../components/check_out_Components/order_popup";
 
 const CheckOut = () => {
@@ -11,6 +12,12 @@ const CheckOut = () => {
   const location = useLocation();
   const product = location.state?.productData;
   const {cart } = useCartContext();
+
+  const totalPrice= product ? product.discountedPrice * product.qty : cart.reduce((total, item) => total + item.discountedPrice * item.qty, 0);
+ 
+  const shippingCost = totalPrice >= 2500 ? 0 : 130;
+  const finalTotal = totalPrice + shippingCost;
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,16 +26,56 @@ const CheckOut = () => {
     city: "",
     province: "",
     zip: "",
+    payment_method: "COD",
   });
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowModel(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const finalCart = product ? [product] : cart;
+  
+  const items = finalCart.map((item) => ({
+    product_id: item.id,
+    quantity: item.qty,
+    price: item.discountedPrice || item.price,
+    size: item.selectedSize,
+    color: item.selectedColor,
+    category: item.category,
+  }));
+
+  const orderData = {
+    customer_name: formData.name,
+    email: formData.email,
+    phone: formData.phone,
+    address: formData.address,
+    city: formData.city,
+    province: formData.province,
+    zip: formData.zip,
+    payment_method: formData.payment_method,
+    total_price: finalTotal,
+    items,
   };
+// alert(JSON.stringify(orderData, null, 2));
+  try {
+    const response = await placeOrder(orderData);
+
+    console.log("API RESPONSE:", response);
+
+    if (response?.status) {
+      setShowModel(true);      
+    } else {
+      alert("Order failed");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong");
+  }
+};
 
   return (
     <div className="bg-gray-50 min-h-screen p-4 md:p-8">
@@ -46,9 +93,9 @@ const CheckOut = () => {
         {/* Summary */}
         <OrderSummary 
           cart={product ? [product] : cart} // Buy se product aya to array me wrap karo
-          totalPrice={product ? product.discountedPrice * product.qty : 
-            cart.reduce((total, item) => total + item.discountedPrice * item.qty, 0)
-          }
+          totalPrice={totalPrice}
+          finalTotal= {finalTotal}
+          shippingCost ={shippingCost}
         />
       </div>
       <OrderPopup 

@@ -9,12 +9,11 @@ import Brands from "../../components/brands/brands";
 const Dashboard =()=>{
     return(
     <div>
-       <div className="pt-0"><RamadanTitle/></div>
-     <div className="pt-4"><Ance /></div>
-
-         <MakeUpTitle/>
-       <Concern/>
-       <Brands/>
+        <div className="pt-0"><RamadanTitle/></div>
+        <div className="pt-4"><Ance /></div>
+        <MakeUpTitle/>
+        <Concern/>
+        <Brands/>
     </div>
     )
 }

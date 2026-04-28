@@ -12,7 +12,7 @@ const SearchInput = ({query, setQuery, handleSearch})=>{
           onKeyDown={(e)=> e.key === "Enter" && handleSearch()}
         />
         <img
-          className="w-5 h-5 opacity-60"
+          className="w-5 h-5 opacity-60 hover:cursor-pointer"
           src="/assets/icons/search.png"
           alt="search"
           onClick={handleSearch}

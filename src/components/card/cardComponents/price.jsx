@@ -2,15 +2,18 @@ import React from "react";
 import { formatCurrency } from "../../../../utils/formatCurrency";
 
 const CardPrice = ({ price, discountedPrice }) => {
+  const hasDiscount = discountedPrice && discountedPrice < price;
     return (
-        <div className="flex gap-1 line-clamp-1 text-xs justify-center items-center">
+        <div className="flex gap-1 md:gap-2 text-xs justify-center items-center">
           <div className="font-bold lg:text-lg">
-            Rs {formatCurrency (discountedPrice || 0)}
+            Rs {formatCurrency(hasDiscount ? discountedPrice : price || 0)}
           </div>
 
-          <div className="line-through">
-            (Rs {formatCurrency (price || 0)})
-          </div>
+            {hasDiscount && (
+                <div className="hidden md:flex line-through text-gray-500">
+                    (Rs {formatCurrency(price || 0)})
+                </div>
+            )}
         </div>
     )
 }

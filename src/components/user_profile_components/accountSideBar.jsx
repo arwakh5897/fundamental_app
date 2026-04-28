@@ -1,0 +1,110 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import MobileLogin from "../auth/mobile_login";
+import CloseButton from "../buttons/close_button";
+
+const AccountSidebar = ({ active, onClose, isLoggedIn }) => {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      {/* Overlay */}
+      <div
+        className={`fixed inset-0 z-40 bg-overlay transition-opacity duration-300 ${
+          active ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={onClose}
+      />
+
+      {/* Sidebar */}
+  <nav
+  data-lenis-prevent
+  className={`fixed top-0 right-0 h-full w-72 md:w-96 bg-menu text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 ${
+    active ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+  {/* Header */}
+  <div className="relative px-5 py-4 border-b bg-buttons">
+    <h2 className="text-lg font-semibold tracking-wide">
+      My Account
+    </h2>
+
+    <p className="text-xs text-halfGray mt-0.5">
+      Manage your profile & orders
+    </p>
+
+    <div className="absolute top-4 right-4">
+      <CloseButton onClick={onClose} />
+    </div>
+  </div>
+
+  {/* User Info */}
+  {/* <div className="flex flex-col items-center py-6">
+    <div className="relative">
+      <img
+        src="/assets/images/user.jpg"
+        alt="user"
+        className="w-16 h-16 rounded-full object-cover border-2 border-gray-300"
+      />
+      <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></span>
+    </div>
+
+    <p className="mt-2 font-semibold text-base">User Name</p>
+    <p className="text-xs text-gray-400">Welcome back 👋</p>
+  </div> */}
+
+  {/* Scrollable Content */}
+  <div className="flex-1 overflow-y-auto px-4 py-5 space-y-4">
+
+    {/* Profile */}
+    <div
+      onClick={() => {
+        navigate("/pages/user-profile");
+        onClose();
+      }}
+      className="p-4 rounded-2xl bg-cart-total shadow-lg cursor-pointer hover:scale-[1.02] active:scale-95 transition-all"
+    >
+      <p className="text-xs uppercase tracking-wide text-halfWhite">
+        Account
+      </p>
+
+      <div className="flex justify-between items-end mt-1">
+        <h2 className="text-lg font-bold">
+          Profile
+        </h2>
+
+        <span className="text-sm text-halfWhite">→</span>
+      </div>
+    </div>
+
+    {/* Orders */}
+    <div
+      onClick={() => {
+        navigate("/pages/order-tracking");
+        onClose();
+      }}
+      className="p-4 rounded-2xl bg-cart-total shadow-lg cursor-pointer hover:scale-[1.02] active:scale-95 transition-all"
+    >
+      <p className="text-xs uppercase tracking-wide text-halfWhite">
+        Orders
+      </p>
+
+      <div className="flex justify-between items-end mt-1">
+        <h2 className="text-lg font-bold">
+          My Orders
+        </h2>
+
+        <span className="text-sm text-halfWhite">→</span>
+      </div>
+    </div>
+
+  </div>
+
+  {/* Bottom Section (Sticky) */}
+    <MobileLogin closeSidebar={onClose} />
+</nav>
+    </>
+  );
+};
+
+export default AccountSidebar;

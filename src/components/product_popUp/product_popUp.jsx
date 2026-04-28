@@ -11,7 +11,7 @@ const ProductDetailsPopup = ({ isOpen, onClose, product }) => {
 
   const description = product?.description || "";
   const myDescription = description.split(" ");
-  const shortDescription = myDescription.length > 50 ? myDescription.slice(0, 50).join(" ") + "..." : description;
+  const shortDescription = myDescription.length > 30 ? myDescription.slice(0, 30).join(" ") + "..." : description;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">

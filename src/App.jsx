@@ -39,6 +39,9 @@ import Lightweight from "./pages/by_concern/lightweight";
 import Flat from "./pages/by_concern/flat";
 import Waterproof from "./pages/by_concern/waterproof";
 
+import UserProfile from "./pages/user_profile/user_profle";
+import OrderStatus from "./pages/order_status/order_status";
+
 const App = () => {
   useLenis();
 
@@ -59,6 +62,9 @@ const App = () => {
                       <Route path="/pages/shop_all" element={<ShopAll />} />
                       <Route path="/pages/accessories" element={<Accessories />} />
                       <Route path="/pages/make_up" element={<MakeUp/>}/>
+
+                      <Route path="/pages/user-profile" element={<UserProfile/>}/>
+                      <Route path="/pages/order-tracking" element={<OrderStatus/>}/>
 
                                             {/*  Extra Pages Routes  */}
                       <Route path="/pages/product_details/:id" element={<ProductDetails/>}/>

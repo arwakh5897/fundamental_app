@@ -7,6 +7,8 @@ const ConditionalBanner = () => {
 
   const hidePaths = [
     "/pages/shopping_details",
+    "/pages/user-profile",
+    "/pages/order-tracking",
     "/pages/checkout",
   ];
 

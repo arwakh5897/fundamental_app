@@ -4,7 +4,7 @@ const CloseButton = ({ onClick, className }) => {
   return (
     <button
       onClick={onClick}
-      className={`text-lg hover:cursor-pointer transition ${className}`}
+      className={`text-lg hover:rotate-90 hover:cursor-pointer transition ${className}`}
     >
       ✕
     </button>

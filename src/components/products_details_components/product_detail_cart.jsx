@@ -50,7 +50,7 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , 
       <CartTitle title={products?.title} />
 
       {/* Reviews */}
-      <CartReviews rating={products?.rating} totalReviews={products?.count}/>
+      <CartReviews rating={products?.avarage_rating} totalReviews={products?.total_reviews}/>
 
       {/* Price */}
       <CartPrice price={products?.price} discountedPrice={products?.discountedPrice}/>
@@ -87,6 +87,7 @@ const ProductDetailCart = ({ products , onAdd ,  onUpdateSize , onUpdateColor , 
             <CartQuantity 
               quantity={quantity} 
               setQuantity={setQuantity}
+              stock= {products?.stock}
             />
 
             <AddButton 
