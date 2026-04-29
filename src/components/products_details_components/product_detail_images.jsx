@@ -27,13 +27,15 @@ const ProductDetailImages = ({ thumbnail, subImages = [] }) => {
         <ImageZoom src={activeImage} />
       </div>
 
-      <div className="flex py-6 gap-2 overflow-auto scrollbar-hide">
+      <div className="flex py-6 px-1 gap-2 overflow-auto scrollbar-hide">
         {subImages.map((item, index) => (
           <img
             key={index}
             ref={(e)=>(imgRef.current[index] = e)}
             onClick={() => handleClick(item, index)}
-            className="w-16 h-16 lg:w-28 lg:h-28 bg-image hover:cursor-pointer rounded object-contain"
+            className={`w-16 h-16 lg:w-28 lg:h-28 bg-image rounded object-contain cursor-pointer transition 
+              ${activeImage === item ? "ring-2 ring-black scale-105" : ""}
+              `}
             src={item}
             alt="image"
           />
