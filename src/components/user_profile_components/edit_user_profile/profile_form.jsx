@@ -107,7 +107,7 @@ const ProfileForm = ({ formData, handleChange, handleSubmit }) => {
             type="submit"
             className="w-1/2 bg-buttons hover-bg-buttons text-buttons py-3 rounded-2xl font-semibold shadow-md"
           >
-            Save Changes
+            Save 
           </button>
 
         </div>
