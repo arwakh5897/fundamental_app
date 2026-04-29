@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ScrollingProducts from "../products/scrolling_Products";
-import { fetchProducts } from "../../api/data";
+import ScrollingProducts from "../../products/scrolling_Products";
+import { fetchProducts } from "../../../api/data";
 
 const MoreShopping =()=>{
     const [allItems , setProducts] =useState([]);

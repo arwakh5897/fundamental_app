@@ -7,7 +7,7 @@ const ShoppingDetailsCardButtons = () => {
     <div className="flex flex-col gap-3 p-2 font-semibold text-xs lg:text-sm transition-colors duration-200 mt-auto">
     <div className="flex gap-3">
       <button
-        className="w-full lg:w-72 py-3 bg-buttons hover-bg-buttons rounded  hover:cursor-pointer"
+        className="w-full lg:w-72 py-3 extra-button rounded  hover:cursor-pointer"
         onClick={() => {
           navigate("/pages/shop_all");
         }}
@@ -15,7 +15,7 @@ const ShoppingDetailsCardButtons = () => {
         Continue Shopping
       </button>
       <button
-        className="w-full lg:w-72 py-3 bg-buttons hover-bg-buttons rounded hover:cursor-pointer "
+        className="w-full lg:w-72 py-3 text-buttons bg-buttons hover-bg-buttons rounded hover:cursor-pointer "
         onClick={() => {
           navigate("/pages/checkout");
         }}

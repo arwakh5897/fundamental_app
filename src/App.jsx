@@ -36,7 +36,7 @@ import CheckOut from "./pages/check_out/check_out";
 
 import UserProfile from "./pages/user_profile/user_profle";
 import OrderStatus from "./pages/order_status/order_status";
-import EditUserProfile from "./components/user_profile_components/edit_user_profile";
+import EditUserProfile from "./pages/user_profile/edit_user_profile";
 
 
 const App = () => {
