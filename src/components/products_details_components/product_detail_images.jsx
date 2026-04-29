@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useRef } from "react";
 import ImageZoom from "../zoom/imageZoom";
 
 const ProductDetailImages = ({ thumbnail, subImages = [] }) => {
   const [activeImage, setActiveImage] = useState(thumbnail);
+  const imgRef = useRef([]);
 
   // 🔥 FIX: jab thumbnail change ho to image update karo
   useEffect(() => {
     setActiveImage(thumbnail);
   }, [thumbnail]);
+
+  const handleClick = (item , index) => {
+    setActiveImage(item);
+
+    imgRef.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    })
+
+  };
 
   return (
     <div className="w-full">
@@ -19,7 +31,8 @@ const ProductDetailImages = ({ thumbnail, subImages = [] }) => {
         {subImages.map((item, index) => (
           <img
             key={index}
-            onClick={() => setActiveImage(item)}
+            ref={(e)=>(imgRef.current[index] = e)}
+            onClick={() => handleClick(item, index)}
             className="w-16 h-16 lg:w-28 lg:h-28 bg-image hover:cursor-pointer rounded object-contain"
             src={item}
             alt="image"
