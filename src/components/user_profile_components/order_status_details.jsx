@@ -28,14 +28,14 @@ const OrderStatusDetails = () => {
   const currentStep = steps.indexOf(order.status);
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+    <div className="rounded-2xl shadow-md p-6 border border-gray-100">
       
       {/* Header */}
       <div className="flex justify-between items-center mb-5">
-        <h2 className="text-xl font-semibold text-gray-800">
+        <h2 className="text-xl font-semibold">
           Order Status
         </h2>
-        <span className="text-xs text-gray-400">{order.id}</span>
+        <span className="text-xs">{order.id}</span>
       </div>
 
       {/* Status Badge */}
@@ -71,7 +71,7 @@ const OrderStatusDetails = () => {
             ></div>
 
             {/* Label */}
-            <p className="text-xs mt-2 text-gray-600">{step}</p>
+            <p className="text-xs mt-2">{step}</p>
           </div>
         ))}
       </div>

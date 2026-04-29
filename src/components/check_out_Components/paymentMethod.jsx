@@ -3,8 +3,14 @@ import React from "react";
 const PaymentMethod = ({ formData , handleChange}) => {
   return (
     <div className="pt-4 border-t">
-      <h3 className="text-lg font-medium mb-3">Payment Method</h3>
-
+      <div className="mb-4">
+        <h3 className="text-lg font-semibold">
+          Payment Method
+        </h3>
+        <p className="text-xs text-fullGray">
+          Choose how you want to pay
+        </p>
+      </div>
       <div className="space-y-2 text-sm">
         <label className="flex items-center gap-2 cursor-pointer">
           <input

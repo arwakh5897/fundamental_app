@@ -23,7 +23,7 @@ const ProductDetailsPopup = ({ isOpen, onClose, product }) => {
       ></div>
 
       {/* Modal Content */}
-      <div className="relative bg-white w-[80%] overflow-y-auto scroll-auto rounded-xl shadow-lg z-10 p-4">
+      <div className="relative bg-popup w-[80%] overflow-y-auto scroll-auto rounded-xl shadow-lg z-10 p-4">
 
         {/* Close Button */}
         <CloseButton onClick={onClose} className={"absolute top-2 right-2 px-2 py-1 "}/>

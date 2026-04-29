@@ -27,14 +27,14 @@ const ImageZoom = ({ src }) => {
 
   return (
     <div
-      className="w-full h-full overflow-hidden"
+      className="w-full h-full bg-gray-100 overflow-hidden"
       onMouseMove={handleZoom}
       onMouseLeave={handleLeave}
     >
       <img
         src={src}
         alt="zoom"
-        className="w-full h-full object-contain transition-transform duration-200 ease-out"
+        className="w-full h-full border border-gray-100 rounded-sm object-contain transition-transform duration-200 ease-out"
         style={zoomStyle}
       />
     </div>

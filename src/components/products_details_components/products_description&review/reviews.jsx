@@ -16,7 +16,7 @@ const Reviews = ({ products }) => {
         reviews.map((review, index) => (
           <div
             key={index}
-            className="border-b rounded-xl p-3 shadow-sm bg-background-card"
+            className="border-b rounded-xl p-3 shadow-sm bg-card"
           >
             {/* Top */}
             <div className="flex justify-between items-center mb-1">

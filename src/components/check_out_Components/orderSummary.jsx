@@ -6,7 +6,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
   // const finalTotal = totalPrice + shippingCost;
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-6 h-fit sticky top-6 space-y-6">
+    <div className="rounded-2xl border border-gray-100 shadow-md p-6 h-fit sticky top-16 space-y-6">
 
       {/* Header */}
       <h2 className="text-xl font-semibold border-b pb-3">
@@ -22,7 +22,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-14 h-14 object-contain border rounded-lg bg-gray-50"
+              className="w-14 h-14 object-contain border rounded-lg"
             />
 
             {/* Info */}
@@ -30,7 +30,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
               <p className="text-sm font-medium line-clamp-2">
                 {item.title}
               </p>
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-fullGray">
                 Qty: {item.qty}
               </p>
             </div>
@@ -51,12 +51,12 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
       <div className="space-y-3 text-sm">
 
         <div className="flex justify-between">
-          <span className="text-gray-500">Subtotal</span>
+          <span className="text-fullGray">Subtotal</span>
           <span>Rs.{formatCurrency (totalPrice)}</span>
         </div>
 
         <div className="flex justify-between">
-          <span className="text-gray-500">Shipping</span>
+          <span className="text-fullGray">Shipping</span>
           <span className={shippingCost === 0 ? "text-green-600 font-medium" : ""}>
             {shippingCost === 0 ? "Free" : `Rs.${shippingCost}`}
           </span>
@@ -70,7 +70,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
       {/* 🧾 Total */}
       <div className="flex justify-between items-center text-lg font-semibold">
         <span>Total</span>
-        <span className="text-black">
+        <span className="">
           Rs.{formatCurrency (finalTotal)}
         </span>
       </div>

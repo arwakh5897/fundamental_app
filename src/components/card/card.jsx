@@ -13,7 +13,8 @@ import EyeButton from "../buttons/eye_button";
 
 import ProductDetailsPopup from "../product_popUp/product_popUp";
 
-const Card = ({ id, image, title, description ,category, rating,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages , total_reviews , avarage_rating  , reviews,}) => {
+const Card = ({ id, image, title, description ,category,
+   rating,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages , total_reviews , avarage_rating  , reviews,}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { error } = useToast();
@@ -40,7 +41,7 @@ const Card = ({ id, image, title, description ,category, rating,  price ,  disco
       {/* ✅ Card */}
       <div
         onClick={handleClick}
-        className="bg-background-card w-36 lg:w-72 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
+        className="bg-card w-36 lg:w-72 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
       >
         {/* 👁 Eye Button */}
         {stock > 0 && (

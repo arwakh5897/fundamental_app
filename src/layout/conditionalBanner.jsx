@@ -9,6 +9,7 @@ const ConditionalBanner = () => {
     "/pages/shopping_details",
     "/pages/user-profile",
     "/pages/order-tracking",
+    "/pages/edit-profile",
     "/pages/checkout",
   ];
 

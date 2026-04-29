@@ -51,11 +51,11 @@ export const fetchProducts = async () => {
         discount: (i % 5) * 5,
         rating: (4 + (i % 10) * 0.1).toFixed(1),
         count: 20 + i,
-        stock: i % 7 === 0 ? 0 : 20 + (i * 3),
+        stock: i % 2 === 0 ? 0 : 2 + (i * 3),
         category: "shoes",
 
-        size: ["6", "7", "8", "9", "10", "11"].slice(0, (i % 6) + 3),
-        color: ["black", "white", "blue", "red", "grey"].slice(0, (i % 5) + 2),
+        sizes: ["6", "7", "8", "9", "10", "11"].slice(0, (i % 6) + 3),
+        colors: ["black", "white", "blue", "red", "grey"].slice(0, (i % 5) + 2),
 
         images: [
           `https://picsum.photos/300/300?random=${i * 3 + 1}`,

@@ -12,7 +12,7 @@ const CardStockCount = ({ stock }) => {
     colorClass = "text-orange-500 font-medium";
   } else {
     message = `${stock} items left`;
-    colorClass = "text-gray-500";
+    colorClass = "text-reviews";
   }
 
   return (

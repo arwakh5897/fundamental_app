@@ -12,7 +12,7 @@ const ProductDetailImages = ({ thumbnail, subImages = [] }) => {
   return (
     <div className="w-full">
       <div className="aspect-[6/5] lg:aspect-[4/3]">
-        <ImageZoom src={activeImage} alt="" />
+        <ImageZoom src={activeImage} />
       </div>
 
       <div className="flex py-6 gap-2 overflow-auto scrollbar-hide">

@@ -28,19 +28,16 @@ import SignIn from "./pages/auth/sign_in";
 import SignUp from "./pages/auth/sign_up";
 
 import MainLayout from "./layout/main_layout";
-import CheckOut from "./pages/check_out/check_out";
+import ConcernLayout from "./pages/by_concern/concern_layout";
+import TypeLayout from "./pages/by_type/type_layout";
+import BundleLayout from "./pages/by_bundle/bundle_layout";
 
-import Casual from "./pages/by_concern/causal";
-import PartyWear from "./pages/by_concern/partywear";
-import Formal from "./pages/by_concern/formal";
-import Sports from "./pages/by_concern/sports";
-import Outdoor from "./pages/by_concern/outdoor";
-import Lightweight from "./pages/by_concern/lightweight";
-import Flat from "./pages/by_concern/flat";
-import Waterproof from "./pages/by_concern/waterproof";
+import CheckOut from "./pages/check_out/check_out";
 
 import UserProfile from "./pages/user_profile/user_profle";
 import OrderStatus from "./pages/order_status/order_status";
+import EditUserProfile from "./components/user_profile_components/edit_user_profile";
+
 
 const App = () => {
   useLenis();
@@ -64,6 +61,7 @@ const App = () => {
                       <Route path="/pages/make_up" element={<MakeUp/>}/>
 
                       <Route path="/pages/user-profile" element={<UserProfile/>}/>
+                      <Route path="/pages/edit-profile" element={<EditUserProfile/>}/>
                       <Route path="/pages/order-tracking" element={<OrderStatus/>}/>
 
                                             {/*  Extra Pages Routes  */}
@@ -72,14 +70,13 @@ const App = () => {
                       <Route path="/pages/checkout" element={<CheckOut/>}/>
 
                                             {/*  Concern Routes  */}
-                      <Route path="/concern/casual-wear" element={<Casual/>} />
-                      <Route path="/concern/formal-wear" element={<Formal/>} />
-                      <Route path="/concern/sports-performance" element={<Sports/>} />
-                      <Route path="/concern/outdoor-hiking" element={<Outdoor/>} />
-                      <Route path="/concern/lightweight" element={<Lightweight/>} />
-                      <Route path="/concern/flat-feet" element={<Flat/>} />
-                      <Route path="/concern/waterproof" element={<Waterproof/>} />
-                      <Route path="/concern/party-wear" element={<PartyWear/>} />
+                      <Route path="/concern/:type" element={<ConcernLayout/>} />
+                      
+                                            {/*  Type Routes  */}
+                      <Route path="/type/:type" element={<TypeLayout/>} />
+
+                                            {/*  Bundle Routes  */}
+                      <Route path="/bundle/:type" element={<BundleLayout/>} />
 
                                             {/*  Footer Routes  */}
                       <Route path="/our-story" element={<OurStory />} />

@@ -94,12 +94,15 @@ body {
   transform: translateY(-1px);
 }
 
-.bg-background-card {
+.bg-card {
   background-color: white;
 }
 
 .bg-image {
   background-color: rgb(243, 244, 246);
+}
+.bg-input {
+ background-color: rgb(249, 250, 251);
 }
 
 .bg-line {
@@ -117,9 +120,15 @@ body {
     rgb(55, 65, 81)
   );
 }
+.bg-popup {
+  background: white;
+}
 
 .bg-halfWhite {
   background: rgba(255, 255, 255, 0.05);
+}
+.bg-greens {
+    color:rgb(29, 221, 29);
 }
 .hover-bg-box:hover {
   background: rgba(255, 255, 255, 0.10);
@@ -145,6 +154,9 @@ body {
 
 .text-halfGray {
   color: rgb(209, 213, 219);
+}
+.text-fullGray {
+  color: rgb(156, 163, 175);
 }
 
 .text-halfWhite {
@@ -202,8 +214,8 @@ body {
   background-color: rgba(15, 23, 42, 0.623);
 }
 
-.dark .bg-background-card {
-  background-color: rgba(218, 221, 230, 0.623);
+.dark .bg-card {
+  background-color: rgba(84, 86, 92, 0.623);
 }
 
 .dark .text-foreground {
@@ -212,6 +224,14 @@ body {
 
 .dark .text-heading {
   color: white;
+}
+
+.dark .bg-input {
+  background-color: #1f2937;
+}
+
+.dark .bg-popup {
+  background: black;
 }
 
 /* =========================

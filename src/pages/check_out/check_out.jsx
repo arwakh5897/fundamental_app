@@ -78,7 +78,7 @@ const handleSubmit = async (e) => {
 };
 
   return (
-    <div className="bg-gray-50 min-h-screen p-4 md:p-8">
+    <div className="min-h-screen p-4 md:p-8">
       <Breadcrumb title="Checkout" />
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8 mt-4">

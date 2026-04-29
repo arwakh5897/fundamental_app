@@ -10,7 +10,7 @@ const CardPrice = ({ price, discountedPrice }) => {
           </div>
 
             {hasDiscount && (
-                <div className="hidden md:flex line-through text-gray-500">
+                <div className="hidden md:flex line-through text-fullGray">
                     (Rs {formatCurrency(price || 0)})
                 </div>
             )}
