@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfilePreview = ({ formData }) => {
   return (
-    <div className="bg-menu-gradiant rounded-3xl p-6 shadow-xl relative overflow-hidden">
+    <div className="bg-menu-gradiant sticky top-16 rounded-3xl p-6 shadow-xl overflow-hidden">
 
       <div className="absolute inset-0 bg-white/10 backdrop-blur-xl"></div>
 

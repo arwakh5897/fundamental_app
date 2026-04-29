@@ -1,11 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProfileForm = ({ formData, handleChange, handleSubmit }) => {
+const ProfileForm = ({ formData = {}, handleChange, handleSubmit, loading }) => {
   const navigate = useNavigate();
 
+  const fieldsTop = [
+    { name: "name", label: "Full Name", icon: "👤" },
+    { name: "email", label: "Email Address", icon: "📧" },
+  ];
+
+  const fieldsBottom = [
+    { name: "city", label: "City", icon: "🏙️" },
+    { name: "province", label: "Province", icon: "🗺️" },
+    { name: "zip", label: "ZIP Code", icon: "📮" },
+  ];
+
   return (
-    <div className="border border-gray-200 rounded-3xl p-4 lg:p-6 md:p-10 shadow-sm">
+    <div className="relative border border-gray-200 rounded-3xl p-4 lg:p-6 md:p-10 shadow-sm">
 
       {/* HEADER */}
       <div className="mb-8">
@@ -15,104 +26,99 @@ const ProfileForm = ({ formData, handleChange, handleSubmit }) => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-
-        {/* NAME + EMAIL */}
-        <div className="grid md:grid-cols-2 gap-5">
-
-          {[
-            { name: "name", label: "Full Name", icon: "👤" },
-            { name: "email", label: "Email Address", icon: "📧" },
-          ].map((field) => (
-            <div key={field.name}>
-              <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
-                {field.icon} {field.label}
-              </label>
-
-              <input
-                name={field.name}
-                value={formData[field.name]}
-                onChange={handleChange}
-                className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent focus:border-gray-300 focus:bg-white transition"
-              />
-            </div>
-          ))}
-
+      {/* LOADING */}
+      {loading ? (
+        <div className="text-center py-10 text-fullGray">
+          Loading profile...
         </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-6">
 
-        {/* PHONE */}
-        <div>
-          <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
-            📱 Phone Number
-          </label>
+          {/* NAME + EMAIL */}
+          <div className="grid md:grid-cols-2 gap-5">
+            {fieldsTop.map((field) => (
+              <div key={field.name}>
+                <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
+                  {field.icon} {field.label}
+                </label>
 
-          <input
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent focus:border-gray-300 focus:bg-white transition"
-          />
-        </div>
+                <input
+                  name={field.name}
+                  value={formData[field.name] || ""}
+                  onChange={handleChange}
+                  className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent  transition"
+                />
+              </div>
+            ))}
+          </div>
 
-        {/* ADDRESS */}
-        <div>
-          <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
-            📍 Address
-          </label>
+          {/* PHONE */}
+          <div>
+            <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
+              📱 Phone Number
+            </label>
 
-          <input
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent focus:border-gray-300 focus:bg-white transition"
-          />
-        </div>
+            <input
+              name="phone"
+              value={formData.phone || ""}
+              onChange={handleChange}
+              className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent  transition"
+            />
+          </div>
 
-        {/* CITY / PROVINCE / ZIP */}
-        <div className="grid md:grid-cols-3 gap-5">
+          {/* ADDRESS */}
+          <div>
+            <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
+              📍 Address
+            </label>
 
-          {[
-            { name: "city", label: "City", icon: "🏙️" },
-            { name: "province", label: "Province", icon: "🗺️" },
-            { name: "zip", label: "ZIP Code", icon: "📮" },
-          ].map((field) => (
-            <div key={field.name}>
-              <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
-                {field.icon} {field.label}
-              </label>
+            <input
+              name="address"
+              value={formData.address || ""}
+              onChange={handleChange}
+              className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent  transition"
+            />
+          </div>
 
-              <input
-                name={field.name}
-                value={formData[field.name]}
-                onChange={handleChange}
-                className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent focus:border-gray-300 focus:bg-white transition"
-              />
-            </div>
-          ))}
+          {/* CITY / PROVINCE / ZIP */}
+          <div className="grid md:grid-cols-3 gap-5">
+            {fieldsBottom.map((field) => (
+              <div key={field.name}>
+                <label className="text-xs text-fullGray flex items-center gap-1 mb-1">
+                  {field.icon} {field.label}
+                </label>
 
-        </div>
+                <input
+                  name={field.name}
+                  value={formData[field.name] || ""}
+                  onChange={handleChange}
+                  className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent  transition"
+                />
+              </div>
+            ))}
+          </div>
 
-        {/* BUTTONS */}
-        <div className="flex gap-4 pt-4">
+          {/* BUTTONS */}
+          <div className="flex gap-4 pt-4">
+            <button
+              type="button"
+              onClick={() => navigate("/pages/user-profile")}
+              className="w-1/2 extra-button py-3 rounded-2xl font-semibold transition"
+            >
+              Cancel
+            </button>
 
-          <button
-            type="button"
-            onClick={() => navigate("/pages/user-profile")}
-            className="w-1/2 extra-button py-3 rounded-2xl font-semibold transition"
-          >
-            Cancel
-          </button>
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-1/2 bg-buttons hover-bg-buttons text-buttons py-3 rounded-2xl font-semibold shadow-md disabled:opacity-50"
+            >
+              {loading ? "Saving..." : "Save"}
+            </button>
+          </div>
 
-          <button
-            type="submit"
-            className="w-1/2 bg-buttons hover-bg-buttons text-buttons py-3 rounded-2xl font-semibold shadow-md"
-          >
-            Save 
-          </button>
-
-        </div>
-
-      </form>
+        </form>
+      )}
     </div>
   );
 };
