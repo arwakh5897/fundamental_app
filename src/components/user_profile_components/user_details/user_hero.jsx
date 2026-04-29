@@ -2,31 +2,37 @@ import React from "react";
 
 const UserHero = ({ user, onEdit }) => {
   return (
-    <div className="relative rounded-3xl p-6 bg-menu-gradiant text-white shadow-lg overflow-hidden">
+    <div className="relative rounded-3xl p-5 sm:p-6 bg-menu-gradiant text-white shadow-lg overflow-hidden">
 
       <div className="absolute inset-0 bg-white/10 backdrop-blur-xl"></div>
 
-      <div className="relative flex items-center justify-between">
+      <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-        <div className="flex items-center gap-4">
+        {/* LEFT SIDE */}
+        <div className="flex items-center gap-3 sm:gap-4">
 
-          <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-2xl font-bold">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 flex items-center justify-center text-xl sm:text-2xl font-bold">
             {user.name.charAt(0)}
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold">{user.name}</h2>
-            <p className="text-sm text-white/80">{user.email}</p>
-            <p className="text-xs text-white/60 mt-1">
+            <h2 className="text-lg sm:text-2xl font-bold">
+              {user.name}
+            </h2>
+            <p className="text-xs sm:text-sm text-white/80">
+              {user.email}
+            </p>
+            <p className="text-[10px] sm:text-xs text-white/60 mt-1">
               Joined {user.joinDate}
             </p>
           </div>
 
         </div>
 
+        {/* RIGHT SIDE BUTTON */}
         <button
-          className="bg-buttons hover:cursor-pointer hover-bg-buttons px-4 py-2 rounded-lg text-sm"
           onClick={onEdit}
+          className="w-full sm:w-auto bg-buttons hover-bg-buttons px-4 py-2 rounded-lg text-sm font-medium transition"
         >
           Edit Profile
         </button>

@@ -5,7 +5,7 @@ const ProfileForm = ({ formData, handleChange, handleSubmit }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="border border-gray-200 rounded-3xl p-6 md:p-10 shadow-sm">
+    <div className="border border-gray-200 rounded-3xl p-4 lg:p-6 md:p-10 shadow-sm">
 
       {/* HEADER */}
       <div className="mb-8">
@@ -98,14 +98,14 @@ const ProfileForm = ({ formData, handleChange, handleSubmit }) => {
           <button
             type="button"
             onClick={() => navigate("/pages/user-profile")}
-            className="w-1/2 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-2xl font-semibold transition"
+            className="w-1/2 extra-button py-3 rounded-2xl font-semibold transition"
           >
             Cancel
           </button>
 
           <button
             type="submit"
-            className="w-1/2 bg-buttons hover-bg-buttons text-white py-3 rounded-2xl font-semibold shadow-md"
+            className="w-1/2 bg-buttons hover-bg-buttons text-buttons py-3 rounded-2xl font-semibold shadow-md"
           >
             Save Changes
           </button>
