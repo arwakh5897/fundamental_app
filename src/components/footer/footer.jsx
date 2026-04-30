@@ -15,7 +15,7 @@ const Footer = () => {
                 <ProductsLinks/>
                 <FollowUs/>
             </div>
-            <div className="h-0.5 my-6 bg-white"></div>
+            <div className="h-0.5 mt-6 bg-white"></div>
             <CopyRight/>
         </footer>
     );
