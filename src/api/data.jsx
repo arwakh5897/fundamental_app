@@ -49,10 +49,10 @@ export const fetchProducts = async () => {
         description: `Premium ${brand.toLowerCase()} running and lifestyle shoes designed for comfort, durability, and modern style.`,
         price: 82 + (i * 5),
         discount: (i % 5) * 5,
-        rating: (4 + (i % 10) * 0.1).toFixed(1),
+        avarage_rating: (4 + (i % 10) * 0.1).toFixed(1),
         count: 20 + i,
         stock: i % 2 === 0 ? 0 : 2 + (i * 3),
-        category: "shoes",
+        category: ["Casual Wear","Formal Wear","Party Wear","Sneakers", "Boots" , "Sandals", "Heels" , "Summer Collection" , "Winter Sale"][i % 9],
 
         sizes: ["6", "7", "8", "9", "10", "11"].slice(0, (i % 6) + 3),
         colors: ["black", "white", "blue", "red", "grey"].slice(0, (i % 5) + 2),

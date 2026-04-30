@@ -23,13 +23,14 @@ const ConcernLayout = () => {
     "party-wear": "Party Wear",
   };
   const title= titles[type] || "Products";
+  const filterItems = allItems.filter(item=> item.category.toLowerCase() === title.toLowerCase());
 
 
 
     return (
         <div>
             <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">BY CONCER</h1>
-            <ProductsLayout allItems={allItems} title={title} itemsPerPage={itemsPerPage} />
+            <ProductsLayout allItems={filterItems} title={title} itemsPerPage={itemsPerPage} />
         </div>
     )
 }
