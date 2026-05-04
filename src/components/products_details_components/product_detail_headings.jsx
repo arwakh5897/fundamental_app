@@ -12,7 +12,7 @@ const ProductDetailHeadings = ({products}) => {
 
   return (
     <div className="w-full">
-      <p className="h-[1px] w-full bg-buttons hover-bg-buttons"></p>
+      <p className="h-[1px] w-full bg-buttons"></p>
 
       {/* Tabs */}
       <div className="flex justify-center items-center gap-8 py-3 lg:py-2">
@@ -39,7 +39,7 @@ const ProductDetailHeadings = ({products}) => {
         ))}
       </div>
 
-      <p className="h-[1px] w-full bg-buttons hover-bg-buttons"></p>
+      <p className="h-[1px] w-full bg-buttons"></p>
 
       {/* Content */}
       <div className="pt-6 px-2 lg:pt-10 transition-all duration-300">
