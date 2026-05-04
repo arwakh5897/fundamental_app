@@ -50,7 +50,7 @@ const App = () => {
         <Loader/>
           <RouteLoader/>
            <ToastContext/>
-            <div className="text-foreground bg-background scrollbar-hide">
+            <div className="text-foreground bg-background min-h-screen scrollbar-hide">
                 <Routes>
                     <Route element={<MainLayout />} >
                       <Route path="/" element={<Dashboard />} />
