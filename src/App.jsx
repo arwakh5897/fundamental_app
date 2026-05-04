@@ -64,6 +64,8 @@ const App = () => {
                       <Route path="/pages/edit-profile" element={<EditUserProfile/>}/>
                       <Route path="/pages/order-tracking" element={<OrderStatus/>}/>
 
+<div clasName="flex-grow">
+
                                             {/*  Extra Pages Routes  */}
                       <Route path="/pages/product_details/:id" element={<ProductDetails/>}/>
                       <Route path="/pages/shopping_details" element={<ShoppingDetails/>}/>
@@ -77,6 +79,7 @@ const App = () => {
 
                                             {/*  Bundle Routes  */}
                       <Route path="/bundle/:type" element={<BundleLayout/>} />
+</div>
 
                                             {/*  Footer Routes  */}
                       <Route path="/our-story" element={<OurStory />} />
