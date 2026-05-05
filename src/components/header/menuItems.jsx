@@ -10,7 +10,7 @@ const MenuItems = () => {
   return (
     <div className="font-semibold lg:font-bold">
       {/* Mobile Hamburger */}
-      <div className="flex gap-2 items-center lg:hidden">
+      <div className="flex gap-8 items-center lg:hidden">
         <HamburgerButton onClick={() => setActive(true)} />
         <MobileSearchIcon />
       </div>
