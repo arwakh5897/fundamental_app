@@ -4,7 +4,7 @@ import BillingForm from "../../components/check_out_Components/billingForm";
 import OrderSummary from "../../components/check_out_Components/orderSummary";
 import { useCartContext } from "../../context/cartContext";
 import { useLocation } from "react-router-dom";
-import { placeOrder } from "../../api/data";
+// import { placeOrder } from "../../api/data";
 import OrderPopup from "../../components/check_out_Components/order_popup";
 import { useAuth } from "../../context/authContext";
 import useToast from "../../../utils/useToast";

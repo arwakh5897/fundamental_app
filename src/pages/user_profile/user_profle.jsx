@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchOrders } from "../../api/data";
+// import { fetchOrders } from "../../api/data";
 import { useAuth } from "../../context/authContext";
 
 import UserHero from "../../components/user_profile_components/user_details/user_hero";
