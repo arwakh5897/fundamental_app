@@ -9,12 +9,16 @@
 //     return [];
 //   }
 // };
+
+
 // export const placeOrder = async (orderData) =>{
+//   const token= localStorage.getItem("token");
 //   try{
 //     const res = await fetch ("http://127.0.0.1:8000/api/orders" , {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
+//         "Authorization": `Bearer ${token}`,
 //         "Accept": "application/json",
 //       },
 //       body:JSON.stringify(orderData),
@@ -25,12 +29,31 @@
 //     console.error("Order API error:" , err)
 //     return null;
 //   }
-// }
+// };
+
+
+// export const fetchOrders = async () => {
+//   const token = localStorage.getItem("token");
+
+//   try {
+//     const res = await fetch("http://127.0.0.1:8000/api/orders", {
+//       method: "GET",
+//       headers: {
+//         Accept: "application/json",
+//         Authorization: `Bearer ${token}`, // MUST
+//       },
+//     });
+
+//     const data = await res.json();
+//     return data.data;
+//   } catch (err) {
+//     console.error("Error fetching orders:", err);
+//     return [];
+//   }
+// };
 
 
 // utils/fetchProducts.js
-// utils/fetchProducts.js
-
 
 export const fetchProducts = async () => {
   return [

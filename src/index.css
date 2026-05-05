@@ -105,6 +105,7 @@ body {
 }
 .bg-input {
  background-color: rgb(249, 250, 251);
+ font-size: 10px;
 }
 
 .bg-line {

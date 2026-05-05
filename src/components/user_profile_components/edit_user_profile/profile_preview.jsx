@@ -2,14 +2,14 @@ import React from "react";
 
 const ProfilePreview = ({ formData }) => {
   return (
-    <div className="bg-menu-gradiant sticky top-16 rounded-3xl p-6 shadow-xl overflow-hidden">
+    <div className="bg-menu-gradiant text-foreground-secondary sticky top-16 rounded-3xl p-6 overflow-hidden">
 
       <div className="absolute inset-0 bg-white/10 backdrop-blur-xl"></div>
 
       <div className="relative text-center space-y-4">
 
         <div className="w-24 h-24 mx-auto rounded-full bg-white/20 flex items-center justify-center text-3xl font-bold shadow-md">
-          {formData.name.charAt(0)}
+          {formData.name.toUpperCase().charAt(0)}
         </div>
 
         <div>

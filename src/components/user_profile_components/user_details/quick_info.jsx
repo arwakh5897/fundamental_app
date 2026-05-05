@@ -10,7 +10,7 @@ const UserQuickInfo = ({ user }) => {
         { label: "Status", value: "Active", status: true },
         { label: "City", value: user.city },
         { label: "Province", value: user.province },
-        { label: "ZIP Code", value: user.zip },
+        { label: "ZIP Code", value: user.zip_code },
       ].map((item, i) => (
         <div
           key={i}

@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../../api/auth";
+import { useAuth } from "../../context/authContext";
+import useToast from "../../../utils/useToast";
 
 const SignIn = () => {
+  const {success , error} = useToast();
   const navigate = useNavigate();
+  const { login } = useAuth();
+  
   const fields = [
     { label: "Email", type: "email", placeholder: "Enter your email" },
     { label: "Password", type: "password", placeholder: "Enter your password" },
@@ -17,52 +23,118 @@ const SignIn = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", form);
-    navigate("/");
-    // Add login logic here
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  return (
-  <div className="fixed inset-0 bg-buttons z-60" >  
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 opacity-100 bg-background p-6 rounded-lg shadow-lg z-50">
-     <h1 className="text-xl font-bold mb-6 text-center">Log In</h1>
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-        {fields.map((field, index) => (
-          <div key={index} className="flex flex-col gap-1">
-            <label className="font-semibold">{field.label}</label>
-            <input
-              type={field.type}
-              name={field.label.toLowerCase()}
-              placeholder={field.placeholder}
-              value={form[field.label.toLowerCase()]}
-              onChange={handleChange}
-              className="border-color rounded-sm px-3 py-2 outline-none"
-              required
-            />
-          </div>
-        ))}
+  try {
+    const res = await loginUser(form);
 
+    if (res?.data?.token) {
+      // save token
+      localStorage.setItem("token", res.data.token);
+
+      // save user in context
+      login(res.data.user, res.data.token);
+
+      navigate("/pages/user-profile");
+    } else {
+      error("Invalid credentials");
+    }
+  } catch (error) {
+  console.error("Full error:", error);
+
+  if (error.response) {
+    error(error.response.data.message || "Backend error");
+  } else {
+    error("Network error");
+  }
+}
+};
+
+return (
+  <div className="fixed inset-0 bg-buttons flex items-center justify-center px-4">
+
+    {/* Blur overlay */}
+    <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+
+    {/* Card */}
+    <div className="relative w-full max-w-md bg-background rounded-3xl shadow-2xl border border-color overflow-hidden">
+
+      {/* Top bar */}
+      <div className="h-2 bg-buttons"></div>
+
+      {/* Header */}
+      <div className="p-6 text-center">
+        <h1 className="text-2xl font-bold text-heading">Welcome Back</h1>
+        <p className="text-fullGray text-sm mt-1">
+          Sign in to continue your dashboard
+        </p>
+      </div>
+
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="px-6 pb-6 flex flex-col gap-4">
+
+        {/* Email */}
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          value={form.email}
+          onChange={handleChange}
+          className="w-full bg-input border border-color px-4 py-3 rounded-xl
+          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          required
+        />
+
+        {/* Password */}
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={form.password}
+          onChange={handleChange}
+          className="w-full bg-input border border-color px-4 py-3 rounded-xl
+          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          required
+        />
+
+        {/* Forgot password */}
+        <div className="text-right">
+          <span className="text-xs text-fullGray hover:text-buttons cursor-pointer">
+            Forgot password?
+          </span>
+        </div>
+
+        {/* Button */}
         <button
           type="submit"
-          className="mt-4 w-full bg-buttons hover-bg-buttons py-2 rounded-md font-semibold hover:cursor-pointer transition"
+          className="bg-buttons hover:opacity-90 transition text-buttons font-semibold py-3 rounded-xl shadow-lg"
         >
           Sign In
         </button>
-      </form>
-              <p className="text-sm text-center mt-4">
-                  Don't have an account?
+
+        {/* Divider */}
+        <div className="flex items-center my-2">
+          <div className="flex-1 h-px bg-line"></div>
+          <span className="px-3 text-fullGray text-xs">OR</span>
+          <div className="flex-1 h-px bg-line"></div>
+        </div>
+
+        {/* Signup link */}
+        <p className="text-center text-sm text-foreground">
+          Don’t have an account?{" "}
           <span
             onClick={() => navigate("/signup")}
-            className="ml-1 text-menu-buttons font-semibold cursor-pointer"
+            className="text-highlighted hover-text-highlighted cursor-pointer font-semibold"
           >
             Sign Up
           </span>
         </p>
+
+      </form>
     </div>
-</div>
-  );
+  </div>
+);
 };
 
 export default SignIn;

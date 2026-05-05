@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 
 import useLenis from "./hook/lenisHook";
 import ToastContext from "./context/toastContext";
+import ProtectedRoute from "./routes/protectedRoute";
 
 import Dashboard from "./pages/dashboard/dashboard";
 import ShopAll from "./pages/dashboard/shop_all";
@@ -60,9 +61,11 @@ const App = () => {
                       <Route path="/pages/accessories" element={<Accessories />} />
                       <Route path="/pages/make_up" element={<MakeUp/>}/>
 
-                      <Route path="/pages/user-profile" element={<UserProfile/>}/>
-                      <Route path="/pages/edit-profile" element={<EditUserProfile/>}/>
-                      <Route path="/pages/order-tracking" element={<OrderStatus/>}/>
+                      <Route element={<ProtectedRoute/>}>
+                        <Route path="/pages/user-profile" element={<UserProfile/>}/>
+                        <Route path="/pages/edit-profile" element={<EditUserProfile/>}/>
+                        <Route path="/pages/order-tracking" element={<OrderStatus/>}/>
+                      </Route>
 
                                             {/*  Extra Pages Routes  */}
                       <Route path="/pages/product_details/:id" element={<ProductDetails/>}/>

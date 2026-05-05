@@ -1,86 +1,154 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { signupUser } from "../../api/auth";
+import useToast from "../../../utils/useToast";
 
 const SignUp = () => {
+  const {success , error} = useToast();
   const navigate = useNavigate();
-
-  const fields = [
-    { label: "Name", type: "text", placeholder: "Enter your name" },
-    { label: "Email", type: "email", placeholder: "Enter your email" },
-    { label: "Password", type: "password", placeholder: "Create a password" },
-    { label: "Confirm Password", type: "password", placeholder: "Confirm password" },
-  ];
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     password: "",
-    "confirm password": "",
+    confirm_password: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (form.password !== form["confirm password"]) {
-      alert("Passwords do not match");
+    if (form.password !== form.confirm_password) {
+      error("Passwords do not match");
       return;
     }
 
-    console.log("Signup Data:", form);
+    try {
+      setLoading(true);
 
-    // API call here
+      const payload = {
+        name: form.name,
+        email: form.email,
+        password: form.password,
+      };
 
-    navigate("/login");
+      const res = await signupUser(payload);
+
+      success("Account created successfully");
+
+      navigate("/login");
+
+    } catch (err) {
+  console.log("Full error:", err);
+
+      if (err.response) {
+        console.log("Backend error:", err.response.data);
+        error(err.response.data.message || "Validation error");
+      } else {
+        toast.error("Network error");
+      }
+    }
+     finally {
+      setLoading(false);
+    }
   };
 
-  return (
-    <div className="fixed inset-0 bg-buttons z-60">
-      {/* Modal */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-background p-6 rounded-lg shadow-lg z-50">
-        
-        <h1 className="text-xl font-bold mb-6 text-center">Sign Up</h1>
+return (
+  <div className="fixed inset-0 bg-buttons flex items-center justify-center px-4">
 
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          {fields.map((field, index) => (
-            <div key={index} className="flex flex-col gap-1">
-              <label className="font-semibold">{field.label}</label>
-              <input
-                type={field.type}
-                name={field.label.toLowerCase()}
-                placeholder={field.placeholder}
-                value={form[field.label.toLowerCase()]}
-                onChange={handleChange}
-                className="border border-color rounded-md px-3 py-2 outline-none"
-                required
-              />
-            </div>
-          ))}
+    {/* Overlay blur */}
+    <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
 
-          <button
-            type="submit"
-            className="mt-4 w-full bg-buttons hover-bg-buttons py-2 rounded-md font-semibold hover:opacity-90 transition"
-          >
-            Create Account
-          </button>
-        </form>
+    {/* Card */}
+    <div className="relative w-full max-w-md bg-background rounded-3xl shadow-2xl border border-color overflow-hidden">
 
-        {/* Redirect to Login */}
-        <p className="text-sm text-center mt-4">
-          Already have an account?
-          <span
-            onClick={() => navigate("/login")}
-            className="ml-1 text-menu-buttons font-semibold cursor-pointer"
-          >
-            Log In
-          </span>
+      {/* Top Accent Bar */}
+      <div className="h-2 bg-buttons"></div>
+
+      {/* Header */}
+      <div className="p-6 text-center">
+        <h1 className="text-2xl font-bold text-heading">Create Account</h1>
+        <p className="text-fullGray text-sm mt-1">
+          Join your dashboard system
         </p>
       </div>
+
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="px-6 pb-6 flex flex-col gap-4">
+
+        <input
+          name="name"
+          placeholder="Full Name"
+          onChange={handleChange}
+          className="w-full bg-input border border-color px-4 py-3 rounded-xl
+          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          required
+        />
+
+        <input
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          onChange={handleChange}
+          className="w-full bg-input border border-color px-4 py-3 rounded-xl
+          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          required
+        />
+
+        <input
+          name="password"
+          type="password"
+          placeholder="Password (min 6)"
+          onChange={handleChange}
+          className="w-full bg-input border border-color px-4 py-3 rounded-xl
+          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          required
+          minLength={6}
+        />
+
+        <input
+          name="confirm_password"
+          type="password"
+          placeholder="Confirm Password"
+          onChange={handleChange}
+          className="w-full bg-input border border-color px-4 py-3 rounded-xl
+          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          required
+        />
+
+        {/* Button */}
+        <button
+          type="submit"
+          disabled={loading}
+          className="bg-buttons hover:opacity-90 transition text-buttons font-semibold py-3 rounded-xl shadow-lg"
+        >
+          {loading ? "Creating Account..." : "Create Account"}
+        </button>
+
+        {/* Divider */}
+        <div className="flex items-center my-2">
+          <div className="flex-1 h-px bg-line"></div>
+          <span className="px-3 text-fullGray text-xs">OR</span>
+          <div className="flex-1 h-px bg-line"></div>
+        </div>
+
+        {/* Login */}
+        <p className="text-center text-sm text-foreground">
+          Already have an account?{" "}
+          <a href="/login" className="text-highlighted hover-text-highlighted">
+            Sign In
+          </a>
+        </p>
+
+      </form>
     </div>
-  );
+  </div>
+);
 };
 
 export default SignUp;

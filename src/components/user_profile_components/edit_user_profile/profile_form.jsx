@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-const ProfileForm = ({ formData = {}, handleChange, handleSubmit, loading }) => {
-  const navigate = useNavigate();
+const ProfileForm = ({ formData = {}, handleChange, handleSubmit, loading, navigate }) => {
 
   const fieldsTop = [
     { name: "name", label: "Full Name", icon: "👤" },
@@ -12,9 +10,9 @@ const ProfileForm = ({ formData = {}, handleChange, handleSubmit, loading }) => 
   const fieldsBottom = [
     { name: "city", label: "City", icon: "🏙️" },
     { name: "province", label: "Province", icon: "🗺️" },
-    { name: "zip", label: "ZIP Code", icon: "📮" },
+    { name: "zip_code", label: "ZIP Code", icon: "📮" }, // ✅ FIX
   ];
-
+  
   return (
     <div className="relative border border-gray-200 rounded-3xl p-4 lg:p-6 md:p-10 shadow-sm">
 
@@ -46,6 +44,7 @@ const ProfileForm = ({ formData = {}, handleChange, handleSubmit, loading }) => 
                   name={field.name}
                   value={formData[field.name] || ""}
                   onChange={handleChange}
+                  readOnly={field.name === "email"}
                   className="w-full p-3.5 bg-input rounded-2xl outline-none border border-transparent  transition"
                 />
               </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Breadcrumb from "../../components/breadcrumbs/breadcrumb";
 import BillingForm from "../../components/check_out_Components/billingForm";
 import OrderSummary from "../../components/check_out_Components/orderSummary";
@@ -6,8 +6,12 @@ import { useCartContext } from "../../context/cartContext";
 import { useLocation } from "react-router-dom";
 // import { placeOrder } from "../../api/data";
 import OrderPopup from "../../components/check_out_Components/order_popup";
+import { useAuth } from "../../context/authContext";
+import useToast from "../../../utils/useToast";
+
 
 const CheckOut = () => {
+  const { success , error } = useToast();
   const [showModel , setShowModel ] = useState(false);
   const location = useLocation();
   const product = location.state?.productData;
@@ -68,15 +72,32 @@ const handleSubmit = async (e) => {
 
     if (response?.status) {
       setShowModel(true);      
+      success("Order placed successfully!");
     } else {
-      alert("Order failed");
+      error("Order failed");
     }
   } catch (err) {
     console.error(err);
-    alert("Something went wrong");
+    error("Something went wrong");
   }
 };
 
+const { user } = useAuth();
+
+useEffect(()=>{
+  if(user){
+    setFormData((prev)=>({
+      ...prev,
+      name: user.name || "",
+      email: user.email || "",
+      phone: user.phone || "",
+      city: user.city || "",
+      province: user.province || "",
+      zip: user.zip_code || "",
+      address: user.address || "",
+    }))
+  }
+}, [user]);
   return (
     <div className="min-h-screen p-4 md:p-8">
       <Breadcrumb title="Checkout" />

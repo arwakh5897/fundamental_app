@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import { fetchOrders } from "../../api/data";
+import { useAuth } from "../../context/authContext";
 
 import UserHero from "../../components/user_profile_components/user_details/user_hero";
 import UserQuickInfo from "../../components/user_profile_components/user_details/quick_info";
@@ -8,33 +10,30 @@ import OrdersTimeline from "../../components/user_profile_components/user_detail
 
 const UserProfile = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
 
-  const user = {
-    name: "User Name",
-    phone: "03001234567",
-    address: "Pattoki, Punjab, Pakistan",
-    city: "Pattoki",
-    province: "Punjab",
-    zip: "55200",
-    email: "user@example.com",
-    joinDate: "12 Jan 2025",
-  };
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    const loadOrders = async () => {
+      const data = await fetchOrders();
+      setOrders(data);
+    };
+    loadOrders();
+  }, []);
+
+  if (!user) return null; // or loading / redirect
 
   const paymentMethods = [
     { type: "Visa", number: "**** **** **** 4242", expiry: "12/27" },
-    { type: "JazzCash", number: "03001234567" },
-  ];
-
-  const orders = [
-    { id: "#ORD123", status: "Delivered", date: "20 Apr 2026" },
-    { id: "#ORD124", status: "Pending", date: "25 Apr 2026" },
+    { type: "JazzCash", number: user.phone },
   ];
 
   return (
     <div className="space-y-6 p-6">
 
       <UserHero
-        user={user}
+        user={user}   // 🔥 now real user
         onEdit={() => navigate("/pages/edit-profile")}
       />
 

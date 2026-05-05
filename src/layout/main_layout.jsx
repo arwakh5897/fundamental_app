@@ -12,7 +12,7 @@ const MainLayout = () => {
       <Menu />
       <ConditionalBanner />
 
-      <Outlet />
+        <Outlet />
 
       <Footer />
     </div>

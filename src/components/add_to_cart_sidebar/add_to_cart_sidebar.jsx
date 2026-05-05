@@ -25,7 +25,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
         <SidebarHeader onClose={onClose} totalItems={totalItems} />
 
         {/* Cart Items */}
-        <div className="flex-1 overflow-y-auto scrollbar-hide space-y-0 mt-4 p-2">
+        <div className="flex-1 overflow-y-auto scrollbar-hide space-y-0 mt-4 px-2 pb-2">
           {cart.length > 0 ? (
             cart.map((item) => (
               <ShoppingCard
