@@ -15,7 +15,7 @@ const SignIn=({darkLight ,className})=>{
             >
                     <img 
                     src={darkLight ? "/assets/icons/light-user.png" : "/assets/icons/user.png"} 
-                    alt="Cart Icon" className="w-4 h-4 md:w-6 md:h-6 hover:cursor-pointer"/>
+                    alt="Cart Icon" className="w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer"/>
 
             </div>
             <AccountSidebar 
