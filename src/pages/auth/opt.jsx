@@ -41,7 +41,7 @@ const VerifyOtp = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-buttons px-4">
+    <div className="flex items-center justify-center min-h-screen bg-menu-gradiant px-4">
       <div className="bg-background p-6 rounded-2xl w-full max-w-md">
         <h2 className="text-xl font-bold mb-4">Verify OTP</h2>
 

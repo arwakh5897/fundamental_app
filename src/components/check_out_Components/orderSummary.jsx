@@ -6,7 +6,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
   // const finalTotal = totalPrice + shippingCost;
 
   return (
-    <div className="rounded-2xl border border-gray-100 shadow-md p-6 h-fit sticky top-16 space-y-6">
+    <div className="rounded-2xl border  border-gray-100 shadow-sm p-6 h-fit sticky top-16 space-y-6">
 
       {/* Header */}
       <h2 className="text-xl font-semibold border-b pb-3">

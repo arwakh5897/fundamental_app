@@ -59,7 +59,7 @@ const SignUp = () => {
   };
 
 return (
-  <div className="fixed inset-0 bg-buttons flex items-center justify-center px-4">
+  <div className="fixed inset-0 bg-menu-gradiant flex items-center justify-center px-4">
 
     {/* Overlay blur */}
     <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>

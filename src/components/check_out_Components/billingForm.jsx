@@ -39,7 +39,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
               placeholder="full name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full mt-2 p-3.5 bg-input rounded-2xl outline-none transition shadow-sm"
+              className="w-full mt-2 p-3.5 bg-input rounded-lg outline-none transition shadow-sm"
               required
             />
           </div>
@@ -57,7 +57,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
                   placeholder={field.label}
                   value={formData[field.name]}
                   onChange={handleChange}
-                  className="w-full mt-2 p-3.5 bg-input rounded-2xl outline-none transition shadow-sm"
+                  className="w-full mt-2 p-3.5 bg-input rounded-lg outline-none transition shadow-sm"
                   required
                 />
               </div>
@@ -75,7 +75,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
               placeholder="Complete Address"
               value={formData.address}
               onChange={handleChange}
-              className="w-full mt-2 p-3.5 bg-input rounded-2xl outline-none transition shadow-sm"
+              className="w-full mt-2 p-3.5 bg-input rounded-lg outline-none transition shadow-sm"
               required
             />
           </div>
@@ -93,7 +93,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
                   placeholder={field.label}
                   value={formData[field.name]}
                   onChange={handleChange}
-                  className="w-full mt-2 p-3.5 bg-input rounded-2xl outline-none bg-input transition shadow-sm"
+                  className="w-full mt-2 p-3.5 bg-input rounded-lg outline-none bg-input transition shadow-sm"
                   required
                 />
               </div>
