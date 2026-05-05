@@ -13,7 +13,7 @@ const RamadanTitle = () => {
     <div id="ramadan">
       <div className="bg-menu lg:text-4xl text-center py-2 lg:py-4">
         NEW
-        <span className="font-semibold mx-2">ARRIVAL</span>
+        <span className="font-semibold mx-2">ARRIVALS</span>
       </div>
       <ScrollingProducts allItems={latestItems}/>
     </div>

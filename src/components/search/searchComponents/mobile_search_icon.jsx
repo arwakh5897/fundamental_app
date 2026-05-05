@@ -7,7 +7,7 @@ const MobileSearchIcon =()=>{
     return(
         <div className="relative" >
             <img 
-            className="w-6 h-6 hover:cursor-pointer"
+            className="w-4 h-4 md:w-6 md:h-6 hover:cursor-pointer"
              src="/assets/icons/search.png"
              alt="" 
              onClick={handleClick}

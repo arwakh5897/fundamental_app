@@ -82,7 +82,7 @@ return (
           value={form.email}
           onChange={handleChange}
           className="w-full bg-input border border-color px-4 py-3 rounded-xl
-          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          focus:outline-none focus:ring-1 focus:ring-buttons transition"
           required
         />
 
@@ -94,13 +94,15 @@ return (
           value={form.password}
           onChange={handleChange}
           className="w-full bg-input border border-color px-4 py-3 rounded-xl
-          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          focus:outline-none focus:ring-1 focus:ring-buttons transition"
           required
         />
 
         {/* Forgot password */}
         <div className="text-right">
-          <span className="text-xs text-fullGray hover:text-buttons cursor-pointer">
+          <span 
+          className="text-xs text-fullGray hover:text-buttons cursor-pointer"
+          onClick={()=>navigate("/forgot-password")}>
             Forgot password?
           </span>
         </div>
@@ -125,7 +127,7 @@ return (
           Don’t have an account?{" "}
           <span
             onClick={() => navigate("/signup")}
-            className="text-highlighted hover-text-highlighted cursor-pointer font-semibold"
+            className="text-highlighted hover-text-highlighted cursor-pointer"
           >
             Sign Up
           </span>

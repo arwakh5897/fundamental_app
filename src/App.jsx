@@ -38,6 +38,9 @@ import CheckOut from "./pages/check_out/check_out";
 import UserProfile from "./pages/user_profile/user_profle";
 import OrderStatus from "./pages/order_status/order_status";
 import EditUserProfile from "./pages/user_profile/edit_user_profile";
+import ForgotPassword from "./pages/auth/forgot_password";
+import ResetPassword from "./pages/auth/reset_password";
+import VerifyOtp from "./pages/auth/opt";
 
 
 const App = () => {
@@ -93,6 +96,9 @@ const App = () => {
                                           {/* Auth Routes */}
                       <Route path="/login" element={<SignIn/>} />
                       <Route path="/signup" element={<SignUp/>} />
+                      <Route path="/forgot-password" element={<ForgotPassword/>} />
+                      <Route path="/verify-otp" element={<VerifyOtp/>} />
+                      <Route path="/reset-password/:token" element={<ResetPassword/>} />
 
                 </Routes>
               </div>

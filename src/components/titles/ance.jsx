@@ -9,7 +9,7 @@ const Ance = () => {
    },[]);
    const specificProducts = allItems
   .sort((a, b) => b.avarage_rating- a.avarage_rating)
-  .slice(0, 8);
+  .slice(0, 12);
       return (
         <div>
       <div className="bg-menu lg:text-4xl text-center py-2 lg:py-4">

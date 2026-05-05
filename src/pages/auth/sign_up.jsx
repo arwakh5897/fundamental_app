@@ -86,7 +86,7 @@ return (
           placeholder="Full Name"
           onChange={handleChange}
           className="w-full bg-input border border-color px-4 py-3 rounded-xl
-          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          focus:outline-none focus:ring-1 focus:ring-buttons transition"
           required
         />
 
@@ -96,7 +96,7 @@ return (
           placeholder="Email Address"
           onChange={handleChange}
           className="w-full bg-input border border-color px-4 py-3 rounded-xl
-          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          focus:outline-none focus:ring-1 focus:ring-buttons transition"
           required
         />
 
@@ -106,7 +106,7 @@ return (
           placeholder="Password (min 6)"
           onChange={handleChange}
           className="w-full bg-input border border-color px-4 py-3 rounded-xl
-          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          focus:outline-none focus:ring-1 focus:ring-buttons transition"
           required
           minLength={6}
         />
@@ -117,7 +117,7 @@ return (
           placeholder="Confirm Password"
           onChange={handleChange}
           className="w-full bg-input border border-color px-4 py-3 rounded-xl
-          focus:outline-none focus:ring-2 focus:ring-buttons transition"
+          focus:outline-none focus:ring-1 focus:ring-buttons transition"
           required
         />
 
