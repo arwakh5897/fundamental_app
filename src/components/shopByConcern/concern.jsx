@@ -12,7 +12,7 @@ const Concern = () => {
 
       <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 py-12 px-6 mx-auto text-center">
         {menuData.concerns.map((item, index) => (
-          <a key={index} href={item.link} className="bg-buttons rounded text-sm font-bold lg:font-medium lg:text-xl p-2 cursor-pointer hover:scale-105 transition">
+          <a key={index} href={item.link} className="bg-menu-gradiant rounded text-sm font-bold lg:font-medium lg:text-xl p-2 cursor-pointer hover:scale-105 transition">
             {item.name}
           </a>
         ))}
