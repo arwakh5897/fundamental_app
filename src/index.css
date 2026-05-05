@@ -162,6 +162,10 @@ body {
   color: rgb(156, 163, 175);
 }
 
+.text-extraGray {
+  color: #4b5563;
+}
+
 .text-halfWhite {
   color: rgba(255, 255, 255, 0.4);
 }
@@ -230,6 +234,10 @@ body {
 
 .dark .text-heading {
   color: white;
+}
+
+.dark .text-extraGray {
+  color: #d1d5db;
 }
 
 .dark .bg-input {

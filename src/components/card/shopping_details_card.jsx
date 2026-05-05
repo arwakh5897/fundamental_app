@@ -12,7 +12,7 @@ const ShoppingDetailsCard = ({
   onRemove,
 }) => {
   return (
-    <div className="flex gap-3 p-3 border-b bg-white rounded-lg shadow-sm hover:shadow-md transition">
+    <div className="flex gap-3 p-3 border-b  rounded-lg shadow-sm hover:shadow-md transition">
 
       {/* Image */}
       <div className="w-24 h-24 lg:w-28 lg:h-28 flex-shrink-0 bg-image rounded-md overflow-hidden">
@@ -34,7 +34,7 @@ const ShoppingDetailsCard = ({
 
           <button
             onClick={onRemove}
-            className="p-1 hover:bg-red-100 hover:cursor-pointer rounded"
+            className="p-1 bg-white hover:cursor-pointer rounded"
           >
             <img
               className="w-4 h-4"
@@ -45,7 +45,7 @@ const ShoppingDetailsCard = ({
         </div>
 
         {/* Details */}
-        <div className="text-xs lg:text-sm text-gray-600 space-y-1">
+        <div className="text-xs lg:text-sm text-extraGray space-y-1">
           <p>QTY: {qty}</p>
           <p>Size: {selectedSize}</p>
           <p>Color: {selectedColor}</p>
