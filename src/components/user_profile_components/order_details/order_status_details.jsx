@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchOrders } from "../../../api/data";
+// import { fetchOrders } from "../../../api/data";
 import ActiveOrders from "./order_status_details_components/activeOrders";
 import DeliveredOrders from "./order_status_details_components/deliveredOrders";
 

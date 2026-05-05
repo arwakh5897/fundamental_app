@@ -26,7 +26,7 @@ const ForgotPassword = () => {
   };
 
   return (
-<div className="min-h-screen flex items-center justify-center bg-buttons px-4 py-6">      
+<div className="min-h-screen flex items-center justify-center bg-buttons px-4">      
     <div className="bg-background p-6 rounded-2xl w-full max-w-md">
         <h2 className="text-xl font-bold mb-4">Forgot Password</h2>
 
@@ -34,7 +34,7 @@ const ForgotPassword = () => {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full border border-color bg-input px-4 py-3 focus:ring-1 focus:ring-buttons focus:outline-none rounded-xl mb-4"
+            className="w-full border border-color bg-input px-4 py-3 focus:ring-1 focus:ring-buttons focus:outline-none rounded-lg mb-4"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
