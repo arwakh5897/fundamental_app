@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-// import { forgotPassword } from "../../api/auth";
+import { forgotPassword } from "../../api/auth";
 import useToast from "../../../utils/useToast";
 import { useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
   const { success, error } = useToast();
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setLoading(true);
 
     try {
       const res = await forgotPassword({ email });
@@ -37,8 +40,11 @@ const ForgotPassword = () => {
             required
           />
 
-          <button className="w-full bg-buttons hover-bg-buttons text-xs text-foreground-secondary py-3 rounded-lg">
-            Send Reset Link
+          <button 
+          className="w-full bg-buttons hover-bg-buttons text-xs text-foreground-secondary py-3 rounded-lg"
+          disabled={loading}
+          >
+            {loading ? "Sending..." : "Send Reset Link"}
           </button>
         </form>
       </div>

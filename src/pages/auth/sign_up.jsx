@@ -119,6 +119,7 @@ return (
           className="w-full bg-input border border-color px-4 py-3 rounded-xl
           focus:outline-none focus:ring-1 focus:ring-buttons transition"
           required
+          minLength={6}
         />
 
         {/* Button */}

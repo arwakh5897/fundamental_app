@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-// import { verifyOtp } from "../../api/auth";
+import { verifyOtp } from "../../api/auth";
 import useToast from "../../../utils/useToast";
-
+import { useNavigate } from "react-router-dom";
 const VerifyOtp = () => {
+  const navigate = useNavigate();
   const { success, error } = useToast();
   const location = useLocation();
   const email = location.state?.email;
@@ -20,6 +21,11 @@ const VerifyOtp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (form.password !== form.confirm_password) {
+      error("Passwords do not match");
+      return;
+    }
+
     try {
       await verifyOtp({
         email,
@@ -28,6 +34,7 @@ const VerifyOtp = () => {
       });
 
       success("Password reset successfully");
+      navigate("/login");
     } catch (err) {
       error(err.response?.data?.message || "Invalid OTP");
     }
@@ -57,6 +64,7 @@ const VerifyOtp = () => {
             onChange={handleChange}
             className="border border-color focus:outline-none focus:ring-1 focus:ring-buttons bg-input px-4 py-3 rounded-lg"
             required
+            minLength={6}
           />
 
             <input
@@ -67,6 +75,7 @@ const VerifyOtp = () => {
             className="w-full bg-input border border-color px-4 py-3 rounded-lg
             focus:outline-none focus:ring-1 focus:ring-buttons transition"
             required
+            minLength={6}
             />
 
           <button className="bg-buttons text-white py-3 rounded-lg">

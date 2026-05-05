@@ -54,6 +54,8 @@
 
 
 // utils/fetchProducts.js
+// utils/fetchProducts.js
+
 
 export const fetchProducts = async () => {
   return [
