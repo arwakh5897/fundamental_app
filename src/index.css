@@ -83,6 +83,7 @@ body {
     rgb(140, 110, 100) 100%
   );
   transition: all 0.3s ease;
+  color: white;
 }
 
 .hover-bg-buttons:hover {

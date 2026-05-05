@@ -16,7 +16,7 @@ const CartBuyButton = ({ qty , selectedSize, selectedColor, products })=>{
     };
     return(
         <div>
-            <button className="bg-buttons rounded hover-bg-buttons hover:cursor-pointer w-full lg:w-2/3 font-semibold py-2 px-4 transition"
+            <button className="bg-buttons rounded hover-bg-buttons hover:cursor-pointer w-full lg:w-2/3 text-foreground-secondary text-xs py-2 px-4 transition"
             onClick={handleBuy}
             >
                 Buy it Now
