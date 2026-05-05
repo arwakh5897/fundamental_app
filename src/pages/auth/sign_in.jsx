@@ -108,7 +108,7 @@ return (
         {/* Button */}
         <button
           type="submit"
-          className="bg-buttons hover:opacity-90 transition text-buttons font-semibold py-3 rounded-xl shadow-lg"
+          className="bg-buttons hover:opacity-90 transition text-xs text-buttons font-semibold py-3 rounded-xl"
         >
           Sign In
         </button>
@@ -121,7 +121,7 @@ return (
         </div>
 
         {/* Signup link */}
-        <p className="text-center text-sm text-foreground">
+        <p className="text-center text-xs text-foreground">
           Don’t have an account?{" "}
           <span
             onClick={() => navigate("/signup")}

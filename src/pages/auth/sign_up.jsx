@@ -125,7 +125,7 @@ return (
         <button
           type="submit"
           disabled={loading}
-          className="bg-buttons hover:opacity-90 transition text-buttons font-semibold py-3 rounded-xl shadow-lg"
+          className="bg-buttons hover:opacity-90 transition text-xs text-buttons font-semibold py-3 rounded-xl shadow-lg"
         >
           {loading ? "Creating Account..." : "Create Account"}
         </button>
@@ -138,7 +138,7 @@ return (
         </div>
 
         {/* Login */}
-        <p className="text-center text-sm text-foreground">
+        <p className="text-center text-xs text-foreground">
           Already have an account?{" "}
           <a href="/login" className="text-highlighted hover-text-highlighted">
             Sign In
