@@ -11,7 +11,7 @@ const PaymentMethod = ({ formData , handleChange}) => {
           Choose how you want to pay
         </p>
       </div>
-      <div className="space-y-2 text-sm">
+      <div className="space-y-2 text-xs">
         <label className="flex items-center gap-2 cursor-pointer">
           <input
             type="radio"

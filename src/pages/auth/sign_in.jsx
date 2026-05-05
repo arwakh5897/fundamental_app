@@ -110,7 +110,7 @@ return (
         {/* Button */}
         <button
           type="submit"
-          className="bg-buttons hover:opacity-90 transition text-xs text-buttons font-semibold py-3 rounded-xl"
+          className="bg-buttons hover:cursor-pointer hover:opacity-90 transition text-xs text-buttons font-semibold py-3 rounded-xl"
         >
           Sign In
         </button>

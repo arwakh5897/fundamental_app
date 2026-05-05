@@ -6,7 +6,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
   // const finalTotal = totalPrice + shippingCost;
 
   return (
-    <div className="rounded-2xl border  border-gray-100 shadow-sm p-6 h-fit sticky top-16 space-y-6">
+    <div className="rounded-2xl border border-gray-100 shadow-sm p-6 h-fit sticky top-16 space-y-6">
 
       {/* Header */}
       <h2 className="text-xl font-semibold border-b pb-3">
@@ -36,7 +36,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
             </div>
 
             {/* Price */}
-            <div className="text-sm font-semibold">
+            <div className="text-xs font-semibold">
               Rs.
               {formatCurrency (item.discountedPrice * item.qty|| 0)}
             </div>
@@ -48,7 +48,7 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
       <div className="border-t"></div>
 
       {/* 💰 Pricing */}
-      <div className="space-y-3 text-sm">
+      <div className="space-y-3 text-xs">
 
         <div className="flex justify-between">
           <span className="text-fullGray">Subtotal</span>
@@ -68,16 +68,16 @@ const OrderSummary = ({ cart, totalPrice ,finalTotal , shippingCost }) => {
       <div className="border-t"></div>
 
       {/* 🧾 Total */}
-      <div className="flex justify-between items-center text-lg font-semibold">
+      <div className="flex justify-between items-center font-semibold">
         <span>Total</span>
         <span className="">
-          Rs.{formatCurrency (finalTotal)}
+          Rs {formatCurrency (finalTotal)}
         </span>
       </div>
 
       {/* 🚀 Free Shipping Hint */}
       {shippingCost > 0 && (
-        <div className="bg-gray-100 text-xs p-2 rounded-lg text-gray-600 text-center">
+        <div className="bg-gray-100 text-xs p-2 rounded-lg text-center">
           Add Rs.{formatCurrency(2500 - totalPrice)} more for FREE delivery 🚚
         </div>
       )}

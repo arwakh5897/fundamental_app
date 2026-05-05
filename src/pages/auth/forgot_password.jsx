@@ -41,7 +41,7 @@ const ForgotPassword = () => {
           />
 
           <button 
-          className="w-full bg-buttons hover-bg-buttons text-xs text-foreground-secondary py-3 rounded-lg"
+          className="w-full bg-buttons hover-bg-buttons hover:cursor-pointer text-xs text-foreground-secondary py-3 rounded-lg"
           disabled={loading}
           >
             {loading ? "Sending..." : "Send Reset Link"}

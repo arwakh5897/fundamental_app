@@ -23,11 +23,9 @@ const DeliveredOrderCard = ({ order }) => {
             <div className="flex gap-4 items-center">
 
               <img
-                src={
-                  item.product?.images?.[0]
-                    ? `${BASE_URL}${item.product.images[0]}`
-                    : "/placeholder.png"
-                }
+                src={item.product?.images?.[0]?.startsWith("http") 
+                  ? item.product.images[0] 
+                  : `${BASE_URL}${item.product.images?.[0]}`}
                 className="w-16 h-16 rounded object-cover"
               />
 

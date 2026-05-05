@@ -78,7 +78,7 @@ const VerifyOtp = () => {
             minLength={6}
             />
 
-          <button className="bg-buttons text-foreground-secondary text-xs py-3 rounded-lg">
+          <button className="bg-buttons hover:cursor-pointer text-foreground-secondary text-xs py-3 rounded-lg">
             Verify & Reset
           </button>
         </form>

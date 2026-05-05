@@ -23,14 +23,14 @@ const MobileLogin = ({ closeSidebar }) => {
       {user ? (
         <button
           onClick={handleLogout}
-          className="w-full bg-buttons hover-bg-buttons py-3 border-t rounded-t-lg font-semibold shadow-sm hover:cursor-pointer transition"
+          className="w-full bg-buttons hover-bg-buttons text-xs py-3 border-t rounded-t-lg font-semibold shadow-sm hover:cursor-pointer transition"
         >
           Logout
         </button>
       ) : (
         <button
           onClick={handleLogin}
-          className="w-full bg-buttons py-3 border-t rounded-t-lg font-semibold shadow-sm hover:cursor-pointer transition"
+          className="w-full bg-buttons text-xs py-3 border-t rounded-t-lg font-semibold shadow-sm hover:cursor-pointer transition"
         >
           Sign In
         </button>

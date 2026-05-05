@@ -126,7 +126,7 @@ return (
         <button
           type="submit"
           disabled={loading}
-          className="bg-buttons hover:opacity-90 transition text-xs text-buttons font-semibold py-3 rounded-xl shadow-lg"
+          className="bg-buttons hover:cursor-pointer hover:opacity-90 transition text-xs text-buttons font-semibold py-3 rounded-xl shadow-lg"
         >
           {loading ? "Creating Account..." : "Create Account"}
         </button>

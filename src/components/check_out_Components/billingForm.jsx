@@ -112,7 +112,7 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
         {/* BUTTON */}
         <button
           type="submit"
-          className="w-full bg-buttons hover-bg-buttons text-foreground-secondary py-3.5 rounded-2xl font-semibold shadow-md transition"
+          className="w-full bg-buttons hover-bg-buttons text-xs py-3.5 rounded-2xl font-semibold shadow-md transition"
         >
           Place Order
         </button>
