@@ -12,8 +12,11 @@ const MainLayout = () => {
       <Menu />
       <ConditionalBanner />
 
-        <Outlet className="min-h-screen"/>
-
+      {/* MAIN CONTENT */}
+      <div className="flex-1 min-h-screen">
+        <Outlet />
+      </div>
+      
       <Footer />
     </div>
   );
