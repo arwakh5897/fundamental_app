@@ -25,7 +25,7 @@ const MakeUpTitle = () => {
           <Products products={specifiedProducts}/>
          <div className="flex flex-col justify-center items-center py-4">
           <button
-            className=" flex bg-buttons hover-bg-buttons justify-center items-center w-24 py-2 px-4 md:px-6 rounded-sm text-sm font-medium lg:text-lg hover:opacity-90 hover:cursor-pointer transition"
+            className=" flex bg-buttons hover-bg-buttons justify-center items-center py-2 px-4 md:px-6 rounded-sm text-xs font-medium hover:opacity-90 hover:cursor-pointer transition"
             onClick={()=>navigate("/pages/shop_all")}
             >
 

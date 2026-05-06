@@ -19,7 +19,7 @@ const AccountSidebar = ({ active, onClose, isLoggedIn }) => {
       {/* Sidebar */}
   <nav
   data-lenis-prevent
-  className={`fixed top-0 right-0 h-full w-4/5 md:w-96 bg-menu text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 ${
+  className={`fixed top-0 right-0 h-full w-4/5 md:w-96 bg-sidebar text-foreground-secondary z-50 flex flex-col transition-transform duration-1000 ${
     active ? "translate-x-0" : "translate-x-full"
   }`}
 >

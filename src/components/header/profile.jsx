@@ -3,19 +3,19 @@ import { useNavigate } from "react-router-dom";
 import AddToCartSidebar from "../add_to_cart_sidebar/add_to_cart_sidebar";
 import AccountBottomSheet from "../user_profile_components/accountSideBar";
 import AccountSidebar from "../user_profile_components/accountSideBar";
+import { User } from "lucide-react";
 
-const SignIn=({darkLight ,className})=>{
+const Profile=()=>{
     const [active , setActive ] = useState(false);
     const navigate = useNavigate();
     
     return(
         <>
-            <div className={`flex ${className}`}
+        <div className="flex items-center gap-1 cursor-pointer"
             onClick={()=>setActive(true)}
             >
-                    <img 
-                    src={darkLight ? "/assets/icons/light-user.png" : "/assets/icons/user.png"} 
-                    alt="Cart Icon" className="w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer"/>
+                <User size={18} />
+                <span className="text-sm">Account</span>
 
             </div>
             <AccountSidebar 
@@ -25,4 +25,4 @@ const SignIn=({darkLight ,className})=>{
      </>
     )
 }
-export default SignIn;
+export default Profile;

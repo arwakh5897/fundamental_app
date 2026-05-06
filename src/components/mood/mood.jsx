@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export default function Mood({darkLight , className}) {
 
   return (
-      <img
-        src={darkLight ? "/assets/icons/sun.png" : "/assets/icons/moon.png"}
-        alt="Toggle Theme"
-        className={`w-5 h-5 ${className}`}
-      />
+    darkLight ? <Sun size={18} className={className}/> : <Moon size={18} className={className}/>
   );
 }

@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import SerachTopUp from "./search_topup";
+import { SearchIcon } from "lucide-react";
 
-const SearchIcon =({darkLight , className})=>{
+const SearchBar =({darkLight , className})=>{
     const [open , setOpen] = useState(false);
     const handleClick = ()=> setOpen(prev => !prev);
     return(
         <div className={`relative hidden lg:flex ${className}`}>
-            <img 
-            className="w-6 h-6 hover:cursor-pointer"
-             src={darkLight ? "/assets/icons/light-search.png" : "/assets/icons/search.png"} 
-             alt="" 
-             onClick={handleClick}
-             />
+            <SearchIcon size={18} className="hover:cursor-pointer" onClick={handleClick}/>
              <div 
         className={`
-          absolute right-0 mt-12
+          absolute right-0 mt-10
           transform transition-all duration-300 ease-in-out
           ${open 
             ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" 
@@ -25,4 +21,4 @@ const SearchIcon =({darkLight , className})=>{
         </div>
     )
 }
-export default SearchIcon;
+export default SearchBar;

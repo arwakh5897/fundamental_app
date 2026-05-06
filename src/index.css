@@ -41,35 +41,44 @@ body {
   background-color: #ffffff;
 }
 
-.bg-background-header {
+.bg-header {
   background-color: rgb(245 245 245 / 1);
 }
 
-.bg-menu {
-  background-color: rgb(190, 168, 155);
+.bg-hamburger {
+  background-color: rgba(25, 23, 42, 0.753);
 }
+
+.bg-menu {
+  background :  rgb(190, 168, 155);
+}
+
 .bg-menu-gradiant {
     background: linear-gradient(135deg,rgb(193, 172, 160) 0%, rgb(140, 110, 100) 100%
   );
 }
 
-.bg-sidebar {
+.bg-dropdown {
   background: linear-gradient(
-    180deg,
-    rgba(190, 168, 155, 0.55),
-    rgba(170, 145, 135, 0.35),
-    rgba(140, 110, 100, 0.25),
-    rgba(120, 95, 85, 0.20)
+    135deg,
+    rgb(193, 172, 160) 0%,
+    rgb(140, 110, 100) 100%
   );
+  transition: all 0.3s ease;
+}
+.hover-bg-dropdown:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(170, 145, 135) 0%,
+    rgb(120, 95, 85) 100%
+  );
+  transform: translateY(-1px);
+  cursor: pointer;
 
-  backdrop-filter: blur(45px);
-  -webkit-backdrop-filter: blur(45px);
+}
 
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-
-  box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 10px 40px rgba(0, 0, 0, 0.25);
+.bg-sidebar {
+  background: rgb(190, 168, 155);
 }
 
 .bg-footer {
@@ -217,16 +226,21 @@ body {
    DARK MODE
 ========================= */
 
+
 .dark .bg-background {
   background-color: black;
 }
 
-.dark .bg-background-header {
+.dark .bg-header {
   background-color: rgba(15, 23, 42, 0.623);
 }
 
 .dark .bg-card {
   background-color: rgba(84, 86, 92, 0.623);
+}
+
+.dark .bg-hamburger {
+  background-color: white;
 }
 
 .dark .text-foreground {

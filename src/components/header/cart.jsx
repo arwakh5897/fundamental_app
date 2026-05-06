@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import AddToCartSidebar from "../add_to_cart_sidebar/add_to_cart_sidebar";
-import { useCartContext } from "../../context/cartContext"; // ✅ cart context
+import { useCartContext } from "../../context/cartContext"; 
+import { ShoppingCart } from "lucide-react";
 
-const Cart = ({ darkLight , className }) => {
+const Cart = ({  className }) => {
   const [active, setActive] = useState(false);
   const { cart, handleRemoveItem} = useCartContext(); // ✅ get cart
  
@@ -13,13 +14,14 @@ const Cart = ({ darkLight , className }) => {
       <div className="text-text dark:text-text-light hover:cursor-pointer"
         onClick={()=>setActive(true)}
         >
-        <img
+        {/* <img
           src={darkLight ? "/assets/icons/light-cart.png" : "/assets/icons/cart.png"}
           alt="Cart Icon"
           className="w-5 h-5 md:w-6 md:h-6"
-        />
+        /> */}
+        <ShoppingCart size={18}/>
         {totalItems > 0 && (
-         <span className="absolute -top-2 -right-2 bg-red-600 text-foreground-secondary text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+          <span className="absolute -top-2 -right-2 bg-buttons text-xs px-1.5 rounded-full">
             {totalItems}
           </span>
         )}

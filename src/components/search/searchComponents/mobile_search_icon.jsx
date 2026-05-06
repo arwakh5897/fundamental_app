@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import SerachTopUp from "./search_topup";
+import { SearchIcon } from "lucide-react";
 
 const MobileSearchIcon =()=>{
     const [open , setOpen] = useState(false);
     const handleClick = ()=> setOpen(prev => !prev);
     return(
         <div className="relative" >
-            <img 
-            className="w-5 h-5 hover:cursor-pointer"
-             src="/assets/icons/search.png"
-             alt="" 
+            <SearchIcon 
+             size={18}
+             className="hover:cursor-pointer"
              onClick={handleClick}
              />
              <div 

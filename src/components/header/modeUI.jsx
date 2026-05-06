@@ -1,7 +1,7 @@
 import React from "react";
 import useModeHook from "../../hook/modeHook";
 import Mood from "../mood/mood";
-import SearchIcon from "../search/searchComponents/search_icon";
+import SearchBar from "../search/searchComponents/search_icon";
 import SignIn from "./profile";
 import Cart from "./cart";
 
@@ -15,7 +15,7 @@ const ModeUI =()=>{
             >
                     <Mood darkLight={isDark} />          
             </button>
-                    <SearchIcon darkLight={isDark} />
+                    <SearchBar darkLight={isDark} />
                     <SignIn darkLight={isDark} />
                     <Cart darkLight={isDark} />
         </div>

@@ -8,7 +8,7 @@ const MenuItems = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="font-semibold lg:font-bold">
+    <div className="text-xs font-semibold">
       {/* Mobile Hamburger */}
       <div className="flex gap-3 items-center lg:hidden">
         <HamburgerButton onClick={() => setActive(true)} />
