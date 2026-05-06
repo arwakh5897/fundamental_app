@@ -15,7 +15,7 @@ const LeftArrow = ({ scrollRef }) => {
     const container = scrollRef.current;
 
     // 👉 Scroll by exact container width (stable on all screens)
-    const scrollAmount = container.clientWidth - 24;
+    const scrollAmount = container.clientWidth ;
 
     container.scrollBy({
       left: -scrollAmount,
