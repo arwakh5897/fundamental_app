@@ -15,7 +15,7 @@ const Profile=()=>{
             onClick={()=>setActive(true)}
             >
                 <User size={18} />
-                <span className="text-sm">Account</span>
+                <span className="text-sm hidden lg:flex">Account</span>
 
             </div>
             <AccountSidebar 
