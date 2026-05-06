@@ -20,8 +20,11 @@ const BundleLayout = () => {
   
     return (
         <div>
-            <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">BY BUNDLE</h1>
-            <ProductsLayout allItems={filteredItems} title={title} itemsPerPage={itemsPerPage} />
+            <ProductsLayout 
+            allItems={filteredItems} 
+            title={title} 
+            itemsPerPage={itemsPerPage} 
+            cat={"By Bundle"} />
         </div>
     )
 }

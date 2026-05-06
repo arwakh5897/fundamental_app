@@ -28,10 +28,11 @@ const ConcernLayout = () => {
 
 
     return (
-        <div>
-            <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">BY CONCER</h1>
-            <ProductsLayout allItems={filterItems} title={title} itemsPerPage={itemsPerPage} />
-        </div>
+            <ProductsLayout 
+            allItems={filterItems} 
+            title={title} 
+            itemsPerPage={itemsPerPage} 
+            cat={"By Concern"} />
     )
 }
 export default ConcernLayout;

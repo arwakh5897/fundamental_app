@@ -2,6 +2,7 @@ import React,{useEffect, useState} from "react";
 import ProductsLayout from "../../components/product_Layout/product_layout";
 import { fetchProducts } from "../../api/data";
 import { useParams } from "react-router-dom";
+import Breadcrumb from "../../components/common/breadcrumb";
 
 const TypeLayout = () => {
   const itemsPerPage = 8;
@@ -25,10 +26,11 @@ const TypeLayout = () => {
 
 
     return (
-        <div>
-            <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">BY TYPE</h1>
-            <ProductsLayout allItems={filterItems} title={title} itemsPerPage={itemsPerPage} />
-        </div>
+            <ProductsLayout 
+            allItems={filterItems} 
+            title={title} 
+            itemsPerPage={itemsPerPage} 
+            cat={"By Type"} />
     )
 }
 export default TypeLayout;
