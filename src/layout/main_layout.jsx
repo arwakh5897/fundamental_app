@@ -12,7 +12,7 @@ const MainLayout = () => {
       <Menu />
       <ConditionalBanner />
 
-        <Outlet className="flex-1"/>
+        <Outlet className="min-h-screen"/>
 
       <Footer />
     </div>
