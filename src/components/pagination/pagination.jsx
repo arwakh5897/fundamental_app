@@ -4,7 +4,7 @@ const Pagination = ({loadMore})=>{
      <div className="flex justify-center items-center py-8">
         <button 
             onClick={loadMore}
-            className=" flex bg-buttons hover-bg-buttons py-2 px-4 md:px-6 rounded-sm text-sm font-medium lg:text-lg hover:opacity-90 hover:cursor-pointer transition">
+            className=" flex bg-buttons hover-bg-buttons py-2 px-4 md:px-6 rounded-sm text-xs hover:cursor-pointer transition">
                 Load More
         </button>
      </div>

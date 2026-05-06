@@ -44,9 +44,11 @@ body {
 .bg-header {
   background-color: rgb(245 245 245 / 1);
 }
-
+.bg-tab {
+  background-color: rgb(245 245 245 / 1);
+}
 .bg-hamburger {
-  background-color: rgba(25, 23, 42, 0.753);
+  background-color: rgba(54, 51, 75, 0.753);
 }
 
 .bg-menu {
@@ -234,7 +236,9 @@ body {
 .dark .bg-header {
   background-color: rgba(15, 23, 42, 0.623);
 }
-
+.dark .bg-tab {
+  background-color: rgba(99, 107, 126, 0.623);
+}
 .dark .bg-card {
   background-color: rgba(84, 86, 92, 0.623);
 }

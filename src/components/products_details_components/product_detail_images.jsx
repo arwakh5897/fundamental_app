@@ -33,7 +33,7 @@ const ProductDetailImages = ({ thumbnail, subImages = [] }) => {
             key={index}
             ref={(e)=>(imgRef.current[index] = e)}
             onClick={() => handleClick(item, index)}
-            className={`w-16 h-16 lg:w-28 lg:h-28 bg-image rounded object-contain cursor-pointer transition 
+            className={`w-12 h-12 lg:w-16 lg:h-16 bg-image rounded object-contain cursor-pointer transition 
               ${activeImage === item ? "ring-2 ring-black scale-105" : ""}
               `}
             src={item}

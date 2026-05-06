@@ -11,7 +11,7 @@ const RamadanTitle = () => {
      console.log("Latest Items:", latestItems);
   return (
     <div id="ramadan">
-      <div className="bg-menu lg:text-4xl text-center py-2 lg:py-4">
+      <div className="bg-menu text-sm lg:text-lg text-center py-2 lg:py-4">
         NEW
         <span className="font-semibold mx-2">ARRIVALS</span>
       </div>

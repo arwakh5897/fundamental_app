@@ -3,7 +3,7 @@ import { formatCurrency } from "../../../utils/formatCurrency";
 
 const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
   return (
-    <div className="flex gap-3 p-2 space-y-2 rounded-2xl shadow-md">
+    <div className="flex gap-3 text-xs p-2 space-y-2 rounded-2xl shadow-md">
       
       {/* Image */}
       <div className="w-16 h-16 flex-shrink-0">
@@ -15,16 +15,16 @@ const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1">
-        <h3 className="text-sm font-medium line-clamp-1">
+      <div className="flex flex-col flex-1 gap-0.5">
+        <h3 className="text-sm font-semibold line-clamp-1">
           {title || "Product"}
         </h3>
 
-        <p className="text-xs">
+        <p>
           QTY: {qty || "1"}
         </p>
 
-        <p className="text-sm font-semibold ">
+        <p className="font-medium">
           Rs {formatCurrency(price * qty)}
         </p>
       </div>

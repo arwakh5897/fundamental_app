@@ -15,7 +15,7 @@ const ProductDetailHeadings = ({products}) => {
       <p className="h-[1px] w-full bg-buttons"></p>
 
       {/* Tabs */}
-      <div className="flex justify-center items-center gap-8 py-3 lg:py-2">
+      <div className="flex justify-center bg-tab items-center gap-8 py-3 lg:py-2">
         {tabs.map((tab) => (
           <div
             key={tab.key}
@@ -23,7 +23,7 @@ const ProductDetailHeadings = ({products}) => {
             className="flex flex-col items-center cursor-pointer group"
           >
             <h1
-              className={`text-sm lg:text-2xl font-semibold transition-all duration-200
+              className={`text-sm lg:text-lg font-semibold transition-all duration-200
               ${activeTab === tab.key ? "text-heading" : "text-foreground"}`}
             >
               {tab.label}

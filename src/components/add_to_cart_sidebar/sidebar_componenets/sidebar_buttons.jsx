@@ -11,20 +11,20 @@ const SidebarButtons = ({ onClick }) => {
 
   return (
     <div className="mt-auto p-4 border-t shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-      <div className="flex gap-3">
+      <div className="flex gap-3 text-xs">
         
         {/* View Cart */}
         <button
           onClick={() => handleNavigate("/pages/shopping_details")}
-          className="flex-1 py-3 rounded-xl bg-buttons hover-bg-buttons font-medium 
-          hover:cursor-pointer transition-all duration-200 shadow-md"        >
+          className="flex-1 py-3 rounded-xl bg-buttons hover-bg-buttons 
+          hover:cursor-pointer transition-all duration-200"        >
           View Cart
         </button>
 
         {/* Checkout */}
         <button
           onClick={() => handleNavigate("/pages/checkout")}
-          className="flex-1 py-3 rounded-xl bg-buttons hover-bg-buttons font-semibold 
+          className="flex-1 py-3 rounded-xl bg-buttons hover-bg-buttons 
           hover:cursor-pointer transition-all duration-200 shadow-md"
         >
           Checkout
