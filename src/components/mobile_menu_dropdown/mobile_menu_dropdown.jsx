@@ -37,8 +37,7 @@ const MobileMenuDropdown = ({ onClose, showMenu, setShowMenu, data = [] }) => {
               px-4 py-3
               rounded-xl
               bg-halfWhite
-              hover-bg-box
-              text-sm
+              hover-bg-box              
               transition-all duration-200
               active:scale-[0.98]
               hover:scale-105
