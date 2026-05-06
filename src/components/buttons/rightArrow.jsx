@@ -6,41 +6,50 @@ const RightArrow = ({ scrollRef }) => {
 
   const handleScroll = () => {
     if (!scrollRef?.current) return;
-    const { scrollLeft, scrollWidth, offsetWidth } = scrollRef.current;
-    // Show arrow only if there's more content to the right
-    setHidden(scrollLeft + offsetWidth >= scrollWidth - 1);
+
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+
+    // Hide when fully scrolled right
+    setHidden(scrollLeft + clientWidth >= scrollWidth - 5);
+  };
+
+  const scrollRight = () => {
+    if (!scrollRef?.current) return;
+
+    const container = scrollRef.current;
+
+    // 👉 stable scroll (same as LeftArrow fix)
+    const scrollAmount = container.clientWidth - 24;
+
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
     if (!scrollRef?.current) return;
-    const refCurrent = scrollRef.current;
 
-    // Wait for DOM to render
-    const timer = setTimeout(handleScroll, 50);
+    const container = scrollRef.current;
 
-    refCurrent.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll); // recalc on resize
+    handleScroll();
+
+    container.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
 
     return () => {
-      refCurrent.removeEventListener("scroll", handleScroll);
+      container.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
-      clearTimeout(timer);
     };
   }, [scrollRef]);
-
-  const RightRef = () => {
-    if (!scrollRef?.current) return;
-    const maxScroll = scrollRef.current.offsetWidth * 0.85;
-    scrollRef.current.scrollBy({ left: maxScroll, behavior: "smooth" });
-  };
 
   if (hidden) return null;
 
   return (
-    <div className="flex bg-transparent right-1 absolute z-10">
+    <div className="absolute right-1 z-10 flex">
       <button
-        onClick={RightRef}
-        className="bg-buttons hover-bg-buttons lg:p-2 p-1 rounded-full hover:opacity-80"
+        onClick={scrollRight}
+        className="bg-buttons hover-bg-buttons lg:p-2 p-1 rounded-full hover:opacity-80 transition"
       >
         <ChevronRightIcon className="lg:w-5 lg:h-5 w-4 h-4" />
       </button>

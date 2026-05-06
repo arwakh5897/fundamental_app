@@ -7,15 +7,13 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <div className="text-foreground bg-background">
+    <div className="text-foreground bg-background min-h-screen">
       <Ad />
       <Menu />
       <ConditionalBanner />
 
       {/* MAIN CONTENT */}
-      <div className="flex-1">
         <Outlet />
-      </div>
 
       <Footer />
     </div>

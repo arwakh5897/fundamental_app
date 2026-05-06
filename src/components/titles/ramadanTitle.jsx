@@ -1,4 +1,4 @@
-import React, {useEffect , useState } from "react";
+import React, {useEffect , useMemo, useState } from "react";
 import { fetchProducts } from "../../api/data";
 import ScrollingProducts from "../products/scrolling_Products";
 
@@ -7,9 +7,11 @@ const RamadanTitle = () => {
      useEffect(()=>{
       fetchProducts().then(setProducts)
      },[]);
-     const latestItems = [...allItems].sort((a,b) => b.id - a.id).slice(0, 16);
-     console.log("Latest Items:", latestItems);
-  return (
+
+     const latestItems = useMemo(()=>{
+      return [...allItems].sort((a,b) => b.id - a.id).slice(0, 16);
+     }, [allItems]);
+     return (
     <div id="ramadan">
       <div className="bg-menu text-sm lg:text-lg text-center py-2 lg:py-4">
         NEW

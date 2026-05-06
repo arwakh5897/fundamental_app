@@ -5,7 +5,7 @@ const CardPrice = ({ price, discountedPrice }) => {
   const hasDiscount = discountedPrice && discountedPrice < price;
     return (
         <div className="flex gap-1 md:gap-2 text-xs justify-center items-center">
-          <div className="font-bold lg:text-lg">
+          <div className="font-semibold lg:text-sm">
             Rs {formatCurrency(hasDiscount ? discountedPrice : price || 0)}
           </div>
 
