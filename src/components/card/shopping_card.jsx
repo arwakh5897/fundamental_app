@@ -16,7 +16,7 @@ const ShoppingCard = ({ image, title, qty, price ,onRemove}) => {
 
       {/* Content */}
       <div className="flex flex-col flex-1 gap-0.5">
-        <h3 className="text-sm font-semibold line-clamp-1">
+        <h3 className="font-semibold line-clamp-1">
           {title || "Product"}
         </h3>
 
