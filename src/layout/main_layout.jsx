@@ -13,7 +13,9 @@ const MainLayout = () => {
       <ConditionalBanner />
 
       {/* MAIN CONTENT */}
+       <div className="flex-1 min-h-screen">
         <Outlet />
+       </div>
 
       <Footer />
     </div>
