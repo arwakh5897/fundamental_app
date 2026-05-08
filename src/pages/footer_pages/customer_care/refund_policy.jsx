@@ -5,8 +5,7 @@ const RefundPolicy = () => {
     <div className="bg-background text-foreground">
 
       {/* HERO */}
-        <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">Refund Policy</h1>
-
+       
 
       {/* CONTENT */}
       <div className="max-w-4xl mx-auto px-4 text-xs lg:text-sm lg:px-10 py-10">
