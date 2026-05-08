@@ -1,7 +1,7 @@
 import React from "react";
 import PaymentMethod from "./paymentMethod";
 
-const BillingForm = ({ formData, handleChange, handleSubmit }) => {
+const BillingForm = ({ formData, handleChange, handleSubmit , handleJazzCash }) => {
   const fields = [
     { name: "email", label: "Email Address", type: "email" },
     { name: "phone", label: "Phone Number", type: "text" },
@@ -115,6 +115,9 @@ const BillingForm = ({ formData, handleChange, handleSubmit }) => {
           className="w-full bg-buttons hover-bg-buttons text-xs py-3.5 rounded-2xl font-semibold shadow-md transition"
         >
           Place Order
+        </button>
+        <button onClick={handleJazzCash} className="w-full bg-buttons hover:cursor-pointer hover:bg-jazzcash-hover text-xs py-3.5 rounded-2xl font-semibold shadow-md transition">
+          Pay with JazzCash
         </button>
 
       </form>

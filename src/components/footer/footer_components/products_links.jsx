@@ -4,8 +4,8 @@ const ProductsLinks = () => {
 
   const links = [
     { name: "All Products", key: "all", href: "/pages/shop_all" },
-    { name: "New Arrivals", key: "new", href: "/pages/shop_all" },
-    { name: "Best Sellers", key: "best", href: "/pages/shop_all" },
+    { name: "New Arrivals", key: "new", href: "/pages/new_products" },
+    { name: "Trending Stuff", key: "best", href: "/pages/trending_products" },
   ];
 
   return (

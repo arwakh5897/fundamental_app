@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import OrderPopup from "../../components/check_out_Components/order_popup";
 import { useAuth } from "../../context/authContext";
 import useToast from "../../../utils/useToast";
+import axios from "axios";
 
 
 const CheckOut = () => {
@@ -77,9 +78,38 @@ const handleSubmit = async (e) => {
       error("Order failed");
     }
   } catch (err) {
-    console.error(err);
     error("Something went wrong");
   }
+};
+const handleJazzCash = async () => {
+    const order = await placeOrder({
+    ...formData,
+    total_price: finalTotal,
+    payment_method: "JazzCash",
+    items: cart,
+  });
+  
+  const res = await axios.post(
+    "http://127.0.0.1:8000/api/jazzcash/payment",
+    {
+      amount: finalTotal,
+    }
+  );
+
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = res.data.action_url;
+
+  Object.keys(res.data.data).forEach((key) => {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = key;
+    input.value = res.data.data[key];
+    form.appendChild(input);
+  });
+
+  document.body.appendChild(form);
+  form.submit();
 };
 
 const { user } = useAuth();
@@ -109,6 +139,7 @@ useEffect(()=>{
           formData={formData}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          handleJazzCash={handleJazzCash}
         />
 
         {/* Summary */}

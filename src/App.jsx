@@ -7,6 +7,8 @@ import ProtectedRoute from "./routes/protectedRoute";
 
 import Dashboard from "./pages/dashboard/dashboard";
 import ShopAll from "./pages/dashboard/shop_all";
+import NewProducts from "./pages/new&trending_products/new_products";
+import TrendingProducts from "./pages/new&trending_products/trending_products";
 import Accessories from "./pages/dashboard/accessories";
 import MakeUp from "./pages/dashboard/make_up";
 import ProductDetails from "./pages/product_details/product_details";
@@ -42,6 +44,7 @@ import ForgotPassword from "./pages/auth/forgot_password";
 import VerifyOtp from "./pages/auth/opt";
 
 
+
 const App = () => {
   useLenis();
 
@@ -60,6 +63,8 @@ const App = () => {
 
                                             {/*  Header Routes  */}
                       <Route path="/pages/shop_all" element={<ShopAll />} />
+                      <Route path="/pages/new_products" element={<NewProducts/>} />
+                      <Route path="/pages/trending_products" element={<TrendingProducts/>} />
                       <Route path="/pages/accessories" element={<Accessories />} />
                       <Route path="/pages/make_up" element={<MakeUp/>}/>
 

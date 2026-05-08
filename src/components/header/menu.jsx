@@ -38,7 +38,7 @@ const Menu = () => {
 
   return (
     <div
-      className={`sticky top-0 left-0 z-50 w-full flex bg-menu shadow-2xl gap-4 p-3 lg:px-0 lg:py-0 
+      className={`sticky top-0 left-0 z-50 w-full flex bg-menu shadow-sm gap-4 p-3 lg:px-0 lg:py-0 
         lg:justify-around justify-between items-center
         transition-all duration-500 ease-in-out
       `}

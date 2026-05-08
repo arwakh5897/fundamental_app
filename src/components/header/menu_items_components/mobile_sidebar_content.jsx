@@ -5,8 +5,10 @@ import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import MobileMenuDropdown from "../../mobile_menu_dropdown/mobile_menu_dropdown";
 import { menuData } from "../../menu_dropdown/menu_data";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const MobileSidebarContent = ({ onClose }) => {
+  const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState(null);
 
   const menuMap = {
@@ -14,7 +16,14 @@ const MobileSidebarContent = ({ onClose }) => {
     concern: menuData.concerns,
     type: menuData.types,
   };
-
+  const handleNewArrivalsClick = () => {
+    navigate("/pages/new_products");
+    onClose();
+  };
+  const handleTrendingClick = () => {
+    navigate("/pages/trending_products");
+    onClose();
+  };
   const item =
     "flex justify-between items-center px-4 py-3 rounded-xl transition-all duration-200 active:scale-95";
 
@@ -42,10 +51,14 @@ const MobileSidebarContent = ({ onClose }) => {
 
       {/* QUICK ACTION (fixed) */}
       <div className="flex gap-2 mb-4 px-5">
-        <div className="flex-1 bg-halfWhite rounded-xl px-3 py-2 text-xs text-center">
+        <div 
+        onClick={handleNewArrivalsClick}
+        className="flex-1 bg-halfWhite hover:cursor-pointer rounded-xl px-3 py-2 text-xs text-center">
           New Drops
         </div>
-        <div className="flex-1 bg-halfWhite rounded-xl px-3 py-2 text-xs text-center">
+        <div 
+        onClick={handleTrendingClick}
+        className="flex-1 bg-halfWhite hover:cursor-pointer rounded-xl px-3 py-2 text-xs text-center">
           Trending
         </div>
       </div>
