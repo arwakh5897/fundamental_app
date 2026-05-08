@@ -69,7 +69,7 @@ const ConditionalBanner = () => {
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        navigation={true}
+        // navigation={true}
         className="rounded-3xl overflow-hidden shadow-sm"
       >
         {banners.map((banner) => (
