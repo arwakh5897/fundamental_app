@@ -13,7 +13,7 @@ const MainLayout = () => {
       <ConditionalBanner />
 
       {/* MAIN CONTENT */}
-       <div className="flex-1 px-4">
+       <div className="flex-1">
         <Outlet />
        </div>
 
