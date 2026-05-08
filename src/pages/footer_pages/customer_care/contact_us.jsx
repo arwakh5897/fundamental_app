@@ -20,7 +20,7 @@ const ContactUs = () => {
     <div className="bg-background  text-foreground">
 
       {/* HERO */}
-        <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">Contact Us</h1>
+        
 
 
       {/* CONTENT */}
