@@ -5,7 +5,7 @@ const OurPhilosophy = () => {
     <div className="bg-background text-foreground">
 
       {/* HERO */}
-          <h1 className="bg-footer lg:text-2xl font-bold text-center py-2 lg:py-4">Our Philosophy</h1>
+          <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">Our Philosophy</h1>
 
 
       {/* CONTENT */}
