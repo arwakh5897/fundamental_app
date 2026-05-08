@@ -21,7 +21,7 @@ const ContactUs = () => {
 
       {/* HERO */}
         
-
+<h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">Contact Us</h1>
 
       {/* CONTENT */}
       <div className="max-w-6xl mx-auto px-4 text-xs lg:text-sm lg:px-10 py-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
