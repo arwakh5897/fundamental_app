@@ -10,7 +10,7 @@ const Dashboard =()=>{
     return(
     <div>
         <div className="pt-0"><RamadanTitle/></div>
-        <div className="pt-4"><Ance /></div>
+        <div className="pt-0"><Ance /></div>
         <MakeUpTitle/>
         <Concern/>
         <Brands/>

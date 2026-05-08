@@ -12,11 +12,16 @@ const Ance = () => {
   .slice(0, 12);
       return (
         <div>
-      <div className="bg-menu text-sm lg:text-lg text-center py-2 lg:py-4">
+
+      <div className="bg-menu text-sm lg:text-lg text-center py-2 lg:py-4 mt-2">
             FOOTWARE
             <span className="font-semibold mx-2">ESSENTIALS</span>
         </div>
-               <img className="w-full"src="/assets/images/banner2.png"/>
+                                 <img className="w-full"src="/assets/images/banner2.png"/>
+
+      {/* <span className="text-heading font-semibold text-2xl">
+        Footware Essestials
+      </span> */}
           {  <Products products={specificProducts} />}
     </div>
     )

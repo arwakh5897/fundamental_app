@@ -17,11 +17,13 @@ const MakeUpTitle = () => {
 
     return (
         <div >
+
           <div className="bg-menu text-sm lg:text-lg text-center py-2 lg:py-4">
                 KICK  
                 <span className="font-semibold mx-2">MUST-HAVES</span>
           </div>
-          <img className="w-full" src="/assets/images/banner3.png"/>
+                              <img className="w-full" src="/assets/images/banner3.png"/>
+
           <Products products={specifiedProducts}/>
          <div className="flex flex-col justify-center items-center py-4">
           <button
