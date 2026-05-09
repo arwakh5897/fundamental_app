@@ -17,7 +17,7 @@ const RamadanTitle = () => {
         NEW
         <span className="font-semibold mx-2">ARRIVALS</span>
       </div>
-            <img className="w-full"src="/assets/images/banner1.png"/>
+            {/* <img className="w-full"src="/assets/images/banner1.png"/> */}
 
       {/* <span className="text-heading px-4 font-semibold text-sm lg:text-sm lg:text-2xl">
         New Arrivals
