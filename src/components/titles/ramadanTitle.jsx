@@ -17,7 +17,7 @@ const RamadanTitle = () => {
         NEW
         <span className="font-semibold mx-2">ARRIVALS</span>
       </div> */}
-      <span className="text-heading font-semibold text-sm lg:text-2xl">
+      <span className="text-heading font-semibold text-sm lg:text-sm lg:text-2xl">
         New Arrivals
       </span>
       <ScrollingProducts allItems={latestItems}/>
