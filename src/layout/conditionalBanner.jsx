@@ -82,7 +82,7 @@ const ConditionalBanner = () => {
       >
         {banners.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <div className="relative h-[220px] sm:h-[320px] md:h-[450px] lg:h-[620px] overflow-hidden group">
+            <div className="relative h-[420px] lg:h-[620px] overflow-hidden group">
               
               {/* Image */}
               <img
@@ -139,18 +139,6 @@ const ConditionalBanner = () => {
                       hover:scale-105 transition-all duration-300"
                     >
                       {banner.button}
-                    </button>
-
-                    <button
-                      onClick={() => navigate("/pages/shop_all")}
-                      className="px-5 sm:px-7 py-2.5 sm:py-3
-                      rounded-full text-xs sm:text-sm md:text-base
-                      border border-white/30
-                      bg-white/10 backdrop-blur-md
-                      hover:bg-white hover:text-black
-                      transition-all duration-300"
-                    >
-                      View Collection
                     </button>
                   </div>
 
