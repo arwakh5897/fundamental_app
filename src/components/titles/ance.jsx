@@ -25,7 +25,7 @@ const Ance = () => {
         
         {/* Image */}
         <img
-          className="w-full h-[320px] lg:h-[420px]  object-cover group-hover:scale-105 transition-transform duration-[4000ms]"
+          className="w-full h-[320px] lg:h-[520px]  object-cover group-hover:scale-105 transition-transform duration-[4000ms]"
           src=  "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=2070"
           alt="Footwear Banner"
         />
