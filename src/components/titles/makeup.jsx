@@ -76,7 +76,7 @@ const MakeUpTitle = () => {
               hover-bg-buttons
               hover:scale-105 transition-all duration-300"
             >
-              Explore Now
+              Buy Now
             </button>
           </div>
         </div>

@@ -139,7 +139,7 @@ const ConditionalBanner = () => {
                       hover-bg-buttons
                       hover:scale-105 transition-all duration-300"
                     >
-                      {banner.button}
+                      Explore Now
                     </button>
                   </div>
 

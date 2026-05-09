@@ -19,7 +19,8 @@ const RightArrow = ({ scrollRef }) => {
     const container = scrollRef.current;
 
     // 👉 stable scroll (same as LeftArrow fix)
-    const scrollAmount = container.clientWidth;
+    const gap = window.innerWidth >= 1024 ? 64 : 8;
+    const scrollAmount = container.clientWidth + gap;
 
     container.scrollBy({
       left: scrollAmount,

@@ -38,21 +38,6 @@ const AccountSidebar = ({ active, onClose, isLoggedIn }) => {
     </div>
   </div>
 
-  {/* User Info */}
-  {/* <div className="flex flex-col items-center py-6">
-    <div className="relative">
-      <img
-        src="/assets/images/user.jpg"
-        alt="user"
-        className="w-16 h-16 rounded-full object-cover border-2 border-gray-300"
-      />
-      <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></span>
-    </div>
-
-    <p className="mt-2 font-semibold text-base">User Name</p>
-    <p className="text-xs text-gray-400">Welcome back 👋</p>
-  </div> */}
-
   {/* Scrollable Content */}
   <div className="flex-1 overflow-y-auto px-4 py-5 space-y-4">
 
