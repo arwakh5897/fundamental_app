@@ -13,13 +13,15 @@ const RamadanTitle = () => {
      }, [allItems]);
      return (
     <div id="ramadan">
-      {/* <div className="bg-menu text-sm lg:text-lg text-center py-2 lg:py-4">
+      <div className="bg-menu text-sm lg:text-lg text-center py-2 lg:py-4">
         NEW
         <span className="font-semibold mx-2">ARRIVALS</span>
-      </div> */}
-      <span className="text-heading font-semibold text-sm lg:text-sm lg:text-2xl">
+      </div>
+            <img className="w-full"src="/assets/images/banner1.png"/>
+
+      {/* <span className="text-heading px-4 font-semibold text-sm lg:text-sm lg:text-2xl">
         New Arrivals
-      </span>
+      </span> */}
       <ScrollingProducts allItems={latestItems}/>
     </div>
   );
