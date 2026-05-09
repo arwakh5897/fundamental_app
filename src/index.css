@@ -382,11 +382,10 @@ body {
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
-  /* background: rgba(255, 255, 255, 0.15); */
-  width: 45px !important;
-  height: 45px !important;
+  background: rgb(190, 168, 155);
+  width: 35px !important;
+  height: 35px !important;
   border-radius: 50%;
-  /* backdrop-filter: blur(10px); */
   transition: all 0.3s ease;
 }
 

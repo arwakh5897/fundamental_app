@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,12 +10,14 @@ import Card from "../card/card";
 
 const ScrollingProducts = ({ allItems }) => {
   return (
-    <div className="w-full bg-black p-4">
+    <div className="w-full p-4">
 
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation , Pagination]}
         navigation
         centeredSlides={false}
+        centerInsufficientSlides={true}
+        slidesOffsetBefore={20}
         grabCursor={true}
         speed={600}
         breakpoints={{
@@ -46,7 +48,9 @@ const ScrollingProducts = ({ allItems }) => {
         }}
       >
         {allItems?.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide 
+          className="py-6"
+          key={item.id}>
             <Card
               id={item.id}
               title={item.title}
