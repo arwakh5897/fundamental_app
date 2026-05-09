@@ -22,7 +22,9 @@ const RamadanTitle = () => {
       {/* <span className="text-heading px-4 font-semibold text-sm lg:text-sm lg:text-2xl">
         New Arrivals
       </span> */}
-      <ScrollingProducts allItems={latestItems}/>
+      <div className="lg:py-8">
+         <ScrollingProducts allItems={latestItems}/>
+      </div>
     </div>
   );
 };

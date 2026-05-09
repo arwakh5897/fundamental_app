@@ -134,8 +134,9 @@ const ConditionalBanner = () => {
                       onClick={() => navigate("/pages/shop_all")}
                       className="px-5 sm:px-7 py-2.5 sm:py-3
                       rounded-full text-xs sm:text-sm md:text-base
-                      font-semibold text-white
-                      bg-gradient-to-r from-[rgb(193,172,160)] to-[rgb(140,110,100)]
+                      font-semibold 
+                      bg-buttons
+                      hover-bg-buttons
                       hover:scale-105 transition-all duration-300"
                     >
                       {banner.button}
