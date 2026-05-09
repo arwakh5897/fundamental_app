@@ -65,7 +65,7 @@ const ConditionalBanner = () => {
   ];
 
   return (
-    <div className="w-full px-2 sm:px-4 lg:px-6 py-3 lg:py-5">
+    <div className="w-full">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -78,7 +78,7 @@ const ConditionalBanner = () => {
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        className="rounded-2xl lg:rounded-[32px] overflow-hidden shadow-xl"
+        className="overflow-hidden shadow-xl"
       >
         {banners.map((banner) => (
           <SwiperSlide key={banner.id}>
