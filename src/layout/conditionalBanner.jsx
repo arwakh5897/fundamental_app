@@ -78,7 +78,7 @@ const ConditionalBanner = () => {
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        className="overflow-hidden shadow-xl"
+        className="overflow-hidden shadow-sm"
       >
         {banners.map((banner) => (
           <SwiperSlide key={banner.id}>
