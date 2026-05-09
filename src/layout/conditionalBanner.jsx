@@ -4,13 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
   Pagination,
-  Navigation,
   EffectFade,
 } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
 const ConditionalBanner = () => {
@@ -41,8 +39,8 @@ const ConditionalBanner = () => {
       tag: "LIMITED OFFER",
       title: "Step Into Modern Style",
       subtitle:
-        "Discover premium sneakers & fashion essentials crafted for comfort and everyday wear.",
-      button: "Shop Sneakers",
+        "Premium sneakers & fashion essentials designed for comfort.",
+      button: "Shop Now",
     },
     {
       id: 2,
@@ -51,8 +49,8 @@ const ConditionalBanner = () => {
       tag: "NEW ARRIVALS",
       title: "Upgrade Your Wardrobe",
       subtitle:
-        "Fresh streetwear collection with trending outfits for every season.",
-      button: "Explore Fashion",
+        "Fresh streetwear collection with trending outfits.",
+      button: "Explore",
     },
     {
       id: 3,
@@ -61,90 +59,106 @@ const ConditionalBanner = () => {
       tag: "EXCLUSIVE DEALS",
       title: "Premium Audio Collection",
       subtitle:
-        "Experience unbeatable sound quality with stylish wireless headphones.",
+        "Experience powerful sound with stylish headphones.",
       button: "Buy Now",
     },
   ];
 
   return (
-    <div className="w-full px-3 md:px-6 py-5">
+    <div className="w-full px-2 sm:px-4 lg:px-6 py-3 lg:py-5">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
+        modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
         fadeEffect={{ crossFade: true }}
         slidesPerView={1}
-        loop={true}
-        speed={1400}
+        loop
+        speed={1200}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        className="rounded-[30px] overflow-hidden shadow-2xl"
+        className="rounded-2xl lg:rounded-[32px] overflow-hidden shadow-xl"
       >
         {banners.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <div className="relative h-[320px] md:h-[650px] overflow-hidden group">
+            <div className="relative h-[220px] sm:h-[320px] md:h-[450px] lg:h-[620px] overflow-hidden group">
               
-              {/* Background Image */}
+              {/* Image */}
               <img
                 src={banner.image}
                 alt={banner.title}
-                className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[5000ms]"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[4000ms]"
               />
 
-              {/* Dark Overlay */}
+              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
-
-              {/* Glow Effect */}
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.15),transparent_40%)]" />
 
               {/* Content */}
               <div className="absolute inset-0 flex items-center">
-                <div className="px-6 md:px-20 max-w-3xl text-white">
+                <div className="px-4 sm:px-6 md:px-10 lg:px-20 max-w-3xl text-white">
                   
                   {/* Tag */}
                   <span
-                    className="inline-block px-4 py-2 rounded-full text-xs md:text-sm
-                    tracking-[4px] font-semibold uppercase
+                    className="inline-block px-3 py-1.5 rounded-full
+                    text-[10px] sm:text-xs md:text-sm
+                    tracking-[2px] sm:tracking-[4px]
+                    font-semibold uppercase
                     bg-white/10 backdrop-blur-md border border-white/20"
                   >
                     {banner.tag}
                   </span>
 
-                  {/* Main Heading */}
-                  <h1 className="mt-5 text-4xl md:text-7xl font-black leading-tight">
+                  {/* Heading */}
+                  <h1
+                    className="mt-3 sm:mt-5
+                    text-2xl sm:text-4xl md:text-5xl lg:text-7xl
+                    font-black leading-tight"
+                  >
                     {banner.title}
                   </h1>
 
                   {/* Subtitle */}
-                  <p className="mt-5 text-sm md:text-xl text-gray-200 leading-7 max-w-2xl">
+                  <p
+                    className="mt-3 sm:mt-5
+                    text-xs sm:text-sm md:text-lg lg:text-xl
+                    text-gray-200 leading-5 sm:leading-7
+                    max-w-xl"
+                  >
                     {banner.subtitle}
                   </p>
 
                   {/* Buttons */}
-                  <div className="flex flex-wrap gap-4 mt-8">
+                  <div className="flex flex-wrap gap-3 mt-5 sm:mt-7">
                     <button
                       onClick={() => navigate("/pages/shop_all")}
-                      className="px-8 py-3 rounded-full text-white font-semibold
+                      className="px-5 sm:px-7 py-2.5 sm:py-3
+                      rounded-full text-xs sm:text-sm md:text-base
+                      font-semibold text-white
                       bg-gradient-to-r from-[rgb(193,172,160)] to-[rgb(140,110,100)]
-                      hover:scale-105 transition-all duration-300 shadow-2xl"
+                      hover:scale-105 transition-all duration-300"
                     >
                       {banner.button}
                     </button>
 
                     <button
                       onClick={() => navigate("/pages/shop_all")}
-                      className="px-8 py-3 rounded-full border border-white/30
-                      bg-white/10 backdrop-blur-md text-white font-semibold
-                      hover:bg-white hover:text-black transition-all duration-300"
+                      className="px-5 sm:px-7 py-2.5 sm:py-3
+                      rounded-full text-xs sm:text-sm md:text-base
+                      border border-white/30
+                      bg-white/10 backdrop-blur-md
+                      hover:bg-white hover:text-black
+                      transition-all duration-300"
                     >
                       View Collection
                     </button>
                   </div>
 
                   {/* Features */}
-                  <div className="flex flex-wrap gap-6 mt-10 text-sm text-gray-300">
+                  <div
+                    className="hidden sm:flex flex-wrap gap-4 lg:gap-6
+                    mt-6 lg:mt-10 text-xs md:text-sm text-gray-300"
+                  >
                     <span>✔ Premium Quality</span>
                     <span>✔ Fast Delivery</span>
                     <span>✔ Secure Payment</span>
