@@ -32,7 +32,7 @@ const ScrollingProducts = ({ allItems }) => {
     <div className="w-full p-4">
 
       <Swiper
-        className="w-full gap-20 lg:gap-2"
+        className="w-full gap-20 lg:gap-0"
         modules={[Navigation , Pagination]}
         navigation
         centeredSlides={false}
