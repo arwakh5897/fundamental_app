@@ -38,7 +38,7 @@ const ScrollingProducts = ({ allItems }) => {
         centeredSlides={false}
         centerInsufficientSlides={true}
         slidesOffsetBefore={8}
-        spaceBetween={8}
+        spaceBetween={16}
         grabCursor={true}
         speed={600}
         breakpoints={{
