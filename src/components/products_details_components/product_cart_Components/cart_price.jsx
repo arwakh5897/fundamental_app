@@ -15,7 +15,7 @@ const CartPrice = ({ price, discountedPrice }) => {
             )}
 
             {/* Final price */}
-            <h2 className="text-gray-500 text-lg">
+            <h2 className="text-sm lg:text-lg">
                 Rs {formatCurrency(hasDiscount ? discountedPrice : price || 0)} PKR
             </h2>
 
