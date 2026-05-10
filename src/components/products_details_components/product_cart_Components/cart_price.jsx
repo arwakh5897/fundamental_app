@@ -9,13 +9,13 @@ const CartPrice = ({ price, discountedPrice }) => {
             
             {/* Original price (sirf tab show hoga jab discount ho) */}
             {hasDiscount && (
-                <h3 className="line-through  text-highlighted">
+                <h3 className="line-through ">
                     Rs {formatCurrency(price || 0)} PKR
                 </h3>
             )}
 
             {/* Final price */}
-            <h2 className="text-lg">
+            <h2 className="text-lg text-highlighted">
                 Rs {formatCurrency(hasDiscount ? discountedPrice : price || 0)} PKR
             </h2>
 
