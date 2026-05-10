@@ -32,7 +32,7 @@ const ScrollingProducts = ({ allItems }) => {
     <div className="w-full p-4">
 
       <Swiper
-        className="w-full gap-20 lg:gap-0"
+        className="w-full gap-24 lg:gap-0"
         modules={[Navigation , Pagination]}
         navigation
         centeredSlides={false}
@@ -70,7 +70,7 @@ const ScrollingProducts = ({ allItems }) => {
       >
         {allItems?.map((item) => (
           <SwiperSlide 
-          className="py-6"
+          className="py-6 gap-16"
           key={item.id}>
             <Card
               id={item.id}
