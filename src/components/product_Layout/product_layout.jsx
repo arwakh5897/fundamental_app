@@ -12,9 +12,9 @@ const ProductsLayout = ({allItems,title,itemsPerPage , cat}) => {
     const {currentPage, totalPages,visibleProducts, loadMore}= usePagination({allItems:sortedProducts,itemsPerPage});
 
     return (
-        <div className="p-4">
+        <div>
           <h1 className="bg-menu lg:text-2xl font-bold text-center py-2 lg:py-4">{cat}</h1>
-            <div className="flex justify-between items-center p-2 lg:p-8">
+            <div className="flex justify-between items-center p-4 lg:p-8">
                 <h2 className="text-sm lg:text-xl font-bold">{title}</h2>
                 <FilterUI sortType={sortType} setSortType={setSortType}/>
             </div>
