@@ -381,8 +381,8 @@ body {
 /* arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: white !important;
-  background: rgb(190, 168, 155);
+  color: rgb(190, 168, 155) !important;
+  /*background: rgb(190, 168, 155);*/
   width: 35px !important;
   height: 35px !important;
   border-radius: 50%;
