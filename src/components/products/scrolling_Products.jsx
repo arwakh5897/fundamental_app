@@ -49,10 +49,10 @@ const ScrollingProducts = ({ allItems }) => {
             slidesPerView: 2,
           },
           640: {
-            slidesPerView: 5,
+            slidesPerView: 4,
           },
           768: {
-            slidesPerView: 4,
+            slidesPerView: 5,
           },
           1024: {
             slidesPerView: 4,
