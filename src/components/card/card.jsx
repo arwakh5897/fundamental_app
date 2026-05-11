@@ -41,7 +41,7 @@ const Card = ({ id, image, title, description ,category,
       {/* ✅ Card */}
       <div
         onClick={handleClick}
-        className="bg-card w-36 lg:w-78 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
+        className="bg-card min-w-36 lg:min-w-78 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
       >
         {/* 👁 Eye Button */}
         {stock > 0 && (

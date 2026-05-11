@@ -32,43 +32,52 @@ const ScrollingProducts = ({ allItems }) => {
     <div className="w-full p-4">
 
       <Swiper
+      className="flex justify-center items-center"
         modules={[Navigation , Pagination]}
         navigation
         centeredSlides={false}
         centerInsufficientSlides={true}
-        slidesOffsetBefore={20}
+        // slidesOffsetBefore={24}
         grabCursor={true}
         speed={600}
         breakpoints={{
           0: {
             slidesPerView: 2,
+            spaceBetween: 16,
           },
           480: {
             slidesPerView: 2,
+            spaceBetween: 16,
           },
           640: {
             slidesPerView: 4,
+            spaceBetween: 16,
           },
           768: {
             slidesPerView: 4,
+            spaceBetween: 16,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
+            spaceBetween: 16,
           },
-          1280: {
+          1340: {
             slidesPerView: 4,
+            spaceBetween: 16,
           },
           1680: {
             slidesPerView: 5,
+            spaceBetween: 16,
           },
           2200: {
             slidesPerView: 6,
+            spaceBetween: 16,
           },
         }}
       >
         {allItems?.map((item) => (
           <SwiperSlide 
-          className="py-6"
+          className="py-6 w-full "
           key={item.id}>
             <Card
               id={item.id}
