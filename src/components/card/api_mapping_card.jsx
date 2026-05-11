@@ -6,6 +6,7 @@ const ApiMappingCard =({products})=>{
     <>
         {products.map((item,index) => (
               <Card
+                className={"w-36 lg:w-78"}
                 key={index}
                 id={item.id}
                 title={item.title}

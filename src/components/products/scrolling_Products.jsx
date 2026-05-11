@@ -78,6 +78,7 @@ const ScrollingProducts = ({ allItems }) => {
           className="py-6 w-full "
           key={item.id}>
             <Card
+              className={"min-w-36 lg:min-w-78"}
               id={item.id}
               title={item.title}
               description={item.description}

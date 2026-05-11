@@ -13,7 +13,7 @@ import EyeButton from "../buttons/eye_button";
 
 import ProductDetailsPopup from "../product_popUp/product_popUp";
 
-const Card = ({ id, image, title, description ,category,
+const Card = ({ className, id, image, title, description ,category,
    rating,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages , total_reviews , avarage_rating  , reviews,}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ const Card = ({ id, image, title, description ,category,
       {/* ✅ Card */}
       <div
         onClick={handleClick}
-        className="bg-card min-w-36 lg:min-w-78 shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group"
+        className={`bg-card shadow-sm overflow-hidden cursor-pointer flex flex-col rounded-xl relative group ${className}`}
       >
         {/* 👁 Eye Button */}
         {stock > 0 && (

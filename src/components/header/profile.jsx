@@ -10,7 +10,7 @@ const Profile=()=>{
     const navigate = useNavigate();
     
     return(
-        <>
+        <>s
         <div className="flex items-center gap-1 cursor-pointer"
             onClick={()=>setActive(true)}
             >
