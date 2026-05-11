@@ -1,11 +1,7 @@
 import React from "react";
 
 const SearchSuggestions =({query , setQuery , handleSearch , existingSearch})=>{
-  const suggestions = [
-    "Men",
-    "Women",
-    "Footware"
-  ];
+
   const handleClick =(item)=>{
     setQuery(item);
     handleSearch;

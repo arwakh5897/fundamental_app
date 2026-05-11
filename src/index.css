@@ -337,7 +337,7 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .marquee-track span {
@@ -346,7 +346,7 @@ body {
   font-weight: 500;
 }
 
-.marquee:hover {
+.marquee-track:hover {
   animation-play-state: paused;
 }
 

@@ -2,37 +2,74 @@ import React from "react";
 
 const Brands = () => {
   const brandsData = [
-    { img: "/assets/images/brand1.png" },
-    { img: "/assets/images/brand2.png" },
-    { img: "/assets/images/brand3.png" },
-    { img: "/assets/images/brand4.png" },
+
+    {
+      img: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
+    },
+    {
+      img: "https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
+    },
+    {
+      img: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    },
+
   ];
 
-  const loopData = [...brandsData, ...brandsData , ...brandsData , ...brandsData]; // must duplicate
+  const loopData = [...brandsData, ...brandsData,...brandsData,...brandsData,...brandsData,...brandsData,];
 
   return (
-    <section className="py-8 md:py-16 overflow-hidden">
-      <div className="text-center mb-10 px-4">
-        <h1 className="text-2xl md:text-4xl font-bold">
-          Our Brands
-        </h1>
-        <p className="mt-3 max-w-xl mx-auto">
-          We collaborate with top-tier brands to bring you the best skincare experience.
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
+      {/* background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#d9c5bb]/20 blur-3xl rounded-full" />
+
+      {/* heading */}
+      <div className="relative text-center mb-16 px-4">
+        <p className="uppercase tracking-[6px] text-xs text-gray-400 mb-5">
+          Global Partners
+        </p>
+
+        <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-black">
+          Brands We Trust
+        </h2>
+
+        <p className="mt-6 max-w-2xl mx-auto text-gray-500 leading-8 text-sm md:text-base">
+          Collaborating with iconic brands to deliver premium beauty and
+          skincare experiences.
         </p>
       </div>
 
-      {/* Moving Strip */}
-      <div className="relative marquee-wraper overflow-hidden">
-        <div className="marquee marquee-track flex w-max">
+      {/* marquee */}
+      <div className="relative marquee-wrapper">
+        {/* left fade */}
+        <div className="absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-white via-white/80 to-transparent" />
+
+        {/* right fade */}
+        <div className="absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-white via-white/80 to-transparent" />
+
+        <div className="marquee-track flex items-center gap-20 md:gap-28">
           {loopData.map((brand, index) => (
             <div
               key={index}
-              className="flex items-center justify-center min-w-[30px] md:min-w-[300px] mx-0 2xl:mx-16"
+              className="
+                shrink-0 py-2
+                flex items-center justify-center
+                group
+              "
             >
               <img
                 src={brand.img}
                 alt="brand"
-                className="h-20 md:h-42 object-contain opacity-70 hover:opacity-100 transition"
+                className="
+                  h-14 md:h-26
+                  w-auto
+                  object-contain
+                  grayscale
+                  opacity-40
+                  group-hover:opacity-100
+                  group-hover:grayscale-0
+                  group-hover:scale-110
+                  transition-all duration-700 ease-out
+                "
               />
             </div>
           ))}
