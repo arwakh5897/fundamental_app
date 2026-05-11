@@ -32,7 +32,7 @@ const ScrollingProducts = ({ allItems }) => {
     <div className="w-full p-4">
 
       <Swiper
-      className="flex justify-center items-center"
+
         modules={[Navigation , Pagination]}
         navigation
         centeredSlides={false}
@@ -55,7 +55,6 @@ const ScrollingProducts = ({ allItems }) => {
           },
           768: {
             slidesPerView: 4,
-            spaceBetween: 16,
           },
           1024: {
             slidesPerView: 3,
