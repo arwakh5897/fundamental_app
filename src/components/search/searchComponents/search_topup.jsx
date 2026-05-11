@@ -13,24 +13,23 @@ const SearchTopUp = ({ handleClick , className }) => {
   const ref = useRef();
   useClickOutside(ref,handleClick)
 
+  const existingSearch = JSON.parse(localStorage.getItem ("recentSearchs")) || [];
   const handleSearch = ()=>{
     if(!query.trim()) return;
     showLoader();
 
-    const existingSearch = JSON.parse(localStorage.getItem ("recentSearchs")) || [];
-    const updated = [query, ...existingSearch.filter(item => item !==query)].slice(0,5);
+    const updated = [query, ...existingSearch.filter(item => item !==query)].slice(0,3);
     localStorage.setItem("recentSearchs" , JSON.stringify(updated));
     setTimeout(() => {
       hideLoader();
     navigate(`/pages/shop_all?search=${query}`);
     }, 1000);
     handleClick();
-
   }
   return (
     <div 
     ref={ref}
-    className={`absolute z-50 w-72 lg:w-[420px] bg-menu-gradiant shadow-xl rounded-xl p-2 lg:p-4 border border-gray-200 ${className}`}>      
+    className={`absolute z-50 w-72 md:w-[520px] bg-menu-gradiant shadow-xl rounded-xl p-2 lg:p-4 border border-gray-200 ${className}`}>      
       {/* Header */}
       <SearchTitle handleClick={handleClick}/>
 
@@ -46,7 +45,9 @@ const SearchTopUp = ({ handleClick , className }) => {
       <SearchSuggestions 
         query={query}
         setQuery={setQuery}
-        handleSearch={handleSearch}/>
+        handleSearch={handleSearch}
+        existingSearch={existingSearch}
+        />
     </div>
   );
 };

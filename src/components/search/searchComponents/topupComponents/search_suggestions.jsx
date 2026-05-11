@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchSuggestions =({query , setQuery , handleSearch})=>{
+const SearchSuggestions =({query , setQuery , handleSearch , existingSearch})=>{
   const suggestions = [
     "Men",
     "Women",
@@ -14,7 +14,7 @@ const SearchSuggestions =({query , setQuery , handleSearch})=>{
       <div className="mt-4">
         <p className="text-xs  mb-2">Recent Searches</p>
         <div className="flex flex-wrap gap-2">
-          {suggestions.map((item,index)=>(
+          {existingSearch.map((item,index)=>(
           <span 
           key={index} 
           onClick={()=>handleClick(item)}

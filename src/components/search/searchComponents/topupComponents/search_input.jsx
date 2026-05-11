@@ -1,4 +1,5 @@
 import React from "react";
+import { SearchIcon } from "lucide-react";
 
 const SearchInput = ({query, setQuery, handleSearch})=>{
     return(
@@ -11,11 +12,9 @@ const SearchInput = ({query, setQuery, handleSearch})=>{
           onChange={(e)=>setQuery(e.target.value)}
           onKeyDown={(e)=> e.key === "Enter" && handleSearch()}
         />
-        <img
-          className="w-5 h-5 opacity-60 hover:cursor-pointer"
-          src="/assets/icons/search.png"
-          alt="search"
-          onClick={handleSearch}
+        <SearchIcon 
+        className="w-5 h-5 opacity-60 hover:cursor-pointer"
+        onClick={handleSearch}
         />
       </div>
     )
