@@ -32,7 +32,6 @@ const ScrollingProducts = ({ allItems }) => {
     <div className="w-full p-4">
 
       <Swiper
-
         modules={[Navigation , Pagination]}
         navigation
         centeredSlides={false}
