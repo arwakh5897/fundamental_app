@@ -18,7 +18,7 @@ const Brands = () => {
   const loopData = [...brandsData, ...brandsData,...brandsData,...brandsData,...brandsData,...brandsData,];
 
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
+    <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#d9c5bb]/20 blur-3xl rounded-full" />
 
@@ -28,7 +28,7 @@ const Brands = () => {
           Global Partners
         </p>
 
-        <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-black">
+        <h2 className="text-4xl md:text-6xl font-semibold tracking-tight ">
           Brands We Trust
         </h2>
 
@@ -41,18 +41,26 @@ const Brands = () => {
       {/* marquee */}
       <div className="relative marquee-wrapper">
         {/* left fade */}
-        <div className="absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-white via-white/90 to-transparent" />
+        {/* <div className="absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-white via-white/80 to-transparent" /> */}
 
         {/* right fade */}
-        <div className="absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-white via-white/80 to-transparent" />
+        {/* <div className="absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-white via-white/80 to-transparent" /> */}
 
-        <div className="marquee-track flex items-center gap-20 md:gap-28">
+        <div className="marquee-track py-4 flex items-center gap-20 md:gap-28">
           {loopData.map((brand, index) => (
             <div
               key={index}
               className="
-                shrink-0 py-2
                 flex items-center justify-center
+                min-w-[180px] md:min-w-[340px]
+                h-[100px] md:h-[130px]
+                rounded-3xl
+                border border-gray-100
+                bg-white/70
+                backdrop-blur-xl
+                shadow-sm
+                hover:shadow-xl
+                transition-all duration-500
                 group
               "
             >
