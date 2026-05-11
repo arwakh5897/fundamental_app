@@ -41,10 +41,10 @@ const Brands = () => {
       {/* marquee */}
       <div className="relative marquee-wrapper">
         {/* left fade */}
-        <div className="absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-white via-white/80 to-transparent" />
+        <div className="absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-white via-white/90 to-transparent" />
 
         {/* right fade */}
-        <div className="absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-white via-white/80 to-transparent" />
+        <div className="absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-white via-white/80 to-transparent" />
 
         <div className="marquee-track flex items-center gap-20 md:gap-28">
           {loopData.map((brand, index) => (
@@ -60,7 +60,7 @@ const Brands = () => {
                 src={brand.img}
                 alt="brand"
                 className="
-                  h-14 md:h-26
+                  h-10 md:h-26
                   w-auto
                   object-contain
                   grayscale
