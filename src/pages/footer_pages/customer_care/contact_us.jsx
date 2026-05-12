@@ -1,6 +1,11 @@
+import axios from "axios";
 import React, { useState } from "react";
+// import { contactUs } from "../../../api/auth";
+import useToast from "../../../../utils/useToast";
+
 
 const ContactUs = () => {
+  const { success , error} = useToast();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -11,10 +16,27 @@ const ContactUs = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(form); // API yahan call karni hai
-  };
+
+try{
+    const response = await contactUs(form);
+    console.log(response.data);
+    setForm({
+      name:"",
+      email:"",
+      message:"",
+  });
+  success("Message sent successfully!")
+}
+catch (err){
+    console.log(err.response?.data || err.message);
+    error("Something went wrong!");
+}
+
+};
+
+
 
   return (
     <div className="bg-background  text-foreground">
