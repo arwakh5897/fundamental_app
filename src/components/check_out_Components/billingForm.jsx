@@ -116,9 +116,9 @@ const BillingForm = ({ formData, handleChange, handleSubmit , handleJazzCash }) 
         >
           Place Order
         </button>
-       {* <button onClick={handleJazzCash} className="w-full bg-buttons hover:cursor-pointer hover:bg-jazzcash-hover text-xs py-3.5 rounded-2xl font-semibold shadow-md transition">
+        {/* <button onClick={handleJazzCash} className="w-full bg-buttons hover:cursor-pointer hover:bg-jazzcash-hover text-xs py-3.5 rounded-2xl font-semibold shadow-md transition">
           Pay with JazzCash
-        </button>*}
+        </button> */}
 
       </form>
     </div>
