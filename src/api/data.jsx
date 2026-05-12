@@ -73,26 +73,32 @@ export const fetchProducts = async () => {
         title: `${brand} ${model} ${id}`,
         description: `Premium ${brand.toLowerCase()} running and lifestyle shoes designed for comfort, durability, and modern style. 
 Crafted with high-quality materials to provide long-lasting performance and everyday reliability. 
-These shoes feature a lightweight construction that helps reduce foot fatigue during long walks or workouts. 
+These shoes feature a lightweight construction that helps reduce foot fatigue during long walks or workouts.
+
 The breathable upper mesh allows proper airflow to keep your feet cool and fresh throughout the day. 
 Soft inner cushioning provides superior comfort for daily wear, gym sessions, and outdoor activities. 
 Designed with advanced sole grip technology for enhanced traction on multiple surfaces. 
+
 Perfect for running, jogging, training, casual outings, and active lifestyles. 
 The flexible outsole ensures smooth movement and natural foot support while walking or exercising. 
 Modern and stylish design makes these shoes easy to pair with sportswear or casual outfits. 
-Shock-absorbing midsoles help reduce pressure on knees and ankles during movement. 
+Shock-absorbing midsoles help reduce pressure on knees and ankles during movement.
+
 Built to support both athletic performance and all-day comfort for every age group. 
 Durable stitching and premium finishing add extra strength and long-term usability. 
-Available in multiple sizes and trendy color combinations to match your personal style. 
+Available in multiple sizes and trendy color combinations to match your personal style.
+
 The ergonomic fit provides excellent balance, stability, and confidence with every step. 
 Easy-to-clean material helps maintain a fresh and polished appearance for a long time. 
 Suitable for indoor and outdoor activities including fitness training and daily commuting. 
 Engineered to provide a secure fit with comfortable lace support and flexible movement. 
 These shoes combine fashion and functionality to meet the demands of modern lifestyles. 
+
 Premium cushioning technology delivers extra softness and enhanced walking comfort. 
 Ideal choice for athletes, students, professionals, and anyone seeking versatile footwear. 
 The stylish silhouette and sleek detailing create a premium and fashionable look. 
 Carefully designed to offer maximum support during intense activities and daily use. 
+
 Reliable performance and superior comfort make these shoes a must-have for every wardrobe. 
 Experience a perfect blend of innovation, comfort, durability, and timeless style with every pair.`,
         price: 82 + (i * 5),
