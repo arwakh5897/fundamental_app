@@ -4,6 +4,7 @@ import CustomerCare from "./footer_components/customer_care";
 import CopyRight from "./footer_components/copy_right";
 import FollowUs from "./footer_components/follow_us";
 import ProductsLinks from "./footer_components/products_links";
+import WhatsAppButton from "../whatsapp/whatsapp";
 
 
 const Footer = () => {
@@ -16,6 +17,7 @@ const Footer = () => {
                 <FollowUs/>
             </div>
             <div className="h-[1px] mt-6 bg-white/20"></div>
+            <WhatsAppButton/>
             <CopyRight/>
         </footer>
     );
