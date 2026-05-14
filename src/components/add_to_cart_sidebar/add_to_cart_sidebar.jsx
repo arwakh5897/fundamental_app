@@ -27,7 +27,7 @@ const AddToCartSidebar = ({ active, onClose, totalItems, totalPrice, cart = [], 
         {/* Cart Items */}
         <div className="flex-1 overflow-y-auto scrollbar-hide space-y-0 mt-4 px-2 pb-2">
           {cart.length > 0 ? (
-            cart.map((item) => (
+            [...cart].reverse().map((item) => (
               <ShoppingCard
                 key={item.id}
                 image={item.image}

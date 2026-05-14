@@ -18,7 +18,9 @@
 //     )
 // }
 // export default ScrollingProducts;
-import React from "react";
+
+
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
@@ -26,9 +28,19 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Card from "../card/card";
+import ProductDetailsPopup from "../product_popUp/product_popUp";
 
 const ScrollingProducts = ({ allItems }) => {
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const handleOpenPopup = (allItems) => {
+    setSelectedProduct(allItems);
+    setOpen(true);
+  };
   return (
+    <>
     <div className="w-full p-4">
 
       <Swiper
@@ -99,12 +111,22 @@ const ScrollingProducts = ({ allItems }) => {
               sizes={item.sizes}
               colors={item.colors}
               discount={Number(item.discount).toFixed(0)}
+
+              setOpen={setOpen}
+              onEyeClick={handleOpenPopup}
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
     </div>
+          {/* GLOBAL POPUP (ONLY ONCE) */}
+      <ProductDetailsPopup
+        product={selectedProduct}
+        isOpen={open}
+        onClose={() => setOpen(false)}
+      />
+    </>
   );
 };
 

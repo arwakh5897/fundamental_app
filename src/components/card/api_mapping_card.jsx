@@ -1,7 +1,7 @@
 import react from "react";
 import Card from "./card";
 
-const ApiMappingCard =({products})=>{
+const ApiMappingCard =({products , onEyeClick , setOpen})=>{
     return(
     <>
         {products.map((item,index) => (
@@ -26,8 +26,10 @@ const ApiMappingCard =({products})=>{
                 sizes={item.sizes}
                 colors={item.colors}
                 discount={Number(item.discount).toFixed(0)}
-                
-                // discount={Math.floor(Math.random() * 30) + 5} // 5% - 35%
+
+                // PopUp Properties
+                onEyeClick={onEyeClick}
+                setOpen={setOpen}                
               />
             ))}
         </>

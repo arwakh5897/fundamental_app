@@ -41,10 +41,10 @@ const Brands = () => {
       {/* marquee */}
       <div className="relative marquee-wrapper">
         {/* left fade */}
-        {/* <div className="absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-white via-white/80 to-transparent" /> */}
+        <div className="absolute left-0 top-0 z-10 h-full w-14 bg-gradient-to-r from-white via-white/80 to-transparent" />
 
         {/* right fade */}
-        {/* <div className="absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-white via-white/80 to-transparent" /> */}
+        <div className="absolute right-0 top-0 z-10 h-full w-14 bg-gradient-to-l from-white via-white/80 to-transparent" />
 
         <div className="marquee-track py-4 flex items-center gap-20 md:gap-28">
           {loopData.map((brand, index) => (
@@ -60,7 +60,6 @@ const Brands = () => {
                 backdrop-blur-xl
                 shadow-sm
                 hover:shadow-xl
-                transition-all duration-500
                 group
               "
             >
@@ -76,7 +75,6 @@ const Brands = () => {
                   group-hover:opacity-100
                   group-hover:grayscale-0
                   group-hover:scale-110
-                  transition-all duration-700 ease-out
                 "
               />
             </div>

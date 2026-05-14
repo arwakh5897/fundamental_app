@@ -13,9 +13,9 @@ import EyeButton from "../buttons/eye_button";
 
 import ProductDetailsPopup from "../product_popUp/product_popUp";
 
-const Card = ({ className, id, image, title, description ,category,
+const Card = ({onEyeClick,setOpen, className, id, image, title, description ,category,
    rating,  price ,  discount ,  stock ,  sizes,  colors, count , hoverImage , subImages , total_reviews , avarage_rating  , reviews,}) => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { error } = useToast();
 
@@ -35,6 +35,13 @@ const Card = ({ className, id, image, title, description ,category,
       
       });
   }
+  const handleEyeClick = (e) => {
+    // e.stopPropagation();
+    setOpen(true);
+    if(onEyeClick){
+      onEyeClick(productData);
+    }
+  };
   return (
     <>
     <div>
@@ -45,7 +52,7 @@ const Card = ({ className, id, image, title, description ,category,
       >
         {/* 👁 Eye Button */}
         {stock > 0 && (
-          <EyeButton onClick={() => setOpen(true)} />
+          <EyeButton onClick={handleEyeClick} />
          )}
 
         {discount > 0 && (
@@ -70,11 +77,11 @@ const Card = ({ className, id, image, title, description ,category,
       </div>
 
       {/* ✅ Popup */}
-      <ProductDetailsPopup
+      {/* <ProductDetailsPopup
         product={productData}
         isOpen={open}
         onClose={() => setOpen(false)}
-      />
+      /> */}
       </div>
     </>
   );
